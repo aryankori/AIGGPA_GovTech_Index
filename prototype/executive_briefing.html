@@ -1,204 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIGGPA Executive Briefing — Project Alpha</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Tailwind Config for Branding -->
-    <script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Executive Briefing | Sovereign Intelligence</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bauhaus-grid {
+            background-image: radial-gradient(circle, #45474c 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b1322; }
+        ::-webkit-scrollbar-thumb { background: #45474c; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFC107; }
+    </style>
+    <script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1B3B6F',
-                        gold: '#FFC107',
-                        surface: '#0A1221',
-                        surfaceLight: '#141c2b'
+                        "primary-fixed": "#FFC107",
+                        "surface": "#0b1322",
+                        "inverse-surface": "#dbe2f8",
+                        "on-surface-variant": "#c6c6cd",
+                        "surface-tint": "#FFC107",
+                        "surface-container-high": "#222a3a",
+                        "secondary": "#1B3B6F",
+                        "primary": "#FFC107",
+                        "error": "#ffb4ab",
+                        "background": "#0b1322",
+                        "surface-container": "#18202f",
+                        "surface-container-highest": "#2d3545",
+                        "outline": "#8f9097",
+                        "surface-bright": "#32394a",
+                        "on-primary": "#1B3B6F",
+                        "on-surface": "#dbe2f8",
+                        "surface-container-low": "#141c2b",
                     },
                     fontFamily: {
-                        headline: ['Public Sans', 'sans-serif'],
-                        body: ['Inter', 'sans-serif']
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"]
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { scroll-behavior: smooth; font-family: 'Inter', sans-serif; background-color: #0A1221; color: white;}
-        h1, h2, h3, h4 { font-family: 'Public Sans', sans-serif; }
-        
-        /* Smooth Fade In */
-        .fade-in { animation: fadeIn 1s ease-in forwards; opacity: 0; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Sticky section logic */
-        .pitch-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,193,7,0.1);
-        }
-
-        .img-shadow {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-    </style>
 </head>
-<body class="antialiased">
-
-    <!-- Sticky Header -->
-    <header class="fixed top-0 w-full z-50 bg-[#0A1221]/90 backdrop-blur-md border-b border-white/10 px-8 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-4">
-            <span class="w-3 h-3 bg-gold rounded-full animate-pulse"></span>
-            <span class="font-headline font-black text-xl tracking-tighter uppercase">AIGGPA Pilot Pitch</span>
+<body class="bg-background text-on-background font-body min-h-screen selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-[#0b1322] z-50 border-b border-[#45474c]/15">
+    <div class="flex justify-between items-center px-8 py-4 w-full bg-[#141c2b]">
+        <div class="flex items-center gap-8">
+            <span class="text-lg font-bold tracking-tighter text-white uppercase font-headline">The Sovereign Intelligence</span>
+            <nav class="hidden md:flex items-center gap-6">
+                <a class="text-[#FFC107] border-b-2 border-[#FFC107] pb-1 font-headline tracking-tight" href="#">Briefings</a>
+                <a class="text-slate-400 hover:text-white transition-colors font-headline tracking-tight" href="#">Assets</a>
+                <a class="text-slate-400 hover:text-white transition-colors font-headline tracking-tight" href="#">Analysis</a>
+                <a class="text-slate-400 hover:text-white transition-colors font-headline tracking-tight" href="index.html">Dashboards</a>
+            </nav>
         </div>
-        <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-white/50">
-            <a href="#problem" class="hover:text-gold transition-colors">01. The Problem</a>
-            <a href="#data" class="hover:text-gold transition-colors">02. Data Evidence</a>
-            <a href="#solution" class="hover:text-gold transition-colors">03. The Architecture</a>
-            <a href="#roi" class="hover:text-gold transition-colors">04. The ROI</a>
+        <div class="flex items-center gap-4">
+            <button class="p-2 text-slate-400 hover:bg-[#222a3a] rounded-lg transition-all active:scale-90">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+                <img alt="Analyst Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOM_42HdwBZroXZp63Rzu0Moh4ei0Gb3IElnC82RB54th4MR36czQth_3QogxQKxIGRjg9G0BB-Tnc8PGFa1zSVzXd_7A0jo4_HDc0xgiP3qSL2V7P-_OCbIUQTe7HoRabhCZe5cpxzIJcxPrpk6C0BCCgWNW8o2DrqODrjkqHyrHULBrO8ReKnnfnuUpFPnvOFRroO0SjSjJ_7VqgMUeedDZhs6BavRJ7UKdOjqYIDfLfQAMYKY-geKXHaXgygmI9e8ZdlzOhTm8"/>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="flex">
+    <!-- SideNavBar -->
+    <aside class="h-screen w-64 fixed left-0 border-r border-[#45474c]/15 bg-[#0b1322] hidden lg:flex flex-col py-6">
+        <div class="px-6 mb-8">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary">security</span>
+                </div>
+                <div>
+                    <p class="font-headline font-black text-primary leading-none">Command Center</p>
+                    <p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Level 4 Authorization</p>
+                </div>
+            </div>
+        </div>
+        <nav class="flex-1 space-y-1">
+            <a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#mandate">
+                <span class="material-symbols-outlined group-hover:text-primary">radar</span>
+                <span class="font-inter text-sm antialiased">01. The Mandate</span>
+            </a>
+            <a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#data">
+                <span class="material-symbols-outlined group-hover:text-primary">analytics</span>
+                <span class="font-inter text-sm antialiased">02. Data Evidence</span>
+            </a>
+            <a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#architecture">
+                <span class="material-symbols-outlined group-hover:text-primary">account_tree</span>
+                <span class="font-inter text-sm antialiased">03. Architecture</span>
+            </a>
+            <a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#roi">
+                <span class="material-symbols-outlined group-hover:text-primary">speed</span>
+                <span class="font-inter text-sm antialiased">04. Execution & ROI</span>
+            </a>
         </nav>
-        <a href="index.html" class="px-6 py-2 border border-gold text-gold font-bold text-xs uppercase tracking-widest hover:bg-gold hover:text-primary transition-all">Exit Briefing</a>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="pitch-section relative flex-col justify-center items-center text-center pt-24 px-8" id="hero">
-        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary to-surface"></div>
-        <div class="relative z-10 max-w-4xl fade-in">
-            <div class="inline-block border border-gold/30 text-gold px-4 py-1 text-[10px] font-black uppercase tracking-[0.3em] mb-8">Internal Briefing Document</div>
-            <h1 class="text-6xl md:text-8xl font-black headline tracking-tighter leading-none mb-6">GovTech <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">Adoption Index</span></h1>
-            <p class="text-xl text-white/60 font-body max-w-2xl mx-auto leading-relaxed mb-12">
-                A data-driven methodology for measuring, interpreting, and solving the digital divide within state government departments.
-            </p>
-            <a href="#problem" class="inline-flex items-center gap-3 px-8 py-4 bg-gold text-primary font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform">
-                Commence Briefing
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        <div class="px-4 mt-auto">
+            <a href="index.html" class="w-full bg-surface-container-high text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#222a3a] transition-all border border-outline/20">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>
+                Return to Hub
             </a>
         </div>
-    </section>
+    </aside>
 
-    <!-- 01. The Problem -->
-    <section class="pitch-section py-24 px-8" id="problem">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div class="lg:col-span-4 fade-in">
-                <span class="text-gold font-black tracking-widest text-[10px] uppercase block mb-2">Phase 01</span>
-                <h2 class="text-4xl font-black headline tracking-tight mb-6">The Mandate & Scope</h2>
-                <p class="text-white/60 leading-relaxed mb-8">
-                    IT adoption in government has historically been measured by "features deployed" rather than actual "human usage." We established a strict boundary for Project Alpha to evaluate behavioral adoption across 4 core departments.
-                </p>
-                <div class="space-y-4">
-                    <div class="border-l-2 border-gold pl-4 text-sm"><strong class="text-white">In Scope:</strong> Behavioral survey measurement, indexing methodology, and policy dashboards.</div>
-                    <div class="border-l-2 border-red-500 pl-4 text-sm text-white/40">Out of Scope: Full production cloud architectures and state-wide extrapolation.</div>
-                </div>
+    <!-- Main Content -->
+    <main class="flex-1 lg:ml-64 p-8 relative">
+        <div class="fixed inset-0 bauhaus-grid pointer-events-none z-0"></div>
+        
+        <header class="mb-12 relative z-10 pt-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/30 rounded-full mb-6">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-[10px] font-black uppercase text-primary tracking-widest">Executive Briefing Mode</span>
             </div>
-            <div class="lg:col-span-8 flex flex-col gap-8 fade-in" style="animation-delay: 0.2s;">
-                <img src="images/scope_analysis.png" alt="Scope Analysis" class="w-full h-auto rounded img-shadow">
-                <img src="images/editorial_infographic.png" alt="Missing Tier Infographic" class="w-full h-auto rounded img-shadow">
-            </div>
-        </div>
-    </section>
-
-    <!-- 02. The Data Evidence -->
-    <section class="pitch-section py-24 px-8 bg-surfaceLight" id="data">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div class="lg:col-span-7 flex flex-col gap-8 fade-in">
-                <img src="images/adoption_index_barchart.png" alt="Readiness Scale" class="w-full h-auto rounded img-shadow">
-                <div class="grid grid-cols-2 gap-8">
-                    <img src="images/age_adoption_hypothesis.png" alt="Age Hypothesis" class="w-full h-auto rounded img-shadow">
-                    <img src="images/composite_scoring_model.png" alt="Scoring Model" class="w-full h-auto rounded img-shadow">
-                </div>
-            </div>
-            <div class="lg:col-span-5 fade-in" style="animation-delay: 0.2s;">
-                <span class="text-gold font-black tracking-widest text-[10px] uppercase block mb-2">Phase 02</span>
-                <h2 class="text-4xl font-black headline tracking-tight mb-6">The Intelligence Matrix</h2>
-                <p class="text-white/60 leading-relaxed mb-8">
-                    By surveying actual officials, we bypass bureaucratic assumptions. The data engine mathematically attributes an exact "Maturity Score" to otherwise invisible departmental friction.
-                </p>
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4">
-                        <span class="w-8 h-8 rounded bg-primary/50 text-gold flex items-center justify-center font-bold">1</span>
-                        <div>
-                            <h4 class="font-bold text-white uppercase text-xs tracking-widest">Composite Scoring</h4>
-                            <p class="text-sm text-white/50 mt-1">Aggregates infrastructure readiness with actual human frustration indexes.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="w-8 h-8 rounded bg-primary/50 text-gold flex items-center justify-center font-bold">2</span>
-                        <div>
-                            <h4 class="font-bold text-white uppercase text-xs tracking-widest">Age Normalization</h4>
-                            <p class="text-sm text-white/50 mt-1">Proves that adoption resistance is driven by UX complexity, not user age.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- 03. The Architecture -->
-    <section class="pitch-section py-24 px-8" id="solution">
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
-                <span class="text-gold font-black tracking-widest text-[10px] uppercase block mb-2">Phase 03</span>
-                <h2 class="text-4xl font-black headline tracking-tight mb-4">The Solution Architecture</h2>
-                <p class="text-white/60 leading-relaxed">
-                    To scale this insight engine state-wide, we require a secure, sovereign infrastructure capable of ingesting raw survey analytics and synthesizing action matrices.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 fade-in" style="animation-delay: 0.2s;">
-                <div class="bg-surfaceLight p-4 rounded border border-white/5 group">
-                    <h4 class="font-bold text-center text-xs uppercase tracking-widest text-gold mb-4">Sovereign Data Pipeline</h4>
-                    <img src="images/data_pipeline_flowchart.png" alt="Data Pipeline" class="w-full h-auto rounded img-shadow group-hover:scale-[1.02] transition-transform duration-500">
-                </div>
-                <div class="bg-surfaceLight p-4 rounded border border-white/5 group">
-                    <h4 class="font-bold text-center text-xs uppercase tracking-widest text-gold mb-4">Four-Layer System Blueprint</h4>
-                    <img src="images/architecture_ledger.png" alt="Architecture" class="w-full h-auto rounded img-shadow group-hover:scale-[1.02] transition-transform duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 04. The ROI & Timeline -->
-    <section class="pitch-section py-24 px-8 bg-surfaceLight" id="roi">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div class="lg:col-span-5 fade-in">
-                <span class="text-gold font-black tracking-widest text-[10px] uppercase block mb-2">Phase 04</span>
-                <h2 class="text-4xl font-black headline tracking-tight mb-6">The ROI & Execution</h2>
-                <p class="text-white/60 leading-relaxed mb-8">
-                    Institutional deployments fail without speed. By equipping managers with MCP-powered (Model Context Protocol) analysis, diagnostic time plummets from 15 minutes to 5 seconds.
-                </p>
-                <div class="p-6 bg-primary/20 border-l-4 border-gold mb-8">
-                    <div class="text-4xl font-black text-white headline tracking-tighter">180X <span class="text-gold">FASTER</span></div>
-                    <div class="text-xs font-bold uppercase tracking-widest text-white/50 mt-1">Information Synthesis Velocity</div>
-                </div>
-                <p class="text-sm text-white/50 italic leading-relaxed">
-                    "Project Alpha is structured as a controlled 12-week sprint ensuring complete methodological freeze before executive delivery."
-                </p>
-            </div>
-            <div class="lg:col-span-7 flex flex-col gap-8 fade-in" style="animation-delay: 0.2s;">
-                <img src="images/comparison_report.png" alt="180X Faster" class="w-full h-auto rounded img-shadow">
-                <img src="images/research_timeline.png" alt="12 Week Gantt" class="w-full h-auto rounded img-shadow">
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Action -->
-    <section class="py-24 px-8 text-center bg-primary border-t border-gold/20">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl font-black headline mb-6">Ready for Pilot Authorization</h2>
-            <p class="text-white/70 mb-10 leading-relaxed">
-                The technical framework is validated and the visual thesis is complete. Pending Executive Committee sign-off, data ingestion initiates immediately.
+            <h1 class="text-4xl lg:text-5xl font-headline font-extrabold text-on-surface tracking-tighter max-w-2xl leading-[1.1]">
+                GovTech Adoption Index — Project Alpha
+            </h1>
+            <p class="mt-4 text-on-surface-variant max-w-xl font-body leading-relaxed border-l-2 border-primary pl-6">
+                A data-driven methodology for measuring, interpreting, and solving the digital divide within state government departments. Pending executive authorization.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="px-8 py-4 bg-gold text-primary font-black uppercase text-sm tracking-widest hover:bg-white transition-colors">AUTHORIZE PILOT</a>
-                <a href="index.html" class="px-8 py-4 bg-transparent border border-white/30 text-white font-bold uppercase text-sm tracking-widest hover:bg-white/10 transition-colors">RETURN TO PROTOTYPE DASHBOARD</a>
-            </div>
+        </header>
+
+        <div class="space-y-24 relative z-10">
+            
+            <!-- 01. The Mandate -->
+            <section id="mandate" class="pt-8 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8 border-b border-outline/20 pb-4">
+                    <span class="text-xs font-black bg-surface-container-high text-primary px-3 py-1 rounded">PHASE 01</span>
+                    <h2 class="text-2xl font-headline font-bold text-white tracking-tight">The Mandate & Scope</h2>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            IT adoption in government has historically been measured by "features deployed" rather than actual "human usage." We established a strict boundary for Project Alpha to evaluate behavioral adoption across 4 core departments.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> <strong>In Scope:</strong> Behavioral surveys, index models, ML insight.</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-sm">cancel</span> <span class="opacity-50">Out of Scope: Full production deployments, state-wide rollout.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/scope_analysis.png" alt="Scope Analysis" class="w-full object-cover">
+                    </div>
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/editorial_infographic.png" alt="Missing Tier" class="w-full object-cover">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02. Data Evidence -->
+            <section id="data" class="pt-8 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8 border-b border-outline/20 pb-4">
+                    <span class="text-xs font-black bg-surface-container-high text-primary px-3 py-1 rounded">PHASE 02</span>
+                    <h2 class="text-2xl font-headline font-bold text-white tracking-tight">The Intelligence Matrix</h2>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-8">
+                    <div class="xl:col-span-1 bg-surface-container-low p-6 rounded-lg border-t-4 border-secondary">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-4">query_stats</span>
+                        <h3 class="text-lg font-bold text-white mb-2">Empirical Proof</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            By surveying actual officials, we bypass bureaucratic assumptions. The data engine mathematically attributes an exact "Maturity Score" to otherwise invisible departmental friction.
+                        </p>
+                    </div>
+                    <div class="xl:col-span-2 bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/adoption_index_barchart.png" alt="Adoption Barchart" class="w-full object-cover">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/composite_scoring_model.png" alt="Composite Score" class="w-full object-cover">
+                    </div>
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/age_adoption_hypothesis.png" alt="Age Hypothesis" class="w-full object-cover">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03. Architecture -->
+            <section id="architecture" class="pt-8 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8 border-b border-outline/20 pb-4">
+                    <span class="text-xs font-black bg-surface-container-high text-primary px-3 py-1 rounded">PHASE 03</span>
+                    <h2 class="text-2xl font-headline font-bold text-white tracking-tight">Sovereign Architecture</h2>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            To scale this insight engine state-wide, we require a secure, sovereign infrastructure capable of ingesting raw survey analytics and synthesizing actionable intelligence matrices without cloud leakage.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/architecture_ledger.png" alt="Architecture Ledger" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/data_pipeline_flowchart.png" alt="Data Pipeline" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04. ROI & Timeline -->
+            <section id="roi" class="pt-8 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8 border-b border-outline/20 pb-4">
+                    <span class="text-xs font-black bg-surface-container-high text-primary px-3 py-1 rounded">PHASE 04</span>
+                    <h2 class="text-2xl font-headline font-bold text-white tracking-tight">Execution & ROI</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-8">
+                    <div class="bg-surface-container-high p-8 rounded-lg flex flex-col justify-center items-center text-center border border-primary/20">
+                        <span class="material-symbols-outlined text-primary text-5xl mb-2">bolt</span>
+                        <div class="text-5xl font-black text-white headline tracking-tighter mb-2">180<span class="text-primary">X</span></div>
+                        <div class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Speed Multiplier (MCP)</div>
+                    </div>
+                    <div class="xl:col-span-2 bg-surface-container-low p-6 rounded-lg border-t-4 border-secondary flex flex-col justify-center">
+                        <h3 class="text-lg font-bold text-white mb-2">The Velocity Argument</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Institutional deployments fail without speed. By equipping managers with MCP-powered (Model Context Protocol) analysis, manual diagnostic time plummets from 15 minutes to 5 seconds. Project Alpha is a controlled 12-week sprint ensuring complete methodological freeze before executive delivery.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/comparison_report.png" alt="Comparison Report" class="w-full object-cover">
+                    </div>
+                    <div class="bg-surface-container rounded-xl overflow-hidden border border-outline/10 shadow-2xl">
+                        <img src="images/research_timeline.png" alt="Gantt Timeline" class="w-full object-cover">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Authorization -->
+            <footer class="mt-24 pt-12 pb-24 border-t border-outline/20 flex flex-col items-center text-center">
+                <span class="material-symbols-outlined text-primary text-4xl mb-4">verified_user</span>
+                <h3 class="text-2xl font-black headline text-white mb-4">Ready for Pilot Authorization</h3>
+                <p class="text-sm text-on-surface-variant max-w-md mb-8">
+                    The technical framework is validated and the visual thesis is complete. Pending Executive Committee sign-off, data ingestion initiates immediately.
+                </p>
+                <button class="bg-primary hover:bg-yellow-400 text-[#0b1322] font-black uppercase tracking-widest px-12 py-4 rounded-lg shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all hover:scale-105 active:scale-95">
+                    Authorize Pilot System
+                </button>
+            </footer>
+
         </div>
-    </section>
+    </main>
+</div>
 
 </body>
 </html>
