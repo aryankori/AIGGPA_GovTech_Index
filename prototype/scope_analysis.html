@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIGGPA Ledger - Project Alpha Scope Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "surface-dim": "#dadada",
+                        "surface": "#f9f9f9",
+                        "surface-container-low": "#f3f3f3",
+                        "outline-variant": "#c4c6d1",
+                        "on-primary-fixed": "#001a41",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-fixed": "#ffdcc3",
+                        "tertiary": "#3e1e00",
+                        "on-surface-variant": "#43474f",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-primary-fixed-variant": "#28467b",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "outline": "#747780",
+                        "surface-tint": "#415e94",
+                        "secondary-fixed": "#ffdf9e",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1b3b6f",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#6c5000",
+                        "secondary-container": "#FFC107",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#acc7ff",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-tertiary-container": "#db9860",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "primary": "#1B3B6F",
+                        "tertiary-container": "#5e3000",
+                        "on-secondary-fixed": "#261a00",
+                        "inverse-primary": "#acc7ff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#FFC107",
+                        "secondary": "#FFC107",
+                        "on-tertiary-fixed-variant": "#6b3a09",
+                        "on-primary-container": "#8aa7e1",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0A1221;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="bg-[#F9F9F9] dark:bg-slate-950 border-b-2 border-[#1B3B6F] dark:border-blue-900 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto">
+<div class="text-xl font-black text-[#1B3B6F] dark:text-white tracking-tighter uppercase">
+                AIGGPA Ledger
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-[0.75rem] font-bold text-slate-500 dark:text-slate-400 hover:text-[#1B3B6F] hover:bg-[#F3F3F3] dark:hover:bg-slate-800 transition-colors duration-75" href="#">Reports</a>
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-[0.75rem] font-bold text-[#1B3B6F] dark:text-blue-200 border-b-2 border-[#1B3B6F] pb-1" href="#">Archive</a>
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-[0.75rem] font-bold text-slate-500 dark:text-slate-400 hover:text-[#1B3B6F] hover:bg-[#F3F3F3] dark:hover:bg-slate-800 transition-colors duration-75" href="#">Indices</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#1B3B6F] dark:text-blue-200 p-2 hover:bg-[#F3F3F3] transition-colors">download</button>
+<button class="material-symbols-outlined text-[#1B3B6F] dark:text-blue-200 p-2 hover:bg-[#F3F3F3] transition-colors">share</button>
+<button class="material-symbols-outlined text-[#1B3B6F] dark:text-blue-200 p-2 hover:bg-[#F3F3F3] transition-colors">settings</button>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-[72px] h-[calc(100vh-72px)] w-64 flex flex-col border-r border-slate-200 dark:border-slate-800 bg-[#F3F3F3] dark:bg-slate-900 hidden lg:flex">
+<div class="p-6 border-b border-[#EEEEEE] dark:border-slate-800">
+<h2 class="font-['Public_Sans'] font-bold text-[#1B3B6F] text-lg uppercase tracking-wider">Project Alpha</h2>
+<p class="text-xs text-slate-500 font-medium">FY2024 Audit Scope</p>
+</div>
+<nav class="flex-1 py-4">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#E8E8E8] dark:hover:bg-slate-700 transition-all font-['Inter'] text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+                    Executive Summary
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#FFFFFF] dark:bg-slate-800 text-[#1B3B6F] dark:text-white font-bold border-l-4 border-[#1B3B6F] transition-all font-['Inter'] text-sm tracking-tight translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="rule">rule</span>
+                    Scope Analysis
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#E8E8E8] dark:hover:bg-slate-700 transition-all font-['Inter'] text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+                    Resource Matrix
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-[#E8E8E8] dark:hover:bg-slate-700 transition-all font-['Inter'] text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+                    Institutional Impact
+                </a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 lg:ml-64 p-8 lg:p-12 max-w-[1440px] mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-12 space-y-2">
+<div class="text-[0.75rem] font-bold tracking-[0.1em] text-[#FFC107] uppercase">Institutional Governance Review</div>
+<h1 class="text-white text-5xl font-black font-headline tracking-tight uppercase leading-none">
+                    Comparison Analysis <br/>
+<span class="text-surface-container-highest opacity-40">Boundary Definition</span>
+</h1>
+</div>
+<!-- Comparison Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1B3B6F] bg-opacity-20">
+<!-- IN SCOPE Column -->
+<div class="bg-surface-container-lowest border-t-8 border-[#10B981] p-10 flex flex-col h-full">
+<div class="mb-10">
+<div class="flex items-center gap-4 mb-2">
+<span class="bg-[#10B981] text-white p-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</span>
+<h2 class="text-[#1B3B6F] text-2xl font-black font-headline tracking-tight uppercase">IN SCOPE</h2>
+</div>
+<div class="h-1 w-24 bg-[#10B981]"></div>
+</div>
+<ul class="space-y-6 flex-1">
+<li class="flex items-start gap-4 group">
+<span class="material-symbols-outlined text-[#10B981] mt-1" data-icon="check">check</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Survey Design &amp; Collection</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Standardized quantitative methodology across all test nodes.</div>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#10B981] mt-1" data-icon="check">check</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">4 Department Analysis</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Full horizontal audit of Finance, HR, Logistics, and Policy branches.</div>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#10B981] mt-1" data-icon="check">check</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Adoption Index Scoring</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Mathematical attribution of digital maturity levels.</div>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#10B981] mt-1" data-icon="check">check</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Demographic Cross-tabs</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Segmented reporting based on administrative hierarchy.</div>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#10B981] mt-1" data-icon="check">check</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Policy Brief</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Executive-level summary of actionable governance pivots.</div>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#10B981] mt-1" data-icon="check">check</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Web Dashboard Prototype</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Interactive Figma-based visualization of key findings.</div>
+</div>
+</li>
+</ul>
+<div class="mt-12 pt-8 border-t border-slate-100">
+<div class="text-[0.65rem] font-bold text-slate-400 uppercase tracking-widest">Authorized Execution</div>
+<div class="text-[#1B3B6F] font-black text-xl tracking-tighter">PHASE 01 COMPLIANCE</div>
+</div>
+</div>
+<!-- OUT OF SCOPE Column -->
+<div class="bg-surface-container-lowest border-t-8 border-error p-10 flex flex-col h-full">
+<div class="mb-10">
+<div class="flex items-center gap-4 mb-2">
+<span class="bg-error text-white p-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="cancel" style="font-variation-settings: 'FILL' 1;">cancel</span>
+</span>
+<h2 class="text-[#1B3B6F] text-2xl font-black font-headline tracking-tight uppercase">OUT OF SCOPE</h2>
+</div>
+<div class="h-1 w-24 bg-error"></div>
+</div>
+<ul class="space-y-6 flex-1">
+<li class="flex items-start gap-4 opacity-70">
+<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Production Software</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">End-to-end software engineering or cloud hosting.</div>
+</div>
+</li>
+<li class="flex items-start gap-4 opacity-70">
+<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Classified Data Access</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Integration with Tier-1 security clearance datasets.</div>
+</div>
+</li>
+<li class="flex items-start gap-4 opacity-70">
+<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">All-India Generalisation</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">Extrapolation of findings beyond selected 4 departments.</div>
+</div>
+</li>
+<li class="flex items-start gap-4 opacity-70">
+<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
+<div>
+<div class="font-bold text-[#1B3B6F] uppercase tracking-wide text-sm">Employee Training</div>
+<div class="text-slate-500 text-xs mt-1 font-medium">On-site workshops or long-term capability building.</div>
+</div>
+</li>
+</ul>
+<div class="mt-12 pt-8 border-t border-slate-100 bg-[#FFF5F5] -mx-10 px-10">
+<div class="text-[0.65rem] font-bold text-error uppercase tracking-widest">Exclusionary Clause</div>
+<div class="text-[#1B3B6F] font-black text-xl tracking-tighter">EXTERNAL PROCUREMENT</div>
+</div>
+</div>
+</div>
+<!-- Editorial Illustration Area -->
+<div class="mt-16 grid grid-cols-12 gap-8 items-center">
+<div class="col-span-12 lg:col-span-7">
+<div class="relative h-64 bg-[#0A1221] overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-48 h-48 border-2 border-primary-container opacity-20 rotate-45"></div>
+<div class="absolute w-32 h-32 bg-[#FFC107] opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute w-full h-px bg-[#1B3B6F] opacity-30 top-1/2"></div>
+<div class="absolute h-full w-px bg-[#1B3B6F] opacity-30 left-1/2"></div>
+</div>
+<img alt="Scope Diagram" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 grayscale" data-alt="Minimalist abstract architectural diagram with precise blue lines and geometric shapes over a dark tech background in Swiss Bauhaus style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ7uSi8C7Y5Jbci2WrnViRE0tgC-a_wATPXZ8dom9qQf3elI9lqRC_MQLadb7qddJ_EwECLaSdSBY1Ozr1guD3UfULvVRfDSXev-wc9C_dz2oaeWV57_85sayGmrHoagH4lmSh1NJzpIsy9RGA5uN5SjoUsF0X9atgqMWSsxwaqiYoV5d0ASRAPyzaBMSIZrjvjfCW8AqHIdUxjfyOvtIplpZ1j1sakeP1mJ_XhYcgrh2T7T7Xr7U5MB4QfRUJzc4Vb0qtregnG9k"/>
+<div class="absolute bottom-4 left-4 bg-[#1B3B6F] px-4 py-2">
+<span class="text-white font-bold text-xs uppercase tracking-widest">Scope Topology v1.4</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 space-y-4">
+<p class="text-slate-400 text-sm leading-relaxed">
+                        The boundaries defined in this document represent the formal mandate approved by the Executive Committee. 
+                        Any deviation from the <span class="text-white font-bold">IN SCOPE</span> parameters requires an amendment to the 
+                        Project Charter and a resource recalibration of at least 15% across all operational nodes.
+                    </p>
+<button class="bg-[#FFC107] text-[#1B3B6F] px-8 py-3 font-bold uppercase text-xs tracking-widest flex items-center gap-2 hover:bg-opacity-90 transition-all">
+                        Request Scope Amendment
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Footer Stats / Archive Info -->
+<footer class="mt-24 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="space-y-1">
+<div class="text-slate-600 text-[0.65rem] font-bold uppercase tracking-widest">Document Status</div>
+<div class="flex items-center gap-4">
+<div class="text-white text-3xl font-black">ACTIVE</div>
+<div class="w-12 h-px bg-slate-700"></div>
+<div class="text-slate-500 text-xs">Certified as of Oct 2023</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-slate-600 text-[0.65rem] font-bold uppercase tracking-widest">Authority Reference</div>
+<div class="text-secondary font-['Public_Sans'] font-bold text-sm">AIGGPA-LEG-2024-X4</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

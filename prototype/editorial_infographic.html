@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Digital Divide in Public Service | AIGGPA Vanguard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700&amp;family=Inter:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#1B3B6F",
+                        "secondary": "#FFC107",
+                        "inverse-primary": "#acc7ff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-container": "#6c5000",
+                        "surface-dim": "#dadada",
+                        "primary-container": "#1b3b6f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#28467b",
+                        "secondary-fixed": "#ffdf9e",
+                        "on-secondary-fixed": "#261a00",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#6b3a09",
+                        "primary-fixed-dim": "#acc7ff",
+                        "inverse-surface": "#2f3131",
+                        "inverse-on-surface": "#f1f1f1",
+                        "secondary-fixed-dim": "#fabd00",
+                        "on-background": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "outline": "#747780",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#5e3000",
+                        "on-primary-fixed": "#001a41",
+                        "surface": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary-fixed": "#ffdcc3",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary": "#3e1e00",
+                        "surface-container": "#eeeeee",
+                        "secondary-container": "#fdc003",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-container": "#db9860",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#8aa7e1",
+                        "outline-variant": "#c4c6d1",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "surface-tint": "#415e94",
+                        "on-surface-variant": "#43474f",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #f9f9f9; }
+        .bauhaus-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0; }
+        .status-green { background-color: #2D6A4F; }
+        .status-amber { background-color: #FFC107; }
+        .status-red { background-color: #D62828; }
+    </style>
+</head>
+<body class="font-body text-on-background m-0 p-0">
+<!-- TopNavBar -->
+<nav class="bg-slate-50 dark:bg-slate-900 flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto fixed top-0 left-0 right-0 z-50">
+<div class="text-2xl font-serif font-bold text-blue-900 dark:text-blue-200">AIGGPA Vanguard</div>
+<div class="hidden md:flex gap-8">
+<a class="text-blue-900 dark:text-amber-500 border-b-2 border-amber-600 dark:border-amber-500 pb-1 font-serif italic tracking-tight hover:text-amber-700 dark:hover:text-amber-400 transition-colors scale-95 duration-150" href="#">Analysis</a>
+<a class="text-slate-600 dark:text-slate-400 font-sans uppercase tracking-widest text-xs hover:text-amber-700 dark:hover:text-amber-400 transition-colors scale-95 duration-150" href="#">Archives</a>
+<a class="text-slate-600 dark:text-slate-400 font-sans uppercase tracking-widest text-xs hover:text-amber-700 dark:hover:text-amber-400 transition-colors scale-95 duration-150" href="#">Methodology</a>
+<a class="text-slate-600 dark:text-slate-400 font-sans uppercase tracking-widest text-xs hover:text-amber-700 dark:hover:text-amber-400 transition-colors scale-95 duration-150" href="#">Governance</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400 cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400 cursor-pointer">account_circle</span>
+</div>
+</nav>
+<!-- SideNavBar (Suppressed for high-end editorial display, but placeholder check: Not a top-level dash) -->
+<main class="pt-32 pb-24 px-12 max-w-screen-2xl mx-auto">
+<!-- Editorial Header -->
+<header class="mb-20">
+<div class="inline-block bg-primary text-on-primary px-3 py-1 mb-6 font-label text-[10px] uppercase tracking-[0.2em] font-bold">
+                Special Report: Digital Governance
+            </div>
+<h1 class="font-headline font-extrabold text-[5rem] leading-[0.9] text-primary tracking-tighter uppercase mb-4">
+                The Digital <br/>Divide
+            </h1>
+<div class="flex items-end gap-12">
+<p class="max-w-xl font-body text-xl text-on-surface-variant leading-relaxed">
+                    An architectural analysis of citizen engagement across demographic strata. Assessing technological literacy and structural accessibility in public service delivery.
+                </p>
+<div class="h-[2px] flex-grow bg-outline-variant opacity-20 mb-3"></div>
+<div class="text-right">
+<span class="font-label text-xs uppercase tracking-widest text-secondary font-bold">V1.02.4 / DESK</span>
+<p class="font-headline italic text-primary">Governance Atelier</p>
+</div>
+</div>
+</header>
+<!-- The Bauhaus Infographic Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-[0.5px] border-outline-variant/30">
+<!-- Tier 1: Active Adopters -->
+<div class="bg-surface p-12 flex flex-col border-r-[0.5px] border-outline-variant/30">
+<div class="mb-12">
+<span class="font-label text-[11px] uppercase tracking-[0.15em] font-bold text-outline">Strata 01</span>
+<h2 class="font-headline text-3xl font-extrabold text-primary mt-2">Active Adopters</h2>
+</div>
+<div class="flex-grow flex items-center justify-center py-20 mb-12">
+<div class="relative w-full max-w-[200px] aspect-square">
+<!-- 2D Vector Representation: Confident User -->
+<div class="absolute inset-0 bg-[#2D6A4F] opacity-10"></div>
+<img alt="Active Adopter" class="w-full h-full object-contain grayscale contrast-125" data-alt="minimalist flat 2D vector illustration of a confident professional using a laptop clean geometric shapes Bauhaus style deep green and white palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZu5m3NL4R-dtYCd2r8qvhiqKci7khJwWSTfzI4KUtjEetr6JCLtTspNPxv73PECzf4d5Seej-0NaT9KOsPEsxIe8-r9ySC9capnbd8nyKpZkcMEx5ZUP4mF6HnGH8n4QSMrFGx1HOkWqtKZpNNfv-PRmjZSMrseij2KXZ4bVeUCPcaoBjhn18uedw42x__sBXhycGEBf3CJ7ZTiW_m-qmMHiXpGaQTliGlmlaUlrNMjJWskLAyWkmXVdMNMmh_e0GY44d63ikt5o"/>
+</div>
+</div>
+<div class="mt-auto">
+<div class="w-12 h-2 status-green mb-6"></div>
+<p class="font-label text-xs uppercase tracking-widest text-outline mb-4">Core Strategy</p>
+<p class="font-headline text-2xl font-bold text-primary mb-8 leading-tight">Optimise &amp; Retain</p>
+<div class="space-y-4 pt-8 border-t border-outline-variant/20">
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] text-outline uppercase tracking-wider">Access Rate</span>
+<span class="font-headline font-bold text-xl text-[#2D6A4F]">92%</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] text-outline uppercase tracking-wider">Literacy Score</span>
+<span class="font-headline font-bold text-xl text-[#2D6A4F]">HIGH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tier 2: Hesitant Users -->
+<div class="bg-surface-container-low p-12 flex flex-col border-r-[0.5px] border-outline-variant/30">
+<div class="mb-12">
+<span class="font-label text-[11px] uppercase tracking-[0.15em] font-bold text-outline">Strata 02</span>
+<h2 class="font-headline text-3xl font-extrabold text-primary mt-2">Hesitant Users</h2>
+</div>
+<div class="flex-grow flex items-center justify-center py-20 mb-12">
+<div class="relative w-full max-w-[200px] aspect-square">
+<!-- 2D Vector Representation: Confused User -->
+<div class="absolute inset-0 bg-[#FFC107] opacity-10"></div>
+<img alt="Hesitant User" class="w-full h-full object-contain grayscale contrast-125" data-alt="minimalist flat 2D vector illustration of a confused person scratching head looking at a tablet geometric shapes Bauhaus style amber and charcoal palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXbO3xD3oUicZad5ZV7Iz3lDiIzGF2ySLoAZNg09Cuqc8FO8K-i8t4rT6Cy4L78IYz1bL2ororfKdMi5US36vkPKtzoYS1xS4tSMZePmV71_yphR3UafG5o7NZTpklEhIrOuWQJXDlEneaZlQ8WG9-nEyDQHhYqxkss4E7jEU3sJji5YNYuEZYwmp2gcvRyEcrBeE8ee0ov1quociBs7Y0DAJySo6dskZb2tTKE-Iz9IuQavpIhTkgcn-x693EbOQkglB4A6TSsN0"/>
+</div>
+</div>
+<div class="mt-auto">
+<div class="w-12 h-2 status-amber mb-6"></div>
+<p class="font-label text-xs uppercase tracking-widest text-outline mb-4">Core Strategy</p>
+<p class="font-headline text-2xl font-bold text-primary mb-8 leading-tight">Motivate + Remove Barriers</p>
+<div class="space-y-4 pt-8 border-t border-outline-variant/20">
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] text-outline uppercase tracking-wider">Access Rate</span>
+<span class="font-headline font-bold text-xl" style="color: #FFC107;">44%</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] text-outline uppercase tracking-wider">Literacy Score</span>
+<span class="font-headline font-bold text-xl" style="color: #FFC107;">MEDIUM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tier 3: Unaware Non-Users -->
+<div class="bg-surface-container p-12 flex flex-col">
+<div class="mb-12">
+<span class="font-label text-[11px] uppercase tracking-[0.15em] font-bold text-outline">Strata 03</span>
+<h2 class="font-headline text-3xl font-extrabold text-primary mt-2">Unaware Non-Users</h2>
+</div>
+<div class="flex-grow flex items-center justify-center py-20 mb-12">
+<div class="relative w-full max-w-[200px] aspect-square">
+<!-- 2D Vector Representation: Unused computer -->
+<div class="absolute inset-0 bg-[#D62828] opacity-10"></div>
+<img alt="Unaware Non-User" class="w-full h-full object-contain grayscale contrast-125" data-alt="minimalist flat 2D vector illustration of an old desktop computer with a large question mark on screen geometric shapes Bauhaus style stark red black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgwNgARNW1tAtQ3ryHr4q_QpfYNYFs9SUvpQCVDOLpiafVJ4kuOCwlgA6UvMEPOSVZwxNMNfpuPeDuIv7ITp7WgI-NZz_w9BM-TuhKGqS575K5F4uTTdu-THtdhgnGdy5Vk-W1KwH1Q5lPqo6l1ZuLHhvhO0ShWgR4Z6w1FsssqqTT4qSOQ5CfcivGU9P7qfP6AV7rYG2sX990qKAU73FgkQSV0F8-R2Augtl1nOh9Vc8CeUJSKOL1y0AVHlbxFWpNyFt07JKEktw"/>
+</div>
+</div>
+<div class="mt-auto">
+<div class="w-12 h-2 status-red mb-6"></div>
+<p class="font-label text-xs uppercase tracking-widest text-outline mb-4">Core Strategy</p>
+<p class="font-headline text-2xl font-bold text-primary mb-8 leading-tight">Awareness + Training + Hardware</p>
+<div class="space-y-4 pt-8 border-t border-outline-variant/20">
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] text-outline uppercase tracking-wider">Access Rate</span>
+<span class="font-headline font-bold text-xl text-[#D62828]">12%</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label text-[10px] text-outline uppercase tracking-wider">Literacy Score</span>
+<span class="font-headline font-bold text-xl text-[#D62828]">LOW</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Analytical Data Footnote -->
+<section class="mt-20 bauhaus-grid">
+<div class="col-span-12 md:col-span-4 border-t-4 border-primary pt-6">
+<p class="font-label text-[10px] font-bold uppercase tracking-widest text-outline mb-2">Observation A</p>
+<p class="font-body text-sm leading-relaxed text-on-surface">The infrastructure gap remains the primary determinant of Tier 3 categorization, irrespective of age demographics in urban centers.</p>
+</div>
+<div class="col-span-12 md:col-span-4 md:ml-12 border-t-4 border-primary pt-6">
+<p class="font-label text-[10px] font-bold uppercase tracking-widest text-outline mb-2">Observation B</p>
+<p class="font-body text-sm leading-relaxed text-on-surface">Psychological friction in Tier 2 users is mitigated 60% faster when mobile-first interfaces are prioritized over complex web portals.</p>
+</div>
+<div class="col-span-12 md:col-span-4 md:ml-12 border-t-4 border-primary pt-6">
+<p class="font-label text-[10px] font-bold uppercase tracking-widest text-outline mb-2">Observation C</p>
+<p class="font-body text-sm leading-relaxed text-on-surface">Active adopters demonstrate high resilience to interface changes but demand significantly higher data transparency standards.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-950 dark:bg-black w-full mt-auto flex flex-col items-center justify-center border-t border-blue-900/30 py-12">
+<div class="mb-8 font-serif italic text-white text-xl">AIGGPA Governance Atelier</div>
+<div class="flex gap-10 mb-8">
+<a class="text-slate-400 font-sans text-xs tracking-tight hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-slate-400 font-sans text-xs tracking-tight hover:text-white transition-colors opacity-80 hover:opacity-100 underline decoration-amber-500" href="#">Terms of Service</a>
+<a class="text-slate-400 font-sans text-xs tracking-tight hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Accessibility Statement</a>
+</div>
+<div class="text-slate-400 font-sans text-[10px] uppercase tracking-widest">
+            © 2024 AIGGPA Governance Atelier. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

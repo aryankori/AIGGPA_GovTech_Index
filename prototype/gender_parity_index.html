@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gender Parity Index | Sovereign Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#18202f",
+                    "secondary-fixed": "#ffdbca",
+                    "secondary-fixed-dim": "#ffb68f",
+                    "on-primary": "#003909",
+                    "surface": "#0b1322",
+                    "tertiary-container": "#2f0001",
+                    "surface-container-high": "#222a3a",
+                    "on-tertiary-fixed": "#410003",
+                    "on-secondary-fixed-variant": "#773200",
+                    "surface-tint": "#FFC107",
+                    "surface-container-highest": "#2d3545",
+                    "surface-container-lowest": "#060e1d",
+                    "outline": "#8f9097",
+                    "surface-container-low": "#141c2b",
+                    "on-tertiary-fixed-variant": "#93000e",
+                    "inverse-primary": "#1b6d24",
+                    "inverse-surface": "#dbe2f8",
+                    "surface-variant": "#2d3545",
+                    "on-tertiary-container": "#e53f3b",
+                    "on-surface-variant": "#c6c6cd",
+                    "surface-dim": "#0b1322",
+                    "error": "#ffb4ab",
+                    "secondary": "#ffb68f",
+                    "on-secondary-container": "#491c00",
+                    "on-primary-fixed": "#002204",
+                    "outline-variant": "#45474c",
+                    "on-secondary-fixed": "#331200",
+                    "tertiary": "#ffb4ac",
+                    "primary-fixed": "#a3f69c",
+                    "tertiary-fixed": "#ffdad6",
+                    "primary": "#FFC107",
+                    "on-primary-container": "#3f8d40",
+                    "background": "#0b1322",
+                    "on-surface": "#dbe2f8",
+                    "secondary-container": "#ec6a00",
+                    "on-background": "#dbe2f8",
+                    "inverse-on-surface": "#293041",
+                    "surface-bright": "#32394a",
+                    "primary-fixed-dim": "#FFC107",
+                    "primary-container": "#001702",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#ffb4ac",
+                    "on-tertiary": "#690007",
+                    "on-secondary": "#542100",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#005312"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Public Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .flat-scale-svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1322] flex justify-between items-center px-8 py-4 w-full shadow-[0_0_40px_0_rgba(136,217,130,0.1)] backdrop-blur-md">
+<div class="text-xl font-bold uppercase tracking-wider text-[#FFC107] font-headline">
+            Sovereign Intelligence
+        </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-400 hover:text-slate-200 transition-colors font-body text-sm font-medium" href="#">Directives</a>
+<a class="text-[#FFC107] border-b-2 border-[#FFC107] pb-1 font-body text-sm font-medium" href="#">Intelligence</a>
+<a class="text-slate-400 hover:text-slate-200 transition-colors font-body text-sm font-medium" href="#">Archives</a>
+<a class="text-slate-400 hover:text-slate-200 transition-colors font-body text-sm font-medium" href="#">Oversight</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-white/5 transition-all cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-white/5 transition-all cursor-pointer">settings</span>
+</div>
+<img alt="Director Profile" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="minimalist professional profile avatar for a government director, clean lighting, high-end corporate style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9iFlBgvIT6WDCW6lRCcIvmz5KUhxL-g7yCNs8enz0o7A8jWPEN7GCe9zhaSPIQmULlkl5IDQpqeRSpU28-m_L9-JO4OvSfOdWMt5B9G4X9Eyaq0_O0SjTJqRC9kaAoIwIhY7waMS_iAR7GPYZ6S0xycRXKbJYMd_orZIfLrY7SkNMAzV8wAgG9luhX20EPjg3w5m7ok7jybsX-8MrNxNdSqWu5_WJyJoP-X_Q_jGI2CuXjpSr7LMqhpYK70Z7Ouc5T2K0FGwAf7s"/>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#141c2b] flex flex-col py-8 pt-24 hidden lg:flex">
+<div class="px-8 mb-10">
+<h2 class="text-[#FFC107] font-black uppercase tracking-widest text-xs font-headline">Command</h2>
+<p class="text-on-surface-variant text-[10px] font-label tracking-tighter uppercase opacity-70">Sector Alpha-9</p>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 text-slate-500 pl-8 py-3 hover:bg-[#222a3a] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+<span class="font-medium text-sm">Strategic View</span>
+</a>
+<a class="flex items-center gap-3 text-[#FFC107] border-l-2 border-[#FFC107] pl-8 py-3 bg-[#222a3a] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">analytics</span>
+<span class="font-medium text-sm">Sector Analysis</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 pl-8 py-3 hover:bg-[#222a3a] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">security</span>
+<span class="font-medium text-sm">Threat Matrix</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 pl-8 py-3 hover:bg-[#222a3a] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">account_tree</span>
+<span class="font-medium text-sm">Resource Flow</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 pl-8 py-3 hover:bg-[#222a3a] hover:text-slate-200 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+<span class="font-medium text-sm">Institutional Data</span>
+</a>
+</nav>
+<div class="px-6 py-6 border-t border-outline-variant/10">
+<button class="w-full bg-[#FFC107] text-[#003909] font-bold py-2 rounded-lg text-sm hover:opacity-90 transition-all active:scale-95">Generate Briefing</button>
+</div>
+<div class="mt-auto px-8 py-4">
+<a class="flex items-center gap-3 text-slate-500 hover:text-error transition-all" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span class="font-medium text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 pt-24 min-h-screen px-8 pb-12">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex items-baseline gap-4 mb-2">
+<span class="text-primary-fixed-dim text-xs font-label tracking-[0.2em] uppercase">Intelligence Briefing // 402-GPI</span>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-black text-on-surface tracking-tighter max-w-2xl leading-none">
+                    Gender Parity <span class="text-primary-fixed-dim italic">Index (GPI)</span>
+</h1>
+<p class="text-on-surface-variant max-w-xl mt-4 font-body leading-relaxed text-sm">
+                    A metric measuring the relative access to education and economic participation of males and females, serving as a critical indicator for institutional stability and socioeconomic development.
+                </p>
+</header>
+<!-- Main Visual: The Balanced Scale -->
+<section class="bg-surface-container-low p-12 lg:p-20 mb-8 rounded-xl relative overflow-hidden group">
+<!-- Atmospheric Background Elements -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-10 left-10 w-64 h-64 border border-outline-variant rounded-full"></div>
+<div class="absolute bottom-10 right-10 w-96 h-96 border border-outline-variant rounded-full"></div>
+</div>
+<div class="relative flex flex-col items-center">
+<!-- Central Scale Illustration (Flat 2D Vector) -->
+<div class="w-full max-w-md flex flex-col items-center">
+<div class="relative w-full h-64 flex justify-center">
+<!-- Main Crossbar -->
+<div class="absolute top-1/2 left-0 right-0 h-1 bg-on-surface-variant/30 rounded-full"></div>
+<!-- Left Scale (Male) -->
+<div class="absolute left-0 top-[calc(50%-120px)] flex flex-col items-center">
+<div class="w-[2px] h-32 bg-on-surface-variant/30"></div>
+<div class="w-24 h-1 bg-on-surface-variant/30 rounded-full"></div>
+<div class="mt-4 flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-blue-400" data-weight="fill">man</span>
+<span class="mt-2 text-xs font-label uppercase tracking-widest text-on-surface-variant">Male Input</span>
+</div>
+</div>
+<!-- Right Scale (Female) -->
+<div class="absolute right-0 top-[calc(50%-120px)] flex flex-col items-center">
+<div class="w-[2px] h-32 bg-on-surface-variant/30"></div>
+<div class="w-24 h-1 bg-on-surface-variant/30 rounded-full"></div>
+<div class="mt-4 flex flex-col items-center">
+<span class="material-symbols-outlined text-6xl text-amber-400" data-weight="fill">woman</span>
+<span class="mt-2 text-xs font-label uppercase tracking-widest text-on-surface-variant">Female Input</span>
+</div>
+</div>
+<!-- Scale Base -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center">
+<div class="w-1 h-32 bg-on-surface-variant/50"></div>
+<div class="w-48 h-2 bg-on-surface-variant/50 rounded-t-full"></div>
+</div>
+</div>
+<!-- Formula Section -->
+<div class="mt-16 text-center">
+<div class="bg-surface-container-high px-8 py-6 rounded-lg border border-outline-variant/10 backdrop-blur-sm">
+<div class="font-headline text-2xl font-bold tracking-tight text-white mb-2">
+                                    GPI = <span class="text-amber-400">Female Adoption Rate</span> / <span class="text-blue-400">Male Adoption Rate</span>
+</div>
+<div class="h-[1px] w-12 bg-primary mx-auto mb-3"></div>
+<p class="text-on-surface-variant text-xs font-label tracking-widest uppercase">Fundamental Institutional Ratio</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Scenario Grid (Horizontal Bauhaus Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Parity -->
+<div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-primary transition-all hover:bg-surface-container">
+<div class="flex justify-between items-start mb-8">
+<div class="flex flex-col gap-2">
+<div class="relative w-16 h-8 flex items-center justify-center">
+<div class="w-full h-[1px] bg-on-surface-variant"></div>
+<div class="absolute left-0 w-4 h-[1px] bg-on-surface-variant -translate-y-2"></div>
+<div class="absolute right-0 w-4 h-[1px] bg-on-surface-variant -translate-y-2"></div>
+</div>
+<h3 class="text-white font-headline font-bold text-sm leading-tight">GPI = 1.0<br/>Perfect Parity</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">check_circle</span>
+</div>
+<p class="text-on-surface-variant text-xs leading-relaxed">
+                        Total gender balance achieved. Equitable distribution of resources and technology adoption across both segments.
+                    </p>
+</div>
+<!-- Under-Adoption Female -->
+<div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary transition-all hover:bg-surface-container">
+<div class="flex justify-between items-start mb-8">
+<div class="flex flex-col gap-2">
+<div class="relative w-16 h-8 flex items-center justify-center">
+<div class="w-full h-[1px] bg-on-surface-variant rotate-[15deg]"></div>
+<div class="absolute left-0 w-4 h-[1px] bg-on-surface-variant -translate-y-0 translate-x-1"></div>
+<div class="absolute right-0 w-4 h-[1px] bg-on-surface-variant -translate-y-4 -translate-x-1"></div>
+</div>
+<h3 class="text-white font-headline font-bold text-sm leading-tight">GPI &lt; 1.0<br/>Female Under-Adoption</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl">warning</span>
+</div>
+<p class="text-on-surface-variant text-xs leading-relaxed">
+                        Significant gender gap favoring males. Indicates potential barriers to access or cultural friction for female users.
+                    </p>
+</div>
+<!-- Under-Adoption Male -->
+<div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary transition-all hover:bg-surface-container">
+<div class="flex justify-between items-start mb-8">
+<div class="flex flex-col gap-2">
+<div class="relative w-16 h-8 flex items-center justify-center">
+<div class="w-full h-[1px] bg-on-surface-variant -rotate-[15deg]"></div>
+<div class="absolute right-0 w-4 h-[1px] bg-on-surface-variant translate-y-0 -translate-x-1"></div>
+<div class="absolute left-0 w-4 h-[1px] bg-on-surface-variant -translate-y-4 translate-x-1"></div>
+</div>
+<h3 class="text-white font-headline font-bold text-sm leading-tight">GPI &gt; 1.0<br/>Male Under-Adoption</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl">warning</span>
+</div>
+<p class="text-on-surface-variant text-xs leading-relaxed">
+                        Inverse gender gap favoring females. Requires strategic analysis of male segment disengagement or niche targeting.
+                    </p>
+</div>
+</div>
+<!-- Bento Meta Section -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+<div class="md:col-span-2 bg-surface-container-high p-6 rounded-xl flex items-center gap-6">
+<div class="h-12 w-1 bg-primary rounded-full"></div>
+<div>
+<div class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest mb-1">Global Benchmark</div>
+<div class="text-2xl font-headline font-black text-white">0.94 <span class="text-xs font-normal text-on-surface-variant ml-2">Avg. Index</span></div>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl text-center">
+<div class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest mb-1">Last Update</div>
+<div class="text-sm font-headline font-bold text-white">24 OCT 2023</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl text-center border border-primary/20">
+<div class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest mb-1">Confidence Score</div>
+<div class="text-sm font-headline font-bold text-primary">98.2% SIGMA</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on this editorial page as per shell visibility logic) -->
+</body></html>

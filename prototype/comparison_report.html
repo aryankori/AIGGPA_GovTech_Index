@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIGGPA Intelligence | Comparison Report</title>
+<!-- Google Fonts: Public Sans for Display, Inter for Data -->
+<link href="https://fonts.googleapis.com/css2?family=Public_Sans:wght@400;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#1B3B6F",
+                        "surface-container-highest": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "tertiary": "#3e1e00",
+                        "secondary-fixed": "#ffdf9e",
+                        "surface-container": "#eeeeee",
+                        "surface-tint": "#415e94",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-surface-variant": "#43474f",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-fixed-dim": "#fabd00",
+                        "secondary-container": "#FFC107",
+                        "on-primary-fixed": "#001a41",
+                        "on-primary-container": "#8aa7e1",
+                        "inverse-primary": "#acc7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c4c6d1",
+                        "surface-dim": "#dadada",
+                        "tertiary-fixed": "#ffdcc3",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#261a00",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "primary-fixed-dim": "#acc7ff",
+                        "on-tertiary-fixed-variant": "#6b3a09",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#5e3000",
+                        "primary-fixed": "#d8e2ff",
+                        "primary-container": "#1b3b6f",
+                        "on-tertiary-container": "#db9860",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary": "#785900",
+                        "on-primary-fixed-variant": "#28467b",
+                        "surface-variant": "#e2e2e2",
+                        "on-surface": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-container": "#6c5000",
+                        "outline": "#747780",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Public Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-[#0A1221] text-white min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#1B3B6F] flex justify-between items-center w-full px-8 py-4 fixed top-0 z-50">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-white">AIGGPA Intelligence</span>
+<nav class="hidden md:flex gap-6">
+<a class="font-['Public_Sans'] uppercase tracking-widest text-[0.75rem] font-bold text-white/70 hover:text-white transition-colors duration-150" href="#">Reports</a>
+<a class="font-['Public_Sans'] uppercase tracking-widest text-[0.75rem] font-bold text-[#FFC107] border-b-2 border-[#FFC107] pb-1" href="#">Analytics</a>
+<a class="font-['Public_Sans'] uppercase tracking-widest text-[0.75rem] font-bold text-white/70 hover:text-white transition-colors duration-150" href="#">Archives</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="bg-[#1B3B6F] border-none text-xs px-4 py-2 w-64 focus:ring-0 placeholder-white/30 text-white" placeholder="Search Archives..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-white hover:bg-[#1B3B6F] p-2 transition-colors duration-150">settings</button>
+<button class="material-symbols-outlined text-white hover:bg-[#1B3B6F] p-2 transition-colors duration-150">notifications</button>
+<div class="w-8 h-8 bg-[#FFC107] flex items-center justify-center font-bold text-[#1B3B6F]">JD</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#0A1221] flex flex-col z-40 pt-20 border-r border-white/10">
+<div class="px-6 py-8 border-b border-white/5">
+<h2 class="text-lg font-black text-white">MCP Research</h2>
+<p class="text-[10px] uppercase tracking-[0.1em] text-[#FFC107]">Precision Data Journalism</p>
+</div>
+<nav class="flex-1 py-6">
+<div class="mb-2">
+<a class="flex items-center gap-4 py-3 text-slate-400 pl-5 hover:bg-[#1B3B6F] transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-white">dashboard</span>
+<span class="font-['Inter'] font-medium text-sm tracking-normal">Dashboard</span>
+</a>
+</div>
+<div class="mb-2">
+<a class="flex items-center gap-4 py-3 text-white font-bold border-l-4 border-[#FFC107] pl-4 bg-[#1B3B6F] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">compare_arrows</span>
+<span class="font-['Inter'] font-medium text-sm tracking-normal">Comparisons</span>
+</a>
+</div>
+<div class="mb-2">
+<a class="flex items-center gap-4 py-3 text-slate-400 pl-5 hover:bg-[#1B3B6F] transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-white">receipt_long</span>
+<span class="font-['Inter'] font-medium text-sm tracking-normal">Data Ledger</span>
+</a>
+</div>
+<div class="mb-2">
+<a class="flex items-center gap-4 py-3 text-slate-400 pl-5 hover:bg-[#1B3B6F] transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-white">settings</span>
+<span class="font-['Inter'] font-medium text-sm tracking-normal">Settings</span>
+</a>
+</div>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 pt-20 flex-1 flex flex-col">
+<!-- Hero Header -->
+<section class="px-12 py-12 bg-[#1B3B6F]">
+<div class="max-w-6xl mx-auto">
+<span class="text-[#FFC107] font-['Inter'] text-[0.75rem] font-bold uppercase tracking-[0.2em] block mb-4">Operational Efficiency Metrics</span>
+<h1 class="text-[3.5rem] leading-[0.95] font-black tracking-tighter text-white mb-6 uppercase">The Speed of <br/>Intelligence</h1>
+<p class="text-white/60 font-['Inter'] max-w-2xl leading-relaxed">Comparative analysis of standard government data workflows versus the AIGGPA Institutional Ledger's MCP-Powered querying engine.</p>
+</div>
+</section>
+<!-- Infographic Section -->
+<section class="flex-1 flex flex-col relative">
+<div class="grid grid-cols-2 flex-1 min-h-[600px] items-stretch">
+<!-- Left Side: Traditional Query -->
+<div class="bg-[#0D182B] p-16 flex flex-col border-r border-white/5">
+<div class="mb-12">
+<div class="inline-block bg-error px-4 py-1 mb-4">
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-white">Traditional Query</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight">Manual Aggregation</h3>
+</div>
+<!-- Flow Container -->
+<div class="flex flex-col gap-8 flex-1 justify-center max-w-xs mx-auto w-full">
+<!-- Step 1 -->
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">person</span>
+</div>
+<span class="text-[0.7rem] uppercase tracking-widest text-white/50 font-bold">Research Analyst</span>
+</div>
+<div class="pl-6 h-8 border-l border-white/20 border-dashed"></div>
+<!-- Step 2 -->
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">table_chart</span>
+</div>
+<span class="text-[0.7rem] uppercase tracking-widest text-white/50 font-bold">Raw Excel Exports</span>
+</div>
+<div class="pl-6 h-8 border-l border-white/20 border-dashed"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">pivot_table_chart</span>
+</div>
+<span class="text-[0.7rem] uppercase tracking-widest text-white/50 font-bold">Pivot Table Logic</span>
+</div>
+<div class="pl-6 h-8 border-l border-white/20 border-dashed"></div>
+<!-- Step 4 -->
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">monitoring</span>
+</div>
+<span class="text-[0.7rem] uppercase tracking-widest text-white/50 font-bold">Manual Chart Gen</span>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+<span class="text-[0.7rem] uppercase tracking-widest text-error font-black">Latency</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="text-2xl font-black text-white">15 MINUTES</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: MCP-Powered Query -->
+<div class="bg-[#0A1221] p-16 flex flex-col">
+<div class="mb-12">
+<div class="inline-block bg-[#00A676] px-4 py-1 mb-4">
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-white">MCP-Powered Query</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight">Intelligence Layer</h3>
+</div>
+<!-- Flow Container -->
+<div class="flex flex-col gap-10 flex-1 justify-center max-w-xs mx-auto w-full">
+<!-- Step 1 -->
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-[#FFC107] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<span class="text-[0.7rem] uppercase tracking-widest text-[#FFC107] font-bold">Research Analyst</span>
+</div>
+<div class="pl-6 h-12 border-l-2 border-[#00A676]"></div>
+<!-- Step 2 -->
+<div class="flex items-start gap-6 bg-[#1B3B6F] p-4 relative">
+<div class="w-8 h-8 bg-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-sm">chat_bubble</span>
+</div>
+<p class="text-xs font-medium text-white italic leading-relaxed">
+                                "What's the adoption index for Health dept?"
+                            </p>
+</div>
+<div class="pl-6 h-12 border-l-2 border-[#00A676]"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[0.7rem] uppercase tracking-widest text-white font-bold">Instant Synthesis</span>
+<span class="text-[10px] text-[#00A676] font-mono">Status: Analysis Complete</span>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+<span class="text-[0.7rem] uppercase tracking-widest text-[#00A676] font-black">Performance</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#00A676]" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="text-2xl font-black text-white uppercase">5 Seconds</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Center Divider Callout -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-white text-primary px-8 py-6 shadow-2xl flex flex-col items-center border-4 border-primary">
+<span class="text-[0.65rem] font-black uppercase tracking-[0.3em] mb-1">Magnitude Increase</span>
+<span class="text-6xl font-black tracking-tighter leading-none">180X</span>
+<span class="text-xl font-bold uppercase tracking-widest mt-1">FASTER</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Grid (Bento Style) -->
+<section class="p-12 bg-[#F9F9F9] text-[#1B3B6F]">
+<div class="grid grid-cols-4 gap-0 max-w-6xl mx-auto border border-[#1B3B6F]/10">
+<div class="p-8 border-r border-[#1B3B6F]/10 bg-white">
+<p class="text-[10px] uppercase font-bold tracking-widest mb-4 opacity-50">Precision</p>
+<p class="text-4xl font-black mb-2">99.8%</p>
+<p class="text-xs leading-relaxed opacity-70">Cross-departmental data reconciliation accuracy.</p>
+</div>
+<div class="p-8 border-r border-[#1B3B6F]/10 bg-[#f3f3f3]">
+<p class="text-[10px] uppercase font-bold tracking-widest mb-4 opacity-50">Workload</p>
+<p class="text-4xl font-black mb-2">-94%</p>
+<p class="text-xs leading-relaxed opacity-70">Reduction in manual data entry for quarterly reports.</p>
+</div>
+<div class="p-8 border-r border-[#1B3B6F]/10 bg-white">
+<p class="text-[10px] uppercase font-bold tracking-widest mb-4 opacity-50">Sources</p>
+<p class="text-4xl font-black mb-2">42</p>
+<p class="text-xs leading-relaxed opacity-70">Active API integrations across federal ledgers.</p>
+</div>
+<div class="p-8 bg-[#f3f3f3]">
+<p class="text-[10px] uppercase font-bold tracking-widest mb-4 opacity-50">Latency</p>
+<p class="text-4xl font-black mb-2">&lt;1s</p>
+<p class="text-xs leading-relaxed opacity-70">Average internal cache refresh speed.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-6 px-8 flex justify-between items-center mt-auto bg-[#0A1221] border-t border-white/10">
+<div class="flex items-center gap-8">
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] text-slate-400">© 2024 AIGGPA Institutional Ledger. Bauhaus Precision Engine.</span>
+</div>
+<nav class="flex gap-6">
+<a class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] text-slate-400 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] text-slate-400 hover:text-white transition-colors" href="#">Data Ethics</a>
+</nav>
+</footer>
+</main>
+</body></html>

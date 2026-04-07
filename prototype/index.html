@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GovTech Adoption Index — AIGGPA Prototype</title>
+    <meta name="description" content="GovTech Adoption Index prototype for measuring IT adoption across government departments. AIGGPA Bhopal Internship Project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-emblem">
+                <svg viewBox="0 0 60 60" width="44" height="44">
+                    <circle cx="30" cy="30" r="28" fill="none" stroke="#FFC107" stroke-width="2"/>
+                    <circle cx="30" cy="30" r="20" fill="none" stroke="#FFC107" stroke-width="1.2"/>
+                    <circle cx="30" cy="30" r="6" fill="#FFC107"/>
+                    <g stroke="#FFC107" stroke-width="0.8">
+                        <line x1="30" y1="2" x2="30" y2="10"/><line x1="30" y1="50" x2="30" y2="58"/>
+                        <line x1="2" y1="30" x2="10" y2="30"/><line x1="50" y1="30" x2="58" y2="30"/>
+                        <line x1="9.7" y1="9.7" x2="15.3" y2="15.3"/><line x1="44.7" y1="44.7" x2="50.3" y2="50.3"/>
+                        <line x1="50.3" y1="9.7" x2="44.7" y2="15.3"/><line x1="15.3" y1="44.7" x2="9.7" y2="50.3"/>
+                    </g>
+                </svg>
+            </div>
+            <h1 class="logo-title">GovTech<br><span>Adoption Index</span></h1>
+            <p class="logo-sub">AIGGPA Bhopal Prototype</p>
+        </div>
+
+        <div class="nav-links">
+            <!-- Executive Pitch Link -->
+            <a href="executive_briefing.html" class="nav-link" style="border: 1px solid #FFC107; color: #FFC107; border-radius: 4px; margin-bottom: 12px; background: rgba(255,193,7,0.1);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span style="font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px;">Launch Pitch</span>
+            </a>
+
+            <a href="#" class="nav-link active" data-page="overview" id="nav-overview">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                <span>Overview</span>
+            </a>
+            <a href="#" class="nav-link" data-page="survey" id="nav-survey">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span>Survey Form</span>
+            </a>
+            <a href="#" class="nav-link" data-page="analytics" id="nav-analytics">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                <span>Analytics</span>
+            </a>
+            <a href="#" class="nav-link" data-page="data" id="nav-data">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                <span>Data Store</span>
+            </a>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="sidebar-badge">
+                <span class="badge-dot"></span>
+                <span id="responseCount">0</span> Responses
+            </div>
+            <p class="sidebar-credit">Internship Research Tool<br>April 2026</p>
+        </div>
+    </nav>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <h1>GovTech Index</h1>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <!-- ===================== OVERVIEW PAGE ===================== -->
+        <section class="page active" id="page-overview">
+            <div class="page-header">
+                <div>
+                    <h2>Project Overview</h2>
+                    <p class="page-subtitle">GovTech Adoption Index — Diagnostic Framework for IT Adoption in Government</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-gold" onclick="loadMockData()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Load Demo Data
+                    </button>
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div class="kpi-data">
+                        <span class="kpi-value" id="kpi-responses">0</span>
+                        <span class="kpi-label">Total Responses</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon gold">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <div class="kpi-data">
+                        <span class="kpi-value" id="kpi-avgindex">—</span>
+                        <span class="kpi-label">Avg. Adoption Index</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                    </div>
+                    <div class="kpi-data">
+                        <span class="kpi-value" id="kpi-depts">4</span>
+                        <span class="kpi-label">Departments</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <div class="kpi-data">
+                        <span class="kpi-value" id="kpi-tier1">—</span>
+                        <span class="kpi-label">Tier 1 (Active) %</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Tier Model -->
+            <div class="section-title">
+                <h3>The Three-Tier Adoption Model</h3>
+                <p>Every government employee is classified into one of three tiers</p>
+            </div>
+            <div class="tier-cards">
+                <div class="tier-card tier-1">
+                    <div class="tier-badge">TIER 1</div>
+                    <h4>Active Adopters</h4>
+                    <p class="hindi">सक्रिय उपयोगकर्ता</p>
+                    <p>Uses IT tools daily; e-Office, e-HRMS, iGOT integrated into workflow</p>
+                    <div class="tier-intervention">
+                        <span class="intervention-label">Intervention:</span>
+                        <span>Optimise & Retain</span>
+                    </div>
+                    <div class="tier-percent" id="tier1-pct">—</div>
+                </div>
+                <div class="tier-card tier-2">
+                    <div class="tier-badge">TIER 2</div>
+                    <h4>Hesitant Users</h4>
+                    <p class="hindi">संकोची उपयोगकर्ता</p>
+                    <p>Aware of tools, possibly trained, but defaults to paper/manual</p>
+                    <div class="tier-intervention">
+                        <span class="intervention-label">Intervention:</span>
+                        <span>Motivate + Remove Barriers</span>
+                    </div>
+                    <div class="tier-percent" id="tier2-pct">—</div>
+                </div>
+                <div class="tier-card tier-3">
+                    <div class="tier-badge">TIER 3</div>
+                    <h4>Unaware Non-Users</h4>
+                    <p class="hindi">अनजान गैर-उपयोगकर्ता</p>
+                    <p>No exposure, no training, no access — "Does not even know"</p>
+                    <div class="tier-intervention">
+                        <span class="intervention-label">Intervention:</span>
+                        <span>Awareness + Training + Hardware</span>
+                    </div>
+                    <div class="tier-percent" id="tier3-pct">—</div>
+                </div>
+            </div>
+
+            <!-- Department Overview -->
+            <div class="section-title">
+                <h3>Target Departments</h3>
+                <p>Selected across the Digitisation × Public Interaction matrix</p>
+            </div>
+            <div class="dept-grid">
+                <div class="dept-card" data-dept="Revenue">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #27AE60, #1E8449);">भू</div>
+                    <h4>Revenue / Land Records</h4>
+                    <p>भू-अभिलेख</p>
+                    <div class="dept-tools">Bhulekh · RCMS · e-District · e-Office</div>
+                    <div class="dept-maturity high">High Digitisation</div>
+                </div>
+                <div class="dept-card" data-dept="PWD">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #E67E22, #D35400);">लोक</div>
+                    <h4>Public Works / PWD</h4>
+                    <p>लोक निर्माण विभाग</p>
+                    <div class="dept-tools">e-Tendering · e-Office · PFMS</div>
+                    <div class="dept-maturity medium">Medium Digitisation</div>
+                </div>
+                <div class="dept-card" data-dept="Health">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">स्वा</div>
+                    <h4>Health / Public Hospitals</h4>
+                    <p>स्वास्थ्य विभाग</p>
+                    <div class="dept-tools">HMIS · Ayushman Bharat · CoWIN</div>
+                    <div class="dept-maturity low-medium">Low-Medium Digitisation</div>
+                </div>
+                <div class="dept-card" data-dept="Education">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #8E44AD, #6C3483);">शिक्</div>
+                    <h4>School Education</h4>
+                    <p>स्कूल शिक्षा विभाग</p>
+                    <div class="dept-tools">Diksha · iGOT · UDISE+</div>
+                    <div class="dept-maturity low">Low Digitisation</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SURVEY PAGE ===================== -->
+        <section class="page" id="page-survey">
+            <div class="page-header">
+                <div>
+                    <h2>Survey Form</h2>
+                    <p class="page-subtitle">GovTech Adoption Assessment — Data Collection Instrument</p>
+                </div>
+            </div>
+
+            <form id="surveyForm" class="survey-form" autocomplete="off">
+                <!-- Section A: Demographics -->
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <span class="section-number">A</span>
+                        <div>
+                            <h3>Demographics / जनसांख्यिकी</h3>
+                            <p>Respondent identification and categorisation</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="respondentName">Full Name <span class="hindi-label">पूरा नाम</span></label>
+                            <input type="text" id="respondentName" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Department <span class="hindi-label">विभाग</span></label>
+                            <select id="department" required>
+                                <option value="">Select Department</option>
+                                <option value="Revenue">Revenue / Land Records (भू-अभिलेख)</option>
+                                <option value="PWD">Public Works / PWD (लोक निर्माण विभाग)</option>
+                                <option value="Health">Health (स्वास्थ्य विभाग)</option>
+                                <option value="Education">School Education (स्कूल शिक्षा विभाग)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender <span class="hindi-label">लिंग</span></label>
+                            <select id="gender" required>
+                                <option value="">Select</option>
+                                <option value="Male">Male / पुरुष</option>
+                                <option value="Female">Female / महिला</option>
+                                <option value="Other">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ageGroup">Age Group <span class="hindi-label">आयु वर्ग</span></label>
+                            <select id="ageGroup" required>
+                                <option value="">Select</option>
+                                <option value="<30">Below 30</option>
+                                <option value="30-40">30 — 40</option>
+                                <option value="41-50">41 — 50</option>
+                                <option value="51+">51+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="grade">Grade / Class <span class="hindi-label">समूह</span></label>
+                            <select id="grade" required>
+                                <option value="">Select</option>
+                                <option value="Group A">Class I / Group A (IAS, Directors)</option>
+                                <option value="Group B">Class II / Group B (Section Officers)</option>
+                                <option value="Group C">Class III / Group C (UDC, LDC, DEO)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="education">Education <span class="hindi-label">शिक्षा</span></label>
+                            <select id="education" required>
+                                <option value="">Select</option>
+                                <option value="12th/Diploma">Up to 12th / Diploma</option>
+                                <option value="Graduate">Graduate (BA/BSc/BCom)</option>
+                                <option value="Post-Graduate">Post-Graduate (MA/MBA/MTech)</option>
+                                <option value="Professional">Professional / Technical (CA, Eng.)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Posting Location <span class="hindi-label">पोस्टिंग स्थान</span></label>
+                            <select id="location" required>
+                                <option value="">Select</option>
+                                <option value="State Capital">State Capital (Bhopal)</option>
+                                <option value="District HQ">District Headquarters</option>
+                                <option value="Tehsil/Block">Tehsil / Block Level</option>
+                                <option value="Field/Mobile">Field / Mobile Posting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceYears">Years of Service <span class="hindi-label">सेवा अवधि</span></label>
+                            <select id="serviceYears" required>
+                                <option value="">Select</option>
+                                <option value="0-5">0 — 5 years</option>
+                                <option value="6-15">6 — 15 years</option>
+                                <option value="16-25">16 — 25 years</option>
+                                <option value="26+">26+ years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section B: Quantitative Metrics -->
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <span class="section-number">B</span>
+                        <div>
+                            <h3>IT Usage Metrics / आईटी उपयोग मापदंड</h3>
+                            <p>Quantitative indicators of technology adoption</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="digitalPenetration">Digital Penetration Rate (%) <span class="hint">% tasks done digitally</span></label>
+                            <input type="number" id="digitalPenetration" min="0" max="100" placeholder="0 — 100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginFrequency">Platform Login Frequency <span class="hint">logins/month</span></label>
+                            <input type="number" id="loginFrequency" min="0" max="200" placeholder="e.g. 15" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="igotCompletion">iGOT Course Completion Rate (%) <span class="hint">courses completed / assigned</span></label>
+                            <input type="number" id="igotCompletion" min="0" max="100" placeholder="0 — 100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hardwareRatio">Hardware Availability (%) <span class="hint">computers / employees</span></label>
+                            <input type="number" id="hardwareRatio" min="0" max="100" placeholder="0 — 100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="connectivityUptime">Connectivity Uptime (%) <span class="hint">% work hours with internet</span></label>
+                            <input type="number" id="connectivityUptime" min="0" max="100" placeholder="0 — 100" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section C: Qualitative Metrics (Likert) -->
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <span class="section-number">C</span>
+                        <div>
+                            <h3>Perceptions & Attitudes / धारणा एवं दृष्टिकोण</h3>
+                            <p>Rate each statement on a scale of 1 (Strongly Disagree) to 5 (Strongly Agree)</p>
+                        </div>
+                    </div>
+
+                    <div class="likert-container">
+                        <div class="likert-item">
+                            <p class="likert-question">"I feel confident using e-Office for my daily work"</p>
+                            <p class="likert-hindi">मुझे अपने दैनिक कार्य के लिए ई-ऑफिस का उपयोग करने में आत्मविश्वास है</p>
+                            <div class="likert-scale" data-metric="confidence">
+                                <label><input type="radio" name="confidence" value="1" required><span>1</span><small>Strongly Disagree</small></label>
+                                <label><input type="radio" name="confidence" value="2"><span>2</span><small>Disagree</small></label>
+                                <label><input type="radio" name="confidence" value="3"><span>3</span><small>Neutral</small></label>
+                                <label><input type="radio" name="confidence" value="4"><span>4</span><small>Agree</small></label>
+                                <label><input type="radio" name="confidence" value="5"><span>5</span><small>Strongly Agree</small></label>
+                            </div>
+                        </div>
+
+                        <div class="likert-item">
+                            <p class="likert-question">"I find government IT tools difficult to use"</p>
+                            <p class="likert-hindi">मुझे सरकारी आईटी उपकरण कठिन लगते हैं</p>
+                            <div class="likert-scale" data-metric="frustration">
+                                <label><input type="radio" name="frustration" value="1" required><span>1</span><small>Strongly Disagree</small></label>
+                                <label><input type="radio" name="frustration" value="2"><span>2</span><small>Disagree</small></label>
+                                <label><input type="radio" name="frustration" value="3"><span>3</span><small>Neutral</small></label>
+                                <label><input type="radio" name="frustration" value="4"><span>4</span><small>Agree</small></label>
+                                <label><input type="radio" name="frustration" value="5"><span>5</span><small>Strongly Agree</small></label>
+                            </div>
+                        </div>
+
+                        <div class="likert-item">
+                            <p class="likert-question">"I would use IT tools more if trained properly"</p>
+                            <p class="likert-hindi">यदि उचित प्रशिक्षण मिले तो मैं आईटी उपकरणों का अधिक उपयोग करूँगा</p>
+                            <div class="likert-scale" data-metric="willingness">
+                                <label><input type="radio" name="willingness" value="1" required><span>1</span><small>Strongly Disagree</small></label>
+                                <label><input type="radio" name="willingness" value="2"><span>2</span><small>Disagree</small></label>
+                                <label><input type="radio" name="willingness" value="3"><span>3</span><small>Neutral</small></label>
+                                <label><input type="radio" name="willingness" value="4"><span>4</span><small>Agree</small></label>
+                                <label><input type="radio" name="willingness" value="5"><span>5</span><small>Strongly Agree</small></label>
+                            </div>
+                        </div>
+
+                        <div class="likert-item">
+                            <p class="likert-question">"My supervisor encourages digital tool usage"</p>
+                            <p class="likert-hindi">मेरे पर्यवेक्षक डिजिटल उपकरणों के उपयोग को प्रोत्साहित करते हैं</p>
+                            <div class="likert-scale" data-metric="supervisorMandate">
+                                <label><input type="radio" name="supervisorMandate" value="1" required><span>1</span><small>Strongly Disagree</small></label>
+                                <label><input type="radio" name="supervisorMandate" value="2"><span>2</span><small>Disagree</small></label>
+                                <label><input type="radio" name="supervisorMandate" value="3"><span>3</span><small>Neutral</small></label>
+                                <label><input type="radio" name="supervisorMandate" value="4"><span>4</span><small>Agree</small></label>
+                                <label><input type="radio" name="supervisorMandate" value="5"><span>5</span><small>Strongly Agree</small></label>
+                            </div>
+                        </div>
+
+                        <div class="likert-item">
+                            <p class="likert-question">"My colleagues' IT usage influences my own"</p>
+                            <p class="likert-hindi">मेरे सहकर्मियों का आईटी उपयोग मेरे उपयोग को प्रभावित करता है</p>
+                            <div class="likert-scale" data-metric="peerInfluence">
+                                <label><input type="radio" name="peerInfluence" value="1" required><span>1</span><small>Strongly Disagree</small></label>
+                                <label><input type="radio" name="peerInfluence" value="2"><span>2</span><small>Disagree</small></label>
+                                <label><input type="radio" name="peerInfluence" value="3"><span>3</span><small>Neutral</small></label>
+                                <label><input type="radio" name="peerInfluence" value="4"><span>4</span><small>Agree</small></label>
+                                <label><input type="radio" name="peerInfluence" value="5"><span>5</span><small>Strongly Agree</small></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Awareness Checklist -->
+                    <div class="form-group awareness-group">
+                        <label>Platform Awareness Checklist <span class="hindi-label">प्लेटफ़ॉर्म जागरूकता</span></label>
+                        <p class="hint" style="margin-bottom: 12px;">Check all platforms you are aware of:</p>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="e-Office"> e-Office</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="e-HRMS"> e-HRMS</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="iGOT"> iGOT Karmayogi</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="SPARROW"> SPARROW/APAR</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="GeM"> GeM</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="PFMS"> PFMS</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="CPGRAMS"> CPGRAMS</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="Parichay"> Parichay SSO</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="AEBAS"> AEBAS</label>
+                            <label class="checkbox-label"><input type="checkbox" name="awareness" value="DSC"> Digital Signature</label>
+                        </div>
+                    </div>
+
+                    <!-- Paper Dependency -->
+                    <div class="form-group">
+                        <label for="paperDependency">Paper Dependency <span class="hindi-label">कागज़ पर निर्भरता</span></label>
+                        <p class="hint" style="margin-bottom: 8px;">"How often do you print digital files for physical signatures?"</p>
+                        <select id="paperDependency" required>
+                            <option value="">Select frequency</option>
+                            <option value="1">Never — fully digital</option>
+                            <option value="2">Rarely (less than once a week)</option>
+                            <option value="3">Sometimes (a few times a week)</option>
+                            <option value="4">Often (daily)</option>
+                            <option value="5">Always — every file is printed</option>
+                        </select>
+                    </div>
+
+                    <!-- Barrier Ranking -->
+                    <div class="form-group">
+                        <label>Primary Barrier to IT Adoption <span class="hindi-label">मुख्य बाधा</span></label>
+                        <select id="primaryBarrier" required>
+                            <option value="">Select the biggest barrier</option>
+                            <option value="No Hardware">No Hardware / हार्डवेयर नहीं</option>
+                            <option value="No Training">No Training / प्रशिक्षण नहीं</option>
+                            <option value="No Internet">No Internet / इंटरनेट नहीं</option>
+                            <option value="No Need">No Need Perceived / आवश्यकता नहीं</option>
+                            <option value="Fear/Discomfort">Fear / Discomfort / भय</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-outline">Clear Form</button>
+                    <button type="submit" class="btn btn-gold btn-lg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        Submit Response
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Toast -->
+            <div class="toast" id="toast">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Response saved successfully!</span>
+            </div>
+        </section>
+
+        <!-- ===================== ANALYTICS PAGE ===================== -->
+        <section class="page" id="page-analytics">
+            <div class="page-header">
+                <div>
+                    <h2>Analytics Dashboard</h2>
+                    <p class="page-subtitle">GovTech Adoption Index — Visual Analysis of Collected Data</p>
+                </div>
+            </div>
+
+            <div class="analytics-empty" id="analyticsEmpty">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                <h3>No Data Yet</h3>
+                <p>Submit survey responses or load demo data to see analytics.</p>
+                <button class="btn btn-gold" onclick="loadMockData()">Load Demo Data</button>
+            </div>
+
+            <div class="analytics-grid" id="analyticsGrid" style="display:none;">
+                <!-- Adoption Index by Department -->
+                <div class="chart-card wide">
+                    <h4>GovTech Adoption Index by Department</h4>
+                    <p class="chart-subtitle">Composite score (0-100) based on all collected metrics</p>
+                    <div class="chart-container">
+                        <canvas id="chartAdoptionIndex"></canvas>
+                    </div>
+                </div>
+
+                <!-- Tier Distribution -->
+                <div class="chart-card">
+                    <h4>Tier Distribution</h4>
+                    <p class="chart-subtitle">Employee classification across three tiers</p>
+                    <div class="chart-container square">
+                        <canvas id="chartTierDist"></canvas>
+                    </div>
+                </div>
+
+                <!-- Gender Split -->
+                <div class="chart-card">
+                    <h4>Gender Distribution</h4>
+                    <p class="chart-subtitle">Response breakdown by gender</p>
+                    <div class="chart-container square">
+                        <canvas id="chartGender"></canvas>
+                    </div>
+                </div>
+
+                <!-- Age Group Distribution -->
+                <div class="chart-card">
+                    <h4>Age Group Distribution</h4>
+                    <p class="chart-subtitle">Respondents by age bracket</p>
+                    <div class="chart-container square">
+                        <canvas id="chartAge"></canvas>
+                    </div>
+                </div>
+
+                <!-- Barriers -->
+                <div class="chart-card">
+                    <h4>Primary Barriers to IT Adoption</h4>
+                    <p class="chart-subtitle">Most cited barriers across all respondents</p>
+                    <div class="chart-container square">
+                        <canvas id="chartBarriers"></canvas>
+                    </div>
+                </div>
+
+                <!-- Likert Averages Radar -->
+                <div class="chart-card wide">
+                    <h4>Perception Scores by Department</h4>
+                    <p class="chart-subtitle">Average Likert scores (1-5) for qualitative metrics</p>
+                    <div class="chart-container">
+                        <canvas id="chartPerceptions"></canvas>
+                    </div>
+                </div>
+
+                <!-- Grade vs Adoption -->
+                <div class="chart-card wide">
+                    <h4>Adoption Index by Grade Level</h4>
+                    <p class="chart-subtitle">Comparing Group A, B, and C adoption scores</p>
+                    <div class="chart-container">
+                        <canvas id="chartGradeAdoption"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DATA PAGE ===================== -->
+        <section class="page" id="page-data">
+            <div class="page-header">
+                <div>
+                    <h2>Data Store</h2>
+                    <p class="page-subtitle">All collected survey responses — stored in browser localStorage</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-outline" onclick="exportCSV()" id="btnExport">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Export CSV
+                    </button>
+                    <button class="btn btn-danger" onclick="clearAllData()" id="btnClear">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+                        Clear All
+                    </button>
+                </div>
+            </div>
+
+            <!-- Data Pipeline Visual -->
+            <div class="pipeline-visual">
+                <div class="pipeline-step">
+                    <div class="pipeline-icon collect">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <span>Collect</span>
+                    <small>Survey Form</small>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon store">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
+                    <span>Store</span>
+                    <small>localStorage</small>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon analyze">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <span>Analyze</span>
+                    <small>Chart.js</small>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon export">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <span>Export</span>
+                    <small>CSV / Excel</small>
+                </div>
+            </div>
+
+            <!-- Storage Info -->
+            <div class="storage-info">
+                <div class="storage-stat">
+                    <span class="storage-label">Storage Engine</span>
+                    <span class="storage-value">Browser localStorage</span>
+                </div>
+                <div class="storage-stat">
+                    <span class="storage-label">Records Stored</span>
+                    <span class="storage-value" id="storageCount">0</span>
+                </div>
+                <div class="storage-stat">
+                    <span class="storage-label">Storage Used</span>
+                    <span class="storage-value" id="storageSize">0 KB</span>
+                </div>
+                <div class="storage-stat">
+                    <span class="storage-label">Last Updated</span>
+                    <span class="storage-value" id="storageLastUpdate">—</span>
+                </div>
+            </div>
+
+            <!-- Filter bar -->
+            <div class="filter-bar">
+                <select id="filterDept" onchange="renderDataTable()">
+                    <option value="all">All Departments</option>
+                    <option value="Revenue">Revenue</option>
+                    <option value="PWD">PWD</option>
+                    <option value="Health">Health</option>
+                    <option value="Education">Education</option>
+                </select>
+                <select id="filterGrade" onchange="renderDataTable()">
+                    <option value="all">All Grades</option>
+                    <option value="Group A">Group A</option>
+                    <option value="Group B">Group B</option>
+                    <option value="Group C">Group C</option>
+                </select>
+            </div>
+
+            <!-- Data Table -->
+            <div class="data-table-wrapper">
+                <table class="data-table" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Grade</th>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>Location</th>
+                            <th>Digital %</th>
+                            <th>Confidence</th>
+                            <th>Awareness</th>
+                            <th>Tier</th>
+                            <th>Index</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody">
+                    </tbody>
+                </table>
+                <div class="data-empty" id="dataEmpty">
+                    <p>No responses collected yet. Use the Survey Form or load demo data.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

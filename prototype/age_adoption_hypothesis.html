@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Age-Adoption Hypothesis | AIGGPA Editorial Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1B3B6F;
+        }
+        .headline-font {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .chart-grid-line {
+            border-bottom: 0.5px solid rgba(196, 198, 209, 0.2);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1a1c1c",
+                      "surface-container": "#eeeeee",
+                      "outline-variant": "#c4c6d1",
+                      "surface": "#f9f9f9",
+                      "surface-dim": "#dadada",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#261a00",
+                      "secondary-fixed-dim": "#fabd00",
+                      "surface-tint": "#415e94",
+                      "surface-variant": "#e2e2e2",
+                      "primary-container": "#1B3B6F",
+                      "secondary": "#785900",
+                      "on-secondary-fixed-variant": "#5b4300",
+                      "on-tertiary-container": "#db9860",
+                      "primary-fixed": "#d8e2ff",
+                      "surface-bright": "#f9f9f9",
+                      "inverse-on-surface": "#f1f1f1",
+                      "tertiary-container": "#5e3000",
+                      "primary": "#1B3B6F",
+                      "on-primary-container": "#8aa7e1",
+                      "secondary-container": "#FFC107",
+                      "on-surface": "#1a1c1c",
+                      "on-primary-fixed-variant": "#28467b",
+                      "on-tertiary-fixed-variant": "#6b3a09",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#2f1500",
+                      "tertiary": "#3e1e00",
+                      "on-error": "#ffffff",
+                      "outline": "#747780",
+                      "on-primary-fixed": "#001a41",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#43474f",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#acc7ff",
+                      "surface-container-highest": "#e2e2e2",
+                      "primary-fixed-dim": "#acc7ff",
+                      "tertiary-fixed-dim": "#ffb77d",
+                      "tertiary-fixed": "#ffdcc3",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdf9e",
+                      "background": "#f9f9f9",
+                      "surface-container-low": "#f3f3f3",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-container": "#6c5000",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Public Sans"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-primary dark:bg-slate-950 text-white selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-[#1B3B6F] dark:bg-slate-950 flex justify-between items-center w-full px-8 h-16 fixed top-0 z-50">
+<div class="font-['Public_Sans'] text-xl font-black text-white tracking-tight">AIGGPA</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-xs font-bold text-white/80 hover:text-white pb-1 transition-colors duration-150" href="#">Summary</a>
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-xs font-bold text-white/80 hover:text-white pb-1 transition-colors duration-150" href="#">Indices</a>
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-xs font-bold text-[#FFC107] border-b-2 border-[#FFC107] pb-1" href="#">Methodology</a>
+</nav>
+<div class="flex items-center space-x-6 text-[#FFC107]">
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#1B3B6F] p-2 transition-colors duration-150" data-icon="download">download</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#1B3B6F] p-2 transition-colors duration-150" data-icon="share">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#1B3B6F] p-2 transition-colors duration-150" data-icon="print">print</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#F3F3F3] dark:bg-slate-900 flex flex-col p-0 z-40 hidden md:flex">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="font-['Public_Sans'] font-bold text-[#1B3B6F] dark:text-white uppercase text-xs tracking-widest">Visualizations</div>
+<div class="font-['Inter'] text-[10px] tracking-wide text-slate-500 dark:text-slate-400 mt-1 uppercase">Analytical Ledger</div>
+</div>
+<div class="flex flex-col flex-grow py-4">
+<a class="flex items-center px-6 py-4 font-['Inter'] text-sm tracking-wide text-slate-600 dark:text-slate-400 hover:bg-[#EEEEEE] dark:hover:bg-slate-800 transition-all group" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="analytics">analytics</span>
+                Adoption Index
+            </a>
+<a class="flex items-center px-6 py-4 font-['Inter'] text-sm tracking-wide text-slate-600 dark:text-slate-400 hover:bg-[#EEEEEE] dark:hover:bg-slate-800 transition-all group" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="grid_view">grid_view</span>
+                Matrix
+            </a>
+<a class="flex items-center px-6 py-4 font-['Inter'] text-sm tracking-wide bg-white dark:bg-slate-800 text-[#1B3B6F] dark:text-[#FFC107] font-bold border-r-4 border-[#1B3B6F] dark:border-[#FFC107] transition-all scale-[0.99]" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="query_stats">query_stats</span>
+                Age Hypothesis
+            </a>
+</div>
+<div class="mt-auto p-6">
+<div class="bg-primary-container p-4">
+<p class="text-[10px] font-bold uppercase tracking-widest text-white mb-2">Current Status</p>
+<div class="flex items-center text-[#FFC107]">
+<div class="w-2 h-2 bg-[#FFC107] rounded-full mr-2"></div>
+<span class="text-xs font-bold uppercase">Live Analysis</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-16 min-h-screen bg-surface dark:bg-slate-950">
+<div class="max-w-7xl mx-auto p-8 md:p-12">
+<!-- Editorial Header -->
+<div class="mb-12 border-l-4 border-secondary-container pl-6">
+<h4 class="font-label text-xs uppercase tracking-[0.2em] text-[#1B3B6F]/60 dark:text-white/40 mb-2">Section 04 // Demographic Projections</h4>
+<h1 class="headline-font text-5xl md:text-6xl font-black text-[#1B3B6F] dark:text-white tracking-tighter leading-none mb-4">
+                    Age-Adoption Hypothesis
+                </h1>
+<p class="font-body text-xl text-[#1B3B6F]/80 dark:text-slate-300 max-w-3xl leading-relaxed">
+                    Quantifying the inverse correlation between biological age and technological assimilation within industrial leadership structures.
+                </p>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Chart Section (Asymmetric Bento Grid Element) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest dark:bg-slate-900 p-8 shadow-sm">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h3 class="font-headline text-lg font-bold text-[#1B3B6F] dark:text-white uppercase tracking-tight">IT Adoption Level Matrix</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest">Aggregated Metric Units</p>
+</div>
+<div class="flex space-x-4">
+<div class="flex items-center text-[10px] font-bold uppercase tracking-tighter text-[#1B3B6F] dark:text-white">
+<span class="w-3 h-3 bg-[#1B3B6F] mr-2"></span> Native
+                            </div>
+<div class="flex items-center text-[10px] font-bold uppercase tracking-tighter text-slate-400">
+<span class="w-3 h-3 bg-slate-300 mr-2"></span> Projected
+                            </div>
+</div>
+</div>
+<!-- Vertical Bar Chart Container -->
+<div class="relative h-[450px] w-full flex items-end justify-between px-4 pb-8">
+<!-- Y-Axis Label -->
+<div class="absolute -left-12 top-1/2 -rotate-90 origin-center text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 whitespace-nowrap">
+                            Expected IT Adoption Level
+                        </div>
+<!-- Horizontal Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-8">
+<div class="chart-grid-line w-full h-0"></div>
+<div class="chart-grid-line w-full h-0"></div>
+<div class="chart-grid-line w-full h-0"></div>
+<div class="chart-grid-line w-full h-0"></div>
+<div class="chart-grid-line w-full h-0 border-[#1B3B6F]/20"></div>
+</div>
+<!-- Bars -->
+<div class="relative flex flex-col items-center group w-1/5">
+<div class="text-[10px] font-bold text-[#1B3B6F] dark:text-white mb-2 opacity-0 group-hover:opacity-100 transition-opacity">94.2%</div>
+<div class="w-full bg-[#1B3B6F] h-[94%] relative">
+<div class="absolute top-0 right-0 w-2 h-2 bg-[#FFC107]"></div>
+</div>
+<div class="mt-4 text-center">
+<div class="font-headline text-xs font-black text-[#1B3B6F] dark:text-white uppercase italic tracking-tighter leading-none">Below 30</div>
+<div class="text-[9px] text-slate-500 uppercase font-bold mt-1 tracking-widest">Digital Native</div>
+</div>
+</div>
+<div class="relative flex flex-col items-center group w-1/5">
+<div class="text-[10px] font-bold text-[#1B3B6F] dark:text-white mb-2 opacity-0 group-hover:opacity-100 transition-opacity">68.5%</div>
+<div class="w-full bg-emerald-700 h-[68%]"></div>
+<div class="mt-4 text-center">
+<div class="font-headline text-xs font-black text-[#1B3B6F] dark:text-white uppercase italic tracking-tighter leading-none">30-40</div>
+<div class="text-[9px] text-slate-500 uppercase font-bold mt-1 tracking-widest">Early-Mid Career</div>
+</div>
+</div>
+<div class="relative flex flex-col items-center group w-1/5">
+<div class="text-[10px] font-bold text-[#1B3B6F] dark:text-white mb-2 opacity-0 group-hover:opacity-100 transition-opacity">42.1%</div>
+<div class="w-full bg-orange-600 h-[42%]"></div>
+<div class="mt-4 text-center">
+<div class="font-headline text-xs font-black text-[#1B3B6F] dark:text-white uppercase italic tracking-tighter leading-none">41-50</div>
+<div class="text-[9px] text-slate-500 uppercase font-bold mt-1 tracking-widest">Mid-Career Transition</div>
+</div>
+</div>
+<div class="relative flex flex-col items-center group w-1/5">
+<div class="text-[10px] font-bold text-[#1B3B6F] dark:text-white mb-2 opacity-0 group-hover:opacity-100 transition-opacity">18.9%</div>
+<div class="w-full bg-rose-800 h-[19%]"></div>
+<div class="mt-4 text-center">
+<div class="font-headline text-xs font-black text-[#1B3B6F] dark:text-white uppercase italic tracking-tighter leading-none">51+</div>
+<div class="text-[9px] text-slate-500 uppercase font-bold mt-1 tracking-widest">Late-Career</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Executive Analysis Side Section -->
+<div class="col-span-12 lg:col-span-4 flex flex-col space-y-8">
+<!-- Insight Card 1 -->
+<div class="bg-primary p-8 text-white flex flex-col h-full border-l-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-container mb-6 text-4xl" data-icon="lightbulb">lightbulb</span>
+<h2 class="font-headline text-2xl font-black uppercase tracking-tight mb-4 leading-tight">Executive Analysis</h2>
+<div class="space-y-4 font-body text-sm text-slate-300 leading-relaxed">
+<p>
+                                The data reveals a <span class="text-secondary-container font-bold italic">precipitous decline</span> in adoption readiness as professional tenure increases. While the "Digital Native" cohort exhibits a nearly frictionless interface with new IT protocols, the "Late-Career" demographic shows a resistance coefficient that is nearly 5x higher.
+                            </p>
+<p>
+                                Strategic interventions must prioritize bridge-building programs that translate native digital intuition into established mid-to-late career workflows.
+                            </p>
+</div>
+<div class="mt-auto pt-8 border-t border-white/10 flex items-center justify-between">
+<div class="text-[10px] uppercase tracking-widest font-bold opacity-60">Verified by AIGGPA Insights</div>
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+</div>
+</div>
+<!-- Visual Accent (Editorial Image Placeholder) -->
+<div class="h-48 relative overflow-hidden bg-slate-200">
+<img alt="Abstract architectural lines and blue data visualizations representing structured information" class="w-full h-full object-cover grayscale contrast-125" data-alt="abstract architectural blueprint lines crossing blue digital data points in a minimalist swiss style layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJg1cK_lDyopzFZHQ25fFv1r3BCq32gOHrI5emcAQYhjnN8v9_eemnea_pNjmwNt5UlGKo1J_vnxaKBkgP0Ys30dNStA76RytOqIEpKgqm4imh8lA1_6C-MwokLnfOE0DF0Tek8Nm4kTdMGCvHJJGNKN3Jta4iD7WczEwriStmLQtn3BSrtX-1t1tqTZcAuKukPxUjNxsAIzRZ878-v-OdYdecEZ1Wgb3s5xAtr5ON82Yl3CMr4RnZtS_ZcveyT3ygUlKEblJst4s"/>
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<div class="text-[8px] font-black uppercase tracking-[0.2em] text-[#1B3B6F] bg-[#FFC107] px-2 py-1 inline-block">Fig 12.A // Structural Rigidity</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Metrics Table (Zebra Striping) -->
+<div class="mt-12 overflow-hidden border border-outline-variant/10">
+<div class="bg-surface-container-highest dark:bg-slate-800 p-4">
+<h4 class="font-headline text-xs font-bold uppercase tracking-widest text-[#1B3B6F] dark:text-white">Comparative Longitudinal Data</h4>
+</div>
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container dark:bg-slate-900 border-b border-outline-variant/20 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+<tr>
+<th class="px-6 py-4">Demographic Tier</th>
+<th class="px-6 py-4">Index Value</th>
+<th class="px-6 py-4">Friction Coeff.</th>
+<th class="px-6 py-4">Delta 2023-24</th>
+</tr>
+</thead>
+<tbody class="font-body text-xs text-slate-700 dark:text-slate-300">
+<tr class="bg-surface dark:bg-slate-950 border-b border-outline-variant/10">
+<td class="px-6 py-4 font-bold text-[#1B3B6F] dark:text-[#FFC107]">Digital Native</td>
+<td class="px-6 py-4">0.94</td>
+<td class="px-6 py-4">0.12</td>
+<td class="px-6 py-4 text-emerald-600 font-bold">+4.2%</td>
+</tr>
+<tr class="bg-surface-container-low dark:bg-slate-900/50 border-b border-outline-variant/10">
+<td class="px-6 py-4 font-bold text-[#1B3B6F] dark:text-[#FFC107]">Early-Mid Career</td>
+<td class="px-6 py-4">0.68</td>
+<td class="px-6 py-4">0.34</td>
+<td class="px-6 py-4 text-emerald-600 font-bold">+1.8%</td>
+</tr>
+<tr class="bg-surface dark:bg-slate-950 border-b border-outline-variant/10">
+<td class="px-6 py-4 font-bold text-[#1B3B6F] dark:text-[#FFC107]">Mid-Career Transition</td>
+<td class="px-6 py-4">0.42</td>
+<td class="px-6 py-4">0.58</td>
+<td class="px-6 py-4 text-rose-600 font-bold">-0.4%</td>
+</tr>
+<tr class="bg-surface-container-low dark:bg-slate-900/50">
+<td class="px-6 py-4 font-bold text-[#1B3B6F] dark:text-[#FFC107]">Late-Career</td>
+<td class="px-6 py-4">0.18</td>
+<td class="px-6 py-4">0.82</td>
+<td class="px-6 py-4 text-rose-600 font-bold">-2.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Methodology Anchor -->
+<footer class="mt-12 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary/40" data-icon="copyright">copyright</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-[#1B3B6F]/40 dark:text-white/40">2024 AIGGPA Editorial Group</span>
+</div>
+<div class="flex space-x-6">
+<a class="text-[10px] font-bold uppercase tracking-widest text-[#1B3B6F] dark:text-slate-400 hover:text-secondary-container transition-colors" href="#">Dataset Access</a>
+<a class="text-[10px] font-bold uppercase tracking-widest text-[#1B3B6F] dark:text-slate-400 hover:text-secondary-container transition-colors" href="#">Peer Review</a>
+<a class="text-[10px] font-bold uppercase tracking-widest text-[#1B3B6F] dark:text-slate-400 hover:text-secondary-container transition-colors" href="#">Contact Analysts</a>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

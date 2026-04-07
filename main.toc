@@ -1,0 +1,34 @@
+\contentsline {part}{I\hspace {1em}HR--IT Integration in the Government Sector}{3}{part.1}%
+\contentsline {section}{\numberline {1}Introduction \& Context}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}The Scale of India's Government Workforce ({\hindifont भारत सरकार का कार्यबल})}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}What is HR--IT Integration? ({\hindifont मानव संसाधन-सूचना प्रौद्योगिकी एकीकरण क्या है?})}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Key Digital Platforms Powering HR--IT Integration}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}e-HRMS (Electronic Human Resource Management System)}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Core Modules}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Strategic Capabilities}{5}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}e-Office ({\hindifont ई-कार्यालय})}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Verified Statistics}{6}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}iGOT Karmayogi (Mission Karmayogi / {\hindifont मिशन कर्मयोगी})}{7}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Verified Growth Statistics}{7}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}Other Key Platforms in the HR--IT Ecosystem}{9}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Institutional Architecture for HR--IT in Madhya Pradesh ({\hindifont मध्य प्रदेश})}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Key MP E-Governance Initiatives}{11}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Theoretical \& Analytical Frameworks}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Technology-Organization-Environment (TOE) Framework}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}2nd Administrative Reforms Commission -- 11th Report}{12}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Challenges in HR--IT Integration}{13}{section.5}%
+\contentsline {part}{II\hspace {1em}Assessment of Class I, II \& III Officials: Technology Usage}{14}{part.2}%
+\contentsline {section}{\numberline {6}Classification of Government Officials ({\hindifont सरकारी अधिकारियों का वर्गीकरण})}{14}{section.6}%
+\contentsline {section}{\numberline {7}Technology Assessment by Class/Group ({\hindifont वर्ग/समूह अनुसार प्रौद्योगिकी मूल्यांकन})}{14}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Class I / Group A: Senior Leadership \& Executive ({\hindifont वरिष्ठ नेतृत्व})}{14}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Class II / Group B: Middle Management ({\hindifont मध्यम प्रबंधन})}{15}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Class III / Group C: Operational / Clerical / Technical ({\hindifont लिपिकीय/तकनीकी})}{16}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Comparative Assessment Matrix}{17}{section.8}%
+\contentsline {section}{\numberline {9}Key Findings from National Assessments}{18}{section.9}%
+\contentsline {subsection}{\numberline {9.1}NeSDA (National e-Service Delivery Assessment / {\hindifont राष्ट्रीय ई-सेवा वितरण मूल्यांकन})}{18}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}iGOT Data as a Proxy for Technology Engagement}{19}{subsection.9.2}%
+\contentsline {section}{\numberline {10}HR--IT Integration Ecosystem -- Architectural Overview}{19}{section.10}%
+\contentsline {section}{\numberline {11}Recommendations for Internship Research}{19}{section.11}%
+\contentsline {subsection}{\numberline {11.1}For HR--IT Integration Research at AIGGPA ({\hindifont एआईजीजीपीए में अनुसंधान})}{19}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}For Technology Assessment of Officials ({\hindifont अधिकारियों का प्रौद्योगिकी मूल्यांकन})}{20}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Glossary ({\hindifont शब्दावली})}{20}{section.12}%

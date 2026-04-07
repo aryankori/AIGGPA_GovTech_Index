@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIGGPA GovTech Index - Adoption Score</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#1B3B6F",
+                        "secondary": "#FFC107",
+                        "tertiary-fixed": "#ffdcc3",
+                        "outline-variant": "#c4c6d1",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#415e94",
+                        "on-secondary-container": "#6c5000",
+                        "inverse-primary": "#acc7ff",
+                        "background": "#f9f9f9",
+                        "on-surface-variant": "#43474f",
+                        "secondary-container": "#FFC107",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#2f1500",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-low": "#f3f3f3",
+                        "outline": "#747780",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "primary-fixed-dim": "#acc7ff",
+                        "on-primary-fixed-variant": "#28467b",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed": "#d8e2ff",
+                        "primary-container": "#1B3B6F",
+                        "on-secondary-fixed": "#261a00",
+                        "on-tertiary-container": "#db9860",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#5e3000",
+                        "inverse-surface": "#2f3131",
+                        "surface-bright": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#6b3a09",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "secondary-fixed": "#ffdf9e",
+                        "secondary-fixed-dim": "#fabd00",
+                        "on-primary-container": "#8aa7e1",
+                        "tertiary": "#3e1e00",
+                        "on-primary-fixed": "#001a41"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Public Sans', sans-serif; }
+        .chart-grid-line {
+            background-image: linear-gradient(to right, #ffffff1a 1px, transparent 1px);
+            background-size: 20% 100%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar - Predictive Component -->
+<header class="bg-[#1B3B6F] dark:bg-[#1B3B6F] text-[#FFFFFF] dark:text-[#FFFFFF] font-['Public_Sans'] tracking-tight docked full-width top-0 flex justify-between items-center px-8 py-4 w-full z-50">
+<div class="text-xl font-bold tracking-[0.05em] uppercase text-white">AIGGPA GovTech Index</div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-[#FFC107] border-b-2 border-[#FFC107] pb-1" href="#">Executive Summary</a>
+<a class="text-white/80 hover:text-white transition-colors duration-200" href="#">Policy Briefs</a>
+<a class="text-white/80 hover:text-white transition-colors duration-200" href="#">Methodology</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined hover:bg-[#1B3B6F] p-2 transition-colors duration-200 cursor-pointer" data-icon="settings">settings</span>
+<span class="material-symbols-outlined hover:bg-[#1B3B6F] p-2 transition-colors duration-200 cursor-pointer" data-icon="notifications">notifications</span>
+</div>
+<img alt="User Profile" class="w-10 h-10 border border-white/20" data-alt="professional portrait of a senior policy analyst in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCskEjbW2_8dvD2xJ43O04Wqqphu7mdjdVdTd-4DNjc-AR8iD8QrCiK19J0cVbc5xs6Rw5uTZmSKS2KvvAklBuP3EV0wP1GDhhoQvjALdKqtuHbIWaq6kJo_nbIccx3qA7ZuAFKLFOrtu_xVDUm90bfQvqSVrFvNtp2XZlhVUVfNBmJr5b1nGyXML4gqsrpy8A_Dk6pqlFjlxE3CkA7aIgjnx_CsOUNJbOzwpB341ZpwV59PRTQDrVcCMcPVEonglmhuU0gTKJvBcg"/>
+</div>
+</header>
+<main class="flex min-h-screen">
+<!-- SideNavBar - Predictive Component -->
+<aside class="bg-[#F3F3F3] dark:bg-[#121212] text-[#1B3B6F] dark:text-[#F3F3F3] font-['Inter'] uppercase tracking-[0.05em] text-[0.75rem] h-screen w-64 fixed left-0 top-0 pt-20 pb-8 px-0 hidden lg:flex flex-col z-40">
+<div class="px-6 mb-8">
+<div class="text-[0.65rem] font-bold text-primary/40 mb-1">REPORTS LEDGER</div>
+<div class="text-primary font-black text-xs">2024 Editorial Cycle</div>
+</div>
+<div class="flex-grow flex flex-col gap-1">
+<a class="flex items-center gap-4 px-6 py-3 bg-white dark:bg-[#1B3B6F] text-[#1B3B6F] dark:text-white font-bold border-l-4 border-[#1B3B6F] dark:border-[#FFC107] translate-x-1 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span> Adoption Index
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#1B3B6F]/60 dark:text-white/60 hover:bg-[#E8E8E8] dark:hover:bg-[#1B3B6F]/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span> Policy Frameworks
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#1B3B6F]/60 dark:text-white/60 hover:bg-[#E8E8E8] dark:hover:bg-[#1B3B6F]/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span> Budget Allocations
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#1B3B6F]/60 dark:text-white/60 hover:bg-[#E8E8E8] dark:hover:bg-[#1B3B6F]/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span> Regional Rankings
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#1B3B6F]/60 dark:text-white/60 hover:bg-[#E8E8E8] dark:hover:bg-[#1B3B6F]/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span> Archival Reports
+                </a>
+</div>
+<div class="px-6 pt-6 mt-6 border-t border-primary/10">
+<button class="w-full bg-primary text-white py-3 px-4 text-[0.7rem] font-bold hover:bg-primary-container transition-colors">
+                    DOWNLOAD FULL DATASET
+                </button>
+</div>
+<div class="mt-auto px-6 flex flex-col gap-1">
+<a class="flex items-center gap-4 py-2 text-[#1B3B6F]/60 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span> Documentation
+                </a>
+<a class="flex items-center gap-4 py-2 text-[#1B3B6F]/60 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span> Support
+                </a>
+</div>
+</aside>
+<!-- Main Editorial Canvas -->
+<section class="flex-grow lg:ml-64 pt-20 px-8 pb-16 bg-surface">
+<!-- Header Section -->
+<div class="max-w-4xl mx-auto mb-12">
+<div class="flex items-center gap-4 mb-4">
+<span class="bg-[rgba(255,193,7,0.2)] text-[#1B3B6F] border border-[#FFC107] font-bold text-[0.65rem] tracking-widest px-3 py-1 uppercase">Advanced Research</span>
+<span class="text-on-surface-variant/40 text-[0.65rem] font-mono">ID: AI-GT-2024-X</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-black text-primary leading-tight tracking-tighter mb-4">
+                    Hypothesised GovTech Adoption Index by Department
+                </h1>
+<p class="text-xl text-on-surface-variant font-medium max-w-2xl border-l-4 border-secondary pl-6 py-2">
+                    Based on secondary research estimates (pre-data collection). An architectural ledger of projected digital readiness.
+                </p>
+</div>
+<!-- Visualization Area -->
+<div class="max-w-4xl mx-auto">
+<div class="bg-primary p-8 md:p-12 shadow-none relative overflow-hidden">
+<!-- Subtle Bauhaus Background Pattern -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 -mr-32 -mt-32 transform rotate-45 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 pointer-events-none"></div>
+<!-- Chart Header -->
+<div class="flex justify-between items-end mb-12 border-b border-white/10 pb-4">
+<div>
+<span class="text-secondary font-black text-xs uppercase tracking-[0.2em] mb-1 block">Data Visualization</span>
+<h3 class="text-white text-lg font-bold">Relative Readiness Scores</h3>
+</div>
+<div class="text-white/40 text-[0.65rem] font-mono">UNITS: INDEX POINTS (0-100)</div>
+</div>
+<!-- The Bar Chart -->
+<div class="space-y-10 relative">
+<!-- Vertical Grid Lines Overlay -->
+<div class="absolute inset-0 chart-grid-line pointer-events-none"></div>
+<!-- Revenue -->
+<div class="relative group z-10">
+<div class="flex justify-between items-center mb-2">
+<label class="text-white font-bold text-sm tracking-wide uppercase">Revenue Department</label>
+<span class="text-[#4ADE80] font-black text-lg">72<span class="text-xs opacity-50 ml-1">/100</span></span>
+</div>
+<div class="h-10 bg-white/10 w-full overflow-hidden border border-white/20">
+<div class="h-full bg-gradient-to-r from-[#22c55e] to-[#4ADE80] transition-all duration-1000 ease-out" style="width: 72%;"></div>
+</div>
+</div>
+<!-- PWD -->
+<div class="relative group z-10">
+<div class="flex justify-between items-center mb-2">
+<label class="text-white font-bold text-sm tracking-wide uppercase">PWD (Public Works)</label>
+<span class="text-[#FFC107] font-black text-lg">55<span class="text-xs opacity-50 ml-1">/100</span></span>
+</div>
+<div class="h-10 bg-white/10 w-full overflow-hidden border border-white/20">
+<div class="h-full bg-gradient-to-r from-[#eab308] to-[#FFC107] transition-all duration-1000 ease-out" style="width: 55%;"></div>
+</div>
+</div>
+<!-- Health -->
+<div class="relative group z-10">
+<div class="flex justify-between items-center mb-2">
+<label class="text-white font-bold text-sm tracking-wide uppercase">Health Department</label>
+<span class="text-[#F87171] font-black text-lg">40<span class="text-xs opacity-50 ml-1">/100</span></span>
+</div>
+<div class="h-10 bg-white/10 w-full overflow-hidden border border-white/20">
+<div class="h-full bg-gradient-to-r from-[#ef4444] to-[#F87171] transition-all duration-1000 ease-out" style="width: 40%;"></div>
+</div>
+</div>
+<!-- Education -->
+<div class="relative group z-10">
+<div class="flex justify-between items-center mb-2">
+<label class="text-white font-bold text-sm tracking-wide uppercase">Education Board</label>
+<span class="text-[#A78BFA] font-black text-lg">30<span class="text-xs opacity-50 ml-1">/100</span></span>
+</div>
+<div class="h-10 bg-white/10 w-full overflow-hidden border border-white/20">
+<div class="h-full bg-gradient-to-r from-[#8b5cf6] to-[#A78BFA] transition-all duration-1000 ease-out" style="width: 30%;"></div>
+</div>
+</div>
+</div>
+<!-- Legend / Footer -->
+<div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10 pt-8">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 bg-[#4ADE80]"></div>
+<span class="text-white/60 text-[0.6rem] font-bold uppercase tracking-wider">Mature (70+)</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 bg-[#FFC107]"></div>
+<span class="text-white/60 text-[0.6rem] font-bold uppercase tracking-wider">Developing (50-70)</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 bg-[#F87171]"></div>
+<span class="text-white/60 text-[0.6rem] font-bold uppercase tracking-wider">Early Stage (30-50)</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 bg-[#A78BFA]"></div>
+<span class="text-white/60 text-[0.6rem] font-bold uppercase tracking-wider">Nascent (&lt;30)</span>
+</div>
+</div>
+</div>
+<!-- Descriptive Content -->
+<div class="mt-16 grid md:grid-cols-3 gap-12 text-on-surface-variant leading-relaxed">
+<div class="md:col-span-2">
+<h4 class="text-primary font-black text-xs uppercase tracking-widest mb-4">Executive Analysis</h4>
+<p class="mb-6 font-medium">The Revenue department leads digital adoption projections, primarily driven by integrated fiscal systems and high-frequency transactional data. Conversely, the Education board remains in a nascent phase, constrained by decentralized reporting structures and manual archival systems.</p>
+<p>This preliminary ledger serves as the architectural foundation for the upcoming 2025 Comprehensive Data Harvest. By establishing these benchmarks, AIGGPA identifies priority zones for GovTech investment and policy intervention.</p>
+</div>
+<div class="bg-surface-container-low p-6 h-fit border-t-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="lightbulb">lightbulb</span>
+<h5 class="font-bold text-primary mb-2">Insight Highlight</h5>
+<p class="text-sm">Departments with higher direct citizen interaction (Revenue, Health) show a +25% correlation with digital tool adoption compared to administrative-heavy sectors.</p>
+</div>
+</div>
+<!-- Footer Image Callout -->
+<div class="mt-20 relative h-[300px] w-full overflow-hidden group">
+<img alt="Abstract Global Data" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:opacity-60 transition-opacity duration-500" data-alt="abstract digital visualization of globe with glowing network connections and geometric data nodes in dark navy and cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzYBf4EzvRgBGRYtCbaU7GsUqT8iAl3Cnk8e38YTRxfqwbrwsZRSCaIgP-R81nl-DbzM2KfCo7gkIQpH5f1HIuQ-_hGopu67ATQqmO2yjOaWc7iKlPwLqNhL-BG-IjVdNLmjzNqd2f5dOf_UXEm7mIOr8gmRAkqGlvTUBpbpVvKt1h-sIUPWWCSccRZxiISiIWpq-naKDGCi1MznRYhQC5W7n-eOB-pHme9G6Z3QtaRhIOhqS0rBP2ieiqjJnuxT30LSi3V200BQU"/>
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
+<div class="bg-secondary px-6 py-1 mb-4">
+<span class="text-[#1B3B6F] font-black text-xs tracking-[0.3em] uppercase">Global Standard Mapping</span>
+</div>
+<h2 class="text-white text-2xl font-black max-w-lg mb-4">Benchmarking National GovTech Trends Against G7 Averages</h2>
+<button class="bg-white text-primary px-8 py-3 font-black text-xs tracking-widest uppercase border border-white hover:bg-[#FFC107] hover:text-[#1B3B6F] hover:border-[#FFC107] transition-all">
+                            Access Global Database
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar - Mobile Visibility Toggle (Design System Rule) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#002555] text-white flex justify-around items-center h-16 z-50">
+<a class="flex flex-col items-center text-[#FDC003]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[0.6rem] font-bold uppercase mt-1">Index</span>
+</a>
+<a class="flex flex-col items-center text-white/60" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="text-[0.6rem] font-bold uppercase mt-1">Policy</span>
+</a>
+<a class="flex flex-col items-center text-white/60" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-[0.6rem] font-bold uppercase mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center text-white/60" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[0.6rem] font-bold uppercase mt-1">Account</span>
+</a>
+</div>
+</body></html>

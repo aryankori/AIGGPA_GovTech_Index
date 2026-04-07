@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIGGPA POLICY LEDGER - Policy Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f9f9f9",
+                        "secondary-fixed": "#ffdf9e",
+                        "inverse-surface": "#2f3131",
+                        "tertiary": "#3e1e00",
+                        "on-tertiary-fixed-variant": "#6b3a09",
+                        "primary-fixed": "#d8e2ff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed-variant": "#28467b",
+                        "secondary-container": "#fdc003",
+                        "on-secondary-fixed": "#261a00",
+                        "inverse-primary": "#acc7ff",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-container": "#db9860",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed": "#ffdcc3",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary-fixed-dim": "#fabd00",
+                        "inverse-on-surface": "#f1f1f1",
+                        "background": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#43474f",
+                        "surface-dim": "#dadada",
+                        "outline": "#747780",
+                        "on-primary-container": "#8aa7e1",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed": "#2f1500",
+                        "primary-fixed-dim": "#acc7ff",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1b3b6f",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#415e94",
+                        "primary": "#002555",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "outline-variant": "#c4c6d1",
+                        "on-primary-fixed": "#001a41",
+                        "secondary": "#785900",
+                        "surface-container": "#eeeeee",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-container": "#5e3000",
+                        "on-secondary-container": "#6c5000",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Public Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-[#1B3B6F] dark:bg-slate-950 text-white flex justify-between items-center w-full px-8 h-16 fixed top-0 z-50 transition-colors duration-150">
+<div class="flex items-center gap-8">
+<div class="text-xl font-bold tracking-tighter text-white dark:text-white">AIGGPA POLICY LEDGER</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-[0.75rem] font-bold text-white/80 hover:text-white transition-colors duration-150" href="#">Reports</a>
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-[0.75rem] font-bold text-[#FDC003] border-b-2 border-[#FDC003] pb-1" href="#">Indices</a>
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-[0.75rem] font-bold text-white/80 hover:text-white transition-colors duration-150" href="#">Archive</a>
+<a class="font-['Public_Sans'] uppercase tracking-[0.05em] text-[0.75rem] font-bold text-white/80 hover:text-white transition-colors duration-150" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#1B3B6F] p-2 transition-colors duration-150">account_balance</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#1B3B6F] p-2 transition-colors duration-150">settings</span>
+</div>
+</header>
+<div class="flex pt-16">
+<!-- SideNavBar -->
+<aside class="bg-[#F3F3F3] dark:bg-slate-900 text-[#1B3B6F] dark:text-slate-100 flex flex-col h-screen sticky top-16 w-64 border-r border-[#E2E2E2] dark:border-slate-800 font-['Inter'] text-sm tracking-wide">
+<div class="p-6">
+<div class="font-bold text-lg uppercase tracking-widest text-[#1B3B6F]">Policy Analysis</div>
+<div class="text-[0.7rem] uppercase opacity-60 tracking-tighter">2024 Annual Review</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<div class="flex items-center gap-3 px-4 py-3 cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 cursor-pointer bg-white dark:bg-slate-800 text-[#1B3B6F] dark:text-[#FDC003] font-bold border-l-4 border-[#1B3B6F] dark:border-[#FDC003] transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span>Economic Data</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="group_work">group_work</span>
+<span>Social Impact</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span>Infrastructure</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span>Governance</span>
+</div>
+</nav>
+<div class="p-4">
+<button class="w-full py-3 bg-[#1B3B6F] text-white font-bold tracking-widest text-xs uppercase hover:bg-opacity-90 transition-colors">EXPORT DATA</button>
+</div>
+<div class="mt-auto p-4 border-t border-[#E2E2E2] dark:border-slate-800 space-y-2">
+<div class="flex items-center gap-3 px-4 py-2 cursor-pointer text-slate-500 hover:text-[#1B3B6F] transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="help_outline">help_outline</span>
+<span class="text-xs">Support</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 cursor-pointer text-slate-500 hover:text-[#1B3B6F] transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="gavel">gavel</span>
+<span class="text-xs">Legal</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 bg-surface min-h-screen p-12 overflow-x-hidden">
+<!-- Header Section -->
+<div class="mb-12">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-[2px] bg-secondary"></div>
+<span class="font-label text-xs font-bold uppercase tracking-[0.1em] text-secondary">Institutional Index 2024</span>
+</div>
+<h1 class="text-[3.5rem] font-extrabold text-primary leading-[1.1] tracking-tight mb-4">
+                    Maturity vs. <br/>Interaction Matrix
+                </h1>
+<p class="max-w-2xl text-on-surface-variant font-body leading-relaxed">
+                    A comparative analysis of departmental evolution. This ledger maps the intersection of internal digital infrastructure against the frequency and quality of public-facing interactions.
+                </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Chart Canvas -->
+<div class="col-span-12 lg:col-span-8 bg-primary p-1 rounded-none">
+<div class="bg-primary dark:bg-slate-950 p-8 h-[600px] relative overflow-hidden">
+<!-- Quadrant Labels -->
+<div class="absolute top-4 left-4 text-[0.6rem] font-label font-bold uppercase tracking-[0.2em] text-white/20">Quadrant II</div>
+<div class="absolute top-4 right-4 text-[0.6rem] font-label font-bold uppercase tracking-[0.2em] text-white/20">Quadrant I</div>
+<div class="absolute bottom-4 left-4 text-[0.6rem] font-label font-bold uppercase tracking-[0.2em] text-white/20">Quadrant III</div>
+<div class="absolute bottom-4 right-4 text-[0.6rem] font-label font-bold uppercase tracking-[0.2em] text-white/20">Quadrant IV</div>
+<!-- Grid Background -->
+<div class="absolute inset-0 flex flex-col pointer-events-none">
+<div class="flex-1 grid grid-cols-2">
+<div class="border-r border-b border-white/10"></div>
+<div class="border-b border-white/10"></div>
+</div>
+<div class="flex-1 grid grid-cols-2">
+<div class="border-r border-white/10"></div>
+<div></div>
+</div>
+</div>
+<!-- Axes -->
+<div class="absolute bottom-12 left-12 right-12 h-[1px] bg-white/20"></div>
+<div class="absolute top-12 bottom-12 left-12 w-[1px] bg-white/20"></div>
+<!-- Axis Labels -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-12 items-center">
+<span class="text-[0.65rem] font-label font-bold uppercase tracking-widest text-white/40">Digitisation Maturity</span>
+<div class="flex items-center gap-2">
+<span class="text-[0.6rem] font-label text-white/30 italic">Low</span>
+<div class="w-12 h-[1px] bg-white/20"></div>
+<span class="text-[0.6rem] font-label text-white/30 italic">High</span>
+</div>
+</div>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 -rotate-90 flex gap-12 items-center origin-center">
+<span class="text-[0.65rem] font-label font-bold uppercase tracking-widest text-white/40 whitespace-nowrap">Public Interaction</span>
+<div class="flex items-center gap-2">
+<span class="text-[0.6rem] font-label text-white/30 italic">Low</span>
+<div class="w-12 h-[1px] bg-white/20"></div>
+<span class="text-[0.6rem] font-label text-white/30 italic">High</span>
+</div>
+</div>
+<!-- Chart Elements (2D Vector Style) -->
+<div class="relative w-full h-full p-12">
+<!-- Revenue (Top Right) -->
+<div class="absolute top-[20%] right-[25%] flex flex-col items-center gap-3">
+<div class="w-16 h-16 bg-[#2E7D32] rounded-full flex items-center justify-center text-white font-bold text-xs">REVENUE</div>
+<div class="w-[1px] h-8 bg-white/20"></div>
+<div class="text-[0.6rem] font-label text-white/60 tracking-wider">INDEX: 8.4</div>
+</div>
+<!-- Health (Top Left) -->
+<div class="absolute top-[30%] left-[20%] flex flex-col items-center gap-3">
+<div class="w-14 h-14 bg-[#C62828] rounded-full flex items-center justify-center text-white font-bold text-xs">HEALTH</div>
+<div class="w-[1px] h-6 bg-white/20"></div>
+<div class="text-[0.6rem] font-label text-white/60 tracking-wider">INDEX: 4.2</div>
+</div>
+<!-- PWD (Bottom Right) -->
+<div class="absolute bottom-[25%] right-[30%] flex flex-col items-center gap-3">
+<div class="w-12 h-12 bg-[#EF6C00] rounded-full flex items-center justify-center text-white font-bold text-[0.6rem]">PWD</div>
+<div class="w-[1px] h-4 bg-white/20"></div>
+<div class="text-[0.6rem] font-label text-white/60 tracking-wider">INDEX: 6.1</div>
+</div>
+<!-- Education (Bottom Left) -->
+<div class="absolute bottom-[35%] left-[30%] flex flex-col items-center gap-3">
+<div class="w-14 h-14 bg-[#6A1B9A] rounded-full flex items-center justify-center text-white font-bold text-[0.65rem]">EDUCATION</div>
+<div class="w-[1px] h-6 bg-white/20"></div>
+<div class="text-[0.6rem] font-label text-white/60 tracking-wider">INDEX: 3.8</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Analysis Panel -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Metrics Card 1 -->
+<div class="bg-surface-container-lowest p-8 border-l-4 border-[#1B3B6F]">
+<div class="font-label text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant mb-6">Aggregated Health Score</div>
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-5xl font-extrabold text-[#1B3B6F]">74.2</span>
+<span class="text-sm font-bold text-[#FFC107]">▲ 12%</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed font-body">
+                            The overall digitisation maturity across state departments has seen a significant uptick in Q3, driven primarily by revenue systems integration.
+                        </p>
+</div>
+<!-- Details List -->
+<div class="bg-surface-container-low p-8">
+<div class="font-label text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant mb-6">Departmental Standings</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/30">
+<div>
+<div class="text-sm font-bold text-[#1B3B6F]">Revenue &amp; Taxation</div>
+<div class="text-[0.65rem] uppercase tracking-tighter opacity-60">High-End Automation</div>
+</div>
+<div class="text-right">
+<div class="text-sm font-bold">92/100</div>
+<div class="w-24 h-1 bg-surface-container-highest mt-1">
+<div class="bg-secondary h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/30">
+<div>
+<div class="text-sm font-bold text-[#1B3B6F]">Healthcare Services</div>
+<div class="text-[0.65rem] uppercase tracking-tighter opacity-60">Citizen Outreach</div>
+</div>
+<div class="text-right">
+<div class="text-sm font-bold">68/100</div>
+<div class="w-24 h-1 bg-surface-container-highest mt-1">
+<div class="bg-[#1B3B6F] h-full w-[68%]"></div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<div class="text-sm font-bold text-[#1B3B6F]">Rural Infrastructure</div>
+<div class="text-[0.65rem] uppercase tracking-tighter opacity-60">Data Connectivity</div>
+</div>
+<div class="text-right">
+<div class="text-sm font-bold">45/100</div>
+<div class="w-24 h-1 bg-surface-container-highest mt-1">
+<div class="bg-outline h-full w-[45%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Analysis Row -->
+<div class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+<div class="bg-surface-container p-8">
+<span class="material-symbols-outlined text-[#1B3B6F] mb-4" data-icon="architecture">architecture</span>
+<h3 class="font-headline font-bold text-lg mb-2">Structural Precision</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Evaluation of core architectural frameworks across regional divisions with 1:1 data mapping.</p>
+</div>
+<div class="bg-surface-container p-8">
+<span class="material-symbols-outlined text-[#1B3B6F] mb-4" data-icon="query_stats">query_stats</span>
+<h3 class="font-headline font-bold text-lg mb-2">Linear Evolution</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Tracking the maturity curve from legacy analogue processes to integrated digital ledgers.</p>
+</div>
+<div class="bg-surface-container p-8">
+<span class="material-symbols-outlined text-[#1B3B6F] mb-4" data-icon="gavel">gavel</span>
+<h3 class="font-headline font-bold text-lg mb-2">Governance Audit</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">A strictly data-driven audit of legislative efficacy in promoting digital public infrastructure.</p>
+</div>
+</div>
+</div>
+<!-- Archival Section -->
+<section class="mt-24 border-t border-outline-variant pt-12">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+<div class="lg:col-span-1">
+<h4 class="font-headline font-bold text-xs uppercase tracking-widest text-[#FFC107] mb-6">Archive 001</h4>
+<div class="text-[0.6rem] font-mono opacity-50 uppercase leading-loose">
+                            Ref: AIGGPA/2024/MTX-09<br/>
+                            Auth: Policy Directorate<br/>
+                            Class: Institutional Review<br/>
+                            Stamp: CONFIDENTIAL
+                        </div>
+</div>
+<div class="lg:col-span-3">
+<div class="bg-white p-12">
+<h2 class="text-3xl font-headline font-extrabold text-[#1B3B6F] mb-8 tracking-tight">Executive Summary</h2>
+<div class="columns-2 gap-12 space-y-6 text-sm leading-relaxed text-on-surface-variant text-justify">
+<p>
+                                    The "Architectural Ledger" approach to policy analysis demands a shift away from qualitative sentiment toward quantitative geometric mapping. By charting "Digitisation Maturity" against "Public Interaction," we observe a distinct stratification in administrative performance. 
+                                </p>
+<p>
+                                    Quadrants I and II represent the aspirational state of institutional governance. The Revenue department serves as the primary benchmark, exhibiting a 1:1 correlation between backend technological investment and public fiscal engagement. This model suggests that maturity is not merely an internal metric but a catalyst for interaction.
+                                </p>
+<p>
+                                    Conversely, the Education sector, while exhibiting moderate interaction, lacks the backend digitisation required to scale institutional efficacy. The ledger indicates a need for immediate infrastructure pivot.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Contextual FAB (Only for Home/Dashboard context) -->
+<button class="fixed bottom-8 right-8 bg-[#FFC107] text-[#1B3B6F] p-4 shadow-xl hover:scale-105 active:opacity-80 transition-all flex items-center gap-2 font-bold text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+        New Entry
+    </button>
+</body></html>

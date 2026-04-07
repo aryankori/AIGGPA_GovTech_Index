@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bauhaus-grid {
+            background-image: radial-gradient(circle, #45474c 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+        }
+        .gauge-mask {
+            clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#ec6a00",
+                        "outline-variant": "#45474c",
+                        "primary-fixed": "#FFC107",
+                        "on-secondary-fixed": "#331200",
+                        "surface-variant": "#2d3545",
+                        "on-primary-fixed": "#002204",
+                        "on-background": "#dbe2f8",
+                        "on-secondary": "#542100",
+                        "surface": "#0b1322",
+                        "error-container": "#93000a",
+                        "primary-container": "#001702",
+                        "surface-dim": "#0b1322",
+                        "on-tertiary-container": "#e53f3b",
+                        "tertiary": "#ffb4ac",
+                        "on-tertiary-fixed-variant": "#93000e",
+                        "on-primary-fixed-variant": "#005312",
+                        "inverse-surface": "#dbe2f8",
+                        "on-surface-variant": "#c6c6cd",
+                        "surface-tint": "#FFC107",
+                        "surface-container-lowest": "#060e1d",
+                        "on-secondary-fixed-variant": "#773200",
+                        "on-tertiary": "#690007",
+                        "surface-container-high": "#222a3a",
+                        "secondary": "#1B3B6F",
+                        "primary": "#FFC107",
+                        "secondary-fixed-dim": "#1B3B6F",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#410003",
+                        "on-error": "#690005",
+                        "tertiary-container": "#2f0001",
+                        "on-secondary-container": "#491c00",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "background": "#0b1322",
+                        "on-primary-container": "#3f8d40",
+                        "inverse-primary": "#1b6d24",
+                        "surface-container": "#18202f",
+                        "surface-container-highest": "#2d3545",
+                        "outline": "#8f9097",
+                        "surface-bright": "#32394a",
+                        "inverse-on-surface": "#293041",
+                        "on-primary": "#1B3B6F",
+                        "secondary-fixed": "#ffdbca",
+                        "on-surface": "#dbe2f8",
+                        "surface-container-low": "#141c2b",
+                        "primary-fixed-dim": "#FFC107"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-[#0b1322] z-50">
+<div class="flex justify-between items-center px-8 py-4 w-full bg-[#141c2b]">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-tighter text-white uppercase font-headline">The Sovereign Intelligence</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-400 hover:text-white transition-colors font-headline tracking-tight" href="#">Briefings</a>
+<a class="text-slate-400 hover:text-white transition-colors font-headline tracking-tight" href="#">Assets</a>
+<a class="text-[#FFC107] border-b-2 border-[#FFC107] pb-1 font-headline tracking-tight" href="#">Analysis</a>
+<a class="text-slate-400 hover:text-white transition-colors font-headline tracking-tight" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:bg-[#222a3a] rounded-lg transition-all active:scale-90">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-400 hover:bg-[#222a3a] rounded-lg transition-all active:scale-90">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User Analyst Profile" class="w-full h-full object-cover" data-alt="Professional portrait of a government analyst in a dark suit with a neutral background and sharp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOM_42HdwBZroXZp63Rzu0Moh4ei0Gb3IElnC82RB54th4MR36czQth_3QogxQKxIGRjg9G0BB-Tnc8PGFa1zSVzXd_7A0jo4_HDc0xgiP3qSL2V7P-_OCbIUQTe7HoRabhCZe5cpxzIJcxPrpk6C0BCCgWNW8o2DrqODrjkqHyrHULBrO8ReKnnfnuUpFPnvOFRroO0SjSjJ_7VqgMUeedDZhs6BavRJ7UKdOjqYIDfLfQAMYKY-geKXHaXgygmI9e8ZdlzOhTm8"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 border-r border-[#45474c]/15 bg-[#0b1322] hidden lg:flex flex-col py-6">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<p class="font-headline font-black text-primary leading-none">Command Center</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Level 4 Authorization</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">dynamic_feed</span>
+<span class="font-inter text-sm antialiased">Intelligence Feed</span>
+</a>
+<a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">language</span>
+<span class="font-inter text-sm antialiased">Global Metrics</span>
+</a>
+<a class="flex items-center gap-4 py-3 text-[#FFC107] font-bold border-l-2 border-[#FFC107] pl-4 bg-[#141c2b]/30" href="#">
+<span class="material-symbols-outlined">security</span>
+<span class="font-inter text-sm antialiased">Security Status</span>
+</a>
+<a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">inventory_2</span>
+<span class="font-inter text-sm antialiased">Research Archive</span>
+</a>
+<a class="flex items-center gap-4 py-3 hover:bg-[#141c2b] hover:text-[#FFC107] transition-all duration-300 group text-slate-500 pl-4" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">rocket_launch</span>
+<span class="font-inter text-sm antialiased">Deployment</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">edit_document</span>
+                    Generate Report
+                </button>
+<div class="mt-6 border-t border-outline-variant/10 pt-4 space-y-1">
+<a class="flex items-center gap-4 py-2 text-slate-500 hover:text-white transition-colors pl-2" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+<span class="text-xs uppercase tracking-tighter">Support</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-slate-500 hover:text-white transition-colors pl-2" href="#">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span class="text-xs uppercase tracking-tighter">Log Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 lg:ml-64 p-8 relative overflow-hidden">
+<div class="absolute inset-0 bauhaus-grid pointer-events-none"></div>
+<header class="mb-12 relative z-10">
+<h1 class="text-4xl lg:text-5xl font-headline font-extrabold text-on-surface tracking-tighter max-w-2xl leading-[1.1]">
+                    GovTech Adoption Index — Composite Scoring Model
+                </h1>
+<p class="mt-4 text-on-surface-variant max-w-xl font-body leading-relaxed border-l-2 border-primary pl-6">
+                    Analytical methodology for weighted adoption measurement across governmental departments. This model synthesizes multi-vector behavioral data into a singular authority score.
+                </p>
+</header>
+<!-- Infographic Canvas -->
+<section class="relative min-h-[700px] flex items-center justify-center">
+<!-- Central Gauge (SVG Bauhaus Style) -->
+<div class="relative z-20 w-[450px] h-[450px] flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Track Background -->
+<circle cx="50" cy="50" fill="none" r="45" stroke="#141c2b" stroke-width="8"></circle>
+<!-- Value Track (72%) -->
+<circle cx="50" cy="50" fill="none" r="45" stroke="#FFC107" stroke-dasharray="282.7" stroke-dashoffset="79.1" stroke-linecap="butt" stroke-width="8"></circle>
+<!-- Critical Marker -->
+<circle class="opacity-30" cx="50" cy="50" fill="none" r="45" stroke="#e53f3b" stroke-dasharray="2 2" stroke-dashoffset="0" stroke-width="1.5"></circle>
+</svg>
+<!-- Center Display -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-6xl font-black font-headline text-white tracking-tighter">72</span>
+<span class="text-primary font-bold text-lg uppercase tracking-widest mt-1">/ 100</span>
+<div class="mt-4 px-4 py-1 bg-surface-container-highest rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-black uppercase text-on-surface-variant tracking-widest">Optimized Status</span>
+</div>
+</div>
+<!-- Needle (Bauhaus Style) -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none" style="transform: rotate(151deg)">
+<div class="w-[200px] h-0.5 bg-primary relative left-[100px]">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-primary rotate-45 border-2 border-background"></div>
+</div>
+</div>
+</div>
+<!-- Input Components (Weighted Attributes) -->
+<!-- 1. Digital Penetration -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 w-64 bg-surface-container-low p-4 rounded-lg border-l-4 border-blue-500 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-black text-blue-500 uppercase tracking-widest">Digital Penetration</span>
+<span class="text-sm font-bold text-white">20%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-blue-500 w-[85%]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Infrastructure readiness index</span>
+<div class="absolute bottom-[-24px] left-1/2 -translate-x-1/2 text-blue-500">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_downward</span>
+</div>
+</div>
+<!-- 2. Login Frequency -->
+<div class="absolute top-1/4 left-[-10%] translate-y-[-50%] w-64 bg-surface-container-low p-4 rounded-lg border-l-4 border-teal-500 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-black text-teal-500 uppercase tracking-widest">Login Frequency</span>
+<span class="text-sm font-bold text-white">15%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-teal-500 w-[60%]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Daily active engagement</span>
+<div class="absolute right-[-24px] top-1/2 -translate-y-1/2 text-teal-500">
+<span class="material-symbols-outlined" style="font-size: 24px; transform: rotate(-90deg);">arrow_downward</span>
+</div>
+</div>
+<!-- 3. Confidence Score -->
+<div class="absolute bottom-1/4 left-[-10%] translate-y-[50%] w-64 bg-surface-container-low p-4 rounded-lg border-l-4 border-primary flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-black text-primary uppercase tracking-widest">Confidence Score</span>
+<span class="text-sm font-bold text-white">20%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">User trust &amp; security perception</span>
+<div class="absolute right-[-24px] top-1/2 -translate-y-1/2 text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px; transform: rotate(-90deg);">arrow_downward</span>
+</div>
+</div>
+<!-- 4. Awareness Index -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4 w-64 bg-surface-container-low p-4 rounded-lg border-l-4 border-purple-500 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-black text-purple-500 uppercase tracking-widest">Awareness Index</span>
+<span class="text-sm font-bold text-white">15%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-purple-500 w-[45%]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">New feature discoverability</span>
+<div class="absolute top-[-24px] left-1/2 -translate-x-1/2 text-purple-500">
+<span class="material-symbols-outlined" style="font-size: 24px; transform: rotate(180deg);">arrow_downward</span>
+</div>
+</div>
+<!-- 5. Hardware Ratio -->
+<div class="absolute bottom-1/4 right-[-10%] translate-y-[50%] w-64 bg-surface-container-low p-4 rounded-lg border-l-4 border-orange-500 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-black text-orange-500 uppercase tracking-widest">Hardware Ratio</span>
+<span class="text-sm font-bold text-white">15%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-orange-500 w-[70%]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Device modernism coefficient</span>
+<div class="absolute left-[-24px] top-1/2 -translate-y-1/2 text-orange-500">
+<span class="material-symbols-outlined" style="font-size: 24px; transform: rotate(90deg);">arrow_downward</span>
+</div>
+</div>
+<!-- 6. Frustration Score -->
+<div class="absolute top-1/4 right-[-10%] translate-y-[-50%] w-64 bg-surface-container-low p-4 rounded-lg border-l-4 border-error flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-black text-error uppercase tracking-widest">Frustration Score</span>
+<span class="text-sm font-bold text-error">-15%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-error w-[30%]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Negative friction events</span>
+<div class="absolute left-[-24px] top-1/2 -translate-y-1/2 text-error">
+<span class="material-symbols-outlined" style="font-size: 24px; transform: rotate(90deg);">arrow_downward</span>
+</div>
+</div>
+</section>
+<!-- Bottom Data Analysis Grid -->
+<section class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+<div class="bg-surface-container-high p-6 rounded-lg relative overflow-hidden group hover:bg-surface-bright transition-colors">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-6xl">analytics</span>
+</div>
+<h3 class="text-xs font-black uppercase tracking-widest text-primary mb-4">Correlation Analysis</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Strong positive correlation (r=0.82) observed between Confidence Score and Deployment speed. Reducing friction by 5% yields a 12% lift in adoption metrics.
+                    </p>
+</div>
+<div class="bg-surface-container-high p-6 rounded-lg relative overflow-hidden group hover:bg-surface-bright transition-colors">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-6xl">speed</span>
+</div>
+<h3 class="text-xs font-black uppercase tracking-widest text-secondary mb-4">Velocity Projection</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        The composite score is projected to reach 85/100 by Q4, contingent on the successful migration of legacy hardware frameworks in Department A-7.
+                    </p>
+</div>
+<div class="bg-surface-container-high p-6 rounded-lg relative overflow-hidden group hover:bg-surface-bright transition-colors">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-6xl">psychology</span>
+</div>
+<h3 class="text-xs font-black uppercase tracking-widest text-purple-500 mb-4">Human-Centric Bias</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Weighted Awareness Index remains the primary bottleneck. Internal training modules have been prioritized to mitigate Frustration Score outliers.
+                    </p>
+</div>
+</section>
+<!-- Institutional Footer -->
+<footer class="mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between gap-8">
+<div class="max-w-xs">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-4 h-4 bg-primary rotate-45"></span>
+<span class="text-[10px] font-black uppercase tracking-widest text-white">Data Integrity Verified</span>
+</div>
+<p class="text-[10px] text-slate-500 leading-tight">
+                        Calculated via Automated Intelligence Monitoring (AIM) using real-time telemetry from sovereign nodes. Data refresh cycle: 15 minutes.
+                    </p>
+</div>
+<div class="flex gap-12">
+<div>
+<span class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Model Version</span>
+<span class="text-xs font-headline text-white">CSM-7.02b</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Classification</span>
+<span class="text-xs font-headline text-secondary uppercase">Level 4 Restricted</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Timestamp</span>
+<span class="text-xs font-headline text-white">2024-05-22 14:00 UTC</span>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>
