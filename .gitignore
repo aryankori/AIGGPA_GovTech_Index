@@ -1,0 +1,31 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bcf
+*.blg
+*.bbl
+*.run.xml
+
+# Compiled PDFs (regenerated from .tex source)
+# Comment this out if you want to track PDFs in git
+Organized_Archive/01_PDFs/
+*.pdf
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Vercel
+prototype/.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Windows
+desktop.ini

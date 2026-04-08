@@ -1,0 +1,96 @@
+{
+  "index_version": "1.0",
+  "generated_at": "2026-04-08T06:45:00Z",
+  "commit_hash": "ec80fd2",
+  "repository": "AIGGPA_Report",
+  "staleness_threshold_days": 7,
+  "freshness_score": 100,
+  "languages": ["LaTeX", "HTML", "JavaScript", "CSS"],
+  "build_system": ["MiKTeX/xelatex", "npm"],
+  "total_source_files": 30,
+  "entry_points": [
+    {
+      "id": "EP-1",
+      "file": "main.tex",
+      "role": "Primary research report",
+      "compile_cmd": "xelatex main.tex"
+    },
+    {
+      "id": "EP-2",
+      "file": "concept_proposal.tex",
+      "role": "Formal concept proposal",
+      "compile_cmd": "xelatex concept_proposal.tex"
+    },
+    {
+      "id": "EP-3",
+      "file": "survey_instrument.tex",
+      "role": "Bilingual field survey",
+      "compile_cmd": "xelatex survey_instrument.tex"
+    },
+    {
+      "id": "EP-4",
+      "file": "proposal_prep_guide.tex",
+      "role": "Proposal prep guide with manager checklist",
+      "compile_cmd": "xelatex proposal_prep_guide.tex"
+    },
+    {
+      "id": "EP-5",
+      "file": "prototype/index.html",
+      "role": "Web dashboard entry point",
+      "compile_cmd": "open in browser"
+    },
+    {
+      "id": "EP-6",
+      "file": "prototype/field_survey_entry.html",
+      "role": "Mobile field data entry app",
+      "compile_cmd": "open on mobile browser"
+    }
+  ],
+  "modules": {
+    "latex_documents": [
+      {"file": "main.tex", "pages": 40, "status": "complete"},
+      {"file": "concept_proposal.tex", "pages": 2, "status": "complete"},
+      {"file": "notes_from_manager.tex", "pages": 8, "status": "complete"},
+      {"file": "survey_instrument.tex", "pages": 2, "status": "complete"},
+      {"file": "proposal_prep_guide.tex", "pages": 7, "status": "complete"},
+      {"file": "manager_questions.tex", "pages": 2, "status": "archive"}
+    ],
+    "prototype_web": [
+      "prototype/index.html",
+      "prototype/field_survey_entry.html",
+      "prototype/adoption_index_barchart.html",
+      "prototype/age_adoption_hypothesis.html",
+      "prototype/architecture_ledger.html",
+      "prototype/comparison_report.html",
+      "prototype/composite_scoring_model.html",
+      "prototype/data_pipeline_flowchart.html",
+      "prototype/editorial_infographic.html",
+      "prototype/executive_briefing.html",
+      "prototype/gender_parity_index.html",
+      "prototype/maturity_ladder.html",
+      "prototype/policy_ledger_matrix.html",
+      "prototype/research_timeline.html",
+      "prototype/scope_analysis.html",
+      "prototype/style.css",
+      "prototype/app.js"
+    ]
+  },
+  "directories": [
+    {"path": ".", "role": "source", "note": "LaTeX source root"},
+    {"path": "prototype/", "role": "source", "note": "Web prototype apps"},
+    {"path": "Organized_Archive/", "role": "archive", "note": "PDFs, build artifacts, scripts"},
+    {"path": "Organized_Archive/01_PDFs/", "role": "output", "note": "Compiled PDF outputs"},
+    {"path": "Organized_Archive/02_Build_Artifacts/", "role": "generated", "note": "LaTeX intermediates -- safe to delete"},
+    {"path": "Organized_Archive/03_Node_Scripts/", "role": "scripts", "note": "Node utilities"},
+    {"path": "docs/", "role": "documentation", "note": "Supporting docs"},
+    {"path": "node_modules/", "role": "vendor", "note": "EXCLUDED -- in .gitignore"}
+  ],
+  "risk_flags": [
+    {"type": "gitignore", "message": "Verify node_modules and PDF build artifacts are gitignored"},
+    {"type": "secrets", "message": "No secrets detected in source files"}
+  ],
+  "external_dependencies": {
+    "latex": ["fontspec", "xcolor", "tcolorbox", "enumitem", "booktabs", "tabularx", "fancyhdr", "hyperref", "titlesec", "pgfplots", "tikz", "wasysym", "geometry"],
+    "node": ["puppeteer"]
+  }
+}

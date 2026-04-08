@@ -1,0 +1,332 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
+\newcommand{\hindi}[1]{{\hindifont #1}}
+
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{wasysym}
+\setlength{\headheight}{14pt}
+
+\definecolor{govblue}{HTML}{003566}
+\definecolor{govgold}{HTML}{d4a017}
+\definecolor{govgray}{HTML}{f1f3f5}
+\definecolor{alertred}{HTML}{c0392b}
+
+\hypersetup{colorlinks=true, linkcolor=govblue, urlcolor=govblue}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{govblue}{\textbf{AIGGPA -- Proposal Preparation Guide}}}
+\fancyhead[R]{\small\textcolor{govblue}{April 2026}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\large\bfseries\color{govblue}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries\color{govblue}}{}{0em}{}
+
+\newcommand{\managerQ}[1]{%
+  \begin{tcolorbox}[colback=govgold!10,colframe=govgold,boxrule=0.5pt,arc=2mm,
+    left=4pt,right=4pt,top=2pt,bottom=2pt]
+    \small\textbf{Ask Manager:} #1
+  \end{tcolorbox}
+}
+
+\newcommand{\fill}[1]{%
+  \begin{tcolorbox}[colback=govgray,colframe=govblue!30,boxrule=0.4pt,arc=2mm,
+    left=4pt,right=4pt,top=2pt,bottom=2pt]
+    \small\textit{#1}
+  \end{tcolorbox}
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\color{govblue} Formal Research Proposal}\\[0.4cm]
+{\large\color{govblue} \hindi{औपचारिक शोध प्रस्ताव}}\\[0.3cm]
+{\normalsize Preparation Guide with Manager Consultation Checklist}\\
+{\small AIGGPA, Bhopal -- Internship 2026}
+\end{center}
+
+\vspace{0.3cm}
+\begin{tcolorbox}[colback=alertred!10,colframe=alertred,title=\textbf{How to use this document},fonttitle=\small\bfseries]
+\small This is your working notepad before writing the final proposal. Each section explains what content is expected, provides prompts to fill in, and lists the precise questions you must ask your manager BEFORE drafting. Do not submit the proposal until every \textbf{Ask Manager} box has a confirmed answer.
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+%-------------------------------------------------------
+\section{1. Title}
+%-------------------------------------------------------
+
+\subsection{What a good title must do}
+A research title should capture: (a) the phenomenon being studied, (b) the context (organisation/geography), and (c) the lens or method used -- all in under 15 words.
+
+\subsection{Draft Title Options (choose one after manager meeting)}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textit{``HR-IT Integration in Madhya Pradesh Government Departments: An Exploratory Study of Technology Adoption Among Class I-III Officials''}
+  \item \textit{``Digital Workflow Readiness of State Government Officials: A Field Assessment Across Education, Health, and Forest Departments of MP''}
+  \item \textit{``Technology Adoption and Human Resource Efficiency in Madhya Pradesh: A Cross-Departmental Study''}
+\end{enumerate}
+
+\managerQ{Which of these three titles resonates best with the study's intended audience -- will this be shared with the GoMP planning commission or kept internal to AIGGPA? That will determine the tone of the title.}
+
+\managerQ{Should the title mention ``Class I, II, III'' officers specifically, or keep it broad as ``state government officials''?}
+
+\managerQ{Does the manager have a preferred terminology -- `HR-IT Integration', `Digital Governance', or `e-Governance Adoption'?}
+
+\vspace{0.4cm}
+
+%-------------------------------------------------------
+\section{2. Background}
+%-------------------------------------------------------
+
+\subsection{What this section must contain}
+The background section contextualises the research within the larger policy ecosystem. It should address: (a) Mission Karmayogi and iGOT as the national framework, (b) MP's own digital governance push (e-Office, CM Dashboard, MPOnline), (c) the capacity gap identified by AIGGPA, and (d) why this study is timely in 2026.
+
+\subsection{Key data points to include (confirm accuracy with manager)}
+\begin{itemize}[leftmargin=1.5em]
+  \item India's National Programme for Civil Services Capacity Building (NPCSCB / Mission Karmayogi) launched October 2020.
+  \item iGOT Karmayogi platform onboarded over 1.8 crore civil servants nationally (as of 2024).
+  \item MP has adopted e-Office across secretariat level. Adoption at district/block level is uneven.
+  \item Three target departments: School Education (90,000+ schools, 3.5 lakh teachers), Health (NHM + Directorate), Forest (77,414 sq km, largest in India).
+\end{itemize}
+
+\fill{Draft 2-3 paragraphs here after confirming the department scope with your manager. Use the data points above as your anchors. Do not estimate numbers -- only use verified figures.}
+
+\managerQ{Is AIGGPA currently conducting any parallel study on e-Office adoption? If yes, how should this study differentiate itself?}
+
+\managerQ{What is the official mandate for this research -- is it for internal AIGGPA use, will it feed into a GoMP policy brief, or will it be published?}
+
+\managerQ{Are there specific government orders or committee reports on digital training gaps that I should cite as the trigger for this study?}
+
+\managerQ{Has any previous intern or staff member already collected data on this topic at AIGGPA? If yes, can I see that data to avoid duplication?}
+
+\vspace{0.4cm}
+
+%-------------------------------------------------------
+\section{3. Research Objectives}
+%-------------------------------------------------------
+
+\subsection{What this section must contain}
+Objectives must be SMART: Specific, Measurable, Achievable, Relevant, and Time-bound. They should flow directly from the background and align with the research questions.
+
+\subsection{Proposed Objectives (seek manager approval)}
+
+\begin{tcolorbox}[colback=govblue!5,colframe=govblue!40,arc=2mm]
+\small
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{RO-\arabic*.}]
+  \item To assess the current level of awareness and usage of HR-IT tools (e-Office, HRMIS, iGOT, SPARROW) among Class I, II, and III officials in the Education, Health, and Forest departments of Madhya Pradesh.
+  \item To identify the key determinants driving or inhibiting technology adoption among these officials.
+  \item To map the variance in technology adoption across departmental levels (state vs. district) and official grades (Class I vs. Class II vs. Class III).
+  \item To generate evidence-based recommendations for AIGGPA's capacity building programmes.
+\end{enumerate}
+\end{tcolorbox}
+
+\managerQ{Are all four objectives acceptable, or should I narrow to 2-3 for a 3-month internship study?}
+
+\managerQ{Is the manager specifically interested in any one tool (e.g., iGOT, SPARROW) more than others? Should that tool be foregrounded?}
+
+\managerQ{Should the study produce a capacity gap report (what training is needed), a current state report (what is the situation), or a technology audit (which tools are functioning)?}
+
+\vspace{0.4cm}
+
+%-------------------------------------------------------
+\section{4. Conceptual Framework}
+%-------------------------------------------------------
+
+\subsection{What this section must contain}
+A conceptual framework visualises the theoretical lens through which you are studying the phenomenon. It shows: the key concepts, their relationships, and what they predict or explain. For this study, the recommended framework is a hybrid of two established theories.
+
+\subsection{Proposed Framework: TAM + TOE Hybrid}
+
+\begin{tcolorbox}[colback=govgray,colframe=govblue!30,arc=2mm]
+\small
+\textbf{Technology Acceptance Model (TAM)} [Davis, 1989]: Explains individual adoption through two constructs -- Perceived Usefulness and Perceived Ease of Use.
+
+\textbf{Technology-Organisation-Environment (TOE) Framework} [Tornatzky \& Fleischer, 1990]: Extends TAM to organisational contexts by adding organisational readiness and environmental (policy) pressure.
+
+\textbf{Your adaptation}: For Indian government departments, add a fourth dimension -- \textbf{Mandate Pressure} (adoption driven by official orders rather than voluntary choice) -- which is absent from both TAM and TOE.
+
+\textbf{Resulting independent variables}:
+\begin{itemize}[leftmargin=1.5em,itemsep=0pt]
+  \item Perceived Usefulness of IT tool
+  \item Ease of Use / digital literacy
+  \item Organisational infrastructure (hardware, internet, IT support)
+  \item Mandate/Policy Pressure (government orders)
+  \item Seniority/Class of official (Class I, II, III)
+\end{itemize}
+\textbf{Dependent variable}: Technology adoption level (Active User / Aware Non-User / Unaware -- 3-tier classification)
+\end{tcolorbox}
+
+\managerQ{Is the TAM/TOE framework familiar to the AIGGPA faculty reviewing this proposal, or should I use a simpler non-theoretical framework?}
+
+\managerQ{Does AIGGPA have a preferred theoretical lens for governance research -- e.g., institutional theory, public value theory?}
+
+\managerQ{Should the 3-tier classification (Active/Aware/Unaware) be the output variable, or should I use a Likert scale adoption score instead?}
+
+\vspace{0.4cm}
+
+%-------------------------------------------------------
+\section{5. Proposed Methodology}
+%-------------------------------------------------------
+
+\subsection{What this section must contain}
+The methodology section must specify: research design, sampling strategy, data collection instrument, data collection method, and analysis technique.
+
+\subsection{Proposed Methodology Details}
+
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Element} & \textbf{Proposed Approach} \\
+\midrule
+Research Design & Exploratory Primary Research with a descriptive cross-sectional survey design \\
+Target Population & Class I, II, and III officials in Education, Health, and Forest depts. of MP \\
+Sampling Strategy & Purposive sampling (state-level) + Convenience sampling (district-level field visits) \\
+Sample Size Target & 50-100 responses across 3 departments (confirm with manager) \\
+Data Collection Tool & Bilingual structured questionnaire (English/Hindi) -- already drafted \\
+Data Collection Method & Face-to-face interviews + self-administered survey (with mobile entry app) \\
+Analysis Technique & Descriptive statistics (frequency, percentage), Crosstab by class/department \\
+Duration & 6 weeks of field data collection within the 3-month internship \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.4cm}
+\managerQ{What is the minimum acceptable sample size for AIGGPA's internal studies -- do they follow any specific sampling guideline?}
+
+\managerQ{Can you facilitate introductions/access to district-level officials (DEO, DFO, CMHO offices) for field visits? Without access, we can only survey state-level officials.}
+
+\managerQ{Should data be collected anonymously, or should we record respondent name/designation for follow-up?}
+
+\managerQ{Is video recording of interviews allowed, or is a text-based questionnaire preferred for sensitivity reasons?}
+
+\managerQ{Are there any official ``field visit permissions'' (aadesh patra / permission letter) required from AIGGPA before surveying government officials?}
+
+\vspace{0.4cm}
+
+%-------------------------------------------------------
+\section{6. Significance of Study / Expected Contribution}
+%-------------------------------------------------------
+
+\subsection{What this section must contain}
+Explain what this study adds -- to theory, to practice, and to the specific institution (AIGGPA). A good significance section answers: "So what? Why does this matter?" in 3 layers.
+
+\subsection{Proposed Significance Statement}
+
+\begin{tcolorbox}[colback=govblue!5,colframe=govblue,arc=2mm]
+\small
+\textbf{To Theory}: This study contributes a government-specific adaptation of TAM/TOE that incorporates ``Mandate Pressure'' as an adoption driver unique to public sector contexts -- a gap in existing e-governance literature.
+
+\textbf{To Practice (AIGGPA)}: The study will generate a department-wise Technology Adoption Heatmap that AIGGPA can directly use to design targeted training programmes for Class I, II, and III officials under Mission Karmayogi.
+
+\textbf{To Policy (GoMP)}: By identifying which tools have high awareness but low usage (the ``Aware Non-User'' category), the study provides actionable evidence for the next phase of MP's e-Governance implementation.
+\end{tcolorbox}
+
+\managerQ{Does AIGGPA plan to use the findings for designing next year's training calendar? If yes, what format should the output be -- a report, a presentation, a dataset?}
+
+\managerQ{Should the study be positioned as a contribution to academic literature (potentially publishable) or purely as a policy practitioner document?}
+
+\vspace{0.4cm}
+
+%-------------------------------------------------------
+\section{7. Scope and Limitations}
+%-------------------------------------------------------
+
+\subsection{What this section must contain}
+Scope defines what IS included; limitations acknowledges what could skew findings. Being honest about limitations is a sign of academic rigour, not weakness.
+
+\subsection{Proposed Scope}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Departments covered}: Education, Health, Forest (Madhya Pradesh government only)
+  \item \textbf{Official grades}: Class I (Group A), Class II (Group B), Class III (Group C)
+  \item \textbf{Geography}: Primarily Bhopal (state level); selected districts (confirm with manager)
+  \item \textbf{Time period}: April to June 2026 (3-month internship window)
+  \item \textbf{Tools studied}: e-Office, HRMIS/SPARROW, iGOT Karmayogi, department-specific portals
+\end{itemize}
+
+\subsection{Known Limitations}
+\begin{itemize}[leftmargin=1.5em]
+  \item Access constraints: Survey depends on goodwill of officials; no random sampling possible without official mandate.
+  \item Self-reporting bias: Officials may overstate technology usage due to social desirability.
+  \item Single-state scope: Findings may not be generalisable to other states.
+  \item Short data collection window: 6 weeks may not capture seasonal variations in portal usage.
+  \item Class IV excluded: Focus is Class I-III; Class IV officials (peons, drivers) are out of scope.
+\end{itemize}
+
+\managerQ{Should Class IV officials be in scope? The manager's original brief mentioned them.}
+
+\managerQ{Can the study be conducted only in Bhopal, or is travel to districts (Indore, Jabalpur, Gwalior) budgeted and expected?}
+
+\managerQ{Is 50-100 responses considered sufficient for AIGGPA's purposes, or does the manager expect a larger dataset?}
+
+\vspace{0.4cm}
+
+%-------------------------------------------------------
+\section{8. Preliminary References}
+%-------------------------------------------------------
+
+\subsection{Confirmed, Citable Sources}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. \textit{MIS Quarterly}, 13(3), 319-340.
+  \item Tornatzky, L. G., \& Fleischer, M. (1990). \textit{The Processes of Technological Innovation}. Lexington Books.
+  \item Government of India (2020). \textit{Mission Karmayogi: National Programme for Civil Services Capacity Building}. DoPT, Ministry of Personnel.
+  \item iGOT Karmayogi (2024). \textit{Annual Report on Civil Servant Onboarding}. Capacity Building Commission, GoI.
+  \item National Informatics Centre (2023). \textit{e-Office Adoption Report: Progress Across States}. NIC, MeitY.
+  \item Government of Madhya Pradesh (2024). \textit{Education Portal 2.0 -- About Us}. School Education Department.
+  \item Government of Madhya Pradesh (2025). \textit{Ayushman Sakhi Chatbot}. Directorate of Health.
+  \item Indian Express (April 2025). \textit{MP becomes first state to launch AI-based real-time forest alert system}.
+\end{enumerate}
+
+\managerQ{Does AIGGPA have a specific citation style requirement -- APA, MLA, or a government report style?}
+
+\managerQ{Are there any AIGGPA-specific working papers or internal studies I should cite to show alignment with institutional priorities?}
+
+\managerQ{Is there an official MP Government e-Governance policy document I should reference as primary evidence for the intervention context?}
+
+\vspace{0.5cm}
+
+%-------------------------------------------------------
+\section*{Master Checklist: Questions for Manager Meeting}
+%-------------------------------------------------------
+
+\begin{tcolorbox}[colback=alertred!8,colframe=alertred,title=\textbf{Complete this checklist before finalising the proposal},fonttitle=\small\bfseries]
+\small
+\begin{enumerate}[leftmargin=1.5em,label=\arabic*.]
+  \item $\square$ What is the primary audience for the final output -- internal AIGGPA, GoMP, or academic publication?
+  \item $\square$ Confirm the exact 3 departments and whether Class IV is in or out of scope.
+  \item $\square$ Is travel to districts (Indore, Jabalpur, Gwalior) expected and will there be travel support?
+  \item $\square$ What minimum sample size is acceptable to AIGGPA for a 3-month study?
+  \item $\square$ Can the manager facilitate official introductions to DEO/DFO/CMHO offices?
+  \item $\square$ Is a formal permission/introductory letter (aadesh patra) available from AIGGPA?
+  \item $\square$ Should data be collected anonymously or with respondent identification?
+  \item $\square$ Is there any existing AIGGPA data on technology adoption levels in MP departments?
+  \item $\square$ Does the manager prefer the TAM/TOE framework or a simpler descriptive approach?
+  \item $\square$ What citation style does AIGGPA use for formal proposals?
+  \item $\square$ Does the proposal need a budget section (for field travel costs)?
+  \item $\square$ What is the deadline for submitting the finalised proposal to the manager?
+  \item $\square$ Are there GoMP orders or circulars on mandatory e-Office adoption I should attach as annexures?
+  \item $\square$ Should iGOT Karmayogi be studied as a primary tool or only as contextual background?
+  \item $\square$ Does the manager want the 3-tier classification (Active/Aware/Unaware) or a different categorisation?
+  \item $\square$ Is there a specific district or state-level office I should prioritise visiting first?
+  \item $\square$ Will the intern be given an official identity card to show officials during field visits?
+  \item $\square$ What is AIGGPA's position on audio/video recording interviews with government officials?
+  \item $\square$ Confirm that the manager has reviewed and approved the bilingual survey questionnaire.
+  \item $\square$ What is the format of the final deliverable -- presentation, PDF report, raw dataset, or all three?
+\end{enumerate}
+\end{tcolorbox}
+
+\vspace{0.3cm}
+\begin{center}
+\small\textit{This document is a working guide. Replace all placeholder text with confirmed information before finalising the formal proposal.}
+\end{center}
+
+\end{document}

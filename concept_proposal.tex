@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
+\newcommand{\hindi}[1]{{\hindifont #1}}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+\tcbuselibrary{skins, breakable}
+
+% Colours
+\definecolor{govblue}{HTML}{003366}
+\definecolor{govgold}{HTML}{C19A3E}
+\definecolor{accent1}{HTML}{1B4F72}
+\definecolor{accent2}{HTML}{2E86C1}
+\definecolor{accent3}{HTML}{27AE60}
+
+% tcolorbox styles
+\newtcolorbox{frameworkbox}[1][]{
+  colback=govblue!5, colframe=govblue,
+  fonttitle=\bfseries, title={#1},
+  boxrule=0.5pt, arc=2mm, breakable
+}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{govblue}{AIGGPA Internship -- Concept Proposal}}
+\fancyhead[R]{\small\textcolor{govblue}{April 2026}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+
+% Section Formatting
+\titleformat{\section}
+  {\Large\bfseries\color{govblue}}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}
+  {\large\bfseries\color{accent1}}{\thesubsection}{1em}{}
+
+\setstretch{1.25}
+\hypersetup{colorlinks=true, linkcolor=govblue, urlcolor=accent2}
+
+\begin{document}
+
+\begin{center}
+\vspace*{0.5cm}
+{\Huge\bfseries\textcolor{govblue}{Research Concept Proposal}}
+
+\vspace{0.3cm}
+{\Large\textcolor{accent1}{Field Assessment of HR-IT Integration \& Technology Adoption}}
+
+{\large\textcolor{accent1}{\hindi{मानव संसाधन-सूचना प्रौद्योगिकी एकीकरण का क्षेत्रीय मूल्यांकन}}}
+
+\vspace{0.5cm}
+\rule{0.6\textwidth}{1pt}
+
+\vspace{0.3cm}
+{\large Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA)}
+\end{center}
+
+\vspace{1cm}
+
+\section{1. Background \& Purpose (\hindi{पृष्ठभूमि एवं उद्देश्य})}
+
+The Government of Madhya Pradesh has made significant strides in digital governance through initiatives anchored in the principles of Mission Karmayogi (\hindi{मिशन कर्मयोगी}). However, secondary research at AIGGPA reveals an explicit \textbf{data gap}: there is no existing internal dataset or research paper tracking the actual, ground-level integration of Human Resource and Information Technology (HR-IT) tools among state and district officials.
+
+The purpose of this research is to conduct a primary, exploratory study to measure unbiased technology adoption levels, identify capacity-building bottlenecks, and categorize officials into a Three-Tier Awareness Framework (Active Users, Aware Non-Users, Unaware).
+
+\section{2. The Government's Role \& Operational Matrix (\hindi{सरकार की भूमिका})}
+
+The shift from a "Rule-Based" to a "Role-Based" bureaucracy requires officials to perform their duties efficiently while acting as agile facilitators of public welfare. This research evaluates technology adoption across two distinct operational dimensions:
+
+\begin{frameworkbox}[The Technology Dimensions]
+\begin{enumerate}
+    \item \textbf{Technology used to serve the public (G2C):} Portals, applications, and dashboards used for scheme delivery, grievance redressal, and citizen interaction.
+    \item \textbf{Technology used for personal administrative use (G2G):} e-Office, e-HRMS, SPARROW, and internal asset/file management systems that enhance the official's personal efficiency.
+\end{enumerate}
+\end{frameworkbox}
+
+\section{3. Technology Audit \& Scope (\hindi{प्रौद्योगिकी ऑडिट एवं दायरा})}
+
+To ensure statistically significant and actionable findings, this audit will target three specific, high-impact sectors spanning both State and District level offices:
+\begin{itemize}
+    \item \textbf{Education Department (\hindi{शिक्षा विभाग})}
+    \item \textbf{Health Department (\hindi{स्वास्थ्य विभाग})}
+    \item \textbf{Forest Department (\hindi{वन विभाग})}
+\end{itemize}
+
+The audit will seek answers to critical operational questions: Do employees use e-Office? Is archiving and digitisation occurring? Do employees require additional tools (e.g., Google Workspace/Microsoft equivalents)? What legacy/parallel tech are they using instead?
+
+\section{4. Research Methodology (\hindi{अनुसंधान पद्धति})}
+
+\begin{itemize}
+    \item \textbf{Approach:} Primary Exploratory Research.
+    \item \textbf{Instrument:} A structured, bi-lingual (English/Hindi) survey designed to elicit unbiased opinions, avoiding leading questions.
+    \item \textbf{Execution:} Direct field interactions at district/state offices. To combat "survey fatigue" and ensure honest responses, the survey will be presented as an efficiency audit rather than an individual performance metric.
+    \item \textbf{Respondents:} Stratified sampling across Class I, II, III, and IV officials to determine where the technical skill gap is widest.
+\end{itemize}
+
+\section{5. Deliverables \& Capacity Building Solutions}
+
+The final output will bridge the identified data gap at AIGGPA, resulting in:
+\begin{enumerate}
+    \item A quantitative \textbf{Adoption Index Matrix} plotting usage vs. awareness.
+    \item A \textbf{Capacity Building Action Plan} tailored for the three target departments.
+    \item A policy advisory on streamlining internal file management and asset tracking.
+\end{enumerate}
+
+\end{document}

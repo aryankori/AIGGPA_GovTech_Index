@@ -1,0 +1,1 @@
+Prototype HTML files are located at: ../prototype/ (kept in place for web server compatibility)

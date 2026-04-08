@@ -1,0 +1,375 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
+\newcommand{\hindi}[1]{{\hindifont #1}}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+\tcbuselibrary{skins, breakable}
+
+% Colours
+\definecolor{govblue}{HTML}{003366}
+\definecolor{govgold}{HTML}{C19A3E}
+\definecolor{accent1}{HTML}{1B4F72}
+\definecolor{accent2}{HTML}{2E86C1}
+\definecolor{accent3}{HTML}{27AE60}
+\definecolor{accent4}{HTML}{E67E22}
+\definecolor{accent5}{HTML}{8E44AD}
+\definecolor{redalert}{HTML}{E53935}
+
+% tcolorbox styles
+\newtcolorbox{datebox}[1][]{
+  colback=govblue!5, colframe=govblue,
+  fonttitle=\bfseries, title={#1},
+  boxrule=0.5pt, arc=2mm, breakable
+}
+
+\newtcolorbox{actionbox}[1][]{
+  colback=accent4!8, colframe=accent4,
+  fonttitle=\bfseries, title={#1},
+  boxrule=0.5pt, arc=2mm, breakable
+}
+
+\newtcolorbox{insightbox}[1][]{
+  colback=accent3!8, colframe=accent3,
+  fonttitle=\bfseries, title={#1},
+  boxrule=0.5pt, arc=2mm, breakable
+}
+
+\newtcolorbox{criticalbox}[1][]{
+  colback=redalert!8, colframe=redalert,
+  fonttitle=\bfseries, title={#1},
+  boxrule=0.5pt, arc=2mm, breakable
+}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{govblue}{AIGGPA Internship -- Notes from Manager}}
+\fancyhead[R]{\small\textcolor{govblue}{April 2026}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+
+% Section Formatting
+\titleformat{\section}
+  {\Large\bfseries\color{govblue}}{\thesection}{1em}{}[\titlerule]
+\titleformat{\subsection}
+  {\large\bfseries\color{accent1}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{accent2}}{\thesubsubsection}{1em}{}
+
+\setstretch{1.25}
+\hypersetup{colorlinks=true, linkcolor=govblue, urlcolor=accent2}
+
+\begin{document}
+
+% --- Title ---
+\begin{center}
+\vspace*{0.5cm}
+
+{\Huge\bfseries\textcolor{govblue}{Notes from Manager}}
+
+\vspace{0.3cm}
+
+{\Large\textcolor{accent1}{AIGGPA Bhopal -- Summer Internship 2026}}
+
+{\large\textcolor{accent1}{\hindi{एआईजीजीपीए भोपाल -- ग्रीष्मकालीन इंटर्नशिप}}}
+
+\vspace{0.5cm}
+
+\rule{0.6\textwidth}{1pt}
+
+\vspace{0.3cm}
+
+{\large Handwritten field notes transcribed from internship diary}
+
+{\normalsize Covering: 6 April 2026 -- 9 April 2026}
+
+\end{center}
+
+\vspace{1cm}
+
+\tableofcontents
+\newpage
+
+% =============================================================================
+% DAY 1 -- 6 APRIL 2026
+% =============================================================================
+\section{Day 1: 6 April 2026 -- Initial Briefing \& Task Assignment}
+
+\begin{datebox}[To-Do List from Manager]
+\textbf{Research Tasks Assigned:}
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=1.5cm]
+  \item[\textbf{K} $\rightarrow$] Work on given topics of study
+  \item[\textbf{K} $\rightarrow$] \textbf{HR \& IT in Government Sector}
+    \begin{itemize}
+      \item Focus areas: women, senior officials, gadgets/devices
+    \end{itemize}
+  \item[\textbf{S} $\rightarrow$] \textbf{Mission Karmayogi} (\hindi{मिशन कर्मयोगी})
+  \item[\textbf{H} $\rightarrow$] \textbf{Wellness of HR} -- Is HR productive?
+    \begin{itemize}
+      \item Study different aspects of wellness (\textbf{8 aspects})
+    \end{itemize}
+\end{enumerate}
+\end{datebox}
+
+\begin{actionbox}[Immediate Action Item]
+\textbf{Monday Sunrise $\rightarrow$ Presentation}
+
+\noindent Research the following for the presentation:
+\begin{itemize}
+  \item DoPT website and other platforms
+  \item CDEC (Centre for Distance \& Online Education)
+  \item NITI Aayog
+  \item Government Departments and their platforms
+\end{itemize}
+\end{actionbox}
+
+% ---
+\subsection{Key Investigation Areas}
+
+The manager outlined three layers of investigation for understanding technology usage among government employees:
+
+\begin{enumerate}[label=\textbf{Layer \arabic*:}]
+  \item \textbf{Government Departments that are not working efficiently} -- or at least, not as efficiently as they can
+  \item \textbf{Ask government department employees:}
+    \begin{itemize}
+      \item[$\rightarrow$] Who \textit{is} using IT tools?
+      \item[$\rightarrow$] Who \textit{knows about} IT tools but is \textit{not using} them?
+      \item[$\rightarrow$] If HR is using tools -- who does not even \textit{know} about them?
+      \item[$\rightarrow$] Or not using at all
+    \end{itemize}
+\end{enumerate}
+
+\begin{insightbox}[Key Insight]
+This is essentially a \textbf{3-tier technology awareness classification}:
+\begin{enumerate}
+  \item \textbf{Active Users} -- using IT tools
+  \item \textbf{Aware Non-Users} -- know about tools but don't use them
+  \item \textbf{Unaware} -- don't even know the tools exist
+\end{enumerate}
+This directly maps to the adoption index methodology in our research framework.
+\end{insightbox}
+
+% =============================================================================
+\section{iGOT Karmayogi Partners \& Training Programmes}
+
+\subsection{iGOT Partners (Content \& Training Providers)}
+
+\begin{table}[h!]
+\centering
+\caption{iGOT Karmayogi Partner Institutions}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Partner} & \textbf{Category} \\
+\midrule
+LBSNAA (Mussoorie) & Premier Civil Services Training Academy \\
+ISTM & Institute of Secretariat Training \& Management \\
+SVNPA & Sardar Vallabhbhai National Police Academy \\
+ISRO & Indian Space Research Organisation \\
+Microsoft & Technology Partner \\
+Udemy & Online Learning Platform \\
+Karmayogi Bharat (\hindi{कर्मयोगी भारत}) & Nodal Agency for Mission Karmayogi \\
+Indian Institute of Remote Sensing, Dehradun & Specialised Technical Training \\
+IIT Roorkee & Academic Partner \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Training Programme Topics (from iGOT/LBSNAA)}
+
+\subsubsection{Technical/Domain Training}
+\begin{enumerate}
+  \item Application of AI/ML in Agricultural Analytics
+  \item Water Management / Natural Resource Management
+  \item Blue Economy (\hindi{नीली अर्थव्यवस्था})
+\end{enumerate}
+
+\subsubsection{Governance \& Policy Training (via LBSNAA)}
+\begin{enumerate}
+  \item Driving Government Finance for Developed India
+  \item Critical Issues of Governance in PRIs \& Rural Development
+  \item Border Economy \& Border Development for National Security
+  \item Breaking Barriers: Building Property Strategies for Women's Economic Inclusion
+  \item Capacity Building \& Sensitisation Programme on Criminal Law Reform
+  \item Digital Transformation of Government for Improved Public Service
+\end{enumerate}
+
+\subsubsection{Ethics \& Personal Development}
+\begin{enumerate}
+  \item Ethics in Public Service (via Centre for Governance)
+  \item Building Competencies for Personal Excellence (via Art of Living, Bangalore)
+\end{enumerate}
+
+\noindent\textit{Additional reference: LBSNAA, Jangpok}
+
+% =============================================================================
+\newpage
+\section{Day 4: 9 April 2026 -- Mission Karmayogi Deep Dive}
+
+\begin{datebox}[Mission Karmayogi (\hindi{मिशन कर्मयोगी}) -- Briefing Notes]
+
+\textbf{What is Mission Karmayogi?}
+
+An Indian Government initiative to \textbf{transform} bureaucratic learning from \textbf{RULE-BASED} to \textbf{ROLE-BASED}.
+
+\vspace{0.5em}
+
+\textbf{Two Core Components:}
+\begin{enumerate}[label=\textbf{(\arabic*)}]
+  \item \textbf{iGOT Karmayogi Platform} \\
+    Enables officials to pursue learning \textbf{anytime, anyplace, any device} at their own convenience.
+  \item \textbf{National Programme for Civil Service Capacity Building (NPCSCB)}
+\end{enumerate}
+\end{datebox}
+
+\subsection{6 Pillars of Mission Karmayogi}
+
+\begin{table}[h!]
+\centering
+\caption{Six Pillars of Mission Karmayogi}
+\begin{tabularx}{\textwidth}{@{}clX@{}}
+\toprule
+\textbf{No.} & \textbf{Pillar} & \textbf{Description} \\
+\midrule
+1 & iGOT Karmayogi & Large-scale comprehensive digital learning platform \\
+2 & e-HRMS & Strategic HR management platform \\
+3 & M\&E & Continuous performance analysis \\
+4 & Institutional Framework & Data-driven goal setting; oversight by PM HR Council \\
+5 & Competence Framework & Shift from Rule $\rightarrow$ Role; new training policies \\
+6 & Policy Framework & Focus on outcome-based (end) learning \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% =============================================================================
+\section{Field Research Observations \& Questions}
+
+\subsection{Critical Finding: Research Gap}
+
+\begin{criticalbox}[No Existing Research Found]
+\begin{enumerate}[label=\textbf{(\arabic*)}]
+  \item \textbf{No research exists on HR \& IT integration} -- no papers available
+  \item As of T4 2026, research on HR: approximately \textbf{22 papers found} (none on HR-IT specifically)
+  \item \textbf{No existing dataset in AIGGPA}
+  \item \textbf{Do people in AIGGPA use e-Office?} -- Status unclear (needs investigation)
+  \item Archiving and digitisation of files in AIGGPA -- needs assessment
+\end{enumerate}
+\end{criticalbox}
+
+\subsection{Manager's Questions for Employees}
+
+These are the questions the manager wants investigated through primary research:
+
+\begin{table}[h!]
+\centering
+\caption{Research Questions from Manager}
+\begin{tabularx}{\textwidth}{@{}clX@{}}
+\toprule
+\textbf{Q\#} & \textbf{Topic} & \textbf{Question} \\
+\midrule
+Q1 & e-Office Usage & Do people in AIGGPA use e-Office? \\
+Q2 & Digitisation & What is the status of archiving and digitisation of files? \\
+Q3 & Tools \& Efficiency & What kind of tech or tools do employees use? What are ways to increase their efficiency? \\
+Q4 & Asset/File Mgmt & Is there an asset management tool or file management tool in use? \\
+Q5 & Employee Needs & Do employees require any additional tools? (ref: Google Workspace) \\
+Q6 & Tool Inventory & What other tools are the employees currently using? \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% =============================================================================
+\section{Scope \& Concept Proposal Direction}
+
+\subsection{Target Sectors for Capacity Building Study}
+
+The manager identified \textbf{7 sectors} for the capacity building solutions study:
+
+\begin{enumerate}[label=\textbf{(\arabic*)}]
+  \item Forest (\hindi{वन})
+  \item Health (\hindi{स्वास्थ्य})
+  \item Education (\hindi{शिक्षा})
+  \item Agriculture (\hindi{कृषि})
+  \item Rural Development (\hindi{ग्रामीण विकास})
+  \item Urban Development (\hindi{शहरी विकास})
+  \item State Office and District Office (\hindi{राज्य कार्यालय एवं जिला कार्यालय})
+\end{enumerate}
+
+\begin{actionbox}[Open Question from Manager]
+\textbf{How many departments should we go focused on?}
+
+Should the study cover officials across \textbf{Class IV, III, II, and I} -- or be narrowed?
+\end{actionbox}
+
+\subsection{Concept Proposal Structure (Manager's Direction)}
+
+The manager outlined the following structure for the concept note/proposal:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Background} $\rightarrow$ Why? Purpose?
+  \item \textbf{Government's Role:} Duties, governance obligations
+  \item \textbf{Technology for Service Delivery:}
+    \begin{itemize}
+      \item Some app to send and receive files
+      \item Look at how government can serve citizens better
+      \item How government employees interact with schemes directly
+    \end{itemize}
+  \item \textbf{Current Technology Audit:}
+    \begin{itemize}
+      \item What tech is the government currently using -- and what do they \textit{think} about it?
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Two Dimensions of Technology Use}
+
+The manager made a key distinction:
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Dimension} & \textbf{Description} \\
+\midrule
+\textbf{Technology used to serve the public} & Platforms, portals, apps used for citizen-facing service delivery (G2C) \\
+\textbf{Technology used for personal/internal use} & Tools used by employees for their own administrative work (G2G) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Research Methodology Direction}
+
+\begin{insightbox}[Manager's Guidance on Methodology]
+\textbf{How to do the research?}
+
+$\rightarrow$ \textbf{Primary research} -- \textbf{Exploratory} approach
+
+This confirms the study should be field-based, qualitative/mixed-methods, using surveys, interviews, and direct observation at AIGGPA and target departments.
+\end{insightbox}
+
+% =============================================================================
+\section*{Summary: Key Takeaways for Next Steps}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{No existing research or data} on HR-IT integration at AIGGPA -- this is greenfield work
+  \item \textbf{Primary exploratory research} is the confirmed methodology
+  \item \textbf{3-tier employee classification:} Active Users / Aware Non-Users / Unaware
+  \item \textbf{7 target sectors} identified for capacity building study
+  \item \textbf{6 specific research questions} from the manager to guide survey design
+  \item \textbf{Two technology dimensions:} public-facing (G2C) vs. internal (G2G)
+  \item \textbf{Concept proposal} needed with Background, Purpose, Tech Audit, and Recommendations
+  \item \textbf{Mission Karmayogi's 6 pillars} provide the national policy framework to anchor the study
+\end{enumerate}
+
+\end{document}

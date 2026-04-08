@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGGPA Field Survey App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-glass: rgba(30, 41, 59, 0.7);
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --accent: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-glow: rgba(59, 130, 246, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top right, #1e1b4b, var(--bg-dark));
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .glass-card {
+            background: var(--card-glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px var(--border-glow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        /* Custom Radio & Checkbox styling */
+        .option-lbl {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .option-lbl:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--text-muted);
+            border-radius: 50%;
+            margin-right: 12px;
+            position: relative;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        input[type="checkbox"] {
+            border-radius: 6px;
+        }
+
+        input[type="radio"]:checked, input[type="checkbox"]:checked {
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input:checked + span {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-submit:hover {
+            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Success Animation Overlay */
+        #success-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            z-index: 100;
+        }
+
+        #success-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: var(--accent);
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px var(--accent);
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: var(--accent);
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke {
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes scale {
+            0%, 100% { transform: none; }
+            50% { transform: scale3d(1.1, 1.1, 1); }
+        }
+        @keyframes fill {
+            100% { box-shadow: inset 0px 0px 0px 30px rgba(16, 185, 129, 0.2); }
+        }
+
+        .success-text {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            opacity: 0;
+            animation: fadeIn 0.5s ease 1.2s forwards;
+        }
+
+        @keyframes fadeIn {
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>AIGGPA Field Survey</h1>
+            <p>Digital Workflow & Efficiency Assessment (Mobile Entry)</p>
+        </div>
+
+        <form id="surveyForm" onsubmit="submitForm(event)">
+            
+            <!-- Section A -->
+            <div class="glass-card">
+                <div class="form-group">
+                    <label>1. Department</label>
+                    <label class="option-lbl"><input type="radio" name="dept" value="Education" required> <span>Education</span></label>
+                    <label class="option-lbl"><input type="radio" name="dept" value="Health"> <span>Health</span></label>
+                    <label class="option-lbl"><input type="radio" name="dept" value="Forest"> <span>Forest</span></label>
+                </div>
+
+                <div class="form-group">
+                    <label>2. Designation Level</label>
+                    <label class="option-lbl"><input type="radio" name="class" value="I" required> <span>Class I (Group A)</span></label>
+                    <label class="option-lbl"><input type="radio" name="class" value="II"> <span>Class II (Group B)</span></label>
+                    <label class="option-lbl"><input type="radio" name="class" value="III"> <span>Class III (Group C)</span></label>
+                    <label class="option-lbl"><input type="radio" name="class" value="IV"> <span>Class IV (Group D)</span></label>
+                </div>
+            </div>
+
+            <!-- Section B -->
+            <div class="glass-card">
+                <div class="form-group">
+                    <label>3. internal Tools Used (G2G)</label>
+                    <label class="option-lbl"><input type="checkbox" name="tools" value="e-Office"> <span>e-Office / e-File</span></label>
+                    <label class="option-lbl"><input type="checkbox" name="tools" value="e-HRMS"> <span>e-HRMS / GEMS</span></label>
+                    <label class="option-lbl"><input type="checkbox" name="tools" value="SPARROW"> <span>SPARROW (Digital APAR)</span></label>
+                    <label class="option-lbl"><input type="checkbox" name="tools" value="iGOT"> <span>iGOT Karmayogi</span></label>
+                </div>
+
+                <div class="form-group">
+                    <label>4. Frequency of e-Office Usage</label>
+                    <label class="option-lbl"><input type="radio" name="usage" value="daily" required> <span>Daily</span></label>
+                    <label class="option-lbl"><input type="radio" name="usage" value="weekly"> <span>Weekly</span></label>
+                    <label class="option-lbl"><input type="radio" name="usage" value="rarely"> <span>Rarely / Prefer physical files</span></label>
+                    <label class="option-lbl"><input type="radio" name="usage" value="never"> <span>Never / Need training</span></label>
+                </div>
+            </div>
+
+            <!-- Section C -->
+            <div class="glass-card">
+                <div class="form-group">
+                    <label>5. Tech Adoption Determinant</label>
+                    <label class="option-lbl"><input type="radio" name="determinant" value="mandate" required> <span>Official Mandate/Order</span></label>
+                    <label class="option-lbl"><input type="radio" name="determinant" value="workload"> <span>Reduces my workload</span></label>
+                    <label class="option-lbl"><input type="radio" name="determinant" value="training"> <span>Adequate training provided</span></label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Save Survey Response</button>
+        </form>
+    </div>
+
+    <!-- Success Feedback -->
+    <div id="success-overlay">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <div class="success-text">Response Recorded</div>
+    </div>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            
+            // Show animation
+            const overlay = document.getElementById('success-overlay');
+            overlay.classList.add('active');
+            
+            // Reset form and hide animation after 2.5s
+            setTimeout(() => {
+                document.getElementById('surveyForm').reset();
+                overlay.classList.remove('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 2500);
+        }
+    </script>
+</body>
+</html>

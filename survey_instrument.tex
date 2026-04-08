@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
+\newcommand{\hindi}[1]{{\hindifont #1}}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+% Colors
+\definecolor{govblue}{HTML}{003366}
+\definecolor{govgray}{HTML}{eceff1}
+
+% Header
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Checkbox command
+\newcommand{\cbox}{$\square$}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Large \textcolor{govblue}{Digital Workflow \& Efficiency Survey}} \\
+\textbf{\large \textcolor{govblue}{\hindi{डिजिटल कार्यप्रवाह एवं दक्षता सर्वेक्षण}}} \\
+\vspace{0.2cm}
+\textit{Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA)} \\
+\vspace{0.3cm}
+\small{\textbf{Note (\hindi{नोट}):} This survey is strictly for research purposes to understand workflow efficiency. Responses are anonymous. (\hindi{यह सर्वेक्षण केवल अनुसंधान उद्देश्यों के लिए है। प्रतिक्रियाएं गुमनाम हैं।})}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
+\textbf{Part A: Basic Information (\hindi{भाग अ: सामान्य जानकारी})}
+\end{tcolorbox}
+
+\noindent \textbf{1. Department (\hindi{विभाग}):} \cbox~Education (\hindi{शिक्षा}) \quad \cbox~Health (\hindi{स्वास्थ्य}) \quad \cbox~Forest (\hindi{वन}) \\[0.3cm]
+\textbf{2. Designation Level (\hindi{पद स्तर}):} 
+\cbox~Class I (Group A) \quad 
+\cbox~Class II (Group B) \quad 
+\cbox~Class III (Group C) \quad 
+\cbox~Class IV (Group D)
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
+\textbf{Part B: Internal Administrative Technology / G2G (\hindi{भाग ब: आंतरिक प्रशासनिक प्रौद्योगिकी})}
+\end{tcolorbox}
+
+\noindent \textbf{3. Which of the following tools currently exist in your department? (Tick all that apply)} \\
+\hindi{आपके विभाग में वर्तमान में कौन से उपकरण मौजूद हैं? (लागू होने वाले सभी विकल्पों पर टिक करें)}
+\begin{itemize}[label=\cbox, itemsep=0pt]
+    \item e-Office / e-File (\hindi{ई-कार्यालय})
+    \item e-HRMS / GEMS (\hindi{ई-एचआरएमएस})
+    \item SPARROW / Digital APAR (\hindi{डिजिटल अपार})
+    \item iGOT Karmayogi (\hindi{आईगॉट कर्मयोगी})
+    \item Department Specific File Portal (\hindi{विभागीय पोर्टल})
+\end{itemize}
+
+\noindent \textbf{4. How frequently do you personally use digital systems (like e-Office) for internal file movement?} \\
+\hindi{आप व्यक्तिगत रूप से आंतरिक फ़ाइल स्थानांतरण के लिए डिजिटल प्रणालियों का कितनी बार उपयोग करते हैं?}
+\begin{itemize}[label=\cbox, itemsep=0pt]
+    \item Daily (\hindi{प्रतिदिन})
+    \item Weekly (\hindi{साप्ताहिक})
+    \item Rarely -- I mostly use physical files (\hindi{शायद ही कभी -- मैं ज्यादातर भौतिक फ़ाइलों का उपयोग करता हूँ})
+    \item Never -- I am not required to use it (\hindi{कभी नहीं -- मुझे इसका उपयोग करने की आवश्यकता नहीं है})
+    \item Need training to use it (\hindi{उपयोग करने के लिए प्रशिक्षण की आवश्यकता है})
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
+\textbf{Part C: Public Service Technology / G2C (\hindi{भाग स: सार्वजनिक सेवा प्रौद्योगिकी})}
+\end{tcolorbox}
+
+\noindent \textbf{5. How frequently do you use citizen-facing digital platforms (e.g., scheme portals, grievance dashboards)?} \\
+\hindi{आप नागरिक-उन्मुख डिजिटल प्लेटफ़ॉर्म का कितनी बार उपयोग करते हैं?}
+\begin{itemize}[label=\cbox, itemsep=0pt]
+    \item Multiple times a day (\hindi{दिन में कई बार})
+    \item Output is printed and given to me (\hindi{प्रिंटआउट मुझे दिया जाता है})
+    \item Handled entirely by data entry operators (\hindi{पूरी तरह से ऑपरेटरों द्वारा संभाला जाता है})
+    \item Not applicable to my role (\hindi{मेरी भूमिका पर लागू नहीं})
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
+\textbf{Part D: Technology Awareness \& Perception (\hindi{भाग द: प्रौद्योगिकी जागरूकता एवं धारणा})}
+\end{tcolorbox}
+
+\noindent \textbf{6. If a new digital tool is introduced in your workflow, what is the primary determinant for your adoption?} \\
+\hindi{यदि आपके कार्यप्रवाह में कोई नया डिजिटल उपकरण पेश किया जाता है, तो उसे अपनाने का प्राथमिक कारण क्या है?}
+\begin{itemize}[label=\cbox, itemsep=0pt]
+    \item Official Mandate/Order (\hindi{आधिकारिक आदेश})
+    \item Reduces my workload (\hindi{मेरे कार्यभार को कम करता है})
+    \item Adequate training provided (\hindi{उचित प्रशिक्षण प्रदान किया गया})
+    \item Availability of functioning hardware/internet (\hindi{कामकाजी हार्डवेयर/इंटरनेट की उपलब्धता})
+\end{itemize}
+
+\vspace{0.3cm}
+\noindent \textbf{7. Are there any commercial tools (e.g., Google Drive, WhatsApp, Excel) that you rely on because official tools are unavailable or difficult to use?} \\
+\hindi{क्या ऐसे कोई व्यावसायिक उपकरण हैं जिन पर आप निर्भर हैं क्योंकि आधिकारिक उपकरण अनुपलब्ध हैं या उपयोग करने में कठिन हैं?} \\
+\rule{\textwidth}{0.5pt} \\
+
+\end{document}
