@@ -1,8 +1,5 @@
 \documentclass[12pt,a4paper]{article}
 
-% ============================================================
-% APA 7 FORMATTING SETUP
-% ============================================================
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 \newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
@@ -15,219 +12,89 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hanging}
-\usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{tabularx}
-\usepackage{caption}
+\usepackage{hyperref}
 
 \hypersetup{colorlinks=false, hidelinks}
-
-% APA 7 paragraph indent = 0.5 inch
 \setlength{\parindent}{1.27cm}
-
-% Double spacing throughout
 \doublespacing
 
-% Page numbers: top right, no header text (student paper APA 7)
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{14pt}
 
-% ============================================================
-% APA 7 HEADING STYLES
-% Level 1: Centered, Bold, Title Case
-% Level 2: Left-aligned, Bold, Title Case
-% Level 3: Left-aligned, Bold Italic, Title Case
-% ============================================================
-\titleformat{\section}[block]
-  {\normalfont\bfseries\fontsize{12}{14}\selectfont\centering}
-  {}{0em}{}
-\titlespacing*{\section}{0pt}{0pt}{0pt}
+% APA 7 heading levels
+\titleformat{\section}[block]{\normalfont\bfseries\centering}{}{0em}{}
+\titlespacing*{\section}{0pt}{12pt}{0pt}
+\titleformat{\subsection}[block]{\normalfont\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{12pt}{0pt}
 
-\titleformat{\subsection}[block]
-  {\normalfont\bfseries\fontsize{12}{14}\selectfont}
-  {}{0em}{}
-\titlespacing*{\subsection}{0pt}{0pt}{0pt}
-
-\titleformat{\subsubsection}[block]
-  {\normalfont\bfseries\itshape\fontsize{12}{14}\selectfont}
-  {}{0em}{}
-\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
-
-% No extra space between list items (APA style)
-\setlist[itemize]{noitemsep,topsep=0pt,leftmargin=1.27cm}
-\setlist[enumerate]{noitemsep,topsep=0pt,leftmargin=1.27cm}
-
-% ============================================================
-% TABLE/FIGURE CAPTION (APA style: Table X above, Note below)
-% ============================================================
-\captionsetup{justification=raggedright,singlelinecheck=false,labelfont=bf}
+\setlist[itemize]{noitemsep,topsep=2pt,leftmargin=1.27cm}
+\setlist[enumerate]{noitemsep,topsep=2pt,leftmargin=1.27cm}
 
 \begin{document}
 
-% ============================================================
-% TITLE PAGE (APA 7 Student Paper)
-% ============================================================
-\begin{titlepage}
-\thispagestyle{fancy}
-\vspace*{4cm}
+% ---- TITLE BLOCK ----
 \begin{center}
-  {\bfseries Assessment of Information Technology Tool Utilisation Among Government Officials:\\
-  An Exploratory Field Study Across Selected Departments, Madhya Pradesh}\\[1.5em]
-  \hindi{सरकारी अधिकारियों द्वारा सूचना प्रौद्योगिकी उपकरणों के उपयोग का आकलन: मध्य प्रदेश}\\[2em]
-  Aryan Kori\\[0.5em]
-  Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA), Bhopal\\[0.5em]
-  Summer Internship Research Proposal\\[0.5em]
-  Faculty Supervisor: [Name of Supervisor]\\[0.5em]
-  April 2026
+{\bfseries Assessment of IT Tool Utilisation Among Government Officials:\\
+\hindi{सरकारी अधिकारियों द्वारा आईटी उपकरणों के उपयोग का आकलन}}\\[0.8em]
+Aryan Kori\\
+Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA), Bhopal\\
+Summer Internship -- April 2026
 \end{center}
-\end{titlepage}
-
-% ============================================================
-% ABSTRACT
-% ============================================================
-\newpage
-\section*{Abstract}
-
-\setlength{\parindent}{0pt}
-
-Digital governance infrastructure in Madhya Pradesh has expanded substantially over the past decade, encompassing platforms such as Education Portal 2.0, e-Office, HRMIS, SPARROW, and department-specific management systems. However, the deployment of digital tools does not necessarily translate into adoption at the operational level. Preliminary observations suggest a significant variance between the official availability of information technology (IT) tools and their actual utilisation by government employees across departments. This exploratory study proposes a structured field assessment of IT tool utilisation among officials in three departments of the Government of Madhya Pradesh (GoMP): School Education, Health, and Forest. Using a two-stream mixed-methods design, the study will survey department officials regarding their daily roles, the IT tools they currently use, barriers to adoption, and learning sources, while also engaging each department's IT cell to document available tools, support mechanisms, and internally perceived adoption rates. Guided by the Technology Acceptance Model (Davis, 1989) and the Technology-Organisation-Environment framework (Tornatzky \& Fleischer, 1990), the study will classify identified gaps into five categories: skill, awareness, availability, motivation, and process gaps. Findings will be compiled into a department-wise IT utilisation map and a gap analysis report to inform AIGGPA's capacity building mandate.
-
-\textit{Keywords}: e-governance, technology adoption, public sector IT, government employees, Madhya Pradesh, digital transformation, HR-IT integration
-
-\setlength{\parindent}{1.27cm}
-
-% ============================================================
-% BODY
-% ============================================================
-\newpage
 
 \section{Background}
 
-Madhya Pradesh has made considerable public investment in digital governance over the past decade. The Education Portal 2.0, serving approximately 350,000 teachers across more than 90,000 government schools, integrates payroll, transfers, leave management, and service books into a single unified platform (Government of Madhya Pradesh, 2024). The National Health Mission's Human Resource Management Information System (HRMIS) extends similar digital infrastructure to health workers, while the Forest Department's Forest Offence Management System (FAMS) received national recognition from the National Informatics Centre (NIC) for digitising offence tracking and land management workflows (National Informatics Centre, 2023). More recently, the department launched an artificial intelligence-based satellite alert system for real-time encroachment detection in five pilot divisions (Indian Express, 2025).
-
-Nationally, the Mission Karmayogi framework and the integrated iGOT Karmayogi platform were introduced in 2020 to systematically build the capacity of civil servants in digital governance competencies (Government of India, Department of Personnel \& Training, 2020). Despite these institutional investments, anecdotal and secondary evidence consistently indicates that deployment at state and district levels does not guarantee adoption at the operational level. Officials continue to rely on manual registers, physical dak, and informal channels such as WhatsApp groups for workflows that existing digital tools were designed to automate.
-
-AIGGPA, as the apex institution for governance and policy capacity building in Madhya Pradesh, is well positioned to study this implementation gap. A systematic field-based assessment of where the adoption gap exists, who it affects, and why, would directly inform the design of targeted training and institutional support interventions.
+Madhya Pradesh has deployed a range of digital governance tools across departments -- Education Portal 2.0, e-Office, HRMIS, SPARROW, and department-specific management systems. However, deployment does not guarantee use. A gap routinely observed in government offices is that IT tools exist on paper but employees -- particularly at district and block levels -- continue to rely on manual methods for functions those tools were built to support. This study proposes a focused field assessment to understand who is using what, who is not, and why.
 
 \section{Research Objectives}
 
-The proposed study aims to:
-
 \begin{enumerate}
-  \item Map the daily roles and responsibilities of officials at various departmental levels and identify which functions have corresponding IT tools available.
-  \item Document the IT tools currently used by officials in practice, distinguishing between formally mandated platforms and informal substitute tools (e.g., Excel, WhatsApp, Google Docs).
-  \item Assess the IT tools and support systems managed by each department's IT cell and evaluate their effective reach to end-users.
-  \item Identify and classify gaps between tool availability and actual utilisation along five dimensions: skill, awareness, availability, motivation, and process.
-  \item Generate evidence-based recommendations for AIGGPA's capacity building programming.
+  \item Identify the key daily roles of officials across departments and determine which roles have corresponding IT tools available.
+  \item Document IT tools actually in use -- both mandated platforms and informal substitutes such as Excel or WhatsApp.
+  \item Understand how officials draft and process official letters and communications.
+  \item Engage each department's IT cell to map tools provided, training offered, and internal adoption estimates.
+  \item Identify and classify gaps in IT adoption by type: skill, awareness, availability, motivation, or process gap.
 \end{enumerate}
 
-\section{Conceptual Framework}
+\section{Scope}
 
-This study takes a hybrid theoretical orientation grounded in two established frameworks.
-
-\subsection{Technology Acceptance Model (TAM)}
-
-Davis (1989) proposed that individual adoption of technology is determined primarily by two perceptions: perceived usefulness (the degree to which a person believes that using a particular system enhances job performance) and perceived ease of use (the degree to which a person believes that using the system requires no significant effort). TAM is the most widely applied and validated framework for studying technology adoption in organisational contexts.
-
-\subsection{Technology-Organisation-Environment (TOE) Framework}
-
-Tornatzky and Fleischer (1990) extended the individual-level focus of TAM to the organisational context by adding two dimensions: organisational readiness (infrastructure, resources, and management support) and environmental context (regulatory pressure, competitive context, and policy mandates). The TOE framework is particularly applicable to government organisations where adoption decisions are frequently driven not by individual choice but by institutional mandate.
-
-\subsection{Context-Specific Adaptation}
-
-In the Indian public sector context, a third driver absent from both TAM and TOE assumes significant salience: directive compliance pressure, wherein employees adopt tools not because of perceived usefulness but because of explicit orders from senior officials or government circulars. This study incorporates this driver as an additional explanatory variable in the gap classification analysis.
-
-\section{Methodology}
-
-This study employs an exploratory, mixed-methods design combining a structured questionnaire survey with semi-structured interviews. Data collection is organised into two respondent streams.
-
-\subsection{Stream A: Department Officials and Employees}
-
-Officials across Class I (Group A), Class II (Group B), and Class III (Group C) will be interviewed at their place of work. The interview-assisted questionnaire will cover the following areas:
-
-\begin{itemize}
-  \item Primary role and key daily responsibilities
-  \item Whether those responsibilities have IT tools available, and which tools
-  \item Current use of digital tools: mandated platforms, productivity software, and informal tools
-  \item Method of drafting and processing official letters and communications
-  \item Use of dashboards, data systems, and management information systems in daily tasks
-  \item Reasons for non-use of relevant IT tools where applicable
-  \item Modality of learning for tools currently in use
-\end{itemize}
-
-\subsection{Stream B: IT Department or IT Cell Officials}
-
-The designated IT unit within each of the three departments will be engaged through a semi-structured interview covering:
-
-\begin{itemize}
-  \item IT tools, platforms, and software currently managed and operated by the IT cell
-  \item Support mechanisms offered to other employees for IT adoption (training, helpdesk, on-site support)
-  \item Internally developed or customised tools, dashboards, or portals unique to the department
-  \item Estimated levels of employee adoption of provided tools
-  \item Primary barriers to adoption as observed by the IT unit
-\end{itemize}
-
-\subsection{Gap Classification}
-
-Following data collection, identified gaps will be classified into one of five categories drawn from the adapted TAM-TOE framework (see Table 1).
-
-\vspace{0.5em}
-
-\noindent\textit{Table 1}
-
-\noindent\textit{IT Adoption Gap Classification Framework}
-
-\vspace{0.3em}
-
-\begin{tabular}{@{}p{3cm}p{10cm}@{}}
+\noindent
+\begin{tabular}{@{}p{3.5cm}p{10cm}@{}}
 \toprule
-\textbf{Gap Type} & \textbf{Description} \\
-\midrule
-Skill Gap & Tool is available and employee is aware of it but lacks the competency to use it effectively \\[4pt]
-Awareness Gap & Employee is unaware that the tool exists or that it is applicable to their role \\[4pt]
-Availability Gap & Tool has been mandated or recommended but the requisite hardware, software, or internet access has not been provisioned \\[4pt]
-Motivation Gap & Tool is available and employee is aware and capable but prefers manual method \\[4pt]
-Process Gap & Tool exists but does not align with the actual workflow or information flow of the role \\
+\textbf{Departments} & School Education, Health, Forest -- Government of Madhya Pradesh \\[4pt]
+\textbf{Respondents} & Officials (Class I, II, III) and IT department staff \\[4pt]
+\textbf{Level} & State offices (Bhopal) and district offices as accessible \\[4pt]
+\textbf{Duration} & April -- June 2026 \\
 \bottomrule
 \end{tabular}
 
-\vspace{0.5em}
-\noindent\textit{Note.} This typology is adapted from Davis (1989) and Tornatzky and Fleischer (1990) for the Indian public sector context.
+\section{Methodology}
 
-\subsection{Sampling and Scope}
+The study uses face-to-face structured interviews at department offices, split into two respondent streams.
 
-Respondents will be selected using purposive sampling at the state level and convenience sampling at the district level, subject to access facilitated by AIGGPA. The target sample is 50 to 100 respondents across the three departments within the internship window of April to June 2026. The three departments are School Education, Health, and Forest, Government of Madhya Pradesh, with fieldwork conducted primarily in Bhopal and selected districts as feasible.
+\textit{Stream A -- Department officials:} Each official is asked about their daily responsibilities, which tasks they use IT tools for, how they draft official letters, what tools they use on dashboards or for data reporting, and -- if they do not use relevant tools -- why not and where they learned any tools they do use.
 
-\subsection{Data Collection Instrument}
+\textit{Stream B -- IT department staff:} IT cell officers are asked what tools and platforms they manage, how they support other employees, whether any tools are built internally, and what they estimate current adoption levels to be across the department.
 
-A bilingual structured questionnaire in English and Hindi has been prepared for Stream A respondents. A semi-structured interview guide for Stream B (IT department officials) is separately developed. Responses from Stream A will be recorded via a mobile-based digital form to enable real-time field entry and reduce data entry lag.
+Responses will be recorded on a mobile digital form. After each visit, the researcher will classify the primary gap observed (skill, awareness, availability, motivation, or process) to build a systematised gap map across all three departments (Davis, 1989; Tornatzky \& Fleischer, 1990).
 
-\section{Significance and Expected Contributions}
+\section{Expected Output}
 
-\subsection{Contribution to Practice}
+\begin{itemize}
+  \item A department-wise map of IT tools in use versus tools available, by role and level.
+  \item A classified gap analysis identifying where and why adoption is falling short.
+  \item A concise report with targeted recommendations for AIGGPA's capacity building programmes.
+\end{itemize}
 
-The study will produce a department-wise IT utilisation map that AIGGPA may use directly to design targeted capacity building interventions for Class I, II, and III officials. The gap classification matrix will enable AIGGPA to distinguish, for instance, whether a training programme is the appropriate intervention (if gaps are skill-based) or whether a hardware provisioning recommendation to the department is more suitable (if gaps are availability-based).
+\vspace{1em}
 
-\subsection{Contribution to Policy}
-
-By identifying which tools have high awareness but low actual use, and which tools are entirely unknown to operational staff, the study provides actionable evidence for the next phase of GoMP's digital governance implementation strategy.
-
-\subsection{Contribution to Theory}
-
-This study contributes a context-specific adaptation of TAM and TOE for the Indian public sector by introducing directive compliance as a fifth explanatory variable alongside perceived usefulness, ease of use, organisational readiness, and environmental pressure. This adaptation addresses a documented gap in the e-governance literature as applied to developing country public administration contexts.
-
-\section{Ethical Considerations}
-
-Participation in the study is entirely voluntary. All responses will be collected and stored in a manner that does not identify individual respondents; analysis and reporting will be conducted at aggregate and department level only. An official introduction letter from AIGGPA will be presented at all field office visits prior to commencing data collection.
-
-% ============================================================
-% REFERENCES (APA 7: Hanging indent, double-spaced, alpha order)
-% ============================================================
-\newpage
+% ---- REFERENCES ----
 \section*{References}
+\singlespacing
 \setlength{\parindent}{0pt}
 \begin{hangparas}{1.27cm}{1}
 
@@ -239,19 +106,7 @@ Government of India, Department of Personnel \& Training. (2020). \textit{Nation
 
 \vspace{0.5em}
 
-Government of Madhya Pradesh, School Education Department. (2024). \textit{Madhya Pradesh education portal 2.0: Overview}. https://educationportal.mp.gov.in
-
-\vspace{0.5em}
-
-Government of Madhya Pradesh, Directorate of Public Health \& Family Welfare. (2025). \textit{Ayushman Sakhi: AI-powered citizen health helpline}. https://health.mp.gov.in
-
-\vspace{0.5em}
-
-Indian Express. (2025, April 15). MP becomes first state to launch AI-based real-time forest alert system. \textit{Indian Express}. https://indianexpress.com
-
-\vspace{0.5em}
-
-National Informatics Centre. (2023). \textit{e-Office adoption report: State-wise implementation progress}. Ministry of Electronics \& Information Technology, Government of India.
+Government of Madhya Pradesh, School Education Department. (2024). \textit{Madhya Pradesh education portal 2.0}. https://educationportal.mp.gov.in
 
 \vspace{0.5em}
 
