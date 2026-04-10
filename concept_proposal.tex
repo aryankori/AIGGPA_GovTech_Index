@@ -1,119 +1,193 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage{fontspec}
 \setmainfont{Latin Modern Roman}
 \newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
 \newcommand{\hindi}[1]{{\hindifont #1}}
 
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
 \usepackage{xcolor}
-\usepackage{enumitem}
-\usepackage{hyperref}
 \usepackage{tcolorbox}
+\usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{wasysym}
 
-\tcbuselibrary{skins, breakable}
+\definecolor{govblue}{HTML}{003566}
+\definecolor{govgold}{HTML}{c9a84c}
+\definecolor{lightgray}{HTML}{f5f5f5}
 
-% Colours
-\definecolor{govblue}{HTML}{003366}
-\definecolor{govgold}{HTML}{C19A3E}
-\definecolor{accent1}{HTML}{1B4F72}
-\definecolor{accent2}{HTML}{2E86C1}
-\definecolor{accent3}{HTML}{27AE60}
+\hypersetup{colorlinks=true,linkcolor=govblue,urlcolor=govblue}
 
-% tcolorbox styles
-\newtcolorbox{frameworkbox}[1][]{
-  colback=govblue!5, colframe=govblue,
-  fonttitle=\bfseries, title={#1},
-  boxrule=0.5pt, arc=2mm, breakable
-}
-
-% Header/Footer
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\textcolor{govblue}{AIGGPA Internship -- Concept Proposal}}
-\fancyhead[R]{\small\textcolor{govblue}{April 2026}}
-\fancyfoot[C]{\thepage}
+\fancyhead[L]{\small\color{govblue}\textbf{AIGGPA Bhopal -- Research Proposal}}
+\fancyhead[R]{\small\color{govblue}April 2026 -- Confidential}
+\fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \setlength{\headheight}{14pt}
 
-% Section Formatting
-\titleformat{\section}
-  {\Large\bfseries\color{govblue}}{\thesection}{1em}{}[\titlerule]
-\titleformat{\subsection}
-  {\large\bfseries\color{accent1}}{\thesubsection}{1em}{}
+\titleformat{\section}{\large\bfseries\color{govblue}}{}{0em}{}[\vspace{-4pt}\rule{\textwidth}{0.4pt}\vspace{2pt}]
+\titleformat{\subsection}{\normalsize\bfseries\color{govblue!80}}{}{0em}{}
 
-\setstretch{1.25}
-\hypersetup{colorlinks=true, linkcolor=govblue, urlcolor=accent2}
+\setlist[itemize]{itemsep=2pt, topsep=4pt, leftmargin=1.4em}
+\setlist[enumerate]{itemsep=2pt, topsep=4pt, leftmargin=1.4em}
 
 \begin{document}
 
 \begin{center}
-\vspace*{0.5cm}
-{\Huge\bfseries\textcolor{govblue}{Research Concept Proposal}}
-
-\vspace{0.3cm}
-{\Large\textcolor{accent1}{Field Assessment of HR-IT Integration \& Technology Adoption}}
-
-{\large\textcolor{accent1}{\hindi{मानव संसाधन-सूचना प्रौद्योगिकी एकीकरण का क्षेत्रीय मूल्यांकन}}}
-
-\vspace{0.5cm}
-\rule{0.6\textwidth}{1pt}
-
-\vspace{0.3cm}
-{\large Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA)}
+  {\LARGE\bfseries\color{govblue}
+    Research Proposal}\\[0.5em]
+  {\large\bfseries
+    Assessment of IT Tool Utilisation Among Government Officials:\\
+    A Field Study Across Selected Departments, Madhya Pradesh}\\[0.4em]
+  {\normalsize\color{govblue}
+    \hindi{सरकारी अधिकारियों द्वारा आईटी उपकरणों के उपयोग का आकलन: मध्य प्रदेश}}\\[0.5em]
+  \rule{0.6\textwidth}{0.4pt}\\[0.3em]
+  {\small
+    Submitted to: \textbf{Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA)}, Bhopal\\
+    Prepared by: Aryan Kori, Summer Intern 2026\\
+    Date: April 2026}
 \end{center}
 
-\vspace{1cm}
+\vspace{0.4cm}
 
-\section{1. Background \& Purpose (\hindi{पृष्ठभूमि एवं उद्देश्य})}
+%----------------------------------------------------------
+\section{Background}
+%----------------------------------------------------------
 
-The Government of Madhya Pradesh has made significant strides in digital governance through initiatives anchored in the principles of Mission Karmayogi (\hindi{मिशन कर्मयोगी}). However, secondary research at AIGGPA reveals an explicit \textbf{data gap}: there is no existing internal dataset or research paper tracking the actual, ground-level integration of Human Resource and Information Technology (HR-IT) tools among state and district officials.
+\begin{onehalfspacing}
+Madhya Pradesh has invested significantly in digital governance infrastructure -- from the Education Portal 2.0 to e-Office, HRMIS, and the Forest Department's AI-based alert system. However, the deployment of a digital tool does not automatically imply its adoption. Across government departments, officials at the state and district level continue to manage critical workflows -- letter drafting, leave management, data reporting, and internal approvals -- through manual processes, despite the existence of IT tools designed for these exact functions.
 
-The purpose of this research is to conduct a primary, exploratory study to measure unbiased technology adoption levels, identify capacity-building bottlenecks, and categorize officials into a Three-Tier Awareness Framework (Active Users, Aware Non-Users, Unaware).
+AIGGPA, as the apex institution for governance and policy capacity building in MP, has a mandate to identify and bridge such gaps. This study aims to conduct a structured field assessment across selected departments to understand the ground-level reality of IT utilisation by officials in their day-to-day roles.
+\end{onehalfspacing}
 
-\section{2. The Government's Role \& Operational Matrix (\hindi{सरकार की भूमिका})}
+\vspace{0.2cm}
 
-The shift from a "Rule-Based" to a "Role-Based" bureaucracy requires officials to perform their duties efficiently while acting as agile facilitators of public welfare. This research evaluates technology adoption across two distinct operational dimensions:
+%----------------------------------------------------------
+\section{Research Objectives}
+%----------------------------------------------------------
 
-\begin{frameworkbox}[The Technology Dimensions]
-\begin{enumerate}
-    \item \textbf{Technology used to serve the public (G2C):} Portals, applications, and dashboards used for scheme delivery, grievance redressal, and citizen interaction.
-    \item \textbf{Technology used for personal administrative use (G2G):} e-Office, e-HRMS, SPARROW, and internal asset/file management systems that enhance the official's personal efficiency.
+\begin{enumerate}[label=\textbf{O\arabic*.}]
+  \item Map the daily roles and responsibilities of officials at various levels and identify which of those roles can be supported by IT tools.
+  \item Document the IT tools currently used by officials -- formally mandated tools as well as informal tools (Excel, WhatsApp, Google Docs).
+  \item Assess the IT tools and support systems deployed by the department's IT unit and evaluate their reach to end-users.
+  \item Identify gaps between available IT tools and actual utilisation, and classify the nature of those gaps (skill deficit, hardware unavailability, awareness gap, or cultural resistance).
+  \item Generate actionable recommendations for AIGGPA's capacity building programmes.
 \end{enumerate}
-\end{frameworkbox}
 
-\section{3. Technology Audit \& Scope (\hindi{प्रौद्योगिकी ऑडिट एवं दायरा})}
+\vspace{0.2cm}
 
-To ensure statistically significant and actionable findings, this audit will target three specific, high-impact sectors spanning both State and District level offices:
+%----------------------------------------------------------
+\section{Scope}
+%----------------------------------------------------------
+
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+\textbf{Departments} & Education, Health, Forest (Government of Madhya Pradesh) \\
+\textbf{Level of officials} & State-level and District-level offices \\
+\textbf{Respondents} & (a) Department officials and employees; (b) IT Department/Cell of each department \\
+\textbf{Geography} & Bhopal (state level); selected districts as feasible \\
+\textbf{Duration} & April -- June 2026 (3-month internship window) \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------
+\section{Methodology}
+%----------------------------------------------------------
+
+The study employs an \textbf{exploratory qualitative-quantitative mixed approach} combining semi-structured interviews with a structured questionnaire. The field engagement is divided into two distinct respondent streams.
+
+\subsection{Stream A -- Department Officials and Employees \hindi{(विभागीय अधिकारी एवं कर्मचारी)}}
+
+Officials across grades (Class I, II, and III) will be questioned on:
+
 \begin{itemize}
-    \item \textbf{Education Department (\hindi{शिक्षा विभाग})}
-    \item \textbf{Health Department (\hindi{स्वास्थ्य विभाग})}
-    \item \textbf{Forest Department (\hindi{वन विभाग})}
+  \item Their primary role and key daily tasks -- what does their job require them to do?
+  \item Which of those tasks currently involve IT tools, and which do not?
+  \item What specific IT tools they use -- e.g., e-Office, HRMIS, dashboards, Excel, WhatsApp?
+  \item Whether they use IT tools for drafting and typing letters or official communications, and how.
+  \item If they do \textit{not} use a relevant IT tool -- why not? (No training, no hardware, no internet, no awareness, or preference for manual method?)
+  \item Where and how they learned to use the IT tools they currently use (formal training, self-taught, colleague assistance).
 \end{itemize}
 
-The audit will seek answers to critical operational questions: Do employees use e-Office? Is archiving and digitisation occurring? Do employees require additional tools (e.g., Google Workspace/Microsoft equivalents)? What legacy/parallel tech are they using instead?
+\subsection{Stream B -- IT Department / IT Cell \hindi{(आईटी विभाग / आईटी प्रकोष्ठ)}}
 
-\section{4. Research Methodology (\hindi{अनुसंधान पद्धति})}
+The designated IT unit within each department will be interviewed on:
 
 \begin{itemize}
-    \item \textbf{Approach:} Primary Exploratory Research.
-    \item \textbf{Instrument:} A structured, bi-lingual (English/Hindi) survey designed to elicit unbiased opinions, avoiding leading questions.
-    \item \textbf{Execution:} Direct field interactions at district/state offices. To combat "survey fatigue" and ensure honest responses, the survey will be presented as an efficiency audit rather than an individual performance metric.
-    \item \textbf{Respondents:} Stratified sampling across Class I, II, III, and IV officials to determine where the technical skill gap is widest.
+  \item What IT tools and platforms the IT department itself manages and operates.
+  \item What support mechanisms are in place to assist other employees in using digital tools.
+  \item Whether the IT department has internally developed tools, dashboards, or platforms unique to the department.
+  \item How IT support requests are handled -- helpdesk, on-site, or remote.
+  \item Their assessment of employee adoption levels and the barriers they observe.
 \end{itemize}
 
-\section{5. Deliverables \& Capacity Building Solutions}
+\subsection{Gap Identification Framework}
 
-The final output will bridge the identified data gap at AIGGPA, resulting in:
+After data collection, gaps will be classified under the following categories:
+
+\begin{tcolorbox}[colback=lightgray,colframe=govblue!40,arc=2mm,boxrule=0.4pt]
+\small
+\begin{tabular}{@{}ll@{}}
+\textbf{Gap Type} & \textbf{Description} \\[4pt]
+Skill Gap & Tool exists but official lacks the competency to use it \\
+Availability Gap & Tool mandated but hardware, software, or internet not provided \\
+Awareness Gap & Official unaware that the tool exists or is relevant to their role \\
+Motivation Gap & Tool available and known, but official prefers manual method \\
+Process Gap & IT tool exists but it does not map to the actual workflow of the official \\
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------
+\section{Data Collection Instruments}
+%----------------------------------------------------------
+
+Two bilingual (English/Hindi) instruments have been prepared:
+
 \begin{enumerate}
-    \item A quantitative \textbf{Adoption Index Matrix} plotting usage vs. awareness.
-    \item A \textbf{Capacity Building Action Plan} tailored for the three target departments.
-    \item A policy advisory on streamlining internal file management and asset tracking.
+  \item \textbf{Structured Questionnaire for Officials} -- face-to-face survey, approximately 10--12 minutes.
+  \item \textbf{Semi-Structured Interview Guide for IT Department} -- open-ended, approximately 20--30 minutes.
 \end{enumerate}
+
+Data will be recorded via a mobile-based digital form (already developed) to enable real-time field entry.
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------
+\section{Expected Output}
+%----------------------------------------------------------
+
+\begin{itemize}
+  \item A \textbf{department-wise IT utilisation map} showing which roles use which tools.
+  \item A \textbf{gap classification matrix} identifying the nature and location of IT adoption gaps.
+  \item A concise \textbf{report with recommendations} for AIGGPA, usable for designing targeted capacity building interventions.
+\end{itemize}
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------
+\section{Ethical Considerations}
+%----------------------------------------------------------
+
+\begin{itemize}
+  \item Participation is voluntary; all responses will be kept confidential.
+  \item Data will not identify individuals; analysis will be at aggregate/department level.
+  \item An official introduction letter from AIGGPA will be presented at all field visits.
+\end{itemize}
+
+\vspace{0.6cm}
+\begin{center}
+\rule{0.5\textwidth}{0.4pt}\\[0.3em]
+\small\textit{This proposal is submitted for review and approval prior to commencement of field research.}
+\end{center}
 
 \end{document}

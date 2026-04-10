@@ -1,115 +1,260 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage{fontspec}
 \setmainfont{Latin Modern Roman}
 \newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
 \newcommand{\hindi}[1]{{\hindifont #1}}
 
-\usepackage[margin=2cm]{geometry}
+\usepackage[top=1.8cm,bottom=2cm,left=2cm,right=2cm]{geometry}
 \usepackage{xcolor}
 \usepackage{tcolorbox}
-\usepackage{tabularx}
-\usepackage{booktabs}
-\usepackage{amssymb}
-\usepackage{fancyhdr}
 \usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{wasysym}
+\usepackage{multicol}
+\usepackage{wasysym}
 
-% Colors
-\definecolor{govblue}{HTML}{003366}
-\definecolor{govgray}{HTML}{eceff1}
+\definecolor{govblue}{HTML}{003566}
+\definecolor{govgold}{HTML}{c9a84c}
+\definecolor{lightgray}{HTML}{f5f5f5}
+\definecolor{streama}{HTML}{e8f4fd}
+\definecolor{streamb}{HTML}{eafaf1}
 
-% Header
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\small\color{govblue}\textbf{AIGGPA Field Survey -- IT Utilisation Assessment}}
+\fancyhead[R]{\small\color{govblue}April 2026}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
 
-% Checkbox command
-\newcommand{\cbox}{$\square$}
+\newcommand{\q}[2]{%
+  \vspace{4pt}
+  \noindent\textbf{#1.}~#2\\[2pt]
+}
+
+\newcommand{\ans}{%
+  \noindent\rule{\textwidth}{0.3pt}\\[3pt]
+}
+
+\newcommand{\choices}[1]{%
+  \begin{itemize}[label=$\square$, leftmargin=1.4em, itemsep=1pt, topsep=2pt]
+    #1
+  \end{itemize}
+}
 
 \begin{document}
 
-\begin{center}
-\textbf{\Large \textcolor{govblue}{Digital Workflow \& Efficiency Survey}} \\
-\textbf{\large \textcolor{govblue}{\hindi{डिजिटल कार्यप्रवाह एवं दक्षता सर्वेक्षण}}} \\
+%===== COVER BOX =====
+\begin{tcolorbox}[colback=govblue,colframe=govblue,arc=2mm]
+  \color{white}
+  \centering
+  {\large\bfseries IT Utilisation Assessment -- Field Survey Instrument}\\[0.3em]
+  {\normalsize\bfseries \hindi{आईटी उपयोग आकलन -- क्षेत्र सर्वेक्षण प्रपत्र}}\\[0.5em]
+  {\small Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA), Bhopal}\\
+  {\small \textit{Strictly for academic research. Responses are confidential and anonymous.}\\
+  \hindi{यह प्रपत्र शैक्षणिक अनुसंधान हेतु है। उत्तर पूर्णतः गोपनीय हैं।}}
+\end{tcolorbox}
+
+\vspace{0.4cm}
+
+%===== RESPONDENT DETAILS =====
+\begin{tcolorbox}[colback=lightgray,colframe=govblue!50,arc=2mm,boxrule=0.5pt,title=\textbf{Respondent Details \hindi{(प्रतिभागी विवरण)}} -- \textit{not shared publicly},fonttitle=\small]
+\small
+\noindent
+\begin{tabularx}{\textwidth}{@{}XX@{}}
+  \textbf{Department \hindi{(विभाग)}:} \rule{5cm}{0.3pt} &
+  \textbf{Office Level \hindi{(कार्यालय स्तर)}:} \\[2pt]
+  & \choices{
+    \item State / \hindi{राज्य}
+    \item District / \hindi{जिला}
+    \item Block / \hindi{ब्लॉक}
+  }\\[4pt]
+  \textbf{Designation \hindi{(पद)}:} \rule{5cm}{0.3pt} &
+  \textbf{Grade \hindi{(श्रेणी)}:}
+  \choices{
+    \item Class I (Group A)
+    \item Class II (Group B)
+    \item Class III (Group C)
+  }\\[4pt]
+  \textbf{Years in service \hindi{(सेवा वर्ष)}:} \rule{3.5cm}{0.3pt} &
+  \textbf{Date of survey:} \rule{3.5cm}{0.3pt}
+\end{tabularx}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+%=========================================================
+\begin{tcolorbox}[colback=streama,colframe=govblue,arc=2mm,boxrule=0.6pt,
+  title={\textbf{STREAM A -- For Department Officials \& Employees} \quad \small\hindi{(विभागीय अधिकारी एवं कर्मचारी)}},fonttitle=\normalsize]
+
+%--- PART 1: ROLES ---
+\textbf{\color{govblue}Part 1 -- Your Role \& Daily Tasks \hindi{(आपकी भूमिका एवं दैनिक कार्य)}}
+\vspace{4pt}
+
+\q{1}{What are your 3 main responsibilities in this role? \hindi{(इस पद में आपकी 3 मुख्य जिम्मेदारियां क्या हैं?)}}
+\ans\ans\ans
+
+\q{2}{Which of your daily tasks do you think \textbf{could benefit from} an IT tool or computer system?\\
+\hindi{आपके किन दैनिक कार्यों को आईटी उपकरण या कंप्यूटर से सहायता मिल सकती है?}}
+\ans\ans
+
+%--- PART 2: CURRENT IT TOOL USE ---
+\vspace{4pt}
+\textbf{\color{govblue}Part 2 -- IT Tools You Currently Use \hindi{(वर्तमान में उपयोग किए जाने वाले आईटी उपकरण)}}
+\vspace{4pt}
+
+\q{3}{Which of the following IT tools do you personally use for your work? (Tick all that apply)\\
+\hindi{आप अपने कार्य के लिए निम्नलिखित में से कौन से आईटी उपकरण उपयोग करते हैं?}}
+\begin{multicols}{2}
+\choices{
+  \item e-Office / e-File \hindi{(ई-कार्यालय)}
+  \item HRMIS / Service Book \hindi{(सेवा रजिस्टर)}
+  \item SPARROW (online APAR)
+  \item iGOT Karmayogi
+  \item Department Portal (specify): \rule{1.5cm}{0.3pt}
+  \item MS Excel / Google Sheets
+  \item MS Word / Google Docs
+  \item WhatsApp (for official work)
+  \item Email (official)
+  \item Dashboard / MIS Report system
+  \item None of the above
+  \item Other: \rule{2cm}{0.3pt}
+}
+\end{multicols}
+
+\q{4}{For writing official letters and communications -- how do you currently do it? \hindi{(आधिकारिक पत्र लिखने के लिए आप क्या तरीका उपयोग करते हैं?)}}
+\choices{
+  \item I type it myself on a computer / laptop
+  \item A typist or data entry operator types it for me
+  \item I handwrite it and it is typed by someone else
+  \item I use a pre-prepared template on the computer
+  \item Other: \rule{6cm}{0.3pt}
+}
+
+\q{5}{For which specific tasks do you use \textbf{dashboards, reports, or data systems} in your role?\\
+\hindi{आप अपनी भूमिका में डैशबोर्ड, रिपोर्ट या डेटा प्रणाली किन कार्यों के लिए उपयोग करते हैं?}\\
+If not applicable, write ``Not applicable''.}
+\ans\ans
+
+%--- PART 3: NON-USE & BARRIERS ---
+\vspace{4pt}
+\textbf{\color{govblue}Part 3 -- Why Tools Are Not Used \hindi{(उपकरण उपयोग न करने के कारण)}}
+\vspace{4pt}
+
+\q{6}{If there are tasks in your role where you \textbf{do not use} an IT tool but feel one would help -- why have you not used it? (Tick all that apply)\\
+\hindi{यदि ऐसे कार्य हैं जिनमें आप आईटी उपकरण उपयोग नहीं करते, तो क्यों नहीं?}}
+\choices{
+  \item I was never trained on it \hindi{(प्रशिक्षण नहीं मिला)}
+  \item No computer or device is available at my desk \hindi{(कंप्यूटर उपलब्ध नहीं)}
+  \item No internet connection available \hindi{(इंटरनेट उपलब्ध नहीं)}
+  \item I am not aware of which tool to use \hindi{(कौन सा उपकरण उपयोग करूं, पता नहीं)}
+  \item The manual method is faster/easier for me \hindi{(मैनुअल तरीका आसान लगता है)}
+  \item The system is often not working / slow \hindi{(सिस्टम अक्सर काम नहीं करता)}
+  \item My seniors do not require the use of IT tools \hindi{(वरिष्ठ अधिकारियों की आवश्यकता नहीं)}
+  \item Other: \rule{6cm}{0.3pt}
+}
+
+%--- PART 4: LEARNING ---
+\vspace{4pt}
+\textbf{\color{govblue}Part 4 -- How Did You Learn to Use IT Tools \hindi{(आईटी उपकरण सीखने का तरीका)}}
+\vspace{4pt}
+
+\q{7}{How did you learn to use the IT tools you currently use? (Tick all that apply)\\
+\hindi{आपने जो आईटी उपकरण उपयोग करते हैं, वे आपने कैसे सीखे?}}
+\choices{
+  \item Formal government training / workshop \hindi{(सरकारी प्रशिक्षण कार्यशाला)}
+  \item Trained by a colleague at the office \hindi{(कार्यालय सहकर्मी द्वारा)}
+  \item Self-taught / YouTube / internet \hindi{(स्व-अध्ययन)}
+  \item Learned in school / college before joining service \hindi{(सेवा पूर्व शिक्षा में)}
+  \item I have not learned / do not use any IT tools \hindi{(मैं कोई आईटी उपकरण नहीं सीखा)}
+}
+
+\q{8}{Would you like to receive formal training on any IT tool? If yes, which one?\\
+\hindi{क्या आप किसी आईटी उपकरण पर औपचारिक प्रशिक्षण प्राप्त करना चाहेंगे? यदि हां, तो कौन सा?}}
+\choices{
+  \item Yes -- \hindi{हां:} \rule{8cm}{0.3pt}
+  \item No, I am comfortable with current tools \hindi{(नहीं, मैं वर्तमान उपकरणों से संतुष्ट हूं)}
+}
+
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+%=========================================================
+\begin{tcolorbox}[colback=streamb,colframe=govblue!60,arc=2mm,boxrule=0.6pt,
+  title={\textbf{STREAM B -- For IT Department / IT Cell Officials} \quad \small\hindi{(आईटी विभाग / प्रकोष्ठ के अधिकारी)}},fonttitle=\normalsize]
+
+\textit{\small This stream is for officials working in or heading the IT unit/section of the department. Stream A questions may be skipped for these respondents.}
+\vspace{6pt}
+
+\q{B1}{What IT tools, platforms, or software does your IT department/cell currently operate and maintain?\\
+\hindi{आपका आईटी विभाग/प्रकोष्ठ वर्तमान में कौन से आईटी उपकरण, प्लेटफ़ॉर्म या सॉफ्टवेयर संचालित करता है?}}
+\ans\ans\ans
+
+\q{B2}{What mechanisms does the IT department use to support other employees in adopting and using digital tools?\\
+\hindi{अन्य कर्मचारियों को डिजिटल उपकरण अपनाने में आपका विभाग क्या सहायता देता है?}}
+\choices{
+  \item Regular training workshops \hindi{(नियमित प्रशिक्षण)}
+  \item On-call helpdesk support \hindi{(हेल्पडेस्क)}
+  \item On-site troubleshooting visits \hindi{(साइट पर समस्या समाधान)}
+  \item User manuals / documentation \hindi{(उपयोगकर्ता पुस्तिका)}
+  \item No formal support mechanism exists \hindi{(कोई औपचारिक सहायता नहीं)}
+  \item Other: \rule{5cm}{0.3pt}
+}
+
+\q{B3}{Does your department have any internally developed tools, dashboards, or platforms custom-built for your specific workflows?\\
+\hindi{क्या आपके विभाग के पास आंतरिक रूप से विकसित कोई उपकरण, डैशबोर्ड या प्लेटफ़ॉर्म है?}}
+\choices{
+  \item Yes -- describe: \rule{8cm}{0.3pt}
+  \item No, we only use centrally provided tools \hindi{(केवल केन्द्रीय उपकरणों का उपयोग)}
+}
+
+\q{B4}{In your assessment, what percentage of employees in this department actively use the IT tools provided to them?\\
+\hindi{आपके अनुमान अनुसार इस विभाग में कितने प्रतिशत कर्मचारी दिए गए आईटी उपकरणों का सक्रिय उपयोग करते हैं?}}
+\choices{
+  \item Less than 25\% \quad
+  \item 25--50\% \quad
+  \item 50--75\% \quad
+  \item More than 75\%
+}
+
+\q{B5}{What are the biggest barriers to IT adoption that you observe among your department's employees?\\
+\hindi{आपके विभाग में आईटी अपनाने में सबसे बड़ी बाधाएं क्या हैं?}}
+\ans\ans
+
+\q{B6}{What additional resources or policy changes would most improve IT adoption in your department?\\
+\hindi{आईटी अपनाने में सुधार के लिए किन संसाधनों या नीतिगत परिवर्तनों की सबसे अधिक आवश्यकता है?}}
+\ans\ans
+
+\end{tcolorbox}
+
+\vspace{0.4cm}
+
+%===== GAP IDENTIFICATION BOX (for surveyor use only) =====
+\begin{tcolorbox}[colback=white,colframe=govgold,arc=2mm,boxrule=0.6pt,
+  title={\textbf{Surveyor's Gap Classification (Fill after interview -- not shown to respondent)}},fonttitle=\small\bfseries]
+\small
+Based on this respondent's answers, the primary gap observed is:
+\begin{multicols}{2}
+\choices{
+  \item Skill Gap (trained but not competent)
+  \item Awareness Gap (unaware tool exists)
+  \item Availability Gap (no hardware/internet)
+  \item Motivation Gap (prefers manual method)
+  \item Process Gap (tool doesn't fit workflow)
+  \item No Gap (fully adopting IT tools)
+}
+\end{multicols}
+\noindent\textbf{Surveyor notes:}\\
+\ans\ans
+\end{tcolorbox}
+
 \vspace{0.2cm}
-\textit{Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis (AIGGPA)} \\
-\vspace{0.3cm}
-\small{\textbf{Note (\hindi{नोट}):} This survey is strictly for research purposes to understand workflow efficiency. Responses are anonymous. (\hindi{यह सर्वेक्षण केवल अनुसंधान उद्देश्यों के लिए है। प्रतिक्रियाएं गुमनाम हैं।})}
+\begin{center}
+\small\textit{Thank you for your time. \hindi{आपके समय के लिए धन्यवाद।}}
 \end{center}
-
-\vspace{0.5cm}
-
-\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
-\textbf{Part A: Basic Information (\hindi{भाग अ: सामान्य जानकारी})}
-\end{tcolorbox}
-
-\noindent \textbf{1. Department (\hindi{विभाग}):} \cbox~Education (\hindi{शिक्षा}) \quad \cbox~Health (\hindi{स्वास्थ्य}) \quad \cbox~Forest (\hindi{वन}) \\[0.3cm]
-\textbf{2. Designation Level (\hindi{पद स्तर}):} 
-\cbox~Class I (Group A) \quad 
-\cbox~Class II (Group B) \quad 
-\cbox~Class III (Group C) \quad 
-\cbox~Class IV (Group D)
-
-\vspace{0.5cm}
-
-\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
-\textbf{Part B: Internal Administrative Technology / G2G (\hindi{भाग ब: आंतरिक प्रशासनिक प्रौद्योगिकी})}
-\end{tcolorbox}
-
-\noindent \textbf{3. Which of the following tools currently exist in your department? (Tick all that apply)} \\
-\hindi{आपके विभाग में वर्तमान में कौन से उपकरण मौजूद हैं? (लागू होने वाले सभी विकल्पों पर टिक करें)}
-\begin{itemize}[label=\cbox, itemsep=0pt]
-    \item e-Office / e-File (\hindi{ई-कार्यालय})
-    \item e-HRMS / GEMS (\hindi{ई-एचआरएमएस})
-    \item SPARROW / Digital APAR (\hindi{डिजिटल अपार})
-    \item iGOT Karmayogi (\hindi{आईगॉट कर्मयोगी})
-    \item Department Specific File Portal (\hindi{विभागीय पोर्टल})
-\end{itemize}
-
-\noindent \textbf{4. How frequently do you personally use digital systems (like e-Office) for internal file movement?} \\
-\hindi{आप व्यक्तिगत रूप से आंतरिक फ़ाइल स्थानांतरण के लिए डिजिटल प्रणालियों का कितनी बार उपयोग करते हैं?}
-\begin{itemize}[label=\cbox, itemsep=0pt]
-    \item Daily (\hindi{प्रतिदिन})
-    \item Weekly (\hindi{साप्ताहिक})
-    \item Rarely -- I mostly use physical files (\hindi{शायद ही कभी -- मैं ज्यादातर भौतिक फ़ाइलों का उपयोग करता हूँ})
-    \item Never -- I am not required to use it (\hindi{कभी नहीं -- मुझे इसका उपयोग करने की आवश्यकता नहीं है})
-    \item Need training to use it (\hindi{उपयोग करने के लिए प्रशिक्षण की आवश्यकता है})
-\end{itemize}
-
-\vspace{0.3cm}
-
-\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
-\textbf{Part C: Public Service Technology / G2C (\hindi{भाग स: सार्वजनिक सेवा प्रौद्योगिकी})}
-\end{tcolorbox}
-
-\noindent \textbf{5. How frequently do you use citizen-facing digital platforms (e.g., scheme portals, grievance dashboards)?} \\
-\hindi{आप नागरिक-उन्मुख डिजिटल प्लेटफ़ॉर्म का कितनी बार उपयोग करते हैं?}
-\begin{itemize}[label=\cbox, itemsep=0pt]
-    \item Multiple times a day (\hindi{दिन में कई बार})
-    \item Output is printed and given to me (\hindi{प्रिंटआउट मुझे दिया जाता है})
-    \item Handled entirely by data entry operators (\hindi{पूरी तरह से ऑपरेटरों द्वारा संभाला जाता है})
-    \item Not applicable to my role (\hindi{मेरी भूमिका पर लागू नहीं})
-\end{itemize}
-
-\vspace{0.3cm}
-
-\begin{tcolorbox}[colback=govblue,colframe=govblue,coltext=white,boxrule=0pt,arc=1mm,top=1mm,bottom=1mm]
-\textbf{Part D: Technology Awareness \& Perception (\hindi{भाग द: प्रौद्योगिकी जागरूकता एवं धारणा})}
-\end{tcolorbox}
-
-\noindent \textbf{6. If a new digital tool is introduced in your workflow, what is the primary determinant for your adoption?} \\
-\hindi{यदि आपके कार्यप्रवाह में कोई नया डिजिटल उपकरण पेश किया जाता है, तो उसे अपनाने का प्राथमिक कारण क्या है?}
-\begin{itemize}[label=\cbox, itemsep=0pt]
-    \item Official Mandate/Order (\hindi{आधिकारिक आदेश})
-    \item Reduces my workload (\hindi{मेरे कार्यभार को कम करता है})
-    \item Adequate training provided (\hindi{उचित प्रशिक्षण प्रदान किया गया})
-    \item Availability of functioning hardware/internet (\hindi{कामकाजी हार्डवेयर/इंटरनेट की उपलब्धता})
-\end{itemize}
-
-\vspace{0.3cm}
-\noindent \textbf{7. Are there any commercial tools (e.g., Google Drive, WhatsApp, Excel) that you rely on because official tools are unavailable or difficult to use?} \\
-\hindi{क्या ऐसे कोई व्यावसायिक उपकरण हैं जिन पर आप निर्भर हैं क्योंकि आधिकारिक उपकरण अनुपलब्ध हैं या उपयोग करने में कठिन हैं?} \\
-\rule{\textwidth}{0.5pt} \\
 
 \end{document}
