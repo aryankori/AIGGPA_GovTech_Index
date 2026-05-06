@@ -1,0 +1,280 @@
+"""Generate printable B&W survey schedule for field use."""
+
+tex = r"""\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{mathptmx}
+\usepackage[margin=0.8cm]{geometry}\usepackage{enumitem}\usepackage{tabularx}
+\usepackage{array}\usepackage{booktabs}\usepackage{fancyhdr}\usepackage{setspace}
+\usepackage{tikz}\usepackage{amssymb}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textbf{AIGGPA Research Schedule}}\fancyhead[R]{\small Respondent ID: \_\_\_\_\_\_\_\_}
+\fancyfoot[C]{\small Page \thepage}\renewcommand{\headrulewidth}{0.5pt}
+\setlength{\headheight}{14pt}\setstretch{1.1}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\qbox}[1]{\noindent\textbf{#1}\par\vspace{2pt}\noindent\hrulefill\par\vspace{3pt}}
+\newcommand{\likert}{{\Large$\square$}\,1\quad{\Large$\square$}\,2\quad{\Large$\square$}\,3\quad{\Large$\square$}\,4\quad{\Large$\square$}\,5}
+\newcommand{\yesno}{{\Large$\square$}\,Yes\quad{\Large$\square$}\,No}
+\newcommand{\blank}{\rule{8cm}{0.4pt}}
+\begin{document}
+
+% ── COVER / HEADER PAGE ──
+\begin{center}
+{\Large\bfseries AIGGPA FIELD RESEARCH SCHEDULE}\\[2pt]
+{\small Assessment of Digital Tool Usage Among Government Employees}\\[2pt]
+{\small Atal Bihari Vajpayee Institute of Good Governance \& Policy Analysis, Bhopal}
+\end{center}
+\vspace{4pt}
+\noindent\rule{\textwidth}{1pt}
+\vspace{4pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{7cm} L{7cm}@{}}
+\textbf{Respondent ID:} \blank & \textbf{Date:} \_\_\_/\_\_\_/2026 \\[8pt]
+\textbf{Department:} {\Large$\square$} Revenue\quad{\Large$\square$} Rural Dev\quad{\Large$\square$} Forest\quad{\Large$\square$} Health & \textbf{Office:} {\Large$\square$} Head Office\quad{\Large$\square$} District Office \\[8pt]
+\textbf{Interviewer:} \blank & \textbf{Start Time:} \_\_:\_\_\quad\textbf{End Time:} \_\_:\_\_ \\
+\end{tabularx}
+
+\vspace{4pt}\noindent\rule{\textwidth}{0.5pt}\vspace{4pt}
+
+% ═══════════════════════════════════
+% SECTION A: DEMOGRAPHICS
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section A: Respondent Profile}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} L{8cm} X@{}}
+Q1 & Designation / Post: & \blank \\[3pt]
+Q2 & Job Role / Level: & \blank \\[3pt]
+Q3 & Age group: & {\Large$\square$} Below 30\quad{\Large$\square$} 30--45\quad{\Large$\square$} 46--60 \\[3pt]
+Q4 & Gender: & {\Large$\square$} Male\quad{\Large$\square$} Female\quad{\Large$\square$} Other \\[3pt]
+Q5 & Years of service: & {\Large$\square$} 0--5\quad{\Large$\square$} 6--10\quad{\Large$\square$} 11--20\quad{\Large$\square$} 21+ \\[3pt]
+Q6 & Highest education: & {\Large$\square$} Up to 12th\quad{\Large$\square$} Graduate\quad{\Large$\square$} Post-Graduate\quad{\Large$\square$} Professional \\
+\end{tabularx}
+
+\vspace{4pt}
+% ═══════════════════════════════════
+% SECTION B: FACILITATING CONDITIONS
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section B: Infrastructure \& Facilitating Conditions}\vspace{4pt}
+
+\small\textit{Likert Scale: 1=Strongly Disagree / Very Poor \quad 2=Disagree / Poor \quad 3=Neutral \quad 4=Agree / Good \quad 5=Strongly Agree / Excellent}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q7 & What digital devices are available at your workstation? & {\Large$\square$} Desktop {\Large$\square$} Laptop {\Large$\square$} Tablet {\Large$\square$} Phone {\Large$\square$} None \\[3pt]
+Q8 & Do you share your device with other employees? & {\Large$\square$} Yes, always {\Large$\square$} Sometimes {\Large$\square$} No, dedicated \\[3pt]
+Q9 & Rate internet connectivity at your office: & \likert \\[3pt]
+Q10 & How often do you experience internet outages per week? & {\Large$\square$} Never {\Large$\square$} 1--2 {\Large$\square$} 3--5 {\Large$\square$} Daily \\[3pt]
+Q11 & Is IT helpdesk / technical support available? & \yesno \\[3pt]
+Q12 & If yes, how quickly are issues resolved? & {\Large$\square$} Same day {\Large$\square$} 2--3 days {\Large$\square$} 1 week+ {\Large$\square$} Never resolved \\
+\end{tabularx}
+
+\vspace{4pt}
+% ═══════════════════════════════════
+% SECTION C: PERFORMANCE EXPECTANCY
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section C: Performance Expectancy}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q13 & Digital tools help me complete tasks faster than paper. & \likert \\[3pt]
+Q14 & Digital tools improve the quality/accuracy of my work. & \likert \\[3pt]
+Q15 & Using digital tools increases my overall productivity. & \likert \\[3pt]
+Q16 & The digital tools available are well-suited to my actual job tasks. & \likert \\
+\end{tabularx}
+
+\vspace{4pt}
+% ═══════════════════════════════════
+% SECTION D: EFFORT EXPECTANCY
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section D: Effort Expectancy}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q17 & How difficult do you find digital tools to use? & \likert{} {\scriptsize(1=Very Easy, 5=Very Difficult)} \\[3pt]
+Q18 & I am confident in my ability to use digital tools for my work. & \likert \\[3pt]
+Q19 & Learning to use a new portal/app takes me: & {\Large$\square$} <1 day {\Large$\square$} Few days {\Large$\square$} 1--2 weeks {\Large$\square$} >2 weeks \\[3pt]
+Q20 & The design/interface of most government portals is user-friendly. & \likert \\
+\end{tabularx}
+
+\vspace{4pt}
+% ═══════════════════════════════════
+% SECTION E: SOCIAL INFLUENCE
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section E: Social Influence}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q21 & My superiors encourage the use of digital tools. & \likert \\[3pt]
+Q22 & My colleagues regularly use digital tools in their work. & \likert \\[3pt]
+Q23 & There is a formal mandate/order requiring digital tool use in my department. & {\Large$\square$} Yes {\Large$\square$} No {\Large$\square$} Don't know \\
+\end{tabularx}
+
+\vspace{4pt}
+% ═══════════════════════════════════
+% SECTION F: AWARENESS & USAGE
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section F: Awareness \& Usage}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q24 & Which general tools are you aware of? & {\Large$\square$} e-Office {\Large$\square$} CM Helpline {\Large$\square$} PFMS {\Large$\square$} SPARROW {\Large$\square$} iGOT {\Large$\square$} MP eDistrict \\[3pt]
+Q25 & How often do you use digital tools for work? & {\Large$\square$} Daily {\Large$\square$} Weekly {\Large$\square$} Monthly {\Large$\square$} Rarely {\Large$\square$} Never \\[3pt]
+Q26 & What percentage of your work is done digitally? & {\Large$\square$} 0--20\% {\Large$\square$} 21--40\% {\Large$\square$} 41--60\% {\Large$\square$} 61--80\% {\Large$\square$} 81--100\% \\
+\end{tabularx}
+
+\newpage
+
+% ═══════════════════════════════════
+% SECTION G: TRAINING
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section G: Training \& Capacity Building}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q27 & Have you attended any digital skills training in the last 2 years? & \yesno \\[3pt]
+Q28 & If yes, how many training sessions? & {\Large$\square$} 1 {\Large$\square$} 2--3 {\Large$\square$} 4--5 {\Large$\square$} More than 5 \\[3pt]
+Q29 & Rate the quality of training received: & \likert \\[3pt]
+Q30 & Was the training sufficient for your actual job needs? & \likert \\[3pt]
+Q31 & What topics need more training? & \rule{\linewidth}{0.4pt}\\[2pt] & & \rule{\linewidth}{0.4pt} \\
+\end{tabularx}
+
+\vspace{4pt}
+% ═══════════════════════════════════
+% SECTION H: CHALLENGES
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section H: Challenges \& Barriers}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q32 & What issues do you face? (tick all) & {\Large$\square$} Slow internet {\Large$\square$} Frequent crashes {\Large$\square$} No device {\Large$\square$} Complex interface {\Large$\square$} No training {\Large$\square$} No support {\Large$\square$} Power cuts \\[3pt]
+Q33 & How often do digital issues disrupt your work? & {\Large$\square$} Daily {\Large$\square$} Weekly {\Large$\square$} Monthly {\Large$\square$} Rarely {\Large$\square$} Never \\[3pt]
+Q34 & I feel comfortable asking for help with digital tools. & \likert \\[3pt]
+Q35 & My organisation provides adequate support for digital tools. & \likert \\[3pt]
+Q36 & My department is committed to digital transformation. & \likert \\
+\end{tabularx}
+
+\vspace{4pt}
+% ═══════════════════════════════════
+% SECTION I: RECOMMENDATIONS
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section I: Recommendations}\vspace{3pt}
+
+\noindent Q37. Rank these priorities (1=highest, 5=lowest):\vspace{4pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{1.5cm}@{}}
+& Better internet connectivity & Rank: \_\_\_ \\[3pt]
+& More/better devices & Rank: \_\_\_ \\[3pt]
+& More training programmes & Rank: \_\_\_ \\[3pt]
+& Simpler portal interfaces & Rank: \_\_\_ \\[3pt]
+& Faster IT support & Rank: \_\_\_ \\
+\end{tabularx}
+
+\vspace{4pt}
+\noindent Q38. What one change would most improve your use of digital tools?\vspace{4pt}
+
+\noindent\rule{\textwidth}{0.4pt}\vspace{4pt}
+\noindent\rule{\textwidth}{0.4pt}\vspace{4pt}
+\noindent\rule{\textwidth}{0.4pt}\vspace{4pt}
+
+\noindent Q39. Has digital tool adoption improved service delivery to citizens?\vspace{2pt}
+
+\noindent {\Large$\square$} Yes, significantly\quad{\Large$\square$} Yes, somewhat\quad{\Large$\square$} No change\quad{\Large$\square$} No, it has worsened\quad{\Large$\square$} Can't say
+
+\vspace{4pt}\noindent\rule{\textwidth}{1pt}\vspace{2pt}
+\begin{center}\textit{--- End of Common Schedule (Q1--Q39). Administer department-specific section below. ---}\end{center}
+\rule{\textwidth}{0.5pt}
+
+\newpage
+% ═══════════════════════════════════
+% DEPARTMENT SPECIFIC: REVENUE
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section J: Department-Specific --- REVENUE}\vspace{4pt}
+
+\small\textit{Administer ONLY to Revenue department respondents.}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q40 & Which Revenue tools are you aware of? & {\Large$\square$} Bhulekh/WebGIS {\Large$\square$} RCMS {\Large$\square$} SAARA {\Large$\square$} SAMPADA {\Large$\square$} e-Court {\Large$\square$} None \\[3pt]
+Q41 & Has Bhulekh/WebGIS improved land record speed/accuracy? & \likert \\[3pt]
+Q42 & How difficult is RCMS to use for case management? & \likert{} {\scriptsize(1=Easy, 5=Difficult)} \\[3pt]
+Q43 & What \% of records still require physical paper files? & {\Large$\square$} 0--20\% {\Large$\square$} 21--40\% {\Large$\square$} 41--60\% {\Large$\square$} 61--80\% {\Large$\square$} 81--100\% \\[3pt]
+Q44 & How often do citizens expect you to use digital tools? & \likert{} {\scriptsize(1=Never, 5=Daily)} \\
+\end{tabularx}
+
+\vspace{3pt}
+% ═══════════════════════════════════
+% DEPARTMENT SPECIFIC: RURAL DEVELOPMENT
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section K: Department-Specific --- RURAL DEVELOPMENT}\vspace{4pt}
+
+\small\textit{Administer ONLY to Rural Development respondents.}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q45 & Which RD tools are you aware of? & {\Large$\square$} NREGASoft/NMMS {\Large$\square$} e-Gram Swaraj {\Large$\square$} PMAY-G {\Large$\square$} SBM-G {\Large$\square$} Panchayat Darpan {\Large$\square$} PFMS {\Large$\square$} None \\[3pt]
+Q46 & How difficult is managing multiple portals? & \likert{} {\scriptsize(1=Easy, 5=Difficult)} \\[3pt]
+Q47 & Rate internet at block/panchayat level: & \likert \\[3pt]
+Q48 & Has NMMS improved MGNREGA attendance accuracy? & \likert \\[3pt]
+Q49 & How much of your day is spent on portal data entry? & {\Large$\square$} <1hr {\Large$\square$} 1--2hr {\Large$\square$} 2--4hr {\Large$\square$} 4+hr {\Large$\square$} Almost all day \\
+\end{tabularx}
+
+\vspace{3pt}
+% ═══════════════════════════════════
+% DEPARTMENT SPECIFIC: FOREST
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section L: Department-Specific --- FOREST}\vspace{4pt}
+
+\small\textit{Administer ONLY to Forest department respondents.}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q50 & Which Forest tools are you aware of? & {\Large$\square$} e-Green Watch {\Large$\square$} AI Alert System {\Large$\square$} GIS/Remote Sensing {\Large$\square$} Forest Offence MIS {\Large$\square$} Nursery MIS {\Large$\square$} None \\[3pt]
+Q51 & Has AI alert system improved detection vs manual patrolling? & \likert{}\quad{\Large$\square$} N/A \\[3pt]
+Q52 & How difficult are GIS tools to use? & \likert{} {\scriptsize(1=Easy, 5=Difficult)} \\[3pt]
+Q53 & GPS device access: & {\Large$\square$} Dept-issued {\Large$\square$} Personal device {\Large$\square$} Not available \\[3pt]
+Q54 & How often does poor network prevent digital tool use in the field? & \likert{} {\scriptsize(1=Never, 5=Always)} \\
+\end{tabularx}
+
+\vspace{3pt}
+% ═══════════════════════════════════
+% DEPARTMENT SPECIFIC: HEALTH
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section M: Department-Specific --- HEALTH}\vspace{4pt}
+
+\small\textit{Administer ONLY to Health department respondents.}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q55 & Which Health tools are you aware of? & {\Large$\square$} ANMOL {\Large$\square$} HMIS {\Large$\square$} Nikshay {\Large$\square$} eVIN {\Large$\square$} IHIP {\Large$\square$} ABHA {\Large$\square$} MPCDSR {\Large$\square$} None \\[3pt]
+Q56 & Has ANMOL/ABHA improved patient tracking? & \likert \\[3pt]
+Q57 & How often do you enter data in BOTH paper AND digital? & \likert{} {\scriptsize(1=Never, 5=Always)} \\[3pt]
+Q58 & How reliably does eVIN reflect actual vaccine stock? & \likert{} {\scriptsize(1=Unreliable, 5=Reliable)} \\[3pt]
+Q59 & How much does IHIP reporting add to your workload? & \likert{} {\scriptsize(1=None, 5=Significant)} \\
+\end{tabularx}
+
+\newpage
+% ═══════════════════════════════════
+% ROLE-SPECIFIC QUESTIONS
+% ═══════════════════════════════════
+\noindent{\large\bfseries Section N: Role-Specific Questions}\vspace{3pt}
+
+\noindent\begin{tabularx}{\textwidth}{@{}L{0.5cm} X L{5.5cm}@{}}
+Q60 & Your primary interaction with digital tools: & {\Large$\square$} I enter data {\Large$\square$} I review/approve {\Large$\square$} Field verification {\Large$\square$} I don't use them {\Large$\square$} Other \\[3pt]
+Q61 & Is there one person who does most portal work for others? & {\Large$\square$} Yes, one person {\Large$\square$} A few share it {\Large$\square$} Everyone does their own {\Large$\square$} N/A \\[3pt]
+Q62 & Is the training appropriate for your specific job role? & \likert \\[3pt]
+Q63 & When a portal gives an error, what do you do? & {\Large$\square$} Wait for IT {\Large$\square$} Ask colleague {\Large$\square$} Use paper {\Large$\square$} Fix myself {\Large$\square$} Tell supervisor {\Large$\square$} Abandon task \\[3pt]
+Q64 & Do senior officers use digital tools themselves? & {\Large$\square$} Yes, themselves {\Large$\square$} Rely on subordinates {\Large$\square$} Mixed {\Large$\square$} Don't know \\[3pt]
+Q65 & Have digital tools changed the work expected at your level? & \likert{} {\scriptsize(1=No change, 5=Completely changed)} \\[3pt]
+Q66 & Are there digital tasks beyond your current skill level? & {\Large$\square$} Yes {\Large$\square$} No \\[2pt]
+ & If yes, which? & \rule{\linewidth}{0.4pt}\\[3pt] & \rule{\linewidth}{0.4pt} \\[3pt]
+Q67 & Should training differ based on job level? & {\Large$\square$} Yes {\Large$\square$} Somewhat {\Large$\square$} No, same for all \\[2pt]
+ & Why? & \rule{\linewidth}{0.4pt}\\[3pt] & \rule{\linewidth}{0.4pt} \\
+\end{tabularx}
+
+\vspace{3pt}\noindent\rule{\textwidth}{1pt}
+\begin{center}
+{\large\bfseries --- END OF SCHEDULE ---}\\[3pt]
+\textbf{Total Questions Administered:} 39 (common) + 5 (department) + 8 (role-specific) = \textbf{52}\\[8pt]
+\textbf{Interviewer Notes:}\vspace{4pt}
+
+\rule{\textwidth}{0.4pt}\vspace{4pt}
+\rule{\textwidth}{0.4pt}\vspace{4pt}
+\rule{\textwidth}{0.4pt}\vspace{4pt}
+\rule{\textwidth}{0.4pt}\vspace{12pt}
+
+\textbf{Interviewer Signature:} \rule{5cm}{0.4pt}\qquad\textbf{Date:} \_\_\_/\_\_\_/2026
+\end{center}
+
+\end{document}
+"""
+
+with open('AIGGPA_Printable_Schedule.tex', 'w', encoding='utf-8') as f:
+    f.write(tex)
+print("Done: AIGGPA_Printable_Schedule.tex")

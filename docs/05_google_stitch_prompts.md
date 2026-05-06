@@ -1,40 +1,29 @@
 # Google Stitch Prompts — One Per Visual
 
 > **Institutional Branding Note:** The Atal Bihari Vajpayee Institute of Good Governance and Policy Analysis (AIGGPA) typically uses a primary color palette of dark blue and gold/yellow in its official branding and logo.
+>
 > ### Official Brand Colors
+>
 > Based on the institute's official visual identity, the primary hex codes are:
+>
 > - **AIGGPA Blue:** `#1B3B6F` (Approximate)
 > - **AIGGPA Gold/Yellow:** `#FFC107` (Approximate)
+>
 > ### Supplemental Secondary Colors
+>
 > While the blue and gold are the most prominent, the following colors are often used for text and accents in digital reports:
+>
 > - **White:** `#FFFFFF` (Backgrounds and negative space)
 > - **Dark Gray:** `#333333` (Standard body text)
-> 
+>
 > **Note:** Do not confuse AIGGPA with the multinational insurance company AIG, whose primary brand color is Spanish Sky Blue (`#00A3E7`).
 
 > **Instructions:** Use these prompts one-by-one in Google Stitch to generate visuals for your presentation and report. Each prompt is tagged with which document/section it belongs to.
 
 ---
 
-## 🚫 The "Anti-Slop" Prompting Guide
-AI image generators (like Google Stitch, Imagen, Midjourney) often default to a generic "AI Slop" aesthetic: shiny 3D renders, glowing blue network lines, garbled fake text, and overly complex backgrounds. 
-
-To force the AI to create **clean, professional, presentation-ready graphics**, append this "Magic Prefix/Suffix" to all your prompts:
-
-### 1. The Anti-Slop Prefix (Start your prompt with this)
-> *"Editorial vector illustration, data journalism style, flat minimal design, Swiss Bauhaus layout, precise geometry. DO NOT use 3D, shiny renders, glowing elements, or photorealism."*
-
-### 2. Handling Garbled Text (AI cannot spell)
-AI models hallucinate fake languages. To fix this, explicitly tell the AI to use placeholder shapes instead of text:
-> *"Replace all actual text and labels with abstract, minimal geometric horizontal lines to represent text blocks. I will add the real typography later in my presentation software."*
-
-### 3. Strict Color Palettes
-If you just say "make it blue and gold", the AI will give you 20 shades of blue. Be explicit about locking the palette:
-> *"Strict 3-color palette: Deep Navy Blue (#1B3B6F), Bright Gold (#FFC107), and White negative space. Monochromatic shading only. No gradients."*
-
----
-
 ## Prompt 1 — Three-Tier Adoption Model
+
 **For:** Main Report Part III / Overview Slide
 
 ```
@@ -49,6 +38,7 @@ Dark navy background (#0A1221), white text, modern flat design, no borders, gove
 ---
 
 ## Prompt 2 — Department Selection Matrix (2×2)
+
 **For:** Main Report Part III / Department Selection
 
 ```
@@ -63,6 +53,7 @@ Faded quadrant labels in each corner. Clean minimal design, dark background, sof
 ---
 
 ## Prompt 3 — GovTech Adoption Index Bar Chart
+
 **For:** Analytics Dashboard / Report
 
 ```
@@ -80,6 +71,7 @@ Dark navy background, modern data dashboard aesthetic, rounded bar ends.
 ---
 
 ## Prompt 4 — Demographic Breakdown (Age Groups)
+
 **For:** Demographics Section
 
 ```
@@ -97,6 +89,7 @@ Professional dark dashboard theme.
 ---
 
 ## Prompt 5 — AI Readiness Ladder
+
 **For:** Government AI Document / Pitch
 
 ```
@@ -113,6 +106,7 @@ Clean isometric or flat design, dark background, each step glowing slightly.
 ---
 
 ## Prompt 6 — Data Pipeline Flow
+
 **For:** Prototype / MCP Document
 
 ```
@@ -128,6 +122,7 @@ Dark background, flat icons, modern tech aesthetic, subtle connecting line anima
 ---
 
 ## Prompt 7 — Gender Parity Index Concept
+
 **For:** Demographics Section
 
 ```
@@ -144,6 +139,7 @@ Clean professional infographic style, dark navy background.
 ---
 
 ## Prompt 8 — Government AI Stack Layers
+
 **For:** Government AI Document
 
 ```
@@ -159,6 +155,7 @@ Dark background, each layer has a subtle gradient, modern tech architecture styl
 ---
 
 ## Prompt 9 — Scope In vs Out
+
 **For:** Pitch Presentation
 
 ```
@@ -173,6 +170,7 @@ Clean card design, dark background, each column is a separate card with rounded 
 ---
 
 ## Prompt 10 — MCP Workflow Comparison
+
 **For:** MCP Concept Document
 
 ```
@@ -188,6 +186,7 @@ Dark background, modern tech style, flow arrows between icons.
 ---
 
 ## Prompt 11 — 12-Week Timeline Gantt
+
 **For:** Report / Presentation
 
 ```
@@ -206,6 +205,7 @@ Dark background, each bar is a different color, overlapping bars shown with tran
 ---
 
 ## Prompt 12 — Composite Index Formula Visual
+
 **For:** Report Metrics Section
 
 ```

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGGPA Research Dashboard</title>
+    <!-- React & Babel UMD -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #001B2E;
+            --navy-light: #003566;
+            --gold: #C9A84C;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+            --text-dim: #D0D6E2;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        #root {
+            height: 100vh;
+        }
+
+        .dashboard-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .side-nav {
+            width: 240px;
+            background: var(--navy-light);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-right: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .logo-section {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            background: var(--gold);
+            color: var(--navy);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .side-nav h1 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: var(--gold);
+        }
+
+        .side-nav button {
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            text-align: left;
+            padding: 0.8rem 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .side-nav button:hover, .side-nav button.active {
+            background: rgba(201, 168, 76, 0.1);
+            color: var(--gold);
+        }
+
+        .pitch-btn {
+            margin-top: auto;
+            border: 1px solid var(--gold) !important;
+            color: var(--gold) !important;
+            text-align: center !important;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 3rem;
+            overflow-y: auto;
+        }
+
+        .header h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header p {
+            color: var(--gold);
+            margin-top: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--navy-light);
+        }
+
+        .stat-card.gold {
+            border-left-color: var(--gold);
+        }
+
+        .stat-card h3 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .stat-card p {
+            color: var(--text-dim);
+            margin: 0.5rem 0 0;
+        }
+
+        .info-box {
+            background: rgba(201, 168, 76, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px dashed var(--gold);
+        }
+
+        .ladder {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .step-count {
+            width: 100px;
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .step-content h4 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .step-content small {
+            color: var(--text-dim);
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .insight-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .insight-card h4 {
+            color: var(--gold);
+            margin: 0 0 1rem;
+        }
+
+        .pitch-overlay {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .giant-text {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            color: var(--gold);
+        }
+
+        .sub-text {
+            font-size: 1.5rem;
+            margin: 0 0 2rem;
+            color: var(--text-dim);
+        }
+
+        .pitch-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        const App = () => {
+          const [activeTab, setActiveTab] = useState('summary');
+
+          const logFrameData = [
+            { level: 'Goal', content: 'Institutional efficiency gains in MP through total digital adoption.', indicator: '>15% reduction in file time.' },
+            { level: 'Purpose', content: 'Diagnose specific human/tech gaps in digital workflow adoption.', indicator: 'Approved roadmap for policy.' },
+            { level: 'Outputs', content: 'Narrative datasets, Barrier frameworks, and Policy roadmap.', indicator: '45-60 balanced interviews.' },
+            { level: 'Activities', content: 'Field visits, Semi-structured interviews, and Thematic Analysis.', indicator: '4-week schedule met.' },
+          ];
+
+          const insights = [
+            { title: 'Delegated Digitization', text: 'Senior staff often outsource tech use to juniors, losing direct fluency.' },
+            { title: 'The Transparency Fear', text: 'Digital trails reduce discretionary power, leading to subtle resistance.' },
+            { title: 'Design-Reality Gap', text: 'HQ-designed software fails in rural block offices due to operational latency.' },
+          ];
+
+          return (
+            <div className="dashboard-container">
+              <nav className="side-nav">
+                <div className="logo-section">
+                  <div className="logo-icon">A</div>
+                  <h1>AIGGPA</h1>
+                </div>
+                <button className={activeTab === 'summary' ? 'active' : ''} onClick={() => setActiveTab('summary')}>Summary</button>
+                <button className={activeTab === 'logframe' ? 'active' : ''} onClick={() => setActiveTab('logframe')}>LogFrame</button>
+                <button className={activeTab === 'insights' ? 'active' : ''} onClick={() => setActiveTab('insights')}>Insights</button>
+                <button className={`pitch-btn ${activeTab === 'pitch' ? 'active' : ''}`} onClick={() => setActiveTab('pitch')}>Pitch Mode</button>
+              </nav>
+
+              <main className="content-area">
+                {activeTab === 'summary' && (
+                  <div className="fade-in">
+                    <header className="header">
+                      <h2>Project Overview</h2>
+                      <p>Digital Assessment of Government Employees in Madhya Pradesh</p>
+                    </header>
+                    <div className="stats-grid">
+                      <div className="stat-card">
+                        <h3>94%</h3>
+                        <p>Top-level Digitization</p>
+                      </div>
+                      <div className="stat-card gold">
+                        <h3>61%</h3>
+                        <p>Block-level Delay Risk</p>
+                      </div>
+                      <div className="stat-card">
+                        <h3>60</h3>
+                        <p>Target Participants</p>
+                      </div>
+                    </div>
+                    <div className="info-box">
+                      <h3>The Core Paradox</h3>
+                      <p>"Digitizing a bad process only makes it a faster bad process. We fix the process through the human user."</p>
+                    </div>
+                  </div>
+                )}
+
+                {activeTab === 'logframe' && (
+                  <div className="fade-in">
+                    <h2>The Logic Ladder</h2>
+                    <div className="ladder">
+                      {logFrameData.map((item, i) => (
+                        <div key={i} className="step">
+                          <div className="step-count">{item.level}</div>
+                          <div className="step-content">
+                            <h4>{item.content}</h4>
+                            <small>Metric: {item.indicator}</small>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {activeTab === 'insights' && (
+                  <div className="fade-in">
+                    <h2>Research Insights</h2>
+                    <div className="insights-grid">
+                      {insights.map((insight, i) => (
+                        <div key={i} className="insight-card">
+                          <h4>{insight.title}</h4>
+                          <p>{insight.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {activeTab === 'pitch' && (
+                  <div className="fade-in pitch-overlay">
+                    <h1 className="giant-text">"Moving from <span className="highlight">Guesswork</span> to <span className="highlight">Framework</span>"</h1>
+                    <p className="sub-text">We aren't just looking at the computers; we are looking at the <strong>fingers on the keyboard</strong>.</p>
+                    <ul className="pitch-list">
+                      <li>Identify the "Shadow Work" (Paper backups)</li>
+                      <li>Fix the "Design-Reality Gap" (Rural vs HQ)</li>
+                      <li>Ensure the "1-Second Digital File" doesn't wait for a "10-Day Human Click"</li>
+                    </ul>
+                  </div>
+                )}
+              </main>
+            </div>
+          );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

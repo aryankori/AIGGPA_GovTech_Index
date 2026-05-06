@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=1.8cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{colortbl}
+
+\hypersetup{colorlinks=true,linkcolor=navyblue,urlcolor=accentteal,citecolor=navyblue}
+
+% ── BRAND COLORS ────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+
+% ── SECTION STYLING ─────────────────────────────────────────
+\titleformat{\section}[block]
+  {\normalfont\bfseries\fontsize{11}{13}\selectfont\color{navyblue}}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{10}{12}\selectfont\color{accentteal}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% ── HEADER / FOOTER ─────────────────────────────────────────
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Bhopal} \quad\textbar\quad
+  Human Capital: Investment in Education, Skill Development and Employment}
+\fancyhead[R]{\footnotesize\color{navyblue}April 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1pt}
+
+% ── LISTS ───────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt}
+
+\newcommand{\rupee}{\textrm{\fontspec{Calibri}₹}}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+  {\fontsize{12}{14}\selectfont\bfseries\color{navyblue}
+  Top 5 States Investing in Education, Skill Development \& Employment:\\[2pt]
+  A Comparative Analysis}\\[6pt]
+  {\small\color{darkgray} Aakriti \quad\textbar\quad AIGGPA Summer Intern 2026}
+\end{center}
+
+\vspace{0.2cm}
+
+\section{1. Ranking Methodology}
+
+States are ranked using a composite view of (a)~\textbf{absolute budget allocation} (in \rupee~Crore) for education and skill development, and (b)~\textbf{percentage of total state budget} devoted to education -- accounting for both fiscal commitment and scale of investment. Data is drawn from 2025--26 Budget Estimates and 2026--27 announcements where available.
+
+\vspace{0.15cm}
+\section{2. Top 5 States -- Budget Allocation Snapshot}
+
+\vspace{0.1cm}
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Top 5 States -- Education \& Skill Development Budget (2025--26 BE)}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{>{\columncolor{lightgray}}c l >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Rank}} & \textcolor{white}{\textbf{State}} & \textcolor{white}{\textbf{Edu. Budget (\rupee~Cr)}} & \textcolor{white}{\textbf{\% of State Budget}} & \textcolor{white}{\textbf{Key Strength}} \\
+\midrule
+1 & Uttar Pradesh      & $\sim$1,12,000  & $\sim$15.2\%  & Highest absolute allocation \\
+\rowcolor{white}
+2 & Maharashtra         & $\sim$1,05,000  & $\sim$14.8\%  & Strong higher education infra. \\
+3 & Bihar               & $\sim$48,000    & $\sim$22.1\%  & Highest budget \% share \\
+\rowcolor{white}
+4 & Tamil Nadu           & $\sim$52,000    & $\sim$15.5\%  & NEP 2020 early adopter \\
+5 & Karnataka            & $\sim$47,500    & $\sim$14.5\%  & IT sector--academia alignment \\
+\bottomrule
+\end{tabularx}
+\vspace{0.05cm}
+\par\scriptsize Source: Respective State Budget Documents 2025--26; PRS India State Budget Analyses; RBI State Finances Reports.
+\end{table}
+
+\vspace{0.15cm}
+\section{3. State-wise Analysis}
+
+\subsection{Uttar Pradesh}
+India's most populous state leads in absolute education spending ($\sim$\rupee1.12 lakh Cr). Major programmes include \textit{Abhyudaya Coaching} for competitive exams and large-scale ITI expansion. The state recruits the highest number of primary teachers annually ($\sim$70,000 in 2024--25) and has established Skill Development Missions in all 75 districts.
+
+\subsection{Maharashtra}
+Maharashtra allocates $\sim$\rupee1.05 lakh Cr, leveraging its industrial base to drive apprenticeship-linked skilling. Pune hosts India's largest cluster of engineering colleges. The state's \textit{Mahaswayam Portal} integrates job-matching, skill training, and entrepreneurship support for youth.
+
+\subsection{Bihar}
+Despite a smaller total budget, Bihar devotes the \textbf{highest share ($\sim$22\%)} to education -- reflecting the state's prioritisation of human capital to overcome low per-capita income. The \textit{Bihar Student Credit Card Scheme} provides up to \rupee4 lakh for higher education loans at zero interest, and the state runs one of India's largest mid-day meal programmes.
+
+\subsection{Tamil Nadu}
+Tamil Nadu combines strong public university infrastructure with early NEP 2020 implementation. Its \textit{Naan Mudhalvan} (``I am the First'') platform provides free AI, blockchain, and data-science courses to college students, skilling over 15 lakh youth since launch. Education spending at $\sim$15.5\% of its budget ranks among the highest in the South.
+
+\subsection{Karnataka}
+Karnataka's Bengaluru ecosystem creates a unique industry--academia feedback loop. The state invests heavily in \textit{Karnataka Digital Economy Mission (KDEM)} and has India's highest density of engineering seats per capita. Its \textit{Skill Connect} initiative partners with 500+ employers for placement-linked training programmes.
+
+\vspace{0.15cm}
+\section{4. Key Takeaway}
+
+Large-population states (UP, Maharashtra) dominate in absolute terms, but \textbf{proportional commitment} -- as seen in Bihar ($>$20\% of budget to education) -- is arguably a stronger indicator of policy priority. States with strong industry linkages (Karnataka, Tamil Nadu) show higher employability outcomes despite moderate spending levels.
+
+\vspace{0.25cm}
+\noindent\rule{\textwidth}{0.5pt}
+{\scriptsize\textbf{References:}
+(1)~PRS Legislative Research, \textit{State Budget Analyses 2025--26}, prsindia.org.
+(2)~Reserve Bank of India, \textit{State Finances: A Study of Budgets 2024--25}, rbi.org.in.
+(3)~Centre for Budget and Governance Accountability (CBGA), \textit{State-wise Education Expenditure}, cbgaindia.org.
+(4)~National Skill Development Corporation, \textit{State Skilling Ecosystem Reports}, nsdcindia.org.
+(5)~Naan Mudhalvan Portal, Government of Tamil Nadu, naanmudhalvan.tn.gov.in.
+(6)~Bihar Student Credit Card Scheme, \textit{Official Portal}, 7nishchay-yuvaupmission.bihar.gov.in.
+}
+
+\end{document}

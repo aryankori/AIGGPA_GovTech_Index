@@ -1,0 +1,238 @@
+RESEARCH PROPOSAL • 2026
+Evaluating the Impact of
+Workplace Wellness Programmes
+on Government HR Efficiency
+Author: Himani Singh
+Date: April 2026
+Concept Proposal April 2026
+1. Title
+Working Title: Evaluating the Impact of Workplace Wellness Programmes on Government HR Efficiency and
+Performance: A Study of Madhya Pradesh Civil Services.
+2. Background
+The performance of government institutions is intrinsically linked to the health and vitality of its human re‐
+sources. Public sector employees, particularly those in Human Resource (HR) departments, operate within
+a high‐pressure environment characterized by rigid bureaucratic structures, heavy workloads, and a high
+volume of public interface. Despite the critical nature of their roles, there remains a persistent gap in the
+implementation of holistic wellness frameworks within the Indian civil services. Traditional approaches have
+largely focused on curative healthcare—addressing illness after it occurs—rather than proactive, preventa‐
+tive wellness that focuses on the overall quality of life (WHO, 1948).
+In the Indian context, the Central Government Health Scheme (CGHS) has been the primary vehicle
+for employee medical assistance since 1954, providing comprehensive coverage for more than 4 million
+beneficiaries ( CGHS Portal ). However, these schemes are often medical‐centric, focusing on reimbursement
+and hospitalization rather than continuous wellness monitoring and stress mitigation. The World Health
+Organization (WHO) defines a Healthy Workplace as one where workers and managers collaborate in a
+continual improvement process to protect and promote the health, safety, and wellbeing of all workers
+(WHO Healthy Workplace Framework, 2010 ). This framework identifies four ” Avenues of Influence”: the
+physical work environment, the psychosocial work environment, personal health resources, and enterprise
+community involvement.
+Currently, government HR officials in Madhya Pradesh—ranging from Class I to Class IV—face diverse
+stressors. While higher‐level officials deal with policy‐level complexities and long‐duration meetings, lower‐
+tier officials handle administrative bottlenecks and clerical fatigue. This study seeks to evaluate how these
+varied wellness challenges impact departmental efficiency. By integrating global standards like the WHO
+Healthy Workplace Model with national efforts such as the Ayushman Bharat Digital Mission (ABDM) and
+theNational Mental Health Policy , this research explores the feasibility of transitioning from a ’sick‐care’
+model to a ’well‐care’ model within the government hierarchy.
+3. Rationale and Need for Study
+While the Government of India has robust statutory requirements under the Occupational Safety, Health
+and Working Conditions Code (2020) , these are primarily compliance‐driven and focused on hazardous
+industries. There is a significant lack of data regarding the ”psychosocial wellness” of administrative HR
+staff. The need for this study arises from:
+•High Absenteeism and Presenteeism: Measuring how hidden health issues lead to decreased produc‐
+tivity even when staff are ”at their desks.”
+•Administrative Burnout: Investigating the psychological toll of rigid deadlines and bureaucratic pressure
+on HR officials.
+•Inadequacy of Current Schemes: Moving beyond the CGHS curative model to identify if preventative
+2
+Concept Proposal April 2026
+wellness can reduce overall medical expenditures (Baicker et al., 2010).
+•Evidence‐Based Policy: Providing localized data for the Madhya Pradesh General Administration Depart‐
+ment (GAD) to implement department‐specific wellness protocols.
+4. Research Objectives
+1.Evaluate the baseline wellness levels of Class I, II, III, and IV government HR officials using WHO
+parameters to substantiate the need for structured interventions.
+2.Analyze the impact of workplace stressors on operational efficiency, providing a reasoning for the
+implementation of departmental wellness protocols.
+3.Substantiate how age and gender‐based wellness differences correlate with performance, allow‐
+ing for the usage of targeted health initiatives.
+4.Develop an evidence‐based framework that demonstrates the correlation between holistic well‐
+ness investments and increased public service productivity.
+5. Conceptual Framework
+This research builds on a few key concepts and theories:
+Wellness and Health
+According to the World Health Organization (WHO), health is not just about not being sick. It is a state
+of complete physical, mental, and social well‐being.
+Dimensions of Wellness
+We will also use Dr. Bill Hettler’s idea that wellness has multiple parts, like our physical health, our
+emotions, and how we feel about our jobs. If one part is suffering, it affects everything else.
+Efficiency and Performance
+We will look at how taking care of employees helps them deal with the heavy demands of their jobs,
+so they can perform better and get more done (efficiency).
+6. Proposed Methodology
+This study adopts a Mixed‐Methods Research Design , combining quantitative rigor with qualitative depth
+to capture a holistic view of employee wellness.
+6.1 Data Collection Sources
+•Primary Research: Direct engagement with 200 HR officials across Class I‐IV in Bhopal and surrounding
+districts.
+3
+Concept Proposal April 2026
+•Secondary Research: Review of WHO Healthy Workplace guidelines, MP GAD policies , and National
+Health Mission (NHM) data.
+6.2 Quantitative Research (Structured Questionnaire)
+A structured questionnaire will be administered to all participants, using Likert‐scale questions and multiple‐
+choice options to ensure statistical validity.
+•Closed‐Ended Questions: Focused on WHO parameters: Physical health (sleep, diet), Mental health (fre‐
+quency of stress), and Environmental health (ergonomics).
+•Demographic Variance: Capturing age and gender to correlate wellness outcomes with departmental
+roles.
+6.3 Qualitative Research (In‐Depth Interviews)
+To understand the ”why” behind the data, semi‐structured interviews will be conducted with select officials.
+•Open‐Ended Questions: ”Describe the most stressful part of your workday,” or ”How does your current
+state of health impact your decision‐making speed?”
+•Factors Included: Influence of hierarchy on mental stress, peer‐support systems, and perceived organi‐
+zational culture.
+6.4 WHO vs National Parameters
+The study will prioritize WHO Healthy Workplace Framework parameters. While National (GoI) parameters
+focus on safety and compliance (Occupational Safety Code, 2020), WHO parameters offer a more holistic
+view including:
+•Psychosocial Environment: Organizational culture, management styles, and work‐life balance.
+•Personal Health Resources: Access to fitness, nutrition, and mental health support.
+Note: Where WHO data is unavailable for specific local contexts, Indian National Health Mission (NHM)
+baseline indicators for civil servants will be utilized.
+7. Government Initiatives in Health & Wellness
+The Indian government has already implemented several key initiatives which this study will reference:
+•AYUSH in Wellness: Promotion of Yoga and Ayurveda in government offices ( Ministry of AYUSH ).
+•ABHA (Ayushman Bharat Health Account): Digital health records for seamless care ( ABDM Portal ).
+•National Mental Health Programme (NMHP): Focused on stress management and de‐stigmatization.
+•Mission Karmayogi: National program for civil service capacity building including health as a pillar of
+performance.
+4
+Concept Proposal April 2026
+8. Significance / Expected Contribution
+This research will highlight the real, everyday struggles of government HR officials. It will show the true
+value of having wellness programmes in government offices. By understanding what these employees
+need, we can help the government create a healthier workplace, which will lead to a faster and better‐
+performing public service.
+9. Scope & Limitation
+Scope: This study focuses closely on Class I, II, III, and IV government HR officials in Madhya Pradesh and
+how their personal wellness ties back to their efficiency at work.
+Limitation: Because this is early exploratory research using a small sample size from specific classes, our
+findings will give us good ideas and a starting point, but they may not apply to all government departments
+or other states.
+10. Prior Studies & Literature Review
+A review of landmark studies demonstrates the varying impacts of workplace wellness programmes across
+both corporate and public sectors:
+•Illinois Workplace Wellness Study (RCT, 2019): A large‐scale randomized controlled trial by Jones, Moli‐
+tor, and Reif evaluated nearly 5,000 university employees. Although health screening rates increased,
+the study found no significant causal effects on health behaviors, medical expenditures, or absenteeism
+after two years, highlighting strong selection bias (healthier employees were more likely to participate).
+•RAND Corporation Study (2013): Mandated by the Affordable Care Act, Mattke et al. found that while
+participants showed statistically significant improvements in exercise, smoking cessation, and weight
+control, there were no substantial reductions in overall medical costs or cholesterol.
+•Baicker, Cutler & Song Meta‐Analysis (2010): A Harvard meta‐analysis of over 30 studies suggested that
+for every dollar spent on wellness programmes, medical costs and absenteeism costs fell by $3.27 and
+$2.73 respectively. Most analysed programmes focused on multiple risk factors like smoking, obesity,
+and stress in large firms.
+While these studies highlight mixed results—varying strictly by methodology and intervention type—
+they also underscore the importance of robust measurement indices and the need for rigorous study de‐
+signs.
+11. Wellness Domain Parameters
+This study adopts the WHO Healthy Workplace Model integrated with the widely recognised Eight Dimen‐
+sions of Wellness framework (SAMHSA, 2016). While national indicators focus on statutory safety, the WHO
+parameters allow for a more holistic evaluation of the psychosocial environment. For each dimension, we
+identify key indicators that will guide our primary data collection.
+5
+Concept Proposal April 2026
+11.1 Physical Wellness
+Physical – Body Health & Activity
+•Blood pressure, cholesterol, BMI (biometric screening results)
+•Frequency of physical activity per week
+•Quality and duration of sleep
+•Nutritional habits and dietary patterns
+•Sick leave and absenteeism rates
+•Prevalence of chronic conditions (diabetes, hypertension)
+11.2 Emotional Wellness
+Emotional – Stress & Resilience
+•Self‐reported stress levels (1–10 scale)
+•Burnout risk assessment scores
+•Ability to cope with daily work pressures
+•Utilisation of Employee Assistance Programme (EAP) or counselling
+•Emotional self‐awareness and self‐regulation
+11.3 Intellectual Wellness
+Intellectual – Learning & Growth
+•Participation in professional development and training programmes
+•Engagement in creative problem‐solving at work
+•Satisfaction with opportunities for skill development
+•Pursuit of new knowledge or certifications
+11.4 Occupational Wellness
+Occupational – Job Satisfaction & Balance
+•Employee engagement and job satisfaction survey scores
+•Work‐life balance self‐assessment
+•Perceived alignment between personal values and job role
+•Manager support and recognition feedback
+•Retention and voluntary turnover rates
+6
+Concept Proposal April 2026
+11.5 Spiritual Wellness
+Spiritual – Purpose & Meaning
+•Sense of purpose and meaning in daily work
+•Alignment with organisational mission and values
+•Engagement in mindfulness, meditation, or yoga practices
+•Participation in community service or volunteer activities
+11.6 Social Wellness
+Social – Relationships & Community
+•Quality of interpersonal relationships with colleagues
+•Perceived sense of belonging within the workplace
+•Frequency of peer‐to‐peer recognition and support
+•Participation in team‐building and social events
+•Availability of a personal support network
+11.7 Financial Wellness
+Financial – Security & Planning
+•Satisfaction with current salary and benefits
+•Usage of financial planning tools and retirement schemes (NPS, GPF)
+•Financial stress and its impact on work focus
+•Awareness of employee welfare entitlements
+11.8 Environmental Wellness
+Environmental – Workspace & Safety
+•Workplace safety and ergonomics assessments
+•Satisfaction with office infrastructure (lighting, ventilation, cleanliness)
+•Access to clean drinking water and sanitation facilities
+•Availability of a dedicated break or wellness room
+•Reported workplace safety incidents
+7
+Concept Proposal April 2026
+12. Proposed Budget for Field Research
+The following budget outlines the estimated expenditure for conducting the primary field research and data
+collection within the targeted departments of Madhya Pradesh.
+12.1 Field Visit & Data Collection Costs
+Expenditure Head Details Estimated Cost (INR)
+Travel Inter‐district travel for interviews (Bhopal, Indore, Se‐
+hore)45,000
+Accommodation Stay during 15‐day field visit for research team 30,000
+Data Entry Digitalization of 200+ structured questionnaires 15,000
+Printing & Stationery Questionnaires, reports, and informational brochures 10,000
+Honorariums Minor tokens of appreciation for interview participants 20,000
+Total Estimated Budget Field Research Phase 1,20,000
+13. Preliminary References
+Ayushman Bharat Digital Mission (ABDM). (2026). ABHA: Ayushman Bharat Health Account . Government of India.
+https://abdm.gov.in/
+Baicker, K., Cutler, D., & Song, Z. (2010). Workplace wellness programs can generate savings. Health Affairs ,29(2),
+304–311.
+Bakker, A. B., & Demerouti, E. (2007). The job demands–resources model: State of the art. Journal of Managerial
+Psychology ,22(3), 309–328.
+Central Government Health Scheme (CGHS). (2026). Beneficiary Services and Wellness Centres . Ministry of Health and
+Family Welfare. https://cghs.gov.in/
+Department of General Administration (GAD). (n.d.). Madhya Pradesh Civil Services Classification . Government of
+Madhya Pradesh. https://gad.mp.gov.in/
+Jones, D., Molitor, D., & Reif, J. (2019). What do workplace wellness programs do? Evidence from the Illinois workplace
+wellness study. The Quarterly Journal of Economics ,134(4), 1747–1791.
+Mattke, S., Liu, H., Caloyeras, J. P ., Huang, C. Y., Van Busum, K. R., Khodyakov, D., & Shier, V. (2013). Workplace wellness
+programs study: Final report . RAND Corporation.
+Ministry of AYUSH. (2026). Yoga and Wellness Initiatives for Public Servants . Government of India. https://ayush.gov.in/
+Substance Abuse and Mental Health Services Administration (SAMHSA). (2016). Creating a healthier life: A step‐by‐
+step guide to wellness . U.S. Department of Health and Human Services. https://store.samhsa.gov/product/creating‐
+a‐healthier‐life/sma16‐4958
+World Health Organization. (1948). Preamble to the Constitution of the World Health Organization . International
+Health Conference.
+World Health Organization. (2010). Healthy workplaces: a model for action: for employers, workers, policymakers and
+practitioners .https://www.who.int/publications/i/item/9789241599313
+8

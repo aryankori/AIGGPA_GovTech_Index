@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=1.8cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{colortbl}
+
+\hypersetup{colorlinks=true,linkcolor=navyblue,urlcolor=accentteal,citecolor=navyblue}
+
+% ── BRAND COLORS ────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+
+% ── SECTION STYLING ─────────────────────────────────────────
+\titleformat{\section}[block]
+  {\normalfont\bfseries\fontsize{11}{13}\selectfont\color{navyblue}}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{10}{12}\selectfont\color{accentteal}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% ── HEADER / FOOTER ─────────────────────────────────────────
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Bhopal} \quad\textbar\quad
+  Human Capital: Investment in Education, Skill Development and Employment}
+\fancyhead[R]{\footnotesize\color{navyblue}April 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1pt}
+
+% ── LISTS ───────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt}
+
+\newcommand{\rupee}{\textrm{\fontspec{Calibri}₹}}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+  {\fontsize{12}{14}\selectfont\bfseries\color{navyblue}
+  Skilling vs. Degree: An Analytical Overview of\\[2pt]
+  Demand, Gaps \& the Changing Technology Landscape}\\[6pt]
+  {\small\color{darkgray} Himani \quad\textbar\quad AIGGPA Summer Intern 2026}
+\end{center}
+
+\vspace{0.2cm}
+
+\section{1. The Degree--Skill Paradox in India}
+
+India produces over \textbf{10 million graduates annually}, yet the \textit{India Skills Report 2025} (CII--Wheebox) reveals that only \textbf{54.81\%} are considered employable by industry standards -- up marginally from 51.25\% in 2024. This ``degree-rich, skill-poor'' paradox arises because:
+
+\begin{itemize}
+  \item Traditional curricula emphasise theoretical knowledge over applied competency.
+  \item Over \textbf{50\% of graduates} work in roles below their qualification level (underemployment).
+  \item Employers increasingly seek demonstrable skills in \textbf{AI/ML, Cloud Computing, Cybersecurity, and Data Analytics} rather than degree credentials alone.
+  \item The hiring paradigm is shifting: companies like Google, IBM, and Infosys now offer ``degree-optional'' roles, prioritising certifications and portfolios.
+\end{itemize}
+
+\vspace{0.15cm}
+\section{2. Current Demand \& Skill Gaps -- National Picture}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Employability \& Demand Snapshot (India Skills Report 2025)}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{>{\columncolor{lightgray}}l >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Category}} & \textcolor{white}{\textbf{Employability Rate}} & \textcolor{white}{\textbf{Key Gap Area}} \\
+\midrule
+Management Graduates (MBA)   & 78\%    & Soft skills, leadership \\
+\rowcolor{white}
+Engineering Graduates (B.Tech) & 71.5\% & AI/ML, hands-on coding \\
+MCA Graduates                 & 71\%    & Cloud, DevOps \\
+\rowcolor{white}
+Science Graduates (B.Sc.)      & 58\%    & Industry exposure, analytics \\
+Arts/Commerce Graduates        & $<$45\% & Digital literacy, communication \\
+\bottomrule
+\end{tabularx}
+\vspace{0.05cm}
+\par\scriptsize Source: India Skills Report 2025, CII--Wheebox--AICTE; NASSCOM Academia Survey 2025.
+\end{table}
+
+\textbf{High-demand technology areas (2025--26):} Artificial Intelligence, Generative AI, Machine Learning, Cloud Architecture (AWS/Azure/GCP), Cybersecurity, Full-Stack Development, Data Engineering, and Semiconductor Design.
+
+\textbf{Critical soft-skill gaps:} Communication, critical thinking, teamwork, and adaptability -- skills that neither degrees nor technical certifications alone can guarantee.
+
+\vspace{0.15cm}
+\section{3. Madhya Pradesh -- State-Level Gaps \& Initiatives}
+
+MP faces a sharper version of the national challenge:
+
+\begin{itemize}
+  \item \textbf{Low vocational training:} Only $\sim$\textbf{1.2\%} of MP's 15+ population has received formal vocational training, compared to the national average of 2.4\% (NSSO/PLFS data).
+  \item \textbf{29 lakh+ registered job seekers} on the state employment portal (March 2025), many holding degrees but lacking industry-ready skills.
+  \item \textbf{Emerging demand:} MP's new IT/ITeS Policy, ESDM Policy, and GCC Policy 2025 are attracting tech investment to Indore, Bhopal, and Gwalior -- creating demand for skills the current education system does not adequately supply.
+\end{itemize}
+
+\textbf{State Responses:}
+\begin{itemize}
+  \item \textit{Mukhyamantri Seekho-Kamao Yojana} -- ``Learn and Earn'' scheme combining on-the-job training with stipends.
+  \item \textit{Global Skills Park (GSP), Bhopal} -- ADB-funded centre of excellence providing internationally benchmarked, advanced vocational training in emerging trades.
+  \item \textit{ITI Modernisation} -- MP achieved a Top-5 national ranking in ITI performance (2025); curricula being upgraded to include AI, IoT, and electric vehicle technology modules.
+  \item Industry partnerships with Reliance, Trident, and Jindal for placement-linked training.
+\end{itemize}
+
+\vspace{0.15cm}
+\section{4. Key Takeaway}
+
+The evidence is clear: \textbf{degrees open doors, but skills keep them open}. In a technology landscape disrupted by AI and automation, India -- and MP in particular -- must accelerate the shift from a ``degree-first'' to a ``skill-first'' human capital model. The Union Budget 2026--27's 62\% increase in skill development allocation (\rupee9,886 Cr) and MP's own skilling infrastructure investments signal that this transition is underway, but the pace must match the urgency of a 370-million-strong youth population entering the workforce.
+
+\vspace{0.25cm}
+\noindent\rule{\textwidth}{0.5pt}
+{\scriptsize\textbf{References:}
+(1)~India Skills Report 2025, CII--Wheebox--AICTE, wheebox.com.
+(2)~NASSCOM, \textit{Academia--Industry Alignment Survey 2025}, nasscom.in.
+(3)~Ministry of Skill Development \& Entrepreneurship, \textit{Annual Report 2024--25}, msde.gov.in.
+(4)~Asian Development Bank, \textit{MP Skills Development Project}, adb.org.
+(5)~Government of Madhya Pradesh, \textit{GCC Policy 2025 \& IT/ITeS Policy}, mpinfo.org.
+(6)~NSSO/PLFS, \textit{Periodic Labour Force Survey 2023--24}, mospi.gov.in.
+}
+
+\end{document}

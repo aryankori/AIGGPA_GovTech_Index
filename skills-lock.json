@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "browser-trace": {
+      "source": "browserbase/skills",
+      "sourceType": "github",
+      "skillPath": "skills/browser-trace/SKILL.md",
+      "computedHash": "07e50a596a016b4d9c247fdb5fc73daac2934803e96011280c552d2d24a11849"
+    }
+  }
+}
