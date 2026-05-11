@@ -1,0 +1,87 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{sectsty}
+
+% Colors
+\definecolor{aiggpanavy}{HTML}{1B3B6F}
+\definecolor{aiggpagold}{HTML}{FFC107}
+\definecolor{redalert}{HTML}{E53935}
+\definecolor{yellowalert}{HTML}{FBC02D}
+\definecolor{greenalert}{HTML}{43A047}
+\definecolor{greyalert}{HTML}{757575}
+
+% Formatting
+\sectionfont{\color{aiggpanavy}}
+\subsectionfont{\color{aiggpanavy}}
+\hypersetup{colorlinks=true, linkcolor=aiggpanavy, urlcolor=aiggpanavy}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{\color{aiggpanavy} AIGGPA GovTech Adoption Index}}\\[0.5em]
+    {\large \textbf{Strategic Manager Questionnaire}}\\[0.2em]
+    \textit{Project Alpha -- Executive Briefing Preparation}
+\end{center}
+
+\vspace{1em}
+
+\begin{tcolorbox}[colback=gray!5,colframe=gray!20,title=\textbf{Objective}]
+The following questions are structured to secure data access, clarify approval chains, and define exact project boundaries before official presentation to the committee.
+\end{tcolorbox}
+
+\vspace{1em}
+
+\subsection*{{\color{redalert} \textbf{1. Data Access (Critical -- Blocks Everything)}}}
+\begin{itemize}[leftmargin=*, label={\color{redalert} $\blacksquare$}]
+    \item \textbf{Can I get read access to the e-Office and e-HRMS login logs for the 4 target departments, even if anonymized?}
+    \vspace{0.2em} \\
+    \textit{Context:} We need quantitative baseline data to validate the index methodology.
+    
+    \item \textbf{Is there an existing dataset of department-wise IT usage I can baseline against?}
+    \vspace{0.2em} \\
+    \textit{Context:} Ensures we do not duplicate efforts or contradict existing internal metrics.
+    
+    \item \textbf{Who is the designated SPOC (Single Point of Contact) in each department I should approach for survey distribution?}
+    \vspace{0.2em} \\
+    \textit{Context:} Crucial for circumventing general bureaucracy and securing actual respondents.
+\end{itemize}
+
+\vspace{1em}
+
+\subsection*{{\color{yellowalert} \textbf{2. Approval Process (Required Pre-Pitch)}}}
+\begin{itemize}[leftmargin=*, label={\color{yellowalert} $\blacksquare$}]
+    \item \textbf{What is the exact approval chain for a pilot like this -- do you sign off directly, or must it go to the Commissioner?}
+    \item \textbf{Is there a standard format the institute requires for intern research proposals, or is presenting our working interactive prototype sufficient?}
+    \item \textbf{What is the realistic timeline for a decision after I present this concept to leadership?}
+\end{itemize}
+
+\vspace{1em}
+
+\subsection*{{\color{greenalert} \textbf{3. Scope Calibration (Protecting the Project)}}}
+\begin{itemize}[leftmargin=*, label={\color{greenalert} $\blacksquare$}]
+    \item \textbf{Are all 4 target departments (Revenue, PWD, Health, School Education) fully accessible for survey distribution, or are some restricted for compliance reasons?}
+    \item \textbf{How many respondents are typically considered statistically valid for an intra-department study within AIGGPA constraints?}
+    \item \textbf{Should the survey execution be physical (printed distribution), digital (Google or Microsoft Forms), or deployed via an existing internal portal?}
+\end{itemize}
+
+\vspace{1em}
+
+\subsection*{{\color{greyalert} \textbf{4. Strategic Alignment}}}
+\begin{itemize}[leftmargin=*, label={\color{greyalert} $\blacksquare$}]
+    \item \textbf{Has AIGGPA run a behavioral or adoption study like this before?}
+    \vspace{0.2em} \\
+    \textit{Context:} Demonstrates awareness of institutional history and desire to build upon it.
+    
+    \item \textbf{Is there a budget or existing cloud infrastructure available for hosting the digital prototype, or should our solution remain fully offline/local?}
+\end{itemize}
+
+\end{document}

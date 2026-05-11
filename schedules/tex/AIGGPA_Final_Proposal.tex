@@ -1,0 +1,383 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+\newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
+\newcommand{\hindi}[1]{{\hindifont #1}}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=2cm,bottom=2.5cm,left=2.2cm,right=2.2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.geometric,arrows.meta,positioning,fit,backgrounds}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hanging}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{caption}
+
+\hypersetup{colorlinks=false,hidelinks}
+
+% ── BRAND COLORS ─────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{midgray}{HTML}{D0D6E2}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+\definecolor{sectionbg}{HTML}{EEF2FA}
+\definecolor{softgreen}{HTML}{E8F5E9}
+\definecolor{darkgreen}{HTML}{2E7D32}
+
+% ── SECTION HEADING ──────────────────────────────────────────
+\newcommand{\navysectionbox}[1]{%
+  \hspace{-2.2cm}%
+  \colorbox{navyblue}{%
+    \hspace{2.2cm}%
+    \parbox[c][0.65cm]{\dimexpr\textwidth+2.0cm}{%
+      {\fontsize{12}{14}\selectfont\color{white}\strut\textbf{\MakeUppercase{#1}}}%
+    }%
+  }%
+}
+
+\titleformat{\section}[block]{\normalfont}{}{0em}{\navysectionbox}
+\titlespacing*{\section}{-2.2cm}{16pt}{8pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{11}{13}\selectfont\color{navyblue}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{2pt}
+
+% ── HEADER / FOOTER ──────────────────────────────────────────
+\setlength{\headheight}{20pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Bhopal}
+  \quad\textbar\quad Assessment of the Use of Digital Tools}
+\fancyhead[R]{\footnotesize\color{navyblue}April 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1.5pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1.5pt}
+
+% ── CUSTOM BOXES ─────────────────────────────────────────────
+\newtcolorbox{goldbox}{
+  colback=gold!10, colframe=gold, boxrule=0.7pt, arc=3mm,
+  left=10pt,right=10pt,top=8pt,bottom=8pt,breakable}
+
+\newtcolorbox{navybox}{
+  colback=sectionbg,colframe=navyblue,boxrule=0.6pt,arc=3mm,
+  left=10pt,right=10pt,top=8pt,bottom=8pt,breakable}
+
+% ── LISTS ────────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em,itemsep=3pt,topsep=4pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=4pt,topsep=4pt}
+
+% ─────────────────────────────────────────────────────────────
+\begin{document}
+\onehalfspacing
+
+% ═════════════════════════════════════════════════════════════
+%  COVER PAGE
+% ═════════════════════════════════════════════════════════════
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[navyblue] (current page.south west) rectangle (current page.north east);
+  \fill[gold] (current page.south west)
+    rectangle ($(current page.south east)+(0,1.1cm)$);
+  \fill[white] ($(current page.south west)+(0,1.1cm)$)
+    rectangle ($(current page.south east)+(0,11.8cm)$);
+  \fill[accentteal!80]
+    ($(current page.south west)+(0,11.8cm)$) --
+    ($(current page.south east)+(0,11.8cm)$) --
+    ($(current page.south east)+(0,13.2cm)$) --
+    ($(current page.south west)+(0,12.4cm)$) -- cycle;
+\end{tikzpicture}
+
+\vspace*{6cm}
+\begin{center}
+  \fontsize{8.5}{10}\selectfont\color{gold!80}
+  \textbf{\MakeUppercase{Research Proposal}}\\[0.7em]
+  \fontsize{18}{24}\selectfont\bfseries\color{white}
+  ASSESSMENT OF THE USE OF DIGITAL TOOLS AND\\[0.15em]
+  TECHNOLOGIES BY GOVERNMENT EMPLOYEES\\[0.9em]
+  \fontsize{14}{16}\selectfont\color{lightgray}
+  FOR ENHANCING WORKPLACE EFFICIENCY\\[0.15em]
+  AND EFFECTIVENESS
+\end{center}
+
+\vspace*{2.0cm}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=south west] at ($(current page.south west)+(2.2cm,1.5cm)$){%
+    \begin{minipage}{14cm}
+      \footnotesize\color{darkgray}
+      \begin{tabular}{@{}ll@{}}
+        \textbf{Prepared By:}  & Aryan Kori \\[3pt]
+        \textbf{Institution:}  & AIGGPA, Bhopal \\[3pt]
+        \textbf{Departments:}  & Rural Development, Health, Revenue and Forest \\[3pt]
+        \textbf{Date:}         & April 2026 \\
+      \end{tabular}
+    \end{minipage}%
+  };
+\end{tikzpicture}
+
+\newpage
+
+% ═════════════════════════════════════════════════════════════
+%  ABSTRACT / SUMMARY
+% ═════════════════════════════════════════════════════════════
+\section{Abstract / Summary}
+
+\vspace{0.2cm}
+This research proposal plans to figure out why many government employees in Madhya Pradesh struggle to use new digital software correctly. Even though the government has launched major policy initiatives like Digital India (Ministry of Electronics and Information Technology, 2015) and provided the tools, these projects often fail at the grassroots level due to design-reality gaps (Heeks, 2003). The actual government employees working in the offices sometimes find them confusing or hard to use because of bad internet, old computers, or poor training. This project will involve visiting different department offices (Revenue, Rural Development, Forest, and Health) to talk to the government employees directly. By understanding their daily problems with technology, we can figure out exactly what kind of training and support they need to work faster and serve citizens better.
+
+% ═════════════════════════════════════════════════════════════
+%  INTRODUCTION
+% ═════════════════════════════════════════════════════════════
+\section{Introduction}
+
+\vspace{0.2cm}
+Technology is supposed to make government work faster and easier. Across India, there has been a massive push for digital tools, with the Department of Administrative Reforms and Public Grievances (DARPG, 2024) reporting that 94 percent of files in the Central Secretariat are now digitized. This proves top-level success. However, the reality inside the smaller, local government offices in Madhya Pradesh is very different. 
+
+Currently, government employees are given computers and software, but there is a major gap between having the tools and actually knowing how to use them well. As noted by Richard Heeks (2003), public sector IT projects frequently fail due to a "design-reality gap" where systems built in headquarters do not match the physical realities of rural offices. Government employees in departments like Revenue or Health face daily challenges. While the Telecom Regulatory Authority of India (TRAI, 2024) shows massive internet growth data, access does not equal usage. Sometimes the local internet is too slow, the computers are too old, or the training provided was not clear enough. Because of these issues, government employees often go back to doing work on paper, which slows down the entire system. This study seeks to look past the top-level numbers and understand the real, daily struggles of the common government employee trying to adopt these new digital systems. 
+
+% ═════════════════════════════════════════════════════════════
+%  GLOBAL JUSTIFICATION
+% ═════════════════════════════════════════════════════════════
+\section{Global Justification}
+
+\vspace{0.2cm}
+This research aligns with global priorities in public administration. The United Nations DESA (2024) emphasizes continuous improvement in the E-Government Development Index (EGDI), showing that nations must look beyond infrastructure into human capacity. Furthermore, the World Bank (2016) highlights the "digital dividends gap," noting that digital investments fail to yield returns without matching institutional skills. Finally, the OECD (2014) mandates user-centric digital governance. This study ensures that the policies in Madhya Pradesh reflect these globally relevant standards by focusing directly on the users.
+
+% ═════════════════════════════════════════════════════════════
+%  LITERATURE REVIEW
+% ═════════════════════════════════════════════════════════════
+\section{Literature Review}
+
+\vspace{0.2cm}
+To solve this problem, this study relies on established academic frameworks to understand digital adoption. Studies show that a new computer system will fail if management just drops it on the desk without asking the government employees how it feels to use it. 
+
+This research will use two highly cited frameworks as a guide: the Technology Acceptance Model (TAM) and the Unified Theory of Acceptance and Use of Technology (UTAUT). These models map the exact conditions required for a government employee to accept a new tool:
+\begin{itemize}
+  \item \textbf{Performance Expectancy:} Specifically built upon Fred Davis's (1989) TAM model, measuring if the system genuinely improves work speed.
+  \item \textbf{Effort Expectancy:} As defined by Viswanath Venkatesh et al. (2003, 2012), determining the degree of ease associated with the use of the system.
+  \item \textbf{Social Influence:} The degree to which an individual perceives that important others (senior officers) believe they should use the new system.
+  \item \textbf{Facilitating Conditions:} The degree to which an individual believes that an organizational and technical infrastructure exists to support use of the system.
+\end{itemize}
+Furthermore, the qualitative data gathered during this study will be analyzed using Thematic Analysis as outlined by Braun and Clarke (2006). This rigorous methodology ensures that the subjective experiences of government employees are systematically categorized into objective insights.
+
+% ═════════════════════════════════════════════════════════════
+%  RESEARCH OBJECTIVES
+% ═════════════════════════════════════════════════════════════
+\section{Research Objectives}
+
+\vspace{0.2cm}
+\begin{navybox}
+\begin{enumerate}[label={\color{gold}\bfseries\arabic*.},itemsep=4pt]
+  \item To know about the digital infrastructure, awareness and use of various tools and technologies by government employees in their office work.
+  \item To assess the capacity building efforts made by the department on technological support to their government employees for using digital tools.
+  \item To identify bottlenecks, issues and challenges faced by government employees using technology or digital tools.
+  \item To suggest the required actions for the department for efficient delivery service by using appropriate digital tools and technologies.
+\end{enumerate}
+\end{navybox}
+
+% ═════════════════════════════════════════════════════════════
+%  IMPORTANT QUESTIONS
+% ═════════════════════════════════════════════════════════════
+\section{Important Questions this study will Answer}
+
+\vspace{0.2cm}
+\begin{itemize}[leftmargin=1.2em, itemsep=6pt]
+  \item What is the current status of digital infrastructure in the selected departments, and to what extent are government employees aware of and using various digital tools and technologies in their daily office work?
+  \item What kind of capacity building efforts, training programs, and technical support are being provided by the departments to help government employees use digital tools effectively?
+  \item What are the major bottlenecks, issues, and challenges faced by government employees while using digital tools and technologies in their work?
+  \item What actions and measures can be suggested to improve the use of digital tools for more efficient and effective service delivery in government departments?
+\end{itemize}
+
+% ═════════════════════════════════════════════════════════════
+%  RESEARCH DESIGN / METHODOLOGY
+% ═════════════════════════════════════════════════════════════
+\section{Research Design / Methodology}
+
+\vspace{0.2cm}
+The researcher will not just send out a digital survey. To get real answers, the researcher will physically visit the offices and talk to the people. The method will happen in three clear steps:
+
+\subsection*{Fieldwork Sample Collection Framework}
+To ensure all opinions are heard, the researcher will use a straightforward data collection framework. This clear methodology grid will be carried into the field and physically filled out to guarantee the research gathers equal perspectives from senior administrators (Class I) down to support staff (Class IV) across each target department.
+
+\vspace{0.1cm}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{
+  >{\centering\arraybackslash}p{1.2cm}
+  >{\raggedright\arraybackslash\bfseries}p{3.2cm} 
+  >{\centering\arraybackslash}X 
+  >{\centering\arraybackslash}X 
+  >{\centering\arraybackslash}X 
+  >{\centering\arraybackslash}X 
+  >{\centering\arraybackslash\bfseries}X}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\bfseries S.No.} & 
+\textcolor{white}{\bfseries Department} & 
+\textcolor{white}{\bfseries Class I} & 
+\textcolor{white}{\bfseries Class II} & 
+\textcolor{white}{\bfseries Class III} & 
+\textcolor{white}{\bfseries Class IV} & 
+\textcolor{white}{\bfseries Total} \\
+\midrule
+1 & Revenue & [ Fill ] & [ Fill ] & [ Fill ] & [ Fill ] & [ Sum ] \\
+\rowcolor{sectionbg}
+2 & Rural Dev. & [ Fill ] & [ Fill ] & [ Fill ] & [ Fill ] & [ Sum ] \\
+3 & Forest & [ Fill ] & [ Fill ] & [ Fill ] & [ Fill ] & [ Sum ] \\
+\rowcolor{sectionbg}
+4 & Health & [ Fill ] & [ Fill ] & [ Fill ] & [ Fill ] & [ Sum ] \\
+\midrule
+\rowcolor{gold!20}
+\textbf{--} & \textbf{Total Cadre} & \textbf{[ Sum ]} & \textbf{[ Sum ]} & \textbf{[ Sum ]} & \textbf{[ Sum ]} & \textbf{[ Total ]} \\
+\bottomrule
+\end{tabularx}
+\vspace{0.3cm}
+
+\textbf{Research Design:} This is a Qualitative exploratory study utilizing a sample size of 45 to 60 government employees across the targeted departments.
+
+\subsection*{Step 1: Office Visits}
+The researcher will travel to the block and district offices for the Revenue, Rural Development, Forest, and Health departments. By sitting in the same room as the government employees (from Class 1 officers to Class 4 government employees), the researcher can gather observational data on physical facilitating conditions.
+
+\subsection*{Step 2: Semi-Structured Interviews}
+The researcher will conduct qualitative data collection through semi-structured interviews with the government employees. Instead of relying on rigid digital surveys, open-ended probing questions will be used to capture authentic narrative data regarding their operational bottlenecks.
+
+\subsection*{Step 3: Thematic Analysis}
+Following the methodology of Braun and Clarke (2006), the qualitative data will be systematically coded and structured into clear categories. For example, complaints regarding system confusion map directly to "Effort Expectancy," while hardware issues map to "Facilitating Conditions." This ensures a formal, rigorous report for decision-makers.
+
+% ═════════════════════════════════════════════════════════════
+%  ETHICAL CONSIDERATIONS
+% ═════════════════════════════════════════════════════════════
+\section{Ethical Considerations}
+
+\vspace{0.2cm}
+It is understood that government employees might be hesitant to candidly critique government software architecture. Therefore, strict qualitative confidentiality frameworks will be enforced.
+\begin{itemize}
+  \item No identifying markers or names will be published in the final report.
+  \item The collected data will remain highly confidential and restricted to analytical use.
+  \item Prior to data collection, the researcher will obtain explicit consent, ensuring the government employees understand they will not face any administrative or professional repercussions for their honest feedback.
+\end{itemize}
+
+% ═════════════════════════════════════════════════════════════
+%  SIGNIFICANCE AND IMPACT
+% ═════════════════════════════════════════════════════════════
+\section{Significance and Impact}
+
+\vspace{0.2cm}
+By accurately diagnosing operational bottlenecks, the government can halt the misallocation of state funds on underutilized software infrastructure. This study drives direct efficiency gains and massive resource optimization (World Bank, 2016). If the Institute can tailor capacity building policies to the actual needs of the end-users, it will result in significant policy improvement (United Nations, 2024). Most importantly, when government employees can execute digital workflows without friction, citizen-facing service delivery timelines will drastically decrease.
+
+% ═════════════════════════════════════════════════════════════
+%  TIMELINE / SCHEDULE
+% ═════════════════════════════════════════════════════════════
+\section{Timeline / Schedule}
+
+\vspace{0.2cm}
+The project will be completed smoothly over 4 weeks using this clear schedule:
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{
+  >{\columncolor{navyblue}\color{white}\bfseries\small\centering}p{2.5cm}
+  >{\columncolor{sectionbg}\small}X}
+\textbf{Time} & \textbf{Planned Work} \\
+\rowcolor{white}
+\textbf{Week 1} & Plan the office visits, get travel permissions, and print the interview questions. \\
+\rowcolor{lightgray}
+\textbf{Week 2} & Travel to the district and block offices to observe the work and interview the staff. \\
+\rowcolor{white}
+\textbf{Week 3} & Read through all the answers and group the problems into clear categories. \\
+\rowcolor{lightgray}
+\textbf{Week 4} & Write the final report and present the solutions to the senior management. \\
+\bottomrule
+\end{tabularx}
+\vspace{0.4cm}
+
+% ═════════════════════════════════════════════════════════════
+%  BUDGET
+% ═════════════════════════════════════════════════════════════
+\newpage
+\section{Total Estimated Budget}
+
+\vspace{0.2cm}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{
+  >{\columncolor{navyblue}\color{white}\bfseries\small\centering}p{1.2cm}
+  >{\columncolor{lightgray}\bfseries\small}p{3.7cm}
+  >{\columncolor{sectionbg}\small}X
+  >{\columncolor{lightgray}\bfseries\small\raggedleft\arraybackslash}p{2.2cm}}
+  
+S. No. & Expense Category & Description & Amount (INR) \\
+\rowcolor{white}
+1 & Data Collection \& Travel & Local travel for conducting primary surveys at district and block-level offices across the four departments & ₹ 5,500 \\
+\rowcolor{lightgray}
+2 & Printing \& Stationery & Printing of questionnaires, consent forms, and field notes for offline data collection & ₹ 1,500 \\
+\rowcolor{white}
+3 & Communication \& Digital Costs & Mobile data, internet charges, and basic software tools required for data collection and analysis & ₹ 1,000 \\
+\rowcolor{lightgray}
+4 & Report Preparation & Printing and binding of the final research report and supporting documents & ₹ 1,000 \\
+\rowcolor{white}
+5 & Contingency Fund & Miscellaneous and unforeseen expenses during fieldwork & ₹ 1,000 \\
+\midrule
+\rowcolor{gold!20}
+\multicolumn{3}{r}{\textbf{Total Estimated Budget}} & \textbf{₹ 10,000} \\
+\end{tabularx}
+
+\newpage
+% ═════════════════════════════════════════════════════════════
+%  REFERENCES
+% ═════════════════════════════════════════════════════════════
+\section{REFERENCES}
+
+\vspace{0.2cm}
+\small
+\begin{itemize}[leftmargin=1.5em, itemindent=-1.5em, label={}]
+\item Alrawabdeh, W. (2014). Examining factors affecting digital platform adoption in Jordan. \textit{International Journal of Business and Social Science, 5}(8), 232-241.
+
+\item Bhatnagar, S. (2004). \textit{E-Government: From Vision to Implementation - A Practical Guide with Case Studies}. Sage Publications.
+
+\item Braun, V., \& Clarke, V. (2006). Using thematic analysis in psychology. \textit{Qualitative Research in Psychology, 3}(2), 77-101.
+
+\item Cordella, A., \& Bonina, C. M. (2012). A public value perspective for ICT enabled public sector reforms. \textit{Government Information Quarterly, 29}(4), 512-520.
+
+\item Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. \textit{MIS Quarterly, 13}(3), 319-340.
+
+\item Government of India, Department of Personnel \& Training. (2020). \textit{National Programme for Civil Services Capacity Building (Mission Karmayogi)}.
+
+\item Government of India, Ministry of Electronics \& Information Technology. (2015). \textit{Digital India}.
+
+\item Heeks, R. (2003). \textit{Most eGovernment-for-Development Projects Fail: How Can Risks Be Reduced?} University of Manchester.
+
+\item Heeks, R. (2006). \textit{Implementing and Managing eGovernment}. Sage Publications.
+
+\item Kumar, R., \& Best, M. L. (2006). Impact and sustainability of e-government services in developing countries. \textit{The Information Society, 22}(1), 1-12.
+
+\item Ndou, V. (2004). E-government for developing countries. \textit{The Electronic Journal of Information Systems in Developing Countries, 18}(1), 1-24.
+
+\item Telecom Regulatory Authority of India. (2024). \textit{Annual Performance Indicators}. 
+
+\item United Nations. (2024). \textit{E-Government Survey 2024: The Future of Digital Government}. UN DESA.
+
+\item Venkatesh, V., Morris, M. G., Davis, G. B., \& Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. \textit{MIS Quarterly, 27}(3), 425-478.
+
+\item Venkatesh, V., Thong, J. Y. L., \& Xu, X. (2012). Consumer acceptance and use of information technology. \textit{MIS Quarterly, 36}(1), 157-178.
+\end{itemize}
+
+\end{document}

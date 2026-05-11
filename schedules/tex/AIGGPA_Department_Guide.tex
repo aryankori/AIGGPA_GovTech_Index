@@ -1,0 +1,391 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{mathptmx}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{booktabs}\usepackage{tabularx}\usepackage{array}
+\usepackage{enumitem}\usepackage{setspace}\usepackage{fancyhdr}
+\usepackage{hyperref}\hypersetup{hidelinks}
+\usepackage{titlesec}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small AIGGPA Research --- Department Reference}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+\onehalfspacing
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{}{0em}{}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Understanding Your Four Departments}\\[6pt]
+{\large A Field Reference for AIGGPA Research}\\[4pt]
+{\small Aryan Kori --- May 2026}
+\end{center}
+\vspace{6pt}\hrule\vspace{12pt}
+
+\tableofcontents
+\newpage
+
+% ════════════════════════════════════════════════════════════
+\part*{Part I: Department Profiles}
+\addcontentsline{toc}{part}{Part I: Department Profiles}
+% ════════════════════════════════════════════════════════════
+
+% ──────────────────────────────────────────────────────────
+\section{Revenue Department}
+% ──────────────────────────────────────────────────────────
+
+\subsection{What this department does}
+
+The Revenue Department is the backbone of land administration in MP. It handles:
+\begin{itemize}[nosep]
+  \item Maintaining all land records (who owns what land, how much, what type)
+  \item Processing mutations (when land changes hands --- sale, inheritance, gift)
+  \item Collecting land revenue and government dues
+  \item Settling land disputes through revenue courts
+  \item Managing disaster relief (flood, drought) at district level
+  \item Election duty, law and order (Collector is also District Magistrate)
+\end{itemize}
+
+Governing law: \textit{Madhya Pradesh Land Revenue Code (MPLRC), 1959.}
+
+\subsection{How it is structured}
+
+\begin{tabularx}{\textwidth}{@{}L{2.5cm} X@{}}
+\toprule
+\textbf{Level} & \textbf{What it covers} \\
+\midrule
+State & Board of Revenue (Gwalior) --- highest appellate authority \\
+Division & Divisional Commissioner --- supervises multiple districts \\
+District & Collector / District Magistrate --- runs the entire district \\
+Sub-Division & SDM (Sub-Divisional Magistrate) --- 2--4 per district \\
+Tehsil & Tehsildar --- one per tehsil, the key revenue officer \\
+RI Circle & Revenue Inspector --- supervises a group of Patwari circles \\
+Village & Patwari --- one Patwari covers 3--8 villages \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Cadre hierarchy --- who does what}
+
+\begin{tabularx}{\textwidth}{@{}L{1cm} L{3.5cm} L{4.5cm} X@{}}
+\toprule
+\textbf{Class} & \textbf{Who} & \textbf{Daily work} & \textbf{Digital role} \\
+\midrule
+I & Collector, Addl.\ Collector, Commissioner (Land Records) & Policy decisions, appellate hearings, disaster coordination, supervision of all revenue operations in the district & Reviews dashboards and MIS reports; approves cases on SAARA/RCMS; rarely does data entry himself \\[6pt]
+II & SDM, Deputy Collector, Dy.\ Director (Land Records) & Hears revenue cases at sub-division level, processes land acquisition, handles magisterial duties, election work & Uses RCMS to dispose cases, verifies records on Bhulekh for acquisition files, conducts e-Court hearings \\[6pt]
+III & Tehsildar, Naib Tehsildar, Revenue Inspector (RI), Patwari, Computer Operator & \textit{This is where most work happens.} Patwari maintains village-level land records (Khasra, B-1), processes mutations, conducts field measurements, crop surveys. Tehsildar approves mutations, hears minor disputes, collects revenue. RI supervises Patwaris. & Patwari is the primary Bhulekh/WebGIS user --- enters and updates Khasra/B-1 data daily. Tehsildar uses RCMS for case tracking. Registration staff use SAMPADA 2.0. This cadre carries the heaviest digital workload. \\[6pt]
+IV & Peon, Office Asst., Process Server, Chowkidar & Carries files between offices, delivers court summons, manages record room, office cleaning & Almost no direct digital use. May help with scanning documents or carrying files to the computer operator. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Key terms you must know}
+
+\begin{tabularx}{\textwidth}{@{}L{3cm} X@{}}
+\toprule
+\textbf{Term} & \textbf{What it means} \\
+\midrule
+Khasra & Village field book --- details of every plot: survey number, area, land type, soil, irrigation, owner name \\
+B-1 (Khatauni) & Summary of all plots owned by one person in a village. This is the main ``proof of ownership'' document. \\
+Mutation (Dakhil Kharij) & Process of updating land records when ownership changes (sale, death, gift, partition). Patwari prepares, Tehsildar approves. \\
+Demarcation & Physical measurement of land boundaries when there is a dispute \\
+Diversion & Changing land use (e.g., agricultural to residential). Requires revenue court permission. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Digital tools}
+
+\begin{tabularx}{\textwidth}{@{}L{3.5cm} X@{}}
+\toprule
+\textbf{Tool} & \textbf{What it does} \\
+\midrule
+MP Bhulekh / WebGIS 2.0 & View and download land records (Khasra, B-1, maps) online. Patwari updates data here. Citizens can check their records at \texttt{mpbhulekh.gov.in}. \\
+RCMS & Revenue Case Management System --- tracks all revenue court cases digitally (mutations, disputes, diversions). Tehsildar and SDM use it. \\
+SAARA & Smart Application for Revenue Administration --- workflow management for revenue processes. \\
+SAMPADA 2.0 & Handles property registration and stamp duty. Used at Sub-Registrar offices. \\
+e-Court / e-Filing & Digital filing and hearing of revenue court cases. \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+% ──────────────────────────────────────────────────────────
+\section{Rural Development Department}
+% ──────────────────────────────────────────────────────────
+
+\subsection{What this department does}
+
+This department runs India's biggest rural welfare schemes at the village level:
+\begin{itemize}[nosep]
+  \item MGNREGA --- guaranteed 100 days of wage employment for rural households
+  \item PMAY-G --- houses for the rural poor (Pradhan Mantri Awas Yojana - Gramin)
+  \item SBM-G --- Swachh Bharat Mission (toilets and sanitation in villages)
+  \item Panchayati Raj --- supporting elected village-level self-government
+  \item GPDP --- Gram Panchayat Development Plans (village planning)
+\end{itemize}
+
+It works through the three-tier Panchayati Raj system: Zila Panchayat (district) $\rightarrow$ Janpad Panchayat (block) $\rightarrow$ Gram Panchayat (village).
+
+\subsection{How it is structured}
+
+\begin{tabularx}{\textwidth}{@{}L{2.5cm} X@{}}
+\toprule
+\textbf{Level} & \textbf{What it covers} \\
+\midrule
+State & Commissioner, Panchayat \& Rural Development \\
+District & CEO, Zila Panchayat + Project Director, DRDA \\
+Block & BDO (Block Development Officer) / CEO, Janpad Panchayat \\
+Village cluster & Gram Panchayat Secretary (covers 1--3 GPs) \\
+Village & Gram Rozgar Sahayak (GRS) --- handles MGNREGA at GP level \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Cadre hierarchy --- who does what}
+
+\begin{tabularx}{\textwidth}{@{}L{1cm} L{3.5cm} L{4.5cm} X@{}}
+\toprule
+\textbf{Class} & \textbf{Who} & \textbf{Daily work} & \textbf{Digital role} \\
+\midrule
+I & CEO (Zila Panchayat), Project Director (DRDA), Joint Director & District-level planning, fund allocation across schemes, convergence meetings, reporting to state & Reviews dashboards on e-Gram Swaraj, approves fund releases on PFMS, monitors NREGASoft MIS reports \\[6pt]
+II & BDO / CEO (Janpad Panchayat), Asst.\ Project Officer, Dy.\ CEO & Runs all schemes at block level, supervises GRS and GP Secretaries, conducts inspections, manages expenditure & Approves works on NREGASoft, sanctions PMAY-G beneficiaries, uploads GPDP on e-Gram Swaraj \\[6pt]
+III & Gram Panchayat Secretary, Gram Rozgar Sahayak (GRS), Accountant, DEO, Gram Sevak & \textit{The real workhorses.} GRS prepares muster rolls, records daily attendance of MGNREGA workers, registers beneficiaries. GP Secretary manages village-level accounts and records. & Heaviest digital load in any department. GRS enters data on NREGASoft daily, uploads NMMS geo-tagged attendance, does PMAY-G house photo verification, enters SBM-G toilet data. Works across 4--6 portals every day. \\[6pt]
+IV & Peon, Office Asst., Chowkidar & File movement, office maintenance, physical delivery of notices & Almost none. May carry printed MIS reports. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Key terms you must know}
+
+\begin{tabularx}{\textwidth}{@{}L{3cm} X@{}}
+\toprule
+\textbf{Term} & \textbf{What it means} \\
+\midrule
+Muster Roll & Daily attendance register of MGNREGA workers at a worksite. GRS fills this. \\
+Job Card & Every rural household registered under MGNREGA gets a Job Card. It records all employment days. \\
+GPDP & Gram Panchayat Development Plan --- annual plan prepared by each GP for village development. Uploaded on e-Gram Swaraj. \\
+Geo-tagging & Taking GPS-tagged photographs to prove that a house/worksite/toilet actually exists at that location. Done via phone. \\
+FTO & Fund Transfer Order --- digital payment instruction for MGNREGA wages via PFMS. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Digital tools}
+
+\begin{tabularx}{\textwidth}{@{}L{3.5cm} X@{}}
+\toprule
+\textbf{Tool} & \textbf{What it does} \\
+\midrule
+NREGASoft MIS & The main MGNREGA management system --- work demand, muster rolls, wage lists, fund tracking. \\
+NMMS App & National Mobile Monitoring System --- mandatory GPS-tagged attendance of workers. Real-time, cannot be faked. \\
+e-Gram Swaraj & Panchayat-level planning and accounting portal. GPs upload their GPDP and expenditure reports here. \\
+PMAY-G Portal & Tracks housing scheme beneficiaries --- from selection to construction stages. Requires geo-tagged photos at each stage. \\
+SBM-G Portal & Swachh Bharat --- tracks toilet construction and ODF (Open Defecation Free) status. \\
+Panchayat Darpan & MP's own panchayat monitoring portal for tracking all GP-level works and finances. \\
+PFMS & Public Financial Management System --- handles all government fund transfers. \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+% ──────────────────────────────────────────────────────────
+\section{Forest Department}
+% ──────────────────────────────────────────────────────────
+
+\subsection{What this department does}
+
+MP has the largest forest cover of any Indian state (about 25\% of the state). The department handles:
+\begin{itemize}[nosep]
+  \item Protection of forests from encroachment, illegal felling, and poaching
+  \item Wildlife management (MP has multiple tiger reserves --- Kanha, Bandhavgarh, Pench, Satpura, Panna)
+  \item Plantation and afforestation programmes
+  \item Fire prevention and management
+  \item CAMPA fund utilisation (Compensatory Afforestation)
+  \item Managing forest rights of tribal communities (FRA, 2006)
+\end{itemize}
+
+\subsection{How it is structured}
+
+The Forest department has its own cadre system, separate from the general administrative cadre:
+
+\begin{tabularx}{\textwidth}{@{}L{2.5cm} X@{}}
+\toprule
+\textbf{Level} & \textbf{What it covers} \\
+\midrule
+State & PCCF (Principal Chief Conservator of Forests) --- Head of Forest Force \\
+Circle & CCF / CF (Chief Conservator / Conservator of Forests) \\
+Division & DFO (Divisional Forest Officer) --- \textit{the key operational authority}. One per forest division. \\
+Sub-Division & ACF / SDFO (Assistant Conservator / Sub-Divisional Forest Officer) \\
+Range & Range Officer (RFO / Ranger) --- manages a forest range \\
+Section & Forester --- manages a section within a range \\
+Beat & Forest Guard --- the frontline. One guard patrols one beat (often alone). \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Cadre hierarchy --- who does what}
+
+\begin{tabularx}{\textwidth}{@{}L{1cm} L{3cm} L{4.8cm} X@{}}
+\toprule
+\textbf{Class} & \textbf{Who} & \textbf{Daily work} & \textbf{Digital role} \\
+\midrule
+I & CCF, CF, DFO (IFS cadre --- Indian Forest Service) & Division/circle-level management, CAMPA fund planning, working plan approval, wildlife protection policy, coordination with district administration & Reviews e-Green Watch dashboards, monitors AI alert patterns on GIS maps, approves plans. Does not do field data entry. \\[6pt]
+II & ACF, SDFO (State Forest Service cadre) & Sub-division supervision, prosecution of forest offences, nursery and plantation inspection, assists DFO in planning & Enters offence cases in Forest Offence MIS, verifies e-Green Watch geo-tags, reviews GIS maps \\[6pt]
+III & Range Officer (RFO), Deputy Ranger, Forester & Patrolling, detecting encroachment and illegal felling, fire management, plantation execution, wildlife census fieldwork, arresting offenders & Responds to AI alerts in the field (goes to the GPS coordinates, takes photos, uploads verification). Collects GIS field data. Enters first information in Forest Offence MIS. \\[6pt]
+IV & Forest Guard, Van Rakshak, Mali & Beat-level daily patrolling (often alone in remote forest), fire line clearing, nursery labour, physical boundary marking, camp duty & Uses personal smartphone for GPS-tagged photos and voice notes when responding to alerts. Lowest formal training but highest field exposure to technology. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Key terms you must know}
+
+\begin{tabularx}{\textwidth}{@{}L{3cm} X@{}}
+\toprule
+\textbf{Term} & \textbf{What it means} \\
+\midrule
+Beat & The smallest forest management unit. One Forest Guard patrols one beat daily. \\
+Range & A group of beats managed by a Range Officer. \\
+Division & A group of ranges managed by a DFO. This is where operational decisions happen. \\
+CAMPA & Compensatory Afforestation Fund. When forest land is diverted for non-forest use (dam, road), money goes into CAMPA for replanting elsewhere. \\
+Working Plan & A 10-year management plan for each forest division. Prescribes what can and cannot be done. \\
+Encroachment & Illegal occupation of forest land for farming or habitation. A major issue in MP. \\
+FRA & Forest Rights Act, 2006 --- gives land rights to forest-dwelling tribals. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Digital tools}
+
+\begin{tabularx}{\textwidth}{@{}L{3.5cm} X@{}}
+\toprule
+\textbf{Tool} & \textbf{What it does} \\
+\midrule
+e-Green Watch & Web portal for monitoring CAMPA works. Tracks plantation, asset creation, and overlays them on satellite imagery (Google Earth) for transparency. \\
+AI Forest Alert System & Uses Google Earth Engine + Sentinel satellite data + ML to detect land-use changes as small as 10$\times$10m. Sends polygon alerts to field staff's phones. Piloted in Shivpuri, Guna, Vidisha, Burhanpur, Khandwa. \\
+GIS / Remote Sensing & Mapping forest boundaries, tracking tree density, species distribution, fire risk zones. Requires specialised skills. \\
+Forest Offence MIS & Tracks all offence cases --- from FIR to court disposal. Range Officers enter cases, DFO monitors. \\
+Nursery Management System & Tracks nursery stock, seedling production, and distribution for plantation programmes. \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+% ──────────────────────────────────────────────────────────
+\section{Health Department}
+% ──────────────────────────────────────────────────────────
+
+\subsection{What this department does}
+
+The Health department runs all public health services in the state:
+\begin{itemize}[nosep]
+  \item Maternal and child health (ANC registration, institutional deliveries, immunisation)
+  \item Disease control --- TB (RNTCP), Malaria, Dengue, Kala-azar
+  \item Immunisation (Universal Immunisation Programme)
+  \item Disease surveillance and outbreak response (IDSP/IHIP)
+  \item Hospital management (district hospitals, CHCs, PHCs)
+  \item Drug and vaccine supply chain management
+\end{itemize}
+
+It works through the National Health Mission (NHM) framework at the state level.
+
+\subsection{How it is structured}
+
+\begin{tabularx}{\textwidth}{@{}L{2.5cm} X@{}}
+\toprule
+\textbf{Level} & \textbf{What it covers} \\
+\midrule
+State & Director, Health Services + Mission Director, NHM \\
+District & CMHO (Chief Medical \& Health Officer) --- runs all health facilities in the district \\
+Block & BMO (Block Medical Officer) --- in charge of block-level health services \\
+CHC & Community Health Centre --- referral unit with specialists (30-bed) \\
+PHC & Primary Health Centre --- basic curative + preventive care (6-bed, 1 doctor) \\
+Sub-Centre / HWC & Health \& Wellness Centre --- first contact point in villages. Run by ANM. \\
+Village & ASHA (Accredited Social Health Activist) --- community health volunteer \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Cadre hierarchy --- who does what}
+
+\begin{tabularx}{\textwidth}{@{}L{1cm} L{3cm} L{4.8cm} X@{}}
+\toprule
+\textbf{Class} & \textbf{Who} & \textbf{Daily work} & \textbf{Digital role} \\
+\midrule
+I & CMHO, Civil Surgeon, Joint/Dy.\ Director, Senior Specialist & District health administration, programme monitoring across all blocks, hospital management, policy compliance, budget & Reviews HMIS dashboards, monitors Nikshay TB data at district level, oversees Ayushman Bharat claims. Supervisory digital role. \\[6pt]
+II & BMO, Medical Officer (MO), District Programme Manager (NHM) & Clinical duties at PHC/CHC (seeing patients, deliveries), block-level programme supervision, data review & Validates HMIS data submitted by ANMs, enters Nikshay TB case notifications, submits IHIP disease reports, supervises ANMOL data quality \\[6pt]
+III & Staff Nurse, ANM, Lab Technician, Pharmacist, Health Worker, DEO & \textit{The backbone of health delivery.} ANM: field visits, ANC registration, immunisation sessions, home-based newborn care. Staff Nurse: hospital ward duties, OPD, assisting in deliveries. Lab Tech: sample collection, testing. & ANM is the primary ANMOL user --- registers pregnant women, tracks immunisation schedules, enters data daily (often on a tablet). Staff Nurse enters HMIS facility data. Pharmacist logs eVIN vaccine stock and cold chain temperature. Heaviest routine digital load. \\[6pt]
+IV & Ward Boy, Peon, Sweeper, Security Guard, Ambulance Helper & Patient handling, hospital sanitation, equipment movement, ambulance support, security & Almost none formally. May interact with biometric attendance systems or assist with patient registration at the counter. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Key terms you must know}
+
+\begin{tabularx}{\textwidth}{@{}L{3cm} X@{}}
+\toprule
+\textbf{Term} & \textbf{What it means} \\
+\midrule
+ANC & Antenatal Care --- check-ups during pregnancy. ANM registers and tracks each pregnant woman. \\
+Immunisation session & A fixed day when vaccines are given at a Sub-Centre or village outreach site. \\
+Cold chain & The system of refrigerators and ice-lined boxes that keeps vaccines at the right temperature from factory to injection. \\
+IDSP / IHIP & Integrated Disease Surveillance Programme / Integrated Health Information Platform --- real-time disease outbreak reporting. \\
+RNTCP & Revised National TB Control Programme (now NTEP). Nikshay portal tracks every TB patient. \\
+OPD & Outpatient Department --- where patients come, see a doctor, and go home the same day. \\
+ASHA & Village-level health volunteer. Not a government employee, but gets incentive payments for each referral, delivery, etc. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Digital tools}
+
+\begin{tabularx}{\textwidth}{@{}L{3.5cm} X@{}}
+\toprule
+\textbf{Tool} & \textbf{What it does} \\
+\midrule
+ANMOL MP & ANM Online --- tablet/phone app for ANMs. Digitises ANC registration, immunisation tracking, home visits. Works offline too. \\
+HMIS & Health Management Information System --- web portal where every facility reports monthly data (deliveries, OPD cases, immunisation counts, etc.). \\
+Nikshay & TB patient management portal. Every diagnosed TB patient is registered here. Tracks treatment compliance, drug supply. \\
+eVIN & Electronic Vaccine Intelligence Network --- digitises vaccine stock at every cold chain point and monitors refrigerator temperature in real-time. \\
+IHIP & Integrated Health Information Platform --- real-time disease surveillance. When there is an outbreak (dengue, malaria), it must be reported here immediately. \\
+ABHA / Ayushman Bharat & Health IDs for patients + insurance scheme for hospitalisation of poor families. \\
+MPCDSR & MP Community-Based Disease Surveillance and Response. \\
+\bottomrule
+\end{tabularx}
+
+\newpage
+% ════════════════════════════════════════════════════════════
+\part*{Part II: Cross-Department Patterns}
+\addcontentsline{toc}{part}{Part II: Cross-Department Patterns}
+% ════════════════════════════════════════════════════════════
+
+\section{The Class III problem}
+
+Across all four departments, the pattern is the same: \textbf{Class III employees carry almost all of the digital workload}, but get the least support.
+
+\begin{tabularx}{\textwidth}{@{}L{3cm} L{3.5cm} L{3.5cm} X@{}}
+\toprule
+\textbf{Department} & \textbf{Class III role} & \textbf{What they enter daily} & \textbf{Portals used daily} \\
+\midrule
+Revenue & Patwari & Khasra/B-1 updates, mutation data & Bhulekh, WebGIS \\
+Rural Dev & GRS, GP Secretary & Muster rolls, attendance, beneficiary data & NREGASoft, NMMS, e-Gram Swaraj, PMAY-G, SBM-G \\
+Forest & Range Officer, Forester & Alert verification, offence reports, GIS data & AI Alert app, Forest Offence MIS, e-Green Watch \\
+Health & ANM, Staff Nurse & Patient registration, immunisation, stock & ANMOL, HMIS, eVIN \\
+\bottomrule
+\end{tabularx}
+
+\section{The Class I/II gap}
+
+Class I and II officers (Collector, DFO, CMHO, BDO) are \textit{supposed} to review dashboards and approve workflows digitally. In practice, many delegate all portal work to a junior or a Computer Operator. This matters because:
+\begin{itemize}[nosep]
+  \item If seniors don't use the system, juniors see digital tools as ``clerical work''
+  \item Dashboard data goes unreviewed, so errors in Class III data entry are never caught
+  \item It signals that paper is still the ``real'' system
+\end{itemize}
+
+\section{The Class IV reality}
+
+Class IV employees (peons, guards, ward boys) have almost no formal digital role, but they are part of the office ecosystem. Your questions should acknowledge their existence without pretending they use portals --- because they don't, and asking them portal-specific questions will not produce useful data.
+
+\section{Common digital barriers across departments}
+
+\begin{enumerate}[nosep]
+  \item \textbf{Connectivity} --- Panchayats, forest beats, and sub-centres often have no internet
+  \item \textbf{Device sharing} --- 3--4 employees share one desktop in many offices
+  \item \textbf{Dual entry} --- Data is entered on paper AND on the portal (nobody trusts digital alone)
+  \item \textbf{One-person dependency} --- One computer operator or junior staff does all digital work for the office
+  \item \textbf{No error support} --- When a portal crashes, there is no IT helpdesk to call
+  \item \textbf{Training mismatch} --- Generic ``computer training'' doesn't teach Bhulekh or NREGASoft
+\end{enumerate}
+
+\end{document}

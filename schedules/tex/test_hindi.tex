@@ -1,0 +1,22 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amssymb}
+\setmainfont{Times New Roman}
+\newfontfamily\hindifont{Nirmala UI}
+\newcommand{\hi}[1]{{\hindifont\small #1}}
+\begin{document}
+\noindent\textbf{Test English and Hindi rendering:}
+
+\noindent Q1 \quad What is your designation?
+
+\hi{आपका पदनाम क्या है?}
+
+\noindent $\square$ Yes/\hi{हाँ} \quad $\square$ No/\hi{नहीं} \quad $\square$ Don't know/\hi{पता नहीं}
+
+\noindent Q2 \quad Which digital tools are you aware of?
+
+\hi{आप किन डिजिटल उपकरणों से अवगत हैं?}
+
+\noindent $\square$ e-Office/\hi{ई-ऑफिस} \quad $\square$ WhatsApp/\hi{व्हाट्सऐप} \quad $\square$ ChatGPT
+\end{document}

@@ -1,0 +1,384 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=2cm,bottom=2.5cm,left=2.2cm,right=2.2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hanging}
+\usepackage{multicol}
+\usepackage[colorlinks=true, linkcolor=navyblue, urlcolor=accentteal]{hyperref}
+
+% ── BRAND COLORS ────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{midgray}{HTML}{D0D6E2}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+\definecolor{sectionbg}{HTML}{EEF2FA}
+
+% ── SECTION HEADING COMMAND ──────────────────────────────────
+\newcommand{\navysectionbox}[1]{%
+  \hspace{-2.2cm}%
+  \colorbox{navyblue}{%
+    \hspace{2.2cm}%
+    \parbox[c][0.65cm]{\dimexpr\textwidth+2.0cm}{%
+      {\fontsize{12}{14}\selectfont\color{white}\strut\textbf{#1}}%
+    }%
+  }%
+}
+
+\titleformat{\section}[block]
+  {\normalfont}
+  {}{0em}
+  {\navysectionbox}
+\titlespacing*{\section}{-2.2cm}{16pt}{8pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{10.5}{13}\selectfont\color{navyblue}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{2pt}
+
+% ── HEADER / FOOTER ─────────────────────────────────────────
+\setlength{\headheight}{20pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Concept Proposal \textbullet{} 2026}}
+\fancyhead[R]{\footnotesize\color{navyblue}April 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1.5pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1.5pt}
+
+% ── CUSTOM BOXES ────────────────────────────────────────────
+\newtcolorbox{goldbox}{
+  colback=gold!10, colframe=gold, boxrule=0.7pt, arc=3mm,
+  left=10pt, right=10pt, top=8pt, bottom=8pt, breakable
+}
+
+\newtcolorbox{navybox}{
+  colback=sectionbg, colframe=navyblue, boxrule=0.6pt, arc=3mm,
+  left=10pt, right=10pt, top=8pt, bottom=8pt, breakable
+}
+
+\newtcolorbox{defbox}[1]{
+  colback=lightgray, colframe=accentteal, boxrule=1.0pt, arc=3mm,
+  lefttitle=8pt, toptitle=4pt, bottomtitle=4pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  title={\bfseries\fontsize{9}{11}\selectfont\color{white}#1},
+  colbacktitle=accentteal, breakable
+}
+
+% ── LISTS ───────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=3pt}
+\setlist[enumerate]{leftmargin=1.4em, itemsep=2pt, topsep=3pt}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+\onehalfspacing
+
+% ════════════════════════════════════════════════════════════
+%  COVER PAGE
+% ════════════════════════════════════════════════════════════
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[navyblue] (current page.south west) rectangle (current page.north east);
+  \fill[gold] (current page.south west)
+    rectangle ($(current page.south east)+(0,1.1cm)$);
+  \fill[white] ($(current page.south west)+(0,1.1cm)$)
+    rectangle ($(current page.south east)+(0,11.8cm)$);
+  \fill[accentteal!80]
+    ($(current page.south west)+(0,11.8cm)$) --
+    ($(current page.south east)+(0,11.8cm)$) --
+    ($(current page.south east)+(0,13.2cm)$) --
+    ($(current page.south west)+(0,12.4cm)$) -- cycle;
+\end{tikzpicture}
+
+\vspace*{1cm}
+\begin{center}
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=1.8cm]{C:/Users/aryan/iifm_logo.jpg}
+  \end{minipage}
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=1.8cm]{C:/Users/aryan/Downloads/AIGGPA LOGO.jpg}
+  \end{minipage}\\[1.5cm]
+  \fontsize{8.5}{10}\selectfont\color{gold!80}
+  \textbf{\MakeUppercase{Concept Proposal \textbullet{} AIGGPA Bhopal}}\\[0.7em]
+  \fontsize{24}{30}\selectfont\bfseries\color{white}
+  Evaluating the Impact of\\[0.15em]
+  Workplace Wellness Programmes\\[0.15em]
+  on Government HR Efficiency\\[0.9em]
+\end{center}
+
+\vspace*{3.5cm}
+
+\newpage
+
+% ════════════════════════════════════════════════════════════
+%  BODY
+% ════════════════════════════════════════════════════════════
+
+\section{1. Title}
+\vspace{0.2cm}
+\textbf{Working Title:} Evaluating the Impact of Workplace Wellness Programmes on Government HR Efficiency and Performance.
+
+\section{2. Background}
+\vspace{0.2cm}
+The performance of government institutions is intrinsically linked to the health and vitality of its human resources. Public sector employees, particularly those in Human Resource (HR) departments, operate within a high-pressure environment characterized by rigid bureaucratic structures, heavy workloads, and a high volume of public interface. Despite the critical nature of their roles, there remains a persistent gap in the implementation of holistic wellness frameworks within the Indian civil services. Traditional approaches have largely focused on curative healthcare, addressing illness after it occurs, rather than proactive, preventative wellness that focuses on the overall quality of life (WHO, 1948).
+
+In the Indian context, the Central Government Health Scheme (CGHS) has been the primary vehicle for employee medical assistance since 1954, providing comprehensive coverage for more than 4 million beneficiaries (\href{https://cghs.gov.in/}{CGHS Portal}). However, these schemes are often medical-centric, focusing on reimbursement and hospitalization rather than continuous wellness monitoring and stress mitigation. The World Health Organization (WHO) defines a Healthy Workplace as one where workers and managers collaborate in a continual improvement process to protect and promote the health, safety, and wellbeing of all workers (\href{https://www.who.int/publications/i/item/9789241599313}{WHO Healthy Workplace Framework, 2010}). This framework identifies four "Avenues of Influence": the physical work environment, the psychosocial work environment, personal health resources, and enterprise community involvement.
+
+Currently, government HR officials in Madhya Pradesh, ranging from Class I to Class IV, face diverse stressors. While higher-level officials deal with policy-level complexities and long-duration meetings, lower-tier officials handle administrative bottlenecks and clerical fatigue. This study seeks to evaluate how these varied wellness challenges impact departmental efficiency. By integrating global standards like the WHO Healthy Workplace Model with national efforts such as the Ayushman Bharat Digital Mission (ABDM) and the National Mental Health Policy, this research explores the feasibility of transitioning from a 'sick-care' model to a 'well-care' model within the government hierarchy.
+
+\section{3. Need for Study}
+\vspace{0.2cm}
+While the Government of India has robust statutory requirements under the Occupational Safety, Health and Working Conditions Code (2020), these are primarily compliance-driven and focused on hazardous industries. There is a significant lack of data regarding the "psychosocial wellness" of administrative HR staff. The need for this study arises from:
+\begin{itemize}
+    \item \textbf{High Absenteeism and Presenteeism:} Measuring how hidden health issues lead to decreased productivity even when staff are "at their desks."
+    \item \textbf{Administrative Burnout:} Investigating the psychological toll of rigid deadlines and bureaucratic pressure on HR officials.
+    \item \textbf{Inadequacy of Current Schemes:} Moving beyond the CGHS curative model to identify if preventative wellness can reduce overall medical expenditures (Baicker et al., 2010).
+    \item \textbf{Evidence-Based Policy:} Providing localized data for the Madhya Pradesh General Administration Department (GAD) to implement department-specific wellness protocols.
+\end{itemize}
+
+\section{4. Research Objectives}
+\vspace{0.2cm}
+\begin{navybox}
+\begin{enumerate}[label={\color{navyblue}\bfseries\arabic*.}, itemsep=6pt]
+    \item Evaluate the baseline wellness levels of Class I, II, III, and IV government HR officials using WHO parameters to substantiate the need for structured interventions.
+    \item Analyze the impact of workplace stressors on operational efficiency, providing a reasoning for the implementation of departmental wellness protocols.
+    \item Substantiate how age and gender-based wellness differences correlate with performance, allowing for the usage of targeted health initiatives.
+    \item Develop an evidence-based framework that demonstrates the correlation between holistic wellness investments and increased public service productivity.
+\end{enumerate}
+\end{navybox}
+
+\section{5. Conceptual Framework}
+\vspace{0.2cm}
+This research builds on key conceptual theories emphasizing that employee well-being is the foundation of organizational success.
+
+\textbf{Holistic Wellness and Health}\\
+According to the World Health Organization (WHO), health transcends the mere absence of disease or infirmity. It encapsulates a proactive state of complete physical, mental, and social well-being. Within a governmental context, promoting holistic wellness is pivotal for maintaining a resilient and responsive workforce capable of navigating complex public service demands.
+
+\textbf{Multi-Dimensional Wellness Model}\\
+Drawing from Dr. Bill Hettler's widely adopted model, wellness is characterized as an active and interconnected set of dimensions—incorporating physical, emotional, occupational, and social facets. A deficit in one dimension invariably bleeds into others. By assessing these multiple dimensions simultaneously, we can pinpoint specific areas where structured interventions will yield the most significant improvements in personal satisfaction and professional output.
+
+\textbf{Efficiency, Presenteeism, and Performance}\\
+We investigate the direct correlation between wellness tracking and operational performance. Taking proactive care of employees actively mitigates 'presenteeism' (where employees are at work but underperforming due to unaddressed health or stress factors) and equips them with the psychological capital needed to manage heavy bureaucratic demands, driving overall administrative efficiency.
+
+\section{6. Methodology}
+\vspace{0.2cm}
+This study adopts a \textbf{Mixed-Methods Research Design}, combining quantitative rigor with qualitative depth to capture a holistic view of employee wellness.
+
+\subsection{6.1 Study Area, Sampling, \& Data Collection}
+\begin{itemize}
+    \item \textbf{Study Area:} The research focuses heavily on central administrative hubs within Bhopal and its surrounding districts.
+    \item \textbf{Sampling Design:} We will utilize a stratified random sampling methodology to ensure representative insights across varying levels of bureaucracy.
+    \item \textbf{Sample Group:} Government HR officials and active administration personnel across 5 core departments.
+    \item \textbf{Primary Research:} Direct engagement through structured interactions aiming to cover about 100 individuals.
+    \item \textbf{Secondary Research:} Review of WHO Healthy Workplace guidelines, \href{https://gad.mp.gov.in/}{MP GAD policies}, and National Health Mission (NHM) data.
+\end{itemize}
+
+\subsection{6.2 Quantitative Research (Structured Questionnaire)}
+A structured questionnaire will be administered to all participants, using Likert-scale questions and multiple-choice options to ensure statistical validity.
+\begin{itemize}
+    \item \textbf{Closed-Ended Questions:} Focused on WHO parameters: Physical health (sleep, diet), Mental health (frequency of stress), and Environmental health (ergonomics).
+    \item \textbf{Demographic Variance:} Capturing age and gender to correlate wellness outcomes with departmental roles.
+\end{itemize}
+
+\subsection{6.3 Qualitative Research (In-Depth Interviews)}
+To understand the "why" behind the data, semi-structured interviews will be conducted with select officials.
+\begin{itemize}
+    \item \textbf{Open-Ended Questions:} "Describe the most stressful part of your workday," or "How does your current state of health impact your decision-making speed?"
+    \item \textbf{Factors Included:} Influence of hierarchy on mental stress, peer-support systems, and perceived organizational culture.
+\end{itemize}
+
+\subsection{6.4 WHO vs National Parameters}
+The study will focus only on parameters in context of this nation and this study. While National (GoI) parameters focus on safety and compliance (Occupational Safety Code, 2020), we aim for a more holistic view including:
+\begin{itemize}
+    \item \textbf{Psychosocial Environment:} Organizational culture, management styles, and work-life balance.
+    \item \textbf{Personal Health Resources:} Access to fitness, nutrition, and mental health support.
+\end{itemize}
+Note: Indian National Health Mission (NHM) baseline indicators for civil servants will be utilized.
+
+\section{7. Government Initiatives in Health \& Wellness}
+\vspace{0.2cm}
+The Indian government has already implemented several key initiatives which this study will reference:
+\begin{itemize}
+    \item \textbf{AYUSH in Wellness:} Promotion of Yoga and Ayurveda in government offices (\href{https://ayush.gov.in/}{Ministry of AYUSH}).
+    \item \textbf{ABHA (Ayushman Bharat Health Account):} Digital health records for seamless care (\href{https://abdm.gov.in/}{ABDM Portal}).
+    \item \textbf{National Mental Health Programme (NMHP):} Focused on stress management and de-stigmatization.
+    \item \textbf{Mission Karmayogi:} National program for civil service capacity building including health as a pillar of performance.
+\end{itemize}
+
+\section{8. Significance / Expected Contribution}
+\vspace{0.2cm}
+\begin{goldbox}
+This research will highlight the real, everyday struggles of government HR officials. It will show the true value of having wellness programmes in government offices. By understanding what these employees need, we can help the government create a healthier workplace, which will lead to a faster and better-performing public service.
+\end{goldbox}
+
+\section{9. Scope \& Limitation}
+\vspace{0.2cm}
+\textbf{Scope:} This study focuses closely on Class I, II, III, and IV government HR officials in Madhya Pradesh and how their personal wellness ties back to their efficiency at work.
+
+\textbf{Limitation:} Because this is early exploratory research using a small sample size from specific classes, our findings will give us good ideas and a starting point, but they may not apply to all government departments or other states.
+
+\section{10. Wellness Domain Parameters}
+\vspace{0.2cm}
+This study adopts the WHO Healthy Workplace Model integrated with the widely recognised Eight Dimensions of Wellness framework (\href{https://store.samhsa.gov/product/creating-a-healthier-life/sma16-4958}{SAMHSA, 2016}). While national indicators focus on statutory safety, the WHO parameters allow for a more holistic evaluation of the psychosocial environment. For each dimension, we identify key indicators that will guide our primary data collection.
+
+\subsection{10.1 Physical Wellness}
+\begin{defbox}{Physical - Body Health \& Activity}
+\begin{itemize}
+  \item Blood pressure, cholesterol, BMI (biometric screening results)
+  \item Frequency of physical activity per week
+  \item Quality and duration of sleep
+  \item Nutritional habits and dietary patterns
+  \item Sick leave and absenteeism rates
+  \item Prevalence of chronic conditions (diabetes, hypertension)
+\end{itemize}
+\end{defbox}
+
+\subsection{10.2 Emotional Wellness}
+\begin{defbox}{Emotional - Stress \& Resilience}
+\begin{itemize}
+  \item Self-reported stress levels (1–10 scale)
+  \item Burnout risk assessment scores
+  \item Ability to cope with daily work pressures
+  \item Utilisation of Employee Assistance Programme (EAP) or counselling
+  \item Emotional self-awareness and self-regulation
+\end{itemize}
+\end{defbox}
+
+\subsection{10.3 Intellectual Wellness}
+\begin{defbox}{Intellectual - Learning \& Growth}
+\begin{itemize}
+  \item Participation in professional development and training programmes
+  \item Engagement in creative problem-solving at work
+  \item Satisfaction with opportunities for skill development
+  \item Pursuit of new knowledge or certifications
+\end{itemize}
+\end{defbox}
+
+\subsection{10.4 Occupational Wellness}
+\begin{defbox}{Occupational - Job Satisfaction \& Balance}
+\begin{itemize}
+  \item Employee engagement and job satisfaction survey scores
+  \item Work-life balance self-assessment
+  \item Perceived alignment between personal values and job role
+  \item Manager support and recognition feedback
+  \item Retention and voluntary turnover rates
+\end{itemize}
+\end{defbox}
+
+\subsection{10.5 Spiritual Wellness}
+\begin{defbox}{Spiritual - Purpose \& Meaning}
+\begin{itemize}
+  \item Sense of purpose and meaning in daily work
+  \item Alignment with organisational mission and values
+  \item Engagement in mindfulness, meditation, or yoga practices
+  \item Participation in community service or volunteer activities
+\end{itemize}
+\end{defbox}
+
+\subsection{10.6 Social Wellness}
+\begin{defbox}{Social - Relationships \& Community}
+\begin{itemize}
+  \item Quality of interpersonal relationships with colleagues
+  \item Perceived sense of belonging within the workplace
+  \item Frequency of peer-to-peer recognition and support
+  \item Participation in team-building and social events
+  \item Availability of a personal support network
+\end{itemize}
+\end{defbox}
+
+\subsection{10.7 Financial Wellness}
+\begin{defbox}{Financial - Security \& Planning}
+\begin{itemize}
+  \item Satisfaction with current salary and benefits
+  \item Usage of financial planning tools and retirement schemes (NPS, GPF)
+  \item Financial stress and its impact on work focus
+  \item Awareness of employee welfare entitlements
+\end{itemize}
+\end{defbox}
+
+\subsection{10.8 Environmental Wellness}
+\begin{defbox}{Environmental - Workspace \& Safety}
+\begin{itemize}
+  \item Workplace safety and ergonomics assessments
+  \item Satisfaction with office infrastructure (lighting, ventilation, cleanliness)
+  \item Access to clean drinking water and sanitation facilities
+  \item Availability of a dedicated break or wellness room
+  \item Reported workplace safety incidents
+\end{itemize}
+\end{defbox}
+
+\section{11. Proposed Budget}
+\vspace{0.2cm}
+The following budget covers the three-month study period. Figures are based on standard field research rates in Madhya Pradesh. Items can be discussed with the Reporting Officer for institutional support.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|X|l|}
+\hline
+\textbf{Budget Item} & \textbf{Amount} \\
+\hline
+\textbf{Travel and Field Visits} & \\
+\hline
+Local departmental visits (Vallabh Bhawan, Satpura Bhawan, Bhopal) & $\sim$Rs 1,500 \\
+\hline
+Outstation travel: Sehore and Vidisha for department visits (return trips by bus/train) & $\sim$Rs 4,500 \\
+\hline
+Field travel in Bhopal Rural and surrounding areas for interviews with Class I-IV officials & $\sim$Rs 4,500 \\
+\hline
+\textbf{TOTAL ESTIMATED BUDGET} & \textbf{Rs 10,500} \\
+\hline
+\end{tabularx}
+\end{center}
+
+\newpage
+\section{12. Preliminary References}
+\vspace{0.2cm}
+\small\setlength{\parindent}{0pt}
+\begin{hangparas}{1.27cm}{1}
+Ayushman Bharat Digital Mission (ABDM). (2026). \textit{ABHA: Ayushman Bharat Health Account}. Government of India. \url{https://abdm.gov.in/}
+
+Baicker, K., Cutler, D., \& Song, Z. (2010). Workplace wellness programs can generate savings. \textit{Health Affairs}, 29(2), 304–311.
+
+Bakker, A. B., \& Demerouti, E. (2007). The job demands-resources model: State of the art. \textit{Journal of Managerial Psychology}, 22(3), 309–328.
+
+Central Government Health Scheme (CGHS). (2026). \textit{Beneficiary Services and Wellness Centres}. Ministry of Health and Family Welfare. \url{https://cghs.gov.in/}
+
+Department of General Administration (GAD). (n.d.). \textit{Madhya Pradesh Civil Services Classification}. Government of Madhya Pradesh. \url{https://gad.mp.gov.in/}
+
+Jones, D., Molitor, D., \& Reif, J. (2019). What do workplace wellness programs do? Evidence from the Illinois workplace wellness study. \textit{The Quarterly Journal of Economics}, 134(4), 1747–1791.
+
+Mattke, S., Liu, H., Caloyeras, J. P., Huang, C. Y., Van Busum, K. R., Khodyakov, D., \& Shier, V. (2013). Workplace wellness programs study: Final report. \textit{RAND Corporation}.
+
+Ministry of AYUSH. (2026). \textit{Yoga and Wellness Initiatives for Public Servants}. Government of India. \url{https://ayush.gov.in/}
+
+Substance Abuse and Mental Health Services Administration (SAMHSA). (2016). \textit{Creating a healthier life: A step-by-step guide to wellness}. U.S. Department of Health and Human Services. \url{https://store.samhsa.gov/product/creating-a-healthier-life/sma16-4958}
+
+World Health Organization. (1948). \textit{Preamble to the Constitution of the World Health Organization}. International Health Conference.
+
+World Health Organization. (2010). \textit{Healthy workplaces: a model for action: for employers, workers, policymakers and practitioners}. \url{https://www.who.int/publications/i/item/9789241599313}
+\end{hangparas}
+
+\end{document}

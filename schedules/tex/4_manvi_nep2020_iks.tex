@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=1.8cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{colortbl}
+
+\hypersetup{colorlinks=true,linkcolor=navyblue,urlcolor=accentteal,citecolor=navyblue}
+
+% ── BRAND COLORS ────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+
+% ── SECTION STYLING ─────────────────────────────────────────
+\titleformat{\section}[block]
+  {\normalfont\bfseries\fontsize{11}{13}\selectfont\color{navyblue}}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{10}{12}\selectfont\color{accentteal}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% ── HEADER / FOOTER ─────────────────────────────────────────
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Bhopal} \quad\textbar\quad
+  Human Capital: Investment in Education, Skill Development and Employment}
+\fancyhead[R]{\footnotesize\color{navyblue}April 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1pt}
+
+% ── LISTS ───────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=1.4em, itemsep=1pt, topsep=2pt}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+  {\fontsize{12}{14}\selectfont\bfseries\color{navyblue}
+  NEP 2020: New Areas for Youth Development \&\\[2pt]
+  The Role of Indian Knowledge System (IKS)}\\[6pt]
+  {\small\color{darkgray} Manvi \quad\textbar\quad AIGGPA Summer Intern 2026}
+\end{center}
+
+\vspace{0.2cm}
+
+\section{1. NEP 2020 -- Provisions for New Areas of Youth Development}
+
+The National Education Policy 2020 introduces several structural shifts designed to equip India's youth with 21st-century capabilities beyond traditional academic silos:
+
+\begin{enumerate}[label={\color{gold}\bfseries\arabic*.}]
+  \item \textbf{Multidisciplinary \& Holistic Education:} Rigid separations between Arts, Science, and Commerce are removed. Students can combine subjects freely (e.g., Physics with Music, or Data Science with History), fostering creativity and cross-disciplinary thinking.
+
+  \item \textbf{Vocational Education from Class 6:} NEP mandates vocational training integration starting from middle school, with internships and hands-on exposure. The goal is that by 2025, at least 50\% of learners in school and higher education receive vocational education.
+
+  \item \textbf{Multiple Entry \& Exit in Higher Education:} A flexible credit-based framework allows students to earn a Certificate (1~year), Diploma (2~years), Bachelor's (3~years), or Honours/Research degree (4~years), with the Academic Bank of Credits (ABC) enabling seamless transfers.
+
+  \item \textbf{Coding, AI \& Computational Thinking:} Introduction of coding and computational thinking from Class 6 onwards, with AI and machine learning modules at the secondary level.
+
+  \item \textbf{National Research Foundation (NRF):} Established to seed, grow, and facilitate research across all disciplines -- especially in universities that have historically been teaching-only institutions.
+
+  \item \textbf{Centres of Excellence in Emerging Fields:} Universities are encouraged to establish centres in AI, biotechnology, quantum computing, climate science, and sustainable energy -- areas critical for future employment.
+
+  \item \textbf{Internationalisation \& Global Standards:} Top global universities are now permitted to set up campuses in India under GIFT City and similar frameworks, exposing youth to international academic standards.
+\end{enumerate}
+
+\vspace{0.15cm}
+\section{2. Indian Knowledge System (IKS) -- Supporting Youth Development}
+
+NEP 2020 positions IKS not as nostalgic revivalism but as a \textit{scientifically studied, curriculum-integrated} body of knowledge that complements modern education:
+
+\begin{itemize}
+  \item \textbf{Curriculum Integration Across Levels:} IKS topics -- including Yoga, Ayurveda, traditional mathematics (e.g., Vedic arithmetic), metallurgy, water management, architecture (\textit{Vastu Shastra}), and classical arts -- are being embedded into UG and PG curricula per UGC guidelines. UGC recommends IKS courses constitute a percentage of total credit requirements.
+
+  \item \textbf{IKS Centres in HEIs:} The Ministry of Education has established a network of IKS centres across Higher Education Institutions to drive original research, curriculum development, and faculty training. Over \textbf{60 IKS centres} have been sanctioned in central and state universities.
+
+  \item \textbf{Relevance to Modern Challenges:}
+  \begin{itemize}
+    \item \textit{Sustainable Agriculture:} Traditional crop rotation and organic farming methods documented in ancient texts are being studied for climate-resilient agriculture.
+    \item \textit{Wellness \& Mental Health:} Yoga and meditation -- rooted in IKS -- are now part of school curricula and professional wellness programmes, addressing youth mental health concerns.
+    \item \textit{Entrepreneurship:} Knowledge of traditional crafts (handloom, pottery, bamboo work) combined with modern design and e-commerce creates livelihood pathways for rural youth.
+  \end{itemize}
+
+  \item \textbf{MOOCs \& Digital Resources:} SWAYAM platform hosts IKS-related courses, and digitised manuscripts are being made available through the National Mission for Manuscripts, democratising access to India's intellectual heritage.
+
+  \item \textbf{Interdisciplinary Research:} IKS encourages youth to study ancient knowledge through a modern scientific lens -- validating traditional water harvesting systems through hydraulic engineering, or comparing Sushruta's surgical methods with contemporary techniques.
+\end{itemize}
+
+\vspace{0.15cm}
+\section{3. Key Takeaway}
+
+NEP 2020's twin pillars -- \textbf{future-ready skill areas} (AI, vocational training, multidisciplinary degrees) and \textbf{IKS integration} -- create a holistic development framework where Indian youth are equipped for global competitiveness while remaining rooted in indigenous knowledge traditions. Together, they address both the \textit{employability gap} and the \textit{cultural-knowledge gap} in India's human capital ecosystem.
+
+\vspace{0.25cm}
+\noindent\rule{\textwidth}{0.5pt}
+{\scriptsize\textbf{References:}
+(1)~Ministry of Education, \textit{National Education Policy 2020}, education.gov.in/sites/upload\_files/mhrd/files/NEP\_Final\_English.pdf.
+(2)~University Grants Commission, \textit{Guidelines on IKS Integration in HEIs}, ugc.gov.in.
+(3)~Ministry of Education, \textit{IKS Division -- Annual Report 2024--25}, education.gov.in.
+(4)~SWAYAM Portal, \textit{IKS Courses Catalogue}, swayam.gov.in.
+(5)~National Research Foundation, \textit{Vision Document}, anrf.res.in.
+(6)~PIB, \textit{Academic Bank of Credits \& Multiple Entry-Exit}, pib.gov.in.
+}
+
+\end{document}

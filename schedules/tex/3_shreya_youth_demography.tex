@@ -1,0 +1,155 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=1.8cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{colortbl}
+
+\hypersetup{colorlinks=true,linkcolor=navyblue,urlcolor=accentteal,citecolor=navyblue}
+
+% ── BRAND COLORS ────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+
+% ── SECTION STYLING ─────────────────────────────────────────
+\titleformat{\section}[block]
+  {\normalfont\bfseries\fontsize{11}{13}\selectfont\color{navyblue}}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{10}{12}\selectfont\color{accentteal}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% ── HEADER / FOOTER ─────────────────────────────────────────
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Bhopal} \quad\textbar\quad
+  Human Capital: Investment in Education, Skill Development and Employment}
+\fancyhead[R]{\footnotesize\color{navyblue}April 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1pt}
+
+% ── LISTS ───────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+  {\fontsize{12}{14}\selectfont\bfseries\color{navyblue}
+  Youth Definitions, Indian \& MP Demography, and\\[2pt]
+  Aspirations Towards Education, Skill \& Employment}\\[6pt]
+  {\small\color{darkgray} Shreya \quad\textbar\quad AIGGPA Summer Intern 2026}
+\end{center}
+
+\vspace{0.2cm}
+
+\section{1. Youth Definitions Across Agencies}
+
+The term ``youth'' has no universal definition; it varies by agency and policy purpose:
+
+\vspace{0.1cm}
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Youth Definitions -- National \& International Agencies}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{>{\columncolor{lightgray}}l X >{\centering\arraybackslash}p{2.2cm}}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Agency / Framework}} & \textcolor{white}{\textbf{Definition of Youth}} & \textcolor{white}{\textbf{Age Group}} \\
+\midrule
+United Nations (UN)                     & Persons between 15 and 24 years (statistical purposes)         & 15--24 \\
+\rowcolor{white}
+WHO / UNICEF / UNFPA                    & ``Adolescents'' (10--19), ``Young People'' (10--24), ``Youth'' (15--24)  & 10--24 \\
+Government of India (NYP 2014)          & National Youth Policy defines youth as persons aged 15--29     & 15--29 \\
+\rowcolor{white}
+Commonwealth Youth Programme            & Persons between 15 and 29 years                                & 15--29 \\
+African Union                           & Persons between 15 and 35 years                                & 15--35 \\
+\rowcolor{white}
+\textbf{Generation Z (Gen Z)}            & Born between late 1990s and early 2010s ($\sim$1997--2012)     & $\sim$14--29 \\
+\bottomrule
+\end{tabularx}
+\vspace{0.05cm}
+\par\scriptsize Source: UN DESA; WHO; Ministry of Youth Affairs \& Sports, GOI (NYP 2014); MoSPI.
+\end{table}
+
+\textbf{Note on Gen Z:} India has the world's largest Gen Z cohort -- approx. \textbf{374--472 million} individuals, constituting $\sim$27\% of the population. This generation is digitally native, career-aspirational, and the primary target of both NEP~2020 and national skilling missions.
+
+\vspace{0.15cm}
+\section{2. Demography: India vs. Madhya Pradesh}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Demographic Comparison -- India vs. Madhya Pradesh (2025 Projections)}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{>{\columncolor{lightgray}}l >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Indicator}} & \textcolor{white}{\textbf{India}} & \textcolor{white}{\textbf{Madhya Pradesh}} \\
+\midrule
+Total Population (proj.)        & $\sim$144 crore                & $\sim$9 crore \\
+\rowcolor{white}
+Median Age                      & $\sim$28--29 years             & $\sim$25--26 years \\
+Youth (15--29 yrs) share        & $\sim$27\%  ($\sim$370 Mn)     & $\sim$30\%  ($\sim$2.7 Cr) \\
+\rowcolor{white}
+Working Age (15--59) share      & $\sim$64\%                     & $\sim$59\% \\
+Literacy Rate                   & 77.7\%                         & 69.3\% \\
+\rowcolor{white}
+Formal Vocational Training      & $\sim$2.4\% of 15+ pop.       & $\sim$1.2\% of 15+ pop. \\
+\bottomrule
+\end{tabularx}
+\vspace{0.05cm}
+\par\scriptsize Source: Census 2011 projections (2021 Census delayed); NSSO PLFS; Registrar General of India; ADB.
+\end{table}
+
+\vspace{0.1cm}
+\section{3. Youth Aspirations -- Education, Skill \& Employment}
+
+\begin{itemize}
+  \item \textbf{Education:} Indian Gen Z shows a strong shift towards STEM, digital skills, and professional degrees. However, 45\% of graduates remain unemployable (India Skills Report 2025), indicating a \textit{quality gap} between aspiration and outcomes.
+  \item \textbf{Skill Preferences:} AI/ML, Data Analytics, and Cloud Computing are the top three aspirational skill areas among youth aged 18--25. At the same time, 93\% of students desire internship opportunities as a bridge between academia and industry.
+  \item \textbf{Employment:} While government jobs remain the top aspiration in states like MP (29 lakh registered ``aspirational youth'' on the state employment portal as of March 2025), urban youth increasingly aspire to startups, gig economy, and remote-work opportunities.
+  \item \textbf{MP-specific:} MP's lower vocational training participation (1.2\% vs. 2.4\% national) means the state's youth aspirations often outpace available skill infrastructure. Initiatives like \textit{Mukhyamantri Seekho-Kamao Yojana} and the \textit{Global Skills Park, Bhopal} are designed to close this gap.
+\end{itemize}
+
+\vspace{0.25cm}
+\noindent\rule{\textwidth}{0.5pt}
+{\scriptsize\textbf{References:}
+(1)~United Nations, DESA, \textit{Definition of Youth}, un.org/development/desa/youth.
+(2)~Ministry of Youth Affairs \& Sports, \textit{National Youth Policy 2014}, yas.gov.in.
+(3)~Ministry of Statistics \& Programme Implementation, \textit{Youth in India 2022}, mospi.gov.in.
+(4)~India Skills Report 2025, CII--Wheebox, wheebox.com.
+(5)~Asian Development Bank, \textit{MP Skills Development Project}, adb.org.
+(6)~Registrar General of India, \textit{Population Projections 2011--2036}.
+}
+
+\end{document}

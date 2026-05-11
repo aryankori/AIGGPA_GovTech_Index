@@ -1,0 +1,432 @@
+\documentclass[12pt,a4paper]{article}
+
+% ── Packages ──
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{amssymb}
+
+% ── Colours ──
+\definecolor{navy}{HTML}{1B2A4A}
+\definecolor{gold}{HTML}{C49A2A}
+\definecolor{darkgray}{HTML}{2D2D2D}
+\definecolor{medgray}{HTML}{4A4A4A}
+\definecolor{lightgray}{HTML}{F2F2F2}
+\definecolor{accentblue}{HTML}{2E5090}
+\definecolor{accentgreen}{HTML}{2E7D32}
+\definecolor{accentorange}{HTML}{E65100}
+\definecolor{accentpurple}{HTML}{6A1B9A}
+
+% ── Heading styles ──
+\titleformat{\section}{\Large\bfseries\color{navy}}{\thesection}{1em}{}[\vspace{-4pt}{\color{gold}\rule{\textwidth}{1.5pt}}]
+\titleformat{\subsection}{\large\bfseries\color{navy}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{accentblue}}{\thesubsubsection}{1em}{}
+
+% ── Header/Footer ──
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{medgray}\textit{AIGGPA Research Plan}}
+\fancyhead[R]{\small\color{medgray}\textit{April 2026}}
+\fancyfoot[C]{\small\color{medgray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ── Hyperlinks ──
+\hypersetup{colorlinks=true,linkcolor=navy,citecolor=navy,urlcolor=accentblue}
+
+% ── Spacing ──
+\setstretch{1.15}
+\setlength{\parskip}{6pt}
+
+% ── Custom column types ──
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+% ══════════════════════════════════════════
+% TITLE PAGE
+% ══════════════════════════════════════════
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+
+{\color{gold}\rule{0.6\textwidth}{2pt}}
+
+\vspace{1cm}
+
+{\Huge\bfseries\color{navy} RESEARCH PLAN}
+
+\vspace{0.6cm}
+
+{\Large\color{darkgray} Assessment of the Use of Digital Tools and\\[4pt] Technologies by Government Employees for\\[4pt] Enhancing Workplace Efficiency and Effectiveness}
+
+\vspace{1cm}
+
+{\color{gold}\rule{0.6\textwidth}{2pt}}
+
+\vspace{2.5cm}
+
+\begin{tabular}{r l}
+\textbf{\color{navy}Prepared By:} & Aryan Kori \\[6pt]
+\textbf{\color{navy}Institution:} & Atal Bihari Vajpayee Institute of Good Governance \\
+& and Policy Analysis (AIGGPA), Bhopal \\[6pt]
+\textbf{\color{navy}Departments:} & Revenue, Rural Development, Forest, Health \\[6pt]
+\textbf{\color{navy}Date:} & April 2026 \\
+\end{tabular}
+
+\vfill
+{\small\color{medgray} Convergent Parallel Mixed-Methods Research Design}
+\end{titlepage}
+
+% ══════════════════════════════════════════
+% TABLE OF CONTENTS
+% ══════════════════════════════════════════
+\tableofcontents
+\newpage
+
+% ══════════════════════════════════════════
+% PART 1: KEY OBJECTIVES
+% ══════════════════════════════════════════
+\section{Key Objectives}
+
+This study is organised around four research objectives, each targeting a specific dimension of digital tool adoption in government departments across Madhya Pradesh.
+
+\subsection{Objective 1: Digital Infrastructure, Awareness \& Usage Assessment}
+
+\textbf{\color{accentblue}Research Question:} What is the current status of digital infrastructure in the selected departments, and to what extent are government employees aware of and using various digital tools and technologies in their daily office work?
+
+\textbf{Data / Information Needed:}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Inventory of digital devices per employee (desktops, laptops, tablets, smartphones)
+    \item Internet bandwidth and uptime metrics at Head Office and District Office levels
+    \item Employee awareness levels across a checklist of tools (e-Office, CPGRAMS, departmental portals, email systems)
+    \item Frequency of daily/weekly digital tool usage
+    \item Observational field data on physical infrastructure conditions
+\end{itemize}
+
+\subsection{Objective 2: Capacity Building \& Training Assessment}
+
+\textbf{\color{accentgreen}Research Question:} What kind of capacity building efforts, training programs, and technical support are being provided by the departments to help government employees use digital tools effectively?
+
+\textbf{Data / Information Needed:}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Number and type of formal IT training programs conducted in the last 2 years
+    \item Percentage of employees who attended training, segmented by cadre (Class~I--IV)
+    \item Duration, content, and format of training programs
+    \item Availability of IT helpdesk / on-site technical support
+    \item Employee satisfaction scores on training quality and relevance
+    \item Mission Karmayogi (iGOT) enrolment and completion records
+\end{itemize}
+
+\subsection{Objective 3: Bottlenecks, Issues \& Challenges Identification}
+
+\textbf{\color{accentorange}Research Question:} What are the major bottlenecks, issues, and challenges faced by government employees while using digital tools and technologies in their work?
+
+\textbf{Data / Information Needed:}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Types and frequency of reported technical issues (connectivity, hardware, software failures)
+    \item Perceived difficulty levels (Effort Expectancy --- Likert scale)
+    \item Attitudinal barriers (resistance to change, digital anxiety, generational gaps)
+    \item Organisational barriers (unclear mandates, lack of accountability, missing SOPs)
+    \item Focus group narratives on systemic pain points
+    \item IT complaint/ticket logs (where available)
+\end{itemize}
+
+\subsection{Objective 4: Recommendations for Efficient Service Delivery}
+
+\textbf{\color{accentpurple}Research Question:} What actions and measures can be suggested to improve the use of digital tools for more efficient and effective service delivery in government departments?
+
+\textbf{Data / Information Needed:}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Employee-ranked priority areas for improvement
+    \item Gap analysis outputs (current state vs.\ desired state)
+    \item Benchmarking data against OECD (2014) and UN DESA (2024) digital government standards
+    \item Feasibility and impact assessment of proposed interventions
+    \item Alignment check with existing national frameworks (Digital India, Mission Karmayogi)
+\end{itemize}
+
+\newpage
+
+% ══════════════════════════════════════════
+% PART 2: RESEARCH METHODS
+% ══════════════════════════════════════════
+\section{Research Methods}
+
+\subsection{Overall Research Design}
+
+This study adopts a \textbf{Convergent Parallel Mixed-Methods Design} (Creswell, 2014), wherein quantitative and qualitative data are collected concurrently, analysed independently, and then merged during interpretation to provide a comprehensive understanding.
+
+A mixed-methods approach is particularly appropriate for public administration research because quantitative data reveals the ``what'' (extent of digital tool usage, infrastructure gaps), while qualitative data explains the ``why'' (attitudes, organisational barriers, lived experience of employees) (Creswell, 2014; Heeks, 2006).
+
+\subsection{Quantitative Methods}
+
+\subsubsection{Instrument: Structured Schedule}
+
+A structured schedule will be administered to \textbf{320 respondents} across 4 departments (Revenue, Rural Development, Forest, Health), stratified by:
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{Office type:} Head Office + District Office
+    \item \textbf{Cadre:} Class~I through Class~IV (10 per class per office)
+    \item \textbf{Age group:} 30--45 years and 46--60 years
+\end{itemize}
+
+The schedule will contain closed-ended items (device availability checklists, tool awareness checklists), Likert-scale items (5-point: internet quality, training satisfaction, perceived difficulty), and frequency items (daily/weekly/monthly/rarely/never).
+
+\subsubsection{Quantitative Analysis Tools}
+
+\begin{table}[H]
+\centering
+\caption{Quantitative Analysis Tools and Their Application}
+\small
+\begin{tabularx}{\textwidth}{L{3.2cm} L{2.8cm} X L{2.8cm}}
+\toprule
+\textbf{Tool / Technique} & \textbf{Purpose} & \textbf{Application in This Study} & \textbf{Citation} \\
+\midrule
+Descriptive Statistics (Frequency, Mean, Median, SD) & Summarise central tendency and spread & Device counts, usage frequency distributions, training attendance rates & Field (2018) \\[6pt]
+Cronbach's Alpha (Reliability Testing) & Ensure internal consistency of Likert-scale constructs & Test reliability of PE, EE, FC sub-scales (threshold: $\alpha \geq 0.70$) & Cronbach (1951); Tavakol \& Dennick (2011) \\[6pt]
+Cross-Tabulation with Chi-Square Test & Examine association between categorical variables & Compare tool usage across departments, cadres, age groups & Field (2018); Agresti (2018) \\[6pt]
+Mann-Whitney U Test & Compare ordinal data between two independent groups & Compare Likert responses: Head Office vs.\ District Office & Conover (1999); Field (2018) \\[6pt]
+Kruskal-Wallis H Test & Compare ordinal data across three or more groups & Compare difficulty levels across four departments; satisfaction across cadres & Conover (1999); Gibbons \& Chakraborti (2010) \\[6pt]
+Percentage \& Proportion Analysis & Quantify awareness and adoption rates & ``X\% of Class~III employees are unaware of e-Office'' & --- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Software:} SPSS v26+ or equivalent (MS Excel for basic descriptive statistics; SPSS for inferential tests).
+
+\smallskip
+\noindent\textit{Note on Likert Data:} Since Likert-scale responses produce ordinal data, non-parametric tests (Mann-Whitney U, Kruskal-Wallis) are preferred over parametric alternatives (t-test, ANOVA) to avoid violating distributional assumptions (Jamieson, 2004).
+
+\subsection{Qualitative Methods}
+
+\subsubsection{Semi-Structured Interviews}
+
+Interviews will be conducted with a purposively selected sub-sample across all four cadre classes, covering lived experiences with digital tools, perceived barriers and facilitators, training effectiveness narratives, and suggestions for improvement. All interviews will be audio-recorded (with consent), transcribed verbatim, and anonymised.
+
+\subsubsection{Focus Group Discussions (FGDs)}
+
+FGDs will be conducted at the department level to capture collective perspectives on systemic challenges, training adequacy, and policy-level recommendations. Each FGD will comprise 6--8 participants from mixed cadres within the same department.
+
+\subsubsection{Qualitative Analysis Tools}
+
+\begin{table}[H]
+\centering
+\caption{Qualitative Analysis Tools and Their Application}
+\small
+\begin{tabularx}{\textwidth}{L{3.2cm} L{2.8cm} X L{2.8cm}}
+\toprule
+\textbf{Tool / Technique} & \textbf{Purpose} & \textbf{Application in This Study} & \textbf{Citation} \\
+\midrule
+Reflexive Thematic Analysis (6-Phase) & Systematically identify, analyse, and report patterns (themes) & Primary method for coding interview and FGD transcripts. 6 phases: (1)~Familiarisation, (2)~Initial codes, (3)~Searching themes, (4)~Reviewing, (5)~Defining \& naming, (6)~Report & Braun \& Clarke (2006, 2019) \\[6pt]
+Deductive Coding Frame (TAM/UTAUT) & Map qualitative findings to established theoretical constructs & Code narratives against: Performance Expectancy, Effort Expectancy, Social Influence, Facilitating Conditions & Davis (1989); Venkatesh et al.\ (2003) \\[6pt]
+Content Analysis & Make replicable inferences from textual data & Analyse government circulars, training guidelines, policy documents for stated vs.\ actual implementation & Krippendorff (2018) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Coding Approach:} A hybrid inductive-deductive approach will be used. Initial codes will emerge inductively from the data, then be mapped to TAM/UTAUT constructs (deductive) to maintain theoretical coherence.
+
+\subsection{Observational Method}
+
+During office visits, a standardised observation checklist will document physical infrastructure conditions (hardware availability, workspace setup), internet connectivity tests (speed, uptime), actual workflow practices (digital vs.\ paper-based processes), and IT support availability. This observational data will be triangulated with survey and interview responses to validate self-reported information.
+
+\subsection{Gap Analysis \& Benchmarking (Objective 4)}
+
+\begin{table}[H]
+\centering
+\caption{Gap Analysis and Benchmarking Tools}
+\small
+\begin{tabularx}{\textwidth}{L{3.2cm} L{2.8cm} X L{2.8cm}}
+\toprule
+\textbf{Tool / Technique} & \textbf{Purpose} & \textbf{Application} & \textbf{Citation} \\
+\midrule
+Gap Analysis (Current vs.\ Desired State) & Identify discrepancies between existing capabilities and targets & Compare findings from Obj~1--3 against OECD DGPF dimensions and UN EGDI components & OECD (2014, 2020) \\[6pt]
+Priority Matrix (Impact vs.\ Feasibility) & Rank interventions by potential impact and feasibility & Classify recommendations into Quick Wins, Strategic Projects, Fill-ins, Hard Slogs & --- \\[6pt]
+International Benchmarking & Contextualise findings within global digital government progress & Map outcomes to UN EGDI sub-indices (OSI, TII, HCI) and OECD DGI dimensions & United Nations (2024); OECD (2014) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+% ══════════════════════════════════════════
+% PART 3: EVALUATION CRITERIA
+% ══════════════════════════════════════════
+\section{Evaluation Criteria}
+
+\subsection{Quantitative Evaluation Metrics}
+
+\begin{table}[H]
+\centering
+\caption{Quantitative Evaluation Metrics and Benchmarks}
+\small
+\begin{tabularx}{\textwidth}{L{4cm} L{3.5cm} X}
+\toprule
+\textbf{Metric} & \textbf{Benchmark / Threshold} & \textbf{Measurement} \\
+\midrule
+Digital Device Availability Ratio & $\geq$ 1 device per employee & Count of devices $\div$ number of employees \\[4pt]
+Internet Connectivity Score & Median Likert $\geq$ 3 (``Adequate'') & 5-point Likert scale \\[4pt]
+Digital Tool Awareness Rate & $\geq$ 70\% aware of core tools & \% selecting each tool on checklist \\[4pt]
+Daily Digital Tool Usage Rate & $\geq$ 50\% use tools daily & \% responding ``Daily'' \\[4pt]
+Training Coverage & $\geq$ 60\% trained in last 2 years & \% responding ``Yes'' \\[4pt]
+Training Satisfaction Score & Median Likert $\geq$ 3.5 & 5-point Likert scale \\[4pt]
+Perceived Difficulty (Effort Expectancy) & Median Likert $\leq$ 2.5 & 5-point Likert (reverse scored) \\[4pt]
+IT Support Availability & $\geq$ 70\% report accessible support & \% responding ``Yes'' \\[4pt]
+Technical Issue Frequency & $\leq$ 20\% report daily issues & \% responding ``Daily'' \\[4pt]
+Instrument Reliability (Cronbach's $\alpha$) & $\alpha \geq 0.70$ per construct & Cronbach's Alpha on sub-scales \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Qualitative Evaluation Factors}
+
+\begin{table}[H]
+\centering
+\caption{Qualitative Evaluation Factors}
+\small
+\begin{tabularx}{\textwidth}{L{4cm} X}
+\toprule
+\textbf{Factor} & \textbf{What Constitutes ``Success''} \\
+\midrule
+Thematic Saturation & No new significant themes emerge in the final 2--3 interviews/FGDs \\[4pt]
+Triangulation Convergence & Qualitative themes corroborate quantitative findings across $\geq$ 2 data sources \\[4pt]
+TAM/UTAUT Construct Coverage & All four constructs (PE, EE, SI, FC) addressed by at least one theme \\[4pt]
+Actionability of Findings & Each bottleneck mapped to a specific, feasible recommendation \\[4pt]
+Participant Representativeness & Sub-sample covers all cadres, office types, age groups, and departments \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Criteria for Viability of Recommendations}
+
+Each final recommendation will be evaluated against five criteria:
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Evidence Base:} Is it directly supported by data from this study?
+    \item \textbf{Policy Alignment:} Does it align with Digital India / Mission Karmayogi objectives?
+    \item \textbf{Feasibility:} Can it be implemented within existing institutional constraints and budget?
+    \item \textbf{Scalability:} Can it be replicated across other departments or states?
+    \item \textbf{Impact Potential:} Will it demonstrably improve service delivery timelines or employee efficiency?
+\end{enumerate}
+
+\newpage
+
+% ══════════════════════════════════════════
+% PART 4: EXPECTED OUTCOMES
+% ══════════════════════════════════════════
+\section{Expected Outcomes}
+
+\subsection{Anticipated Findings}
+
+Based on the literature review and theoretical framework, the following findings are anticipated:
+
+\subsubsection*{\color{accentblue}Objective 1 --- Infrastructure \& Awareness}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Significant disparity in device availability between Head Offices (better equipped) and District Offices
+    \item High awareness of basic tools (email) but low awareness of specialised platforms (e-Office, CPGRAMS)
+    \item Usage frequency likely correlated with age group (lower in 46--60 cohort)
+\end{itemize}
+
+\subsubsection*{\color{accentgreen}Objective 2 --- Capacity Building}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Formal training coverage likely below 50\% of total staff
+    \item Training satisfaction likely varies significantly by cadre --- Class~III/IV staff may report lower satisfaction
+    \item IT helpdesk availability expected to be significantly higher at Head Offices than District Offices
+\end{itemize}
+
+\subsubsection*{\color{accentorange}Objective 3 --- Bottlenecks}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Top bottleneck anticipated: poor internet connectivity at District Offices (Facilitating Conditions)
+    \item Significant attitudinal resistance among senior employees (46--60 age group) --- Effort Expectancy
+    \item Lack of departmental mandate / accountability for digital adoption --- Social Influence
+    \item Software usability issues (complex interfaces) --- Performance Expectancy
+\end{itemize}
+
+\subsubsection*{\color{accentpurple}Objective 4 --- Recommendations}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item Infrastructure investment priorities (bandwidth, devices) for District Offices
+    \item Cadre-specific, role-based training programmes (not one-size-fits-all)
+    \item Establishment of permanent IT helpdesk at District level
+    \item Policy mandate for digital-first workflows with transition support
+\end{itemize}
+
+\subsection{Next Steps Following Research}
+
+\begin{table}[H]
+\centering
+\caption{Post-Research Action Plan}
+\small
+\begin{tabularx}{\textwidth}{L{3.5cm} X L{3cm}}
+\toprule
+\textbf{Phase} & \textbf{Action} & \textbf{Timeline} \\
+\midrule
+Immediate (Week~4) & Present findings and evidence-based recommendations to AIGGPA senior management & End of internship \\[4pt]
+Short-term (1--3 months) & Department-level dissemination; initiate pilot training programmes & Post-internship \\[4pt]
+Medium-term (3--6 months) & Policy brief prepared for state administration & Post-internship \\[4pt]
+Long-term (6--12 months) & Follow-up study to measure impact of implemented recommendations & Future research \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Deliverables}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Final Research Report} --- comprehensive mixed-methods analysis with all findings, visualisations, and recommendations
+    \item \textbf{Executive Summary} --- 2-page brief for senior management
+    \item \textbf{Policy Brief} --- actionable recommendations aligned with Digital India / Mission Karmayogi
+    \item \textbf{Raw Data Archive} --- anonymised datasets for institutional records
+    \item \textbf{Presentation Deck} --- visual presentation for stakeholder briefing
+\end{enumerate}
+
+\newpage
+
+% ══════════════════════════════════════════
+% REFERENCES
+% ══════════════════════════════════════════
+\section*{References}
+\addcontentsline{toc}{section}{References}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=4pt, label={[\arabic*]}]
+    \item Agresti, A. (2018). \textit{Statistical Methods for the Social Sciences} (5th ed.). Pearson.
+    \item Braun, V., \& Clarke, V. (2006). Using thematic analysis in psychology. \textit{Qualitative Research in Psychology}, 3(2), 77--101.
+    \item Braun, V., \& Clarke, V. (2019). Reflecting on reflexive thematic analysis. \textit{Qualitative Research in Sport, Exercise and Health}, 11(4), 589--597.
+    \item Conover, W. J. (1999). \textit{Practical Nonparametric Statistics} (3rd ed.). Wiley.
+    \item Creswell, J. W. (2014). \textit{Research Design: Qualitative, Quantitative, and Mixed Methods Approaches} (4th ed.). SAGE Publications.
+    \item Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. \textit{Psychometrika}, 16(3), 297--334.
+    \item Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. \textit{MIS Quarterly}, 13(3), 319--340.
+    \item Field, A. (2018). \textit{Discovering Statistics Using IBM SPSS Statistics} (5th ed.). SAGE Publications.
+    \item Gibbons, J. D., \& Chakraborti, S. (2010). \textit{Nonparametric Statistical Inference} (5th ed.). CRC Press.
+    \item Government of India, Department of Personnel \& Training. (2020). \textit{National Programme for Civil Services Capacity Building (Mission Karmayogi)}.
+    \item Government of India, Ministry of Electronics \& Information Technology. (2015). \textit{Digital India}.
+    \item Heeks, R. (2003). Most eGovernment-for-Development Projects Fail: How Can Risks Be Reduced? University of Manchester.
+    \item Heeks, R. (2006). \textit{Implementing and Managing eGovernment}. SAGE Publications.
+    \item Jamieson, S. (2004). Likert scales: How to (ab)use them. \textit{Medical Education}, 38(12), 1217--1218.
+    \item Krippendorff, K. (2018). \textit{Content Analysis: An Introduction to Its Methodology} (4th ed.). SAGE Publications.
+    \item OECD. (2014). \textit{Recommendation of the Council on Digital Government Strategies}. OECD Publishing.
+    \item OECD. (2020). \textit{Digital Government Index: 2019 Results}. OECD Public Governance Policy Papers, No.~03.
+    \item Roni, S. M., \& Djajadikerta, H. G. (2021). \textit{Data Analysis with SPSS for Survey-based Research}. Springer.
+    \item Tavakol, M., \& Dennick, R. (2011). Making sense of Cronbach's alpha. \textit{International Journal of Medical Education}, 2, 53--55.
+    \item United Nations. (2024). \textit{E-Government Survey 2024: The Future of Digital Government}. UN DESA.
+    \item Venkatesh, V., Morris, M. G., Davis, G. B., \& Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. \textit{MIS Quarterly}, 27(3), 425--478.
+    \item Venkatesh, V., Thong, J. Y. L., \& Xu, X. (2012). Consumer acceptance and use of information technology. \textit{MIS Quarterly}, 36(1), 157--178.
+    \item World Bank. (2016). \textit{World Development Report 2016: Digital Dividends}. The World Bank.
+\end{enumerate}
+
+\end{document}

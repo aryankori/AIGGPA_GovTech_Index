@@ -1,0 +1,157 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=1.8cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{colortbl}
+
+\hypersetup{colorlinks=true,linkcolor=navyblue,urlcolor=accentteal,citecolor=navyblue}
+
+% ── BRAND COLORS ────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+
+% ── SECTION STYLING ─────────────────────────────────────────
+\titleformat{\section}[block]
+  {\normalfont\bfseries\fontsize{11}{13}\selectfont\color{navyblue}}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{10}{12}\selectfont\color{accentteal}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% ── HEADER / FOOTER ─────────────────────────────────────────
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Bhopal} \quad\textbar\quad
+  Human Capital: Investment in Education, Skill Development and Employment}
+\fancyhead[R]{\footnotesize\color{navyblue}April 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1pt}
+
+% ── LISTS ───────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt}
+
+\newcommand{\rupee}{\textrm{\fontspec{Calibri}₹}}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+  {\fontsize{12}{14}\selectfont\bfseries\color{navyblue}
+  Analysis of Central \& MP State Government Budget Allocation\\[2pt]
+  for Education, Skill Development \& Employment (FY 2022--23 to 2026--27)}\\[6pt]
+  {\small\color{darkgray} Aryan Kori \quad\textbar\quad AIGGPA Summer Intern 2026}
+\end{center}
+
+\vspace{0.2cm}
+
+\section{1. Central Government Budget Allocation}
+
+Table~1 presents the Union Budget allocations for the Ministry of Education (MoE) and the Ministry of Skill Development \& Entrepreneurship (MSDE) over five fiscal years.
+
+\vspace{0.15cm}
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Union Budget Allocation -- Education \& Skill Development (\rupee~in Crore)}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{>{\columncolor{lightgray}}l *{5}{>{\centering\arraybackslash}X}}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Head}} & \textcolor{white}{\textbf{2022--23}} & \textcolor{white}{\textbf{2023--24}} & \textcolor{white}{\textbf{2024--25}} & \textcolor{white}{\textbf{2025--26}} & \textcolor{white}{\textbf{2026--27}} \\
+\midrule
+MoE (Total)         & 1,04,278 & 1,12,899 & 1,21,114 & 1,28,650 & 1,39,289 \\
+\rowcolor{white}
+\ -- School Edu.     & 59,053   & 68,805   & 73,008   & 78,564   & 83,562 \\
+\ -- Higher Edu.     & 40,828   & 44,094   & 48,106   & 50,086   & 55,727 \\
+\rowcolor{white}
+MSDE (Total)        & 2,278    & 2,775    & 2,704    & 6,100    & 9,886 \\
+Employment*          & 6,700    & 7,200    & 7,800   & 20,082   & 20,082 \\
+\bottomrule
+\end{tabularx}
+\vspace{0.05cm}
+\par\scriptsize\textit{*Employment includes PM Viksit Bharat Rozgar Yojana (erstwhile Naya Rozgar Srijan) and MGNREGA successor allocations.}
+\par\scriptsize Source: Union Budget Documents, indiabudget.gov.in; education.gov.in; pib.gov.in.
+\end{table}
+
+\textbf{Key Observation:} The MoE budget grew at a CAGR of $\sim$7.5\% over five years, crossing \rupee1.39 lakh crore in 2026--27. MSDE received a landmark 62\% jump in 2026--27 (\rupee9,886 Cr), largely driven by the PM SETU scheme for ITI upgradation (\rupee6,141 Cr). The formal employment allocation saw a sharp increase to \rupee20,082 Cr in 2025--26 under PM Viksit Bharat Rozgar Yojana.
+
+\vspace{0.15cm}
+\section{2. Madhya Pradesh State Government Budget Allocation}
+
+Table~2 shows MP's education, skill development, and employment budget over the same five-year window.
+
+\vspace{0.15cm}
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{MP State Budget Allocation -- Education, Skill Dev. \& Employment (\rupee~in Crore)}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{>{\columncolor{lightgray}}l *{5}{>{\centering\arraybackslash}X}}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Head}} & \textcolor{white}{\textbf{2022--23}} & \textcolor{white}{\textbf{2023--24}} & \textcolor{white}{\textbf{2024--25}} & \textcolor{white}{\textbf{2025--26}} & \textcolor{white}{\textbf{2026--27}} \\
+\midrule
+Education (Total)     & 34,150  & 38,375  & 39,800  & 42,103  & 45,358 \\
+\rowcolor{white}
+Skill Development     & 850     & 950     & 1,100   & 1,400   & 1,850 \\
+Employment Schemes    & 7,200   & 7,800   & 8,500   & 9,600   & 10,428 \\
+\rowcolor{white}
+\textbf{Combined}     & \textbf{42,200} & \textbf{47,125} & \textbf{49,400} & \textbf{53,103} & \textbf{57,636} \\
+\bottomrule
+\end{tabularx}
+\vspace{0.05cm}
+\par\scriptsize Source: MP Finance Department Budget Documents; Drishti IAS State Budget Analysis; PRS India -- MP Budget 2026--27.
+\end{table}
+
+\textbf{Key Observation:} MP's education budget grew steadily from \rupee34,150 Cr (2022--23) to \rupee45,358 Cr (2026--27), a CAGR of $\sim$7.3\%. The 2026--27 budget notably allocated \rupee10,428 Cr for rural employment (VB Gram Rojgar Guarantee) and announced recruitment of 15,000 new teachers. Skill development saw targeted provisions for 19,000 women under Nari Shakti initiatives.
+
+\vspace{0.15cm}
+\section{3. Comparative Insight}
+
+\begin{itemize}
+  \item Both Central and MP budgets reflect a consistent year-on-year upward trend, with education remaining the largest social-sector investment.
+  \item MSDE's 62\% Union jump in 2026--27 signals a national pivot from ``degree-first'' to ``skill-first'' policy, especially via PM SETU (ITI modernisation).
+  \item MP allocates approximately \textbf{14--15\%} of its total state budget to education, aligning with the national average but still below NEP 2020's recommended 6\% of GDP target when combined with Centre's share.
+  \item The state's new \textit{Seekho-Kamao Yojana} and the \textit{Global Skills Park, Bhopal} represent forward-looking investments in employability.
+\end{itemize}
+
+\vspace{0.25cm}
+\noindent\rule{\textwidth}{0.5pt}
+{\scriptsize\textbf{References:}
+(1)~Union Budget 2022--23 to 2026--27, \textit{indiabudget.gov.in}.
+(2)~Ministry of Education, \textit{Budget Brief}, education.gov.in.
+(3)~Ministry of Skill Development \& Entrepreneurship, \textit{Notes on Demands for Grants, 2026--27}.
+(4)~PRS India, \textit{MP State Budget Analysis 2026--27}, prsindia.org.
+(5)~Drishti IAS, \textit{MP Budget Highlights 2026--27}, drishtiias.com.
+(6)~Press Information Bureau, \textit{PM SETU \& Viksit Bharat Rozgar Yojana}, pib.gov.in.
+}
+
+\end{document}
