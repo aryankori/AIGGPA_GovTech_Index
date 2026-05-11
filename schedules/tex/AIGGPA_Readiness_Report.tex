@@ -1,0 +1,215 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Nirmala UI}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+
+% Professional colors
+\definecolor{primary}{rgb}{0.1, 0.3, 0.6}
+\definecolor{secondary}{rgb}{0.3, 0.3, 0.3}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    filecolor=primary,      
+    urlcolor=primary,
+    pdftitle={AIGGPA Fieldwork Readiness Dossier},
+}
+
+\titleformat{\section}{\large\bfseries\color{primary}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{secondary}}{\thesubsection}{1em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{secondary}{AIGGPA Research Project}}
+\lhead{\textcolor{secondary}{Fieldwork Readiness Dossier}}
+\rfoot{\thepage}
+
+\title{\LARGE \bfseries \color{primary} AIGGPA Research Fieldwork Readiness Dossier \\ \Large Comprehensive Project Overview \& Instrument Repository}
+\author{\textbf{Aryan Kori} \\ Intern, AIGGPA}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Executive Summary}
+This dossier provides a comprehensive, line-by-line detailed account of the research preparation for the study titled \textbf{"Assessment of Digital Tool Adoption and Its Impact on Efficiency in MP Government Departments"}. 
+
+Every aspect of the workspace has been documented here, including the exact questions asked in the surveys, the purpose of each automation script, the folder structure on Google Drive and GitHub, and the proposed fieldwork itinerary. This document serves as the single source of truth for the project manager to review before approving the commencement of fieldwork.
+
+\section{Project Overview \& Objectives}
+The primary objective of this research is to evaluate how effectively digital tools are being adopted by government employees across four key departments in Madhya Pradesh:
+\begin{enumerate}[label=\alph*)]
+    \item Revenue Department
+    \item Rural Development Department
+    \item Forest Department
+    \item Health Department
+\end{enumerate}
+
+The study aims to answer:
+\begin{itemize}
+    \item What is the actual adoption rate of official portals vs. manual registers?
+    \item Do digital tools increase or decrease workload for field staff?
+    \item What are the infrastructure gaps (internet, devices) preventing full adoption?
+    \item To what extent are personal tools (like WhatsApp) filling the gaps left by official systems?
+\end{itemize}
+
+\section{Methodology \& Instrument Design}
+A hybrid approach (Digital + Print) has been adopted. All schedules are **bilingual (English and Hindi)** to ensure no respondent is excluded due to language barriers.
+
+\subsection{Folder Structure \& Infrastructure}
+The workspace is organized to ensure data integrity and backup across local storage, Google Drive, and GitHub:
+\begin{itemize}
+    \item \textbf{`scripts/`}: Contains all Python automation scripts.
+    \item \textbf{`schedules/pdf/`}: Stores all generated PDF schedules.
+    \item \textbf{`schedules/docx/`}: Stores all converted Word files.
+    \item \textbf{`schedules/tex/`}: Stores all source LaTeX files.
+\end{itemize}
+
+\section{Detailed Script Reference}
+Here is the list of all scripts created in the workspace and their specific functions:
+
+\begin{enumerate}
+    \item \textbf{\texttt{gen\_printable\_schedule.py}}
+    \begin{itemize}
+        \item \textbf{Purpose:} Generates the master bilingual questionnaire in LaTeX and compiles it to PDF.
+    \end{itemize}
+    
+    \item \textbf{\texttt{gen\_dept\_schedules.py}}
+    \begin{itemize}
+        \item \textbf{Purpose:} Generates 4 separate PDF schedules, one for each department.
+    \end{itemize}
+    
+    \item \textbf{\texttt{create\_form.py}}
+    \begin{itemize}
+        \item \textbf{Purpose:} Automates the creation of the giant Google Form using the \texttt{gog} CLI tool.
+    \end{itemize}
+    
+    \item \textbf{\texttt{hi.py}}
+    \begin{itemize}
+        \item \textbf{Purpose:} The core translation dictionary. Stores all questions in both English and Hindi.
+    \end{itemize}
+    
+    \item \textbf{\texttt{convert\_pdf2docx\_v2.py}}
+    \begin{itemize}
+        \item \textbf{Purpose:} Converts the generated PDFs into editable Microsoft Word documents.
+    \end{itemize}
+    
+    \item \textbf{\texttt{upload\_to\_drive.py}}
+    \begin{itemize}
+        \item \textbf{Purpose:} Automates the uploading of all categorized files to Google Drive.
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+\appendix
+\section{Full Survey Instrument (The Questions)}
+Here is the exact list of questions configured in the system.
+
+\subsection{Common Questions (Q1 - Q39)}
+These questions are asked to ALL respondents across all departments.
+
+\begin{longtable}{|p{1cm}|p{6cm}|p{6cm}|}
+\hline
+\textbf{No.} & \textbf{English Question} & \textbf{Hindi Translation} \\ \hline
+\endfirsthead
+\hline
+\textbf{No.} & \textbf{English Question} & \textbf{Hindi Translation} \\ \hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+Q1 & Designation / Post: & पदनाम / पद: \\ \hline
+Q2 & Job Role / Level: & कार्य भूमिका / स्तर: \\ \hline
+Q3 & Age group: & आयु वर्ग: \\ \hline
+Q4 & Gender: & लिंग: \\ \hline
+Q5 & Years of service: & सेवा के वर्ष: \\ \hline
+Q6 & Highest education: & उच्चतम शिक्षा: \\ \hline
+Q7 & What digital devices are available at your workstation? & आपके कार्यस्थल पर कौन-से डिजिटल उपकरण उपलब्ध हैं? \\ \hline
+Q8 & Do you share your device with other employees? & क्या आप अपना उपकरण अन्य कर्मचारियों के साथ साझा करते हैं? \\ \hline
+Q9 & Rate internet connectivity at your office: & अपने कार्यालय में इंटरनेट कनेक्टिविटी का मूल्यांकन करें: \\ \hline
+Q10 & How often do you experience internet outages per week? & सप्ताह में कितनी बार इंटरनेट बंद होता है? \\ \hline
+Q11 & Is IT helpdesk / technical support available? & क्या IT हेल्पडेस्क / तकनीकी सहायता उपलब्ध है? \\ \hline
+Q12 & If yes, how quickly are issues resolved? & यदि हाँ, तो समस्याएँ कितनी जल्दी हल होती हैं? \\ \hline
+Q13 & Digital tools help me complete tasks faster than paper. & डिजिटल उपकरण मुझे कागज़ की तुलना में कार्य तेज़ी से पूरा करने में मदद करते हैं। \\ \hline
+Q14 & Digital tools improve the quality/accuracy of my work. & डिजिटल उपकरण मेरे काम की गुणवत्ता/सटीकता में सुधार करते हैं। \\ \hline
+Q15 & Using digital tools increases my overall productivity. & डिजिटल उपकरणों का उपयोग मेरी समग्र उत्पादकता बढ़ाता है। \\ \hline
+Q16 & The digital tools available are well-suited to my actual job tasks. & उपलब्ध डिजिटल उपकरण मेरे वास्तविक कार्यों के लिए उपयुक्त हैं। \\ \hline
+Q17 & How difficult do you find digital tools to use? & डिजिटल उपकरणों का उपयोग आपको कितना कठिन लगता है? \\ \hline
+Q18 & I am confident in my ability to use digital tools for my work. & मुझे डिजिटल उपकरण उपयोग करने की अपनी क्षमता पर विश्वास है। \\ \hline
+Q19 & Learning to use a new portal/app takes me: & एक नया पोर्टल/ऐप सीखने में मुझे लगता है: \\ \hline
+Q20 & The design/interface of most government portals is user-friendly. & अधिकांश सरकारी पोर्टलों का डिज़ाइन उपयोगकर्ता-अनुकूल है। \\ \hline
+Q21 & My superiors encourage the use of digital tools. & मेरे वरिष्ठ अधिकारी डिजिटल उपकरणों के उपयोग को प्रोत्साहित करते हैं। \\ \hline
+Q22 & My colleagues regularly use digital tools in their work. & मेरे सहकर्मी नियमित रूप से डिजिटल उपकरणों का उपयोग करते हैं। \\ \hline
+Q23 & There is a formal mandate/order requiring digital tool use in my department. & मेरे विभाग में डिजिटल उपकरण के लिए औपचारिक आदेश है। \\ \hline
+Q24 & Which general tools are you aware of? & आप किन सामान्य उपकरणों से अवगत हैं? \\ \hline
+Q25 & How often do you use digital tools for work? & आप कितनी बार काम के लिए डिजिटल उपकरणों का उपयोग करते हैं? \\ \hline
+Q26 & What percentage of your work is done digitally? & आपके कार्य का कितना प्रतिशत डिजिटल रूप से होता है? \\ \hline
+Q27 & Have you attended any digital skills training in the last 2 years? & क्या पिछले 2 वर्षों में आपने कोई डिजिटल कौशल प्रशिक्षण लिया है? \\ \hline
+Q28 & If yes, how many training sessions? & यदि हाँ, तो कितने प्रशिक्षण सत्र? \\ \hline
+Q29 & Rate the quality of training received: & प्राप्त प्रशिक्षण की गुणवत्ता का मूल्यांकन करें: \\ \hline
+Q30 & Was the training sufficient for your actual job needs? & क्या प्रशिक्षण आपकी वास्तविक कार्य आवश्यकताओं के लिए पर्याप्त था? \\ \hline
+Q31 & What topics need more training? & किन विषयों में अधिक प्रशिक्षण चाहिए? \\ \hline
+Q32 & What issues do you face? (tick all) & आपको क्या समस्याएँ आती हैं? (सभी पर टिक करें) \\ \hline
+Q33 & How often do digital issues disrupt your work? & डिजिटल समस्याएँ कितनी बार आपके काम में बाधा डालती हैं? \\ \hline
+Q34 & I feel comfortable asking for help with digital tools. & मुझे डिजिटल उपकरणों के लिए सहायता माँगने में सहजता है। \\ \hline
+Q35 & My organisation provides adequate support for digital tools. & मेरा संगठन डिजिटल उपकरणों के लिए पर्याप्त सहायता प्रदान करता है। \\ \hline
+Q36 & My department is committed to digital transformation. & मेरा विभाग डिजिटल परिवर्तन के प्रति प्रतिबद्ध है। \\ \hline
+Q37 & Rank these priorities (1=highest, 5=lowest): & इन प्राथमिकताओं को क्रम दें (1=सर्वोच्च, 5=न्यूनतम): \\ \hline
+Q38 & What one change would most improve your use of digital tools? & कौन-सा एक बदलाव आपके डिजिटल उपकरण उपयोग में सबसे अधिक सुधार करेगा? \\ \hline
+Q39 & Has digital tool adoption improved service delivery to citizens? & क्या डिजिटल उपकरणों से नागरिकों को सेवा वितरण में सुधार हुआ है? \\ \hline
+\end{longtable}
+
+\subsection{Role-Specific Questions}
+\begin{longtable}{|p{6cm}|p{6cm}|}
+\hline
+\textbf{English Question} & \textbf{Hindi Translation} \\ \hline
+\endfirsthead
+\hline
+\textbf{English Question} & \textbf{Hindi Translation} \\ \hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+Primary interaction with digital tools: & डिजिटल उपकरणों के साथ आपकी प्राथमिक भूमिका: \\ \hline
+Is there one person who does most portal work for others? & क्या कोई एक व्यक्ति दूसरों का पोर्टल कार्य करता है? \\ \hline
+Is the training appropriate for your specific job role? & क्या प्रशिक्षण आपकी विशिष्ट भूमिका के लिए उपयुक्त है? \\ \hline
+When a portal gives an error, what do you do? & जब पोर्टल त्रुटि देता है, तो आप क्या करते हैं? \\ \hline
+Do senior officers use digital tools themselves? & क्या वरिष्ठ अधिकारी स्वयं डिजिटल उपकरण उपयोग करते हैं? \\ \hline
+Have digital tools changed the work expected at your level? & क्या डिजिटल उपकरणों ने आपके स्तर पर अपेक्षित कार्य बदला है? \\ \hline
+Are there digital tasks beyond your current skill level? & क्या कोई डिजिटल कार्य आपके कौशल स्तर से परे हैं? \\ \hline
+Should training differ based on job level? & क्या प्रशिक्षण पद स्तर के अनुसार अलग होना चाहिए? \\ \hline
+\end{longtable}
+
+\subsection{Personal Tools Questions}
+\begin{longtable}{|p{6cm}|p{6cm}|}
+\hline
+\textbf{English Question} & \textbf{Hindi Translation} \\ \hline
+\endfirsthead
+\hline
+\textbf{English Question} & \textbf{Hindi Translation} \\ \hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+Do you use any non-government apps or tools to help with your work? & क्या आप अपने काम में कोई गैर-सरकारी ऐप्स या उपकरण उपयोग करते हैं? \\ \hline
+Which of these do you use for work-related tasks? (tick all) & इनमें से कौन-से आप कार्य के लिए उपयोग करते हैं? (सभी पर टिक करें) \\ \hline
+What do you mainly use these tools for? (tick all) & आप इन उपकरणों का मुख्य रूप से किसलिए उपयोग करते हैं? (सभी पर टिक करें) \\ \hline
+How often do you use these personal tools for official work? & आप कितनी बार इन व्यक्तिगत उपकरणों का आधिकारिक काम के लिए उपयोग करते हैं? \\ \hline
+Do you feel these tools fill a gap that government systems don't cover? & क्या ये उपकरण सरकारी प्रणालियों की कमी पूरी करते हैं? \\ \hline
+Any concerns about using personal tools for official work? & व्यक्तिगत उपकरणों के आधिकारिक उपयोग में कोई चिंता? \\ \hline
+\end{longtable}
+
+\end{document}
