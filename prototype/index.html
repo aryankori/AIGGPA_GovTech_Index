@@ -34,9 +34,15 @@
 
         <div class="nav-links">
             <!-- Executive Pitch Link -->
-            <a href="executive_briefing.html" class="nav-link" style="border: 1px solid #FFC107; color: #FFC107; border-radius: 4px; margin-bottom: 12px; background: rgba(255,193,7,0.1);">
+            <a href="executive_briefing.html" class="nav-link" style="border: 1px solid #FFC107; color: #FFC107; border-radius: 4px; margin-bottom: 8px; background: rgba(255,193,7,0.15);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                 <span style="font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px;">Launch Pitch</span>
+            </a>
+
+            <!-- Tactile Sandbox Link -->
+            <a href="spatial_sandbox.html" class="nav-link" style="border: 1px solid #52D68A; color: #52D68A; border-radius: 4px; margin-bottom: 12px; background: rgba(39,174,96,0.15);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+                <span style="font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px;">Tactile Sandbox</span>
             </a>
 
             <a href="#" class="nav-link active" data-page="overview" id="nav-overview">
@@ -117,7 +123,7 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
                     </div>
                     <div class="kpi-data">
-                        <span class="kpi-value" id="kpi-depts">4</span>
+                        <span class="kpi-value" id="kpi-depts">3</span>
                         <span class="kpi-label">Departments</span>
                     </div>
                 </div>
@@ -179,33 +185,26 @@
                 <p>Selected across the Digitisation × Public Interaction matrix</p>
             </div>
             <div class="dept-grid">
-                <div class="dept-card" data-dept="Revenue">
-                    <div class="dept-icon" style="background: linear-gradient(135deg, #27AE60, #1E8449);">भू</div>
-                    <h4>Revenue / Land Records</h4>
-                    <p>भू-अभिलेख</p>
-                    <div class="dept-tools">Bhulekh · RCMS · e-District · e-Office</div>
+                <div class="dept-card" data-dept="Forest">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #27AE60, #1E8449);">वन</div>
+                    <h4>Forest Department</h4>
+                    <p>वन विभाग</p>
+                    <div class="dept-tools">e-Green Watch · GIS · Alert System · e-Office</div>
                     <div class="dept-maturity high">High Digitisation</div>
                 </div>
-                <div class="dept-card" data-dept="PWD">
-                    <div class="dept-icon" style="background: linear-gradient(135deg, #E67E22, #D35400);">लोक</div>
-                    <h4>Public Works / PWD</h4>
-                    <p>लोक निर्माण विभाग</p>
-                    <div class="dept-tools">e-Tendering · e-Office · PFMS</div>
+                <div class="dept-card" data-dept="Rural Development">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #E67E22, #D35400);">वि</div>
+                    <h4>Rural Development</h4>
+                    <p>पंचायत एवं ग्रामीण विकास</p>
+                    <div class="dept-tools">NREGASoft · NMMS · e-Gram Swaraj · PFMS</div>
                     <div class="dept-maturity medium">Medium Digitisation</div>
                 </div>
-                <div class="dept-card" data-dept="Health">
-                    <div class="dept-icon" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">स्वा</div>
-                    <h4>Health / Public Hospitals</h4>
-                    <p>स्वास्थ्य विभाग</p>
-                    <div class="dept-tools">HMIS · Ayushman Bharat · CoWIN</div>
-                    <div class="dept-maturity low-medium">Low-Medium Digitisation</div>
-                </div>
-                <div class="dept-card" data-dept="Education">
-                    <div class="dept-icon" style="background: linear-gradient(135deg, #8E44AD, #6C3483);">शिक्</div>
-                    <h4>School Education</h4>
-                    <p>स्कूल शिक्षा विभाग</p>
-                    <div class="dept-tools">Diksha · iGOT · UDISE+</div>
-                    <div class="dept-maturity low">Low Digitisation</div>
+                <div class="dept-card" data-dept="Revenue">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #1B3B6F, #152238);">रा</div>
+                    <h4>Revenue Department</h4>
+                    <p>राजस्व विभाग</p>
+                    <div class="dept-tools">Bhulekh · RCMS · SAARA · SAMPADA 2.0</div>
+                    <div class="dept-maturity high">High Digitisation</div>
                 </div>
             </div>
         </section>
@@ -239,10 +238,9 @@
                             <label for="department">Department <span class="hindi-label">विभाग</span></label>
                             <select id="department" required>
                                 <option value="">Select Department</option>
-                                <option value="Revenue">Revenue / Land Records (भू-अभिलेख)</option>
-                                <option value="PWD">Public Works / PWD (लोक निर्माण विभाग)</option>
-                                <option value="Health">Health (स्वास्थ्य विभाग)</option>
-                                <option value="Education">School Education (स्कूल शिक्षा विभाग)</option>
+                                <option value="Forest">Forest Department (वन विभाग)</option>
+                                <option value="Rural Development">Rural Development Department (पंचायत एवं ग्रामीण विकास)</option>
+                                <option value="Revenue">Revenue Department (राजस्व विभाग)</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -268,9 +266,10 @@
                             <label for="grade">Grade / Class <span class="hindi-label">समूह</span></label>
                             <select id="grade" required>
                                 <option value="">Select</option>
-                                <option value="Group A">Class I / Group A (IAS, Directors)</option>
-                                <option value="Group B">Class II / Group B (Section Officers)</option>
-                                <option value="Group C">Class III / Group C (UDC, LDC, DEO)</option>
+                                <option value="Group A">Class I (Directors, Officers)</option>
+                                <option value="Group B">Class II (Mid-Level Managers)</option>
+                                <option value="Group C">Class III (Operational/Field Staff)</option>
+                                <option value="Group D">Class IV (Support/Field Staff)</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -635,16 +634,16 @@
             <div class="filter-bar">
                 <select id="filterDept" onchange="renderDataTable()">
                     <option value="all">All Departments</option>
+                    <option value="Forest">Forest</option>
+                    <option value="Rural Development">Rural Development</option>
                     <option value="Revenue">Revenue</option>
-                    <option value="PWD">PWD</option>
-                    <option value="Health">Health</option>
-                    <option value="Education">Education</option>
                 </select>
                 <select id="filterGrade" onchange="renderDataTable()">
                     <option value="all">All Grades</option>
-                    <option value="Group A">Group A</option>
-                    <option value="Group B">Group B</option>
-                    <option value="Group C">Group C</option>
+                    <option value="Group A">Class I</option>
+                    <option value="Group B">Class II</option>
+                    <option value="Group C">Class III</option>
+                    <option value="Group D">Class IV</option>
                 </select>
             </div>
 

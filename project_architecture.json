@@ -1,0 +1,3635 @@
+{
+  "name": "AIGGPA_Report",
+  "type": "directory",
+  "size_bytes": 92852128,
+  "size": "88.6 MB",
+  "children": [
+    {
+      "name": ".gitignore",
+      "type": "file",
+      "extension": "",
+      "size_bytes": 357,
+      "size": "357.0 B"
+    },
+    {
+      "name": "1_aryan_budget_analysis.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 984,
+      "size": "984.0 B"
+    },
+    {
+      "name": "1_aryan_budget_analysis.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 25540,
+      "size": "24.9 KB"
+    },
+    {
+      "name": "1_aryan_budget_analysis.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 730,
+      "size": "730.0 B"
+    },
+    {
+      "name": "1_aryan_budget_analysis.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 75157,
+      "size": "73.4 KB"
+    },
+    {
+      "name": "2_aakriti_top5_states.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 1390,
+      "size": "1.4 KB"
+    },
+    {
+      "name": "2_aakriti_top5_states.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 25519,
+      "size": "24.9 KB"
+    },
+    {
+      "name": "2_aakriti_top5_states.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 1260,
+      "size": "1.2 KB"
+    },
+    {
+      "name": "2_aakriti_top5_states.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 76476,
+      "size": "74.7 KB"
+    },
+    {
+      "name": "3_shreya_youth_demography.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 912,
+      "size": "912.0 B"
+    },
+    {
+      "name": "3_shreya_youth_demography.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 24179,
+      "size": "23.6 KB"
+    },
+    {
+      "name": "3_shreya_youth_demography.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 818,
+      "size": "818.0 B"
+    },
+    {
+      "name": "3_shreya_youth_demography.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 74010,
+      "size": "72.3 KB"
+    },
+    {
+      "name": "4_manvi_nep2020_iks.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 558,
+      "size": "558.0 B"
+    },
+    {
+      "name": "4_manvi_nep2020_iks.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 23831,
+      "size": "23.3 KB"
+    },
+    {
+      "name": "4_manvi_nep2020_iks.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 886,
+      "size": "886.0 B"
+    },
+    {
+      "name": "4_manvi_nep2020_iks.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 74494,
+      "size": "72.7 KB"
+    },
+    {
+      "name": "5_himani_skilling_vs_degree.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 850,
+      "size": "850.0 B"
+    },
+    {
+      "name": "5_himani_skilling_vs_degree.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 25818,
+      "size": "25.2 KB"
+    },
+    {
+      "name": "5_himani_skilling_vs_degree.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 1003,
+      "size": "1003.0 B"
+    },
+    {
+      "name": "5_himani_skilling_vs_degree.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 77844,
+      "size": "76.0 KB"
+    },
+    {
+      "name": "AIGGPA PRE REPORT.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 170154,
+      "size": "166.2 KB"
+    },
+    {
+      "name": "AIGGPA_Department_Guide.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 3945,
+      "size": "3.9 KB"
+    },
+    {
+      "name": "AIGGPA_Department_Guide.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 19223,
+      "size": "18.8 KB"
+    },
+    {
+      "name": "AIGGPA_Department_Guide.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 5369,
+      "size": "5.2 KB"
+    },
+    {
+      "name": "AIGGPA_Department_Guide.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 113150,
+      "size": "110.5 KB"
+    },
+    {
+      "name": "AIGGPA_Department_Guide.toc",
+      "type": "file",
+      "extension": ".toc",
+      "size_bytes": 2552,
+      "size": "2.5 KB"
+    },
+    {
+      "name": "AIGGPA_Dept_Questionnaire.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 1976,
+      "size": "1.9 KB"
+    },
+    {
+      "name": "AIGGPA_Dept_Questionnaire.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 24149,
+      "size": "23.6 KB"
+    },
+    {
+      "name": "AIGGPA_Dept_Questionnaire.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 2542,
+      "size": "2.5 KB"
+    },
+    {
+      "name": "AIGGPA_Dept_Questionnaire.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 136988,
+      "size": "133.8 KB"
+    },
+    {
+      "name": "AIGGPA_Dept_Questionnaire.toc",
+      "type": "file",
+      "extension": ".toc",
+      "size_bytes": 1239,
+      "size": "1.2 KB"
+    },
+    {
+      "name": "AIGGPA_Fieldwork_Vault",
+      "type": "directory",
+      "size_bytes": 48402,
+      "size": "47.3 KB",
+      "children": [
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "extension": "",
+          "size_bytes": 126,
+          "size": "126.0 B"
+        },
+        {
+          "name": "01_Schedules_Raw",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": "Forest",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": "DO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                },
+                {
+                  "name": "HO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": "DO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                },
+                {
+                  "name": "HO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Revenue",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": "DO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                },
+                {
+                  "name": "HO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Rural_Development",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": "DO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                },
+                {
+                  "name": "HO",
+                  "type": "directory",
+                  "size_bytes": 0,
+                  "size": "0.0 B",
+                  "children": [
+                    {
+                      "name": ".gitkeep",
+                      "type": "file",
+                      "extension": "",
+                      "size_bytes": 0,
+                      "size": "0.0 B"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "02_Audio_Recordings",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": "FGDs",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Interviews",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "03_Transcripts",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": "FGDs",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Interviews",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "04_Observation_Notes",
+          "type": "directory",
+          "size_bytes": 2278,
+          "size": "2.2 KB",
+          "children": [
+            {
+              "name": "TEMPLATE_Observation_Checklist.txt",
+              "type": "file",
+              "extension": ".txt",
+              "size_bytes": 2278,
+              "size": "2.2 KB"
+            }
+          ]
+        },
+        {
+          "name": "05_Photos_Evidence",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": "Digital_Setup",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Office_Infrastructure",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Training_Material",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "06_Consent_Forms",
+          "type": "directory",
+          "size_bytes": 2070,
+          "size": "2.0 KB",
+          "children": [
+            {
+              "name": "Scanned",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "TEMPLATE_Consent_Form.txt",
+              "type": "file",
+              "extension": ".txt",
+              "size_bytes": 2070,
+              "size": "2.0 KB"
+            }
+          ]
+        },
+        {
+          "name": "07_Secondary_Data",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": "Circulars_Orders",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Helpdesk_Logs",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "IT_Inventories",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Training_Records",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "08_Data_Entry",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": "Cleaned_Data",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Raw_Excel",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "SPSS_Files",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "09_Analysis_Output",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": "Qualitative_Coding",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Quantitative",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            },
+            {
+              "name": "Visualisations",
+              "type": "directory",
+              "size_bytes": 0,
+              "size": "0.0 B",
+              "children": [
+                {
+                  "name": ".gitkeep",
+                  "type": "file",
+                  "extension": "",
+                  "size_bytes": 0,
+                  "size": "0.0 B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "10_Reports_Drafts",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": ".gitkeep",
+              "type": "file",
+              "extension": "",
+              "size_bytes": 0,
+              "size": "0.0 B"
+            }
+          ]
+        },
+        {
+          "name": "11_Presentations",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": ".gitkeep",
+              "type": "file",
+              "extension": "",
+              "size_bytes": 0,
+              "size": "0.0 B"
+            }
+          ]
+        },
+        {
+          "name": "12_Backups",
+          "type": "directory",
+          "size_bytes": 0,
+          "size": "0.0 B",
+          "children": [
+            {
+              "name": ".gitkeep",
+              "type": "file",
+              "extension": "",
+              "size_bytes": 0,
+              "size": "0.0 B"
+            }
+          ]
+        },
+        {
+          "name": "AIGGPA_Master_Tracker.xlsx",
+          "type": "file",
+          "extension": ".xlsx",
+          "size_bytes": 31117,
+          "size": "30.4 KB"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 3461,
+          "size": "3.4 KB"
+        },
+        {
+          "name": "setup_respondent.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 2465,
+          "size": "2.4 KB"
+        },
+        {
+          "name": "transcribe_audio.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 2676,
+          "size": "2.6 KB"
+        },
+        {
+          "name": "validate_tracker.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 4209,
+          "size": "4.1 KB"
+        }
+      ]
+    },
+    {
+      "name": "AIGGPA_Final_Proposal.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 1637,
+      "size": "1.6 KB"
+    },
+    {
+      "name": "AIGGPA_Final_Proposal.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 17199,
+      "size": "16.8 KB"
+    },
+    {
+      "name": "AIGGPA_Final_Proposal.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 43997,
+      "size": "43.0 KB"
+    },
+    {
+      "name": "AIGGPA_Final_Proposal.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 1847,
+      "size": "1.8 KB"
+    },
+    {
+      "name": "AIGGPA_Final_Proposal.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 93395,
+      "size": "91.2 KB"
+    },
+    {
+      "name": "AIGGPA_Form_Content.md",
+      "type": "file",
+      "extension": ".md",
+      "size_bytes": 21239,
+      "size": "20.7 KB"
+    },
+    {
+      "name": "AIGGPA_Pitch_Deck.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "AIGGPA_Pitch_Deck.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 13005,
+      "size": "12.7 KB"
+    },
+    {
+      "name": "AIGGPA_Pitch_Deck.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 14969,
+      "size": "14.6 KB"
+    },
+    {
+      "name": "AIGGPA_Pitch_Deck.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 78130,
+      "size": "76.3 KB"
+    },
+    {
+      "name": "AIGGPA_Printable_Schedule.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "AIGGPA_Printable_Schedule.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 19305,
+      "size": "18.9 KB"
+    },
+    {
+      "name": "AIGGPA_Printable_Schedule.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 142864,
+      "size": "139.5 KB"
+    },
+    {
+      "name": "AIGGPA_Questionnaire.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 1602,
+      "size": "1.6 KB"
+    },
+    {
+      "name": "AIGGPA_Questionnaire.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 21248,
+      "size": "20.8 KB"
+    },
+    {
+      "name": "AIGGPA_Questionnaire.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 2570,
+      "size": "2.5 KB"
+    },
+    {
+      "name": "AIGGPA_Questionnaire.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 114646,
+      "size": "112.0 KB"
+    },
+    {
+      "name": "AIGGPA_Questionnaire.toc",
+      "type": "file",
+      "extension": ".toc",
+      "size_bytes": 988,
+      "size": "988.0 B"
+    },
+    {
+      "name": "AIGGPA_Readiness_Report.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 1556,
+      "size": "1.5 KB"
+    },
+    {
+      "name": "AIGGPA_Readiness_Report.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 25127,
+      "size": "24.5 KB"
+    },
+    {
+      "name": "AIGGPA_Readiness_Report.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 1772,
+      "size": "1.7 KB"
+    },
+    {
+      "name": "AIGGPA_Readiness_Report.toc",
+      "type": "file",
+      "extension": ".toc",
+      "size_bytes": 795,
+      "size": "795.0 B"
+    },
+    {
+      "name": "AIGGPA_Research_Plan.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 4504,
+      "size": "4.4 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Plan.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 43762,
+      "size": "42.7 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Plan.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 29615,
+      "size": "28.9 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Plan.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 5316,
+      "size": "5.2 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Plan.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 130432,
+      "size": "127.4 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Plan.toc",
+      "type": "file",
+      "extension": ".toc",
+      "size_bytes": 2380,
+      "size": "2.3 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Proposal_v3.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 44651,
+      "size": "43.6 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Rationale.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "AIGGPA_Research_Rationale.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 13943,
+      "size": "13.6 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Rationale.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 15023,
+      "size": "14.7 KB"
+    },
+    {
+      "name": "AIGGPA_Research_Rationale.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 71711,
+      "size": "70.0 KB"
+    },
+    {
+      "name": "AIGGPA_Wellness_Survey_Tool.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 40068,
+      "size": "39.1 KB"
+    },
+    {
+      "name": "Charts_Data_Appendix.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 67868562,
+      "size": "64.7 MB"
+    },
+    {
+      "name": "Final_Proposal_Formatted.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 40217,
+      "size": "39.3 KB"
+    },
+    {
+      "name": "Final_Proposal_Formatted.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 54115,
+      "size": "52.8 KB"
+    },
+    {
+      "name": "Framework_Completed.xlsx",
+      "type": "file",
+      "extension": ".xlsx",
+      "size_bytes": 9923,
+      "size": "9.7 KB"
+    },
+    {
+      "name": "Framework_View.html",
+      "type": "file",
+      "extension": ".html",
+      "size_bytes": 19146,
+      "size": "18.7 KB"
+    },
+    {
+      "name": "Framework_for_Interns.xlsx",
+      "type": "file",
+      "extension": ".xlsx",
+      "size_bytes": 11892,
+      "size": "11.6 KB"
+    },
+    {
+      "name": "Methodology_Scope_Options.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 38609,
+      "size": "37.7 KB"
+    },
+    {
+      "name": "Methodology_Scope_Options.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 33553,
+      "size": "32.8 KB"
+    },
+    {
+      "name": "Organized_Archive",
+      "type": "directory",
+      "size_bytes": 741820,
+      "size": "724.4 KB",
+      "children": [
+        {
+          "name": "01_PDFs",
+          "type": "directory",
+          "size_bytes": 433701,
+          "size": "423.5 KB",
+          "children": [
+            {
+              "name": "AIGGPA PRE REPORT.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 170154,
+              "size": "166.2 KB"
+            },
+            {
+              "name": "concept_proposal.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 52403,
+              "size": "51.2 KB"
+            },
+            {
+              "name": "notes_from_manager.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 71518,
+              "size": "69.8 KB"
+            },
+            {
+              "name": "proposal_prep_guide.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 78568,
+              "size": "76.7 KB"
+            },
+            {
+              "name": "survey_instrument.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 61058,
+              "size": "59.6 KB"
+            }
+          ]
+        },
+        {
+          "name": "02_Build_Artifacts",
+          "type": "directory",
+          "size_bytes": 261087,
+          "size": "255.0 KB",
+          "children": [
+            {
+              "name": "concept_proposal.aux",
+              "type": "file",
+              "extension": ".aux",
+              "size_bytes": 1065,
+              "size": "1.0 KB"
+            },
+            {
+              "name": "concept_proposal.log",
+              "type": "file",
+              "extension": ".log",
+              "size_bytes": 35320,
+              "size": "34.5 KB"
+            },
+            {
+              "name": "concept_proposal.out",
+              "type": "file",
+              "extension": ".out",
+              "size_bytes": 1830,
+              "size": "1.8 KB"
+            },
+            {
+              "name": "main.aux",
+              "type": "file",
+              "extension": ".aux",
+              "size_bytes": 14918,
+              "size": "14.6 KB"
+            },
+            {
+              "name": "main.log",
+              "type": "file",
+              "extension": ".log",
+              "size_bytes": 63296,
+              "size": "61.8 KB"
+            },
+            {
+              "name": "main.out",
+              "type": "file",
+              "extension": ".out",
+              "size_bytes": 11443,
+              "size": "11.2 KB"
+            },
+            {
+              "name": "main.toc",
+              "type": "file",
+              "extension": ".toc",
+              "size_bytes": 4519,
+              "size": "4.4 KB"
+            },
+            {
+              "name": "notes_from_manager.aux",
+              "type": "file",
+              "extension": ".aux",
+              "size_bytes": 3142,
+              "size": "3.1 KB"
+            },
+            {
+              "name": "notes_from_manager.log",
+              "type": "file",
+              "extension": ".log",
+              "size_bytes": 35755,
+              "size": "34.9 KB"
+            },
+            {
+              "name": "notes_from_manager.out",
+              "type": "file",
+              "extension": ".out",
+              "size_bytes": 4647,
+              "size": "4.5 KB"
+            },
+            {
+              "name": "notes_from_manager.toc",
+              "type": "file",
+              "extension": ".toc",
+              "size_bytes": 1851,
+              "size": "1.8 KB"
+            },
+            {
+              "name": "proposal_prep_guide.aux",
+              "type": "file",
+              "extension": ".aux",
+              "size_bytes": 3314,
+              "size": "3.2 KB"
+            },
+            {
+              "name": "proposal_prep_guide.log",
+              "type": "file",
+              "extension": ".log",
+              "size_bytes": 46605,
+              "size": "45.5 KB"
+            },
+            {
+              "name": "proposal_prep_guide.out",
+              "type": "file",
+              "extension": ".out",
+              "size_bytes": 5019,
+              "size": "4.9 KB"
+            },
+            {
+              "name": "survey_instrument.aux",
+              "type": "file",
+              "extension": ".aux",
+              "size_bytes": 32,
+              "size": "32.0 B"
+            },
+            {
+              "name": "survey_instrument.log",
+              "type": "file",
+              "extension": ".log",
+              "size_bytes": 28331,
+              "size": "27.7 KB"
+            }
+          ]
+        },
+        {
+          "name": "03_Node_Scripts",
+          "type": "directory",
+          "size_bytes": 43058,
+          "size": "42.0 KB",
+          "children": [
+            {
+              "name": "capture_prototypes.js",
+              "type": "file",
+              "extension": ".js",
+              "size_bytes": 1588,
+              "size": "1.6 KB"
+            },
+            {
+              "name": "package-lock.json",
+              "type": "file",
+              "extension": ".json",
+              "size_bytes": 41126,
+              "size": "40.2 KB"
+            },
+            {
+              "name": "package.json",
+              "type": "file",
+              "extension": ".json",
+              "size_bytes": 344,
+              "size": "344.0 B"
+            }
+          ]
+        },
+        {
+          "name": "04_Prototype_Web_App",
+          "type": "directory",
+          "size_bytes": 95,
+          "size": "95.0 B",
+          "children": [
+            {
+              "name": "SEE_PROTOTYPE_FOLDER.md",
+              "type": "file",
+              "extension": ".md",
+              "size_bytes": 95,
+              "size": "95.0 B"
+            }
+          ]
+        },
+        {
+          "name": "index.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 3879,
+          "size": "3.8 KB"
+        }
+      ]
+    },
+    {
+      "name": "PROJECT_INDEX.json",
+      "type": "file",
+      "extension": ".json",
+      "size_bytes": 3713,
+      "size": "3.6 KB"
+    },
+    {
+      "name": "PROJECT_INDEX.md",
+      "type": "file",
+      "extension": ".md",
+      "size_bytes": 4633,
+      "size": "4.5 KB"
+    },
+    {
+      "name": "Permission_Letter_Draft.txt",
+      "type": "file",
+      "extension": ".txt",
+      "size_bytes": 2005,
+      "size": "2.0 KB"
+    },
+    {
+      "name": "Pitch_Guide.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 65153,
+      "size": "63.6 KB"
+    },
+    {
+      "name": "Proposal_Graphics",
+      "type": "directory",
+      "size_bytes": 2315191,
+      "size": "2.2 MB",
+      "children": [
+        {
+          "name": "chart_adoption_gap.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 75962,
+          "size": "74.2 KB"
+        },
+        {
+          "name": "chart_digital_india_stats.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 126105,
+          "size": "123.1 KB"
+        },
+        {
+          "name": "chart_eoffice_growth.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 78148,
+          "size": "76.3 KB"
+        },
+        {
+          "name": "chart_eoffice_transition.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 118681,
+          "size": "115.9 KB"
+        },
+        {
+          "name": "chart_igot_mp_growth.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 168680,
+          "size": "164.7 KB"
+        },
+        {
+          "name": "chart_mp_tools_ecosystem.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 139442,
+          "size": "136.2 KB"
+        },
+        {
+          "name": "chart_utaut_framework.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 166821,
+          "size": "162.9 KB"
+        },
+        {
+          "name": "chart_workplan_gantt.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 150902,
+          "size": "147.4 KB"
+        },
+        {
+          "name": "conceptual_framework.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 310411,
+          "size": "303.1 KB"
+        },
+        {
+          "name": "fig1_un_egdi_ranking.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 155087,
+          "size": "151.5 KB"
+        },
+        {
+          "name": "fig2_internet_subscribers.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 136398,
+          "size": "133.2 KB"
+        },
+        {
+          "name": "fig3_igot_national.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 161012,
+          "size": "157.2 KB"
+        },
+        {
+          "name": "fig4_eoffice_rate.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 109574,
+          "size": "107.0 KB"
+        },
+        {
+          "name": "fig5_mp_igot.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 105756,
+          "size": "103.3 KB"
+        },
+        {
+          "name": "fig6_eoffice_delayering.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 174642,
+          "size": "170.5 KB"
+        },
+        {
+          "name": "fig7_utaut_model.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 137570,
+          "size": "134.3 KB"
+        }
+      ]
+    },
+    {
+      "name": "Questionnaire_Design_Framework.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 2922,
+      "size": "2.9 KB"
+    },
+    {
+      "name": "Questionnaire_Design_Framework.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 34022,
+      "size": "33.2 KB"
+    },
+    {
+      "name": "Questionnaire_Design_Framework.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 4822,
+      "size": "4.7 KB"
+    },
+    {
+      "name": "Questionnaire_Design_Framework.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 125699,
+      "size": "122.8 KB"
+    },
+    {
+      "name": "Questionnaire_Design_Framework.toc",
+      "type": "file",
+      "extension": ".toc",
+      "size_bytes": 1939,
+      "size": "1.9 KB"
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "extension": ".md",
+      "size_bytes": 1569,
+      "size": "1.5 KB"
+    },
+    {
+      "name": "Reference_Papers_UTAUT.md",
+      "type": "file",
+      "extension": ".md",
+      "size_bytes": 3232,
+      "size": "3.2 KB"
+    },
+    {
+      "name": "ResearchDashboard.css",
+      "type": "file",
+      "extension": ".css",
+      "size_bytes": 3400,
+      "size": "3.3 KB"
+    },
+    {
+      "name": "ResearchDashboard.html",
+      "type": "file",
+      "extension": ".html",
+      "size_bytes": 11563,
+      "size": "11.3 KB"
+    },
+    {
+      "name": "ResearchDashboard.tsx",
+      "type": "file",
+      "extension": ".tsx",
+      "size_bytes": 4804,
+      "size": "4.7 KB"
+    },
+    {
+      "name": "Research_Defense_Mastery_Guide.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 1233,
+      "size": "1.2 KB"
+    },
+    {
+      "name": "Research_Defense_Mastery_Guide.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 22228,
+      "size": "21.7 KB"
+    },
+    {
+      "name": "Research_Defense_Mastery_Guide.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 31457,
+      "size": "30.7 KB"
+    },
+    {
+      "name": "Research_Defense_Mastery_Guide.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 92857,
+      "size": "90.7 KB"
+    },
+    {
+      "name": "Schedule_Forest.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "Schedule_Forest.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 70634,
+      "size": "69.0 KB"
+    },
+    {
+      "name": "Schedule_Forest.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 130397,
+      "size": "127.3 KB"
+    },
+    {
+      "name": "Schedule_Health.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "Schedule_Health.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 70600,
+      "size": "68.9 KB"
+    },
+    {
+      "name": "Schedule_Health.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 131892,
+      "size": "128.8 KB"
+    },
+    {
+      "name": "Schedule_Revenue.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "Schedule_Revenue.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 70606,
+      "size": "69.0 KB"
+    },
+    {
+      "name": "Schedule_Revenue.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 132565,
+      "size": "129.5 KB"
+    },
+    {
+      "name": "Schedule_Rural_Development.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "Schedule_Rural_Development.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 70677,
+      "size": "69.0 KB"
+    },
+    {
+      "name": "Schedule_Rural_Development.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 132734,
+      "size": "129.6 KB"
+    },
+    {
+      "name": "TODO_repo-indexer.md",
+      "type": "file",
+      "extension": ".md",
+      "size_bytes": 7168,
+      "size": "7.0 KB"
+    },
+    {
+      "name": "academic_premium.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 15809,
+      "size": "15.4 KB"
+    },
+    {
+      "name": "academic_restyle.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 14568,
+      "size": "14.2 KB"
+    },
+    {
+      "name": "advanced_prompt_tester.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 4052,
+      "size": "4.0 KB"
+    },
+    {
+      "name": "apply_formatting.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 5324,
+      "size": "5.2 KB"
+    },
+    {
+      "name": "apply_humanizer.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 3062,
+      "size": "3.0 KB"
+    },
+    {
+      "name": "artistic_overhaul.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 16401,
+      "size": "16.0 KB"
+    },
+    {
+      "name": "baseline_test.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 21561,
+      "size": "21.1 KB"
+    },
+    {
+      "name": "build_charts_pdf.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 13781,
+      "size": "13.5 KB"
+    },
+    {
+      "name": "build_docx_versions.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 23820,
+      "size": "23.3 KB"
+    },
+    {
+      "name": "build_final_pdf.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 22488,
+      "size": "22.0 KB"
+    },
+    {
+      "name": "build_methodologies_pdf.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 13560,
+      "size": "13.2 KB"
+    },
+    {
+      "name": "build_pitch_pdf.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 24690,
+      "size": "24.1 KB"
+    },
+    {
+      "name": "charts_preview",
+      "type": "directory",
+      "size_bytes": 1051533,
+      "size": "1.0 MB",
+      "children": [
+        {
+          "name": "cp_1.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 63624,
+          "size": "62.1 KB"
+        },
+        {
+          "name": "cp_2.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 149476,
+          "size": "146.0 KB"
+        },
+        {
+          "name": "cp_3.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 146692,
+          "size": "143.3 KB"
+        },
+        {
+          "name": "cp_4.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 155050,
+          "size": "151.4 KB"
+        },
+        {
+          "name": "cp_5.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 123675,
+          "size": "120.8 KB"
+        },
+        {
+          "name": "cp_6.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 126313,
+          "size": "123.4 KB"
+        },
+        {
+          "name": "cp_7.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 150781,
+          "size": "147.2 KB"
+        },
+        {
+          "name": "cp_8.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 135922,
+          "size": "132.7 KB"
+        }
+      ]
+    },
+    {
+      "name": "check_pdfs.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1431,
+      "size": "1.4 KB"
+    },
+    {
+      "name": "check_style.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 439,
+      "size": "439.0 B"
+    },
+    {
+      "name": "clear_colors.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 536,
+      "size": "536.0 B"
+    },
+    {
+      "name": "compress_4pages.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1920,
+      "size": "1.9 KB"
+    },
+    {
+      "name": "concept_proposal.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 2710,
+      "size": "2.6 KB"
+    },
+    {
+      "name": "concept_proposal.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 42408,
+      "size": "41.4 KB"
+    },
+    {
+      "name": "concept_proposal.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 1918,
+      "size": "1.9 KB"
+    },
+    {
+      "name": "concept_proposal.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 1460817,
+      "size": "1.4 MB"
+    },
+    {
+      "name": "concept_proposal_final.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 2767,
+      "size": "2.7 KB"
+    },
+    {
+      "name": "concept_proposal_final.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 42676,
+      "size": "41.7 KB"
+    },
+    {
+      "name": "concept_proposal_final.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 1974,
+      "size": "1.9 KB"
+    },
+    {
+      "name": "concept_proposal_final.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 1460497,
+      "size": "1.4 MB"
+    },
+    {
+      "name": "concept_proposal_final_v2.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 2207,
+      "size": "2.2 KB"
+    },
+    {
+      "name": "concept_proposal_final_v2.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 200339,
+      "size": "195.6 KB"
+    },
+    {
+      "name": "concept_proposal_final_v2.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 70759,
+      "size": "69.1 KB"
+    },
+    {
+      "name": "concept_proposal_final_v2.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 2284,
+      "size": "2.2 KB"
+    },
+    {
+      "name": "concept_proposal_final_v2.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 140280,
+      "size": "137.0 KB"
+    },
+    {
+      "name": "concept_proposal_final_v3.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 1347,
+      "size": "1.3 KB"
+    },
+    {
+      "name": "concept_proposal_final_v3.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 51786,
+      "size": "50.6 KB"
+    },
+    {
+      "name": "concept_proposal_final_v3.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 981,
+      "size": "981.0 B"
+    },
+    {
+      "name": "concept_proposal_final_v3.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 132485,
+      "size": "129.4 KB"
+    },
+    {
+      "name": "concept_proposal_human.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 148501,
+      "size": "145.0 KB"
+    },
+    {
+      "name": "convert_pdf2docx.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 807,
+      "size": "807.0 B"
+    },
+    {
+      "name": "cover_page-1.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 72565,
+      "size": "70.9 KB"
+    },
+    {
+      "name": "create_background_doc.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 19745,
+      "size": "19.3 KB"
+    },
+    {
+      "name": "create_charts.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 11381,
+      "size": "11.1 KB"
+    },
+    {
+      "name": "create_charts_v2.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 15380,
+      "size": "15.0 KB"
+    },
+    {
+      "name": "create_charts_v3.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 18062,
+      "size": "17.6 KB"
+    },
+    {
+      "name": "create_docx_schedules.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 4734,
+      "size": "4.6 KB"
+    },
+    {
+      "name": "create_explanation_doc.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 4889,
+      "size": "4.8 KB"
+    },
+    {
+      "name": "create_vault.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 19735,
+      "size": "19.3 KB"
+    },
+    {
+      "name": "create_wellness_form.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 18717,
+      "size": "18.3 KB"
+    },
+    {
+      "name": "crop_graphics.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1073,
+      "size": "1.0 KB"
+    },
+    {
+      "name": "docs",
+      "type": "directory",
+      "size_bytes": 57609,
+      "size": "56.3 KB",
+      "children": [
+        {
+          "name": "01_pitch_script.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 8337,
+          "size": "8.1 KB"
+        },
+        {
+          "name": "02_mcp_for_aiggpa.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 8037,
+          "size": "7.8 KB"
+        },
+        {
+          "name": "03_government_ai_llms.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 10164,
+          "size": "9.9 KB"
+        },
+        {
+          "name": "04_government_data_sources.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 8671,
+          "size": "8.5 KB"
+        },
+        {
+          "name": "05_google_stitch_prompts.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 8966,
+          "size": "8.8 KB"
+        },
+        {
+          "name": "06_stress_test.md",
+          "type": "file",
+          "extension": ".md",
+          "size_bytes": 13434,
+          "size": "13.1 KB"
+        }
+      ]
+    },
+    {
+      "name": "draft_email.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1528,
+      "size": "1.5 KB"
+    },
+    {
+      "name": "expand_framework.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 11733,
+      "size": "11.5 KB"
+    },
+    {
+      "name": "expected_outputs.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 53842,
+      "size": "52.6 KB"
+    },
+    {
+      "name": "fieldwork_map.html",
+      "type": "file",
+      "extension": ".html",
+      "size_bytes": 11961,
+      "size": "11.7 KB"
+    },
+    {
+      "name": "fieldwork_map.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 53937,
+      "size": "52.7 KB"
+    },
+    {
+      "name": "figure_page-2.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 350117,
+      "size": "341.9 KB"
+    },
+    {
+      "name": "figure_page-3.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 259310,
+      "size": "253.2 KB"
+    },
+    {
+      "name": "figure_page-4.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 230183,
+      "size": "224.8 KB"
+    },
+    {
+      "name": "figure_utaut.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "figure_utaut.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 18893,
+      "size": "18.5 KB"
+    },
+    {
+      "name": "figure_utaut.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 16909,
+      "size": "16.5 KB"
+    },
+    {
+      "name": "figure_utaut.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 20681,
+      "size": "20.2 KB"
+    },
+    {
+      "name": "figures",
+      "type": "directory",
+      "size_bytes": 1370548,
+      "size": "1.3 MB",
+      "children": [
+        {
+          "name": "fig1_research_design.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 184449,
+          "size": "180.1 KB"
+        },
+        {
+          "name": "fig2_gap_classification.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 486995,
+          "size": "475.6 KB"
+        },
+        {
+          "name": "fig3_education_portal.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 699104,
+          "size": "682.7 KB"
+        }
+      ]
+    },
+    {
+      "name": "fill_framework.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 7479,
+      "size": "7.3 KB"
+    },
+    {
+      "name": "finish_google_setup.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 8429,
+      "size": "8.2 KB"
+    },
+    {
+      "name": "gen_dept_questionnaire.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 27890,
+      "size": "27.2 KB"
+    },
+    {
+      "name": "gen_framework_doc.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 23552,
+      "size": "23.0 KB"
+    },
+    {
+      "name": "gen_framework_html.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 6330,
+      "size": "6.2 KB"
+    },
+    {
+      "name": "gen_questionnaire.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 26566,
+      "size": "25.9 KB"
+    },
+    {
+      "name": "gen_research_plan.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 24201,
+      "size": "23.6 KB"
+    },
+    {
+      "name": "generate_framework.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 19560,
+      "size": "19.1 KB"
+    },
+    {
+      "name": "impact_pathway.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 53096,
+      "size": "51.9 KB"
+    },
+    {
+      "name": "local_llm_query.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 2090,
+      "size": "2.0 KB"
+    },
+    {
+      "name": "manager_pitch.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "manager_pitch.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 13919,
+      "size": "13.6 KB"
+    },
+    {
+      "name": "manager_pitch2.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 42801,
+      "size": "41.8 KB"
+    },
+    {
+      "name": "migrate_tracker.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 3649,
+      "size": "3.6 KB"
+    },
+    {
+      "name": "notes_from_manager.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 71518,
+      "size": "69.8 KB"
+    },
+    {
+      "name": "output.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 238,
+      "size": "238.0 B"
+    },
+    {
+      "name": "output_page-8.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 300519,
+      "size": "293.5 KB"
+    },
+    {
+      "name": "output_page-9.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 293266,
+      "size": "286.4 KB"
+    },
+    {
+      "name": "pdf_text_dump.txt",
+      "type": "file",
+      "extension": ".txt",
+      "size_bytes": 15625,
+      "size": "15.3 KB"
+    },
+    {
+      "name": "pdf_to_docx.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 740,
+      "size": "740.0 B"
+    },
+    {
+      "name": "preview_pages",
+      "type": "directory",
+      "size_bytes": 892013,
+      "size": "871.1 KB",
+      "children": [
+        {
+          "name": "page_1.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 59284,
+          "size": "57.9 KB"
+        },
+        {
+          "name": "page_2.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 55710,
+          "size": "54.4 KB"
+        },
+        {
+          "name": "page_3.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 145292,
+          "size": "141.9 KB"
+        },
+        {
+          "name": "page_4.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 133318,
+          "size": "130.2 KB"
+        },
+        {
+          "name": "page_5.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 103850,
+          "size": "101.4 KB"
+        },
+        {
+          "name": "page_6.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 66555,
+          "size": "65.0 KB"
+        },
+        {
+          "name": "page_7.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 138547,
+          "size": "135.3 KB"
+        },
+        {
+          "name": "page_8.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 189457,
+          "size": "185.0 KB"
+        }
+      ]
+    },
+    {
+      "name": "proposal_prep_guide.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 44703,
+      "size": "43.7 KB"
+    },
+    {
+      "name": "proposal_prep_guide.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 78560,
+      "size": "76.7 KB"
+    },
+    {
+      "name": "prototype",
+      "type": "directory",
+      "size_bytes": 3545392,
+      "size": "3.4 MB",
+      "children": [
+        {
+          "name": ".gitignore",
+          "type": "file",
+          "extension": "",
+          "size_bytes": 9,
+          "size": "9.0 B"
+        },
+        {
+          "name": ".vercel",
+          "type": "directory",
+          "size_bytes": 608,
+          "size": "608.0 B",
+          "children": [
+            {
+              "name": "README.txt",
+              "type": "file",
+              "extension": ".txt",
+              "size_bytes": 520,
+              "size": "520.0 B"
+            },
+            {
+              "name": "project.json",
+              "type": "file",
+              "extension": ".json",
+              "size_bytes": 88,
+              "size": "88.0 B"
+            }
+          ]
+        },
+        {
+          "name": "adoption_index_barchart.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 17365,
+          "size": "17.0 KB"
+        },
+        {
+          "name": "age_adoption_hypothesis.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 17800,
+          "size": "17.4 KB"
+        },
+        {
+          "name": "app.js",
+          "type": "file",
+          "extension": ".js",
+          "size_bytes": 27495,
+          "size": "26.9 KB"
+        },
+        {
+          "name": "architecture_ledger.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 15810,
+          "size": "15.4 KB"
+        },
+        {
+          "name": "comparison_report.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 15633,
+          "size": "15.3 KB"
+        },
+        {
+          "name": "composite_scoring_model.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 20125,
+          "size": "19.7 KB"
+        },
+        {
+          "name": "data_pipeline_flowchart.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 19784,
+          "size": "19.3 KB"
+        },
+        {
+          "name": "editorial_infographic.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 15305,
+          "size": "14.9 KB"
+        },
+        {
+          "name": "executive_briefing.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 17797,
+          "size": "17.4 KB"
+        },
+        {
+          "name": "field_survey_entry.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 11717,
+          "size": "11.4 KB"
+        },
+        {
+          "name": "gender_parity_index.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 15933,
+          "size": "15.6 KB"
+        },
+        {
+          "name": "images",
+          "type": "directory",
+          "size_bytes": 3216560,
+          "size": "3.1 MB",
+          "children": [
+            {
+              "name": "adoption_index_barchart.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 303459,
+              "size": "296.3 KB"
+            },
+            {
+              "name": "age_adoption_hypothesis.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 277612,
+              "size": "271.1 KB"
+            },
+            {
+              "name": "architecture_ledger.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 171514,
+              "size": "167.5 KB"
+            },
+            {
+              "name": "comparison_report.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 189095,
+              "size": "184.7 KB"
+            },
+            {
+              "name": "composite_scoring_model.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 263750,
+              "size": "257.6 KB"
+            },
+            {
+              "name": "data_pipeline_flowchart.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 237151,
+              "size": "231.6 KB"
+            },
+            {
+              "name": "editorial_infographic.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 233786,
+              "size": "228.3 KB"
+            },
+            {
+              "name": "gender_parity_index.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 182939,
+              "size": "178.7 KB"
+            },
+            {
+              "name": "index.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 297833,
+              "size": "290.9 KB"
+            },
+            {
+              "name": "maturity_ladder.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 358222,
+              "size": "349.8 KB"
+            },
+            {
+              "name": "policy_ledger_matrix.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 236082,
+              "size": "230.5 KB"
+            },
+            {
+              "name": "research_timeline.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 176085,
+              "size": "172.0 KB"
+            },
+            {
+              "name": "scope_analysis.png",
+              "type": "file",
+              "extension": ".png",
+              "size_bytes": 289032,
+              "size": "282.3 KB"
+            }
+          ]
+        },
+        {
+          "name": "index.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 42934,
+          "size": "41.9 KB"
+        },
+        {
+          "name": "maturity_ladder.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 16782,
+          "size": "16.4 KB"
+        },
+        {
+          "name": "policy_ledger_matrix.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 18996,
+          "size": "18.6 KB"
+        },
+        {
+          "name": "research_timeline.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 16296,
+          "size": "15.9 KB"
+        },
+        {
+          "name": "scope_analysis.html",
+          "type": "file",
+          "extension": ".html",
+          "size_bytes": 16548,
+          "size": "16.2 KB"
+        },
+        {
+          "name": "style.css",
+          "type": "file",
+          "extension": ".css",
+          "size_bytes": 21895,
+          "size": "21.4 KB"
+        }
+      ]
+    },
+    {
+      "name": "read_frameworks.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 691,
+      "size": "691.0 B"
+    },
+    {
+      "name": "restore_colors.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1459,
+      "size": "1.4 KB"
+    },
+    {
+      "name": "restore_colors_v2.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1449,
+      "size": "1.4 KB"
+    },
+    {
+      "name": "restore_format.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 2263,
+      "size": "2.2 KB"
+    },
+    {
+      "name": "restyle_latex.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 8292,
+      "size": "8.1 KB"
+    },
+    {
+      "name": "retry_calendar.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1777,
+      "size": "1.7 KB"
+    },
+    {
+      "name": "rich_restyle.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 3648,
+      "size": "3.6 KB"
+    },
+    {
+      "name": "rich_restyle_v2.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 5011,
+      "size": "4.9 KB"
+    },
+    {
+      "name": "schedules",
+      "type": "directory",
+      "size_bytes": 1905256,
+      "size": "1.8 MB",
+      "children": [
+        {
+          "name": "docx",
+          "type": "directory",
+          "size_bytes": 245739,
+          "size": "240.0 KB",
+          "children": [
+            {
+              "name": "AIGGPA_Printable_Schedule_v2.docx",
+              "type": "file",
+              "extension": ".docx",
+              "size_bytes": 50266,
+              "size": "49.1 KB"
+            },
+            {
+              "name": "Schedule_Forest_v2.docx",
+              "type": "file",
+              "extension": ".docx",
+              "size_bytes": 48693,
+              "size": "47.6 KB"
+            },
+            {
+              "name": "Schedule_Health_v2.docx",
+              "type": "file",
+              "extension": ".docx",
+              "size_bytes": 48891,
+              "size": "47.7 KB"
+            },
+            {
+              "name": "Schedule_Revenue_v2.docx",
+              "type": "file",
+              "extension": ".docx",
+              "size_bytes": 48924,
+              "size": "47.8 KB"
+            },
+            {
+              "name": "Schedule_Rural_Development_v2.docx",
+              "type": "file",
+              "extension": ".docx",
+              "size_bytes": 48965,
+              "size": "47.8 KB"
+            }
+          ]
+        },
+        {
+          "name": "pdf",
+          "type": "directory",
+          "size_bytes": 727332,
+          "size": "710.3 KB",
+          "children": [
+            {
+              "name": "AIGGPA_Printable_Schedule.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 142864,
+              "size": "139.5 KB"
+            },
+            {
+              "name": "AIGGPA_Readiness_Report.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 56880,
+              "size": "55.5 KB"
+            },
+            {
+              "name": "Schedule_Forest.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 130397,
+              "size": "127.3 KB"
+            },
+            {
+              "name": "Schedule_Health.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 131892,
+              "size": "128.8 KB"
+            },
+            {
+              "name": "Schedule_Revenue.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 132565,
+              "size": "129.5 KB"
+            },
+            {
+              "name": "Schedule_Rural_Development.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 132734,
+              "size": "129.6 KB"
+            }
+          ]
+        },
+        {
+          "name": "tex",
+          "type": "directory",
+          "size_bytes": 932185,
+          "size": "910.3 KB",
+          "children": [
+            {
+              "name": "1_aryan_budget_analysis.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 8119,
+              "size": "7.9 KB"
+            },
+            {
+              "name": "2_aakriti_top5_states.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 7885,
+              "size": "7.7 KB"
+            },
+            {
+              "name": "3_shreya_youth_demography.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 8009,
+              "size": "7.8 KB"
+            },
+            {
+              "name": "4_manvi_nep2020_iks.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 8465,
+              "size": "8.3 KB"
+            },
+            {
+              "name": "5_himani_skilling_vs_degree.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 8108,
+              "size": "7.9 KB"
+            },
+            {
+              "name": "AIGGPA_Department_Guide.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 24672,
+              "size": "24.1 KB"
+            },
+            {
+              "name": "AIGGPA_Dept_Questionnaire.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 44655,
+              "size": "43.6 KB"
+            },
+            {
+              "name": "AIGGPA_Fieldwork_Schedule.aux",
+              "type": "file",
+              "extension": ".aux",
+              "size_bytes": 33,
+              "size": "33.0 B"
+            },
+            {
+              "name": "AIGGPA_Fieldwork_Schedule.log",
+              "type": "file",
+              "extension": ".log",
+              "size_bytes": 34093,
+              "size": "33.3 KB"
+            },
+            {
+              "name": "AIGGPA_Fieldwork_Schedule.pdf",
+              "type": "file",
+              "extension": ".pdf",
+              "size_bytes": 61319,
+              "size": "59.9 KB"
+            },
+            {
+              "name": "AIGGPA_Fieldwork_Schedule.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 37735,
+              "size": "36.9 KB"
+            },
+            {
+              "name": "AIGGPA_Final_Proposal.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 25532,
+              "size": "24.9 KB"
+            },
+            {
+              "name": "AIGGPA_Pitch_Deck.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 5750,
+              "size": "5.6 KB"
+            },
+            {
+              "name": "AIGGPA_Printable_Schedule.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 34533,
+              "size": "33.7 KB"
+            },
+            {
+              "name": "AIGGPA_Questionnaire.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 26647,
+              "size": "26.0 KB"
+            },
+            {
+              "name": "AIGGPA_Readiness_Report.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 16045,
+              "size": "15.7 KB"
+            },
+            {
+              "name": "AIGGPA_Research_Plan.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 24392,
+              "size": "23.8 KB"
+            },
+            {
+              "name": "AIGGPA_Research_Rationale.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 7594,
+              "size": "7.4 KB"
+            },
+            {
+              "name": "Questionnaire_Design_Framework.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 23822,
+              "size": "23.3 KB"
+            },
+            {
+              "name": "Research_Defense_Mastery_Guide.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 32341,
+              "size": "31.6 KB"
+            },
+            {
+              "name": "Schedule_Forest.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 26862,
+              "size": "26.2 KB"
+            },
+            {
+              "name": "Schedule_Health.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 26991,
+              "size": "26.4 KB"
+            },
+            {
+              "name": "Schedule_Revenue.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 27084,
+              "size": "26.4 KB"
+            },
+            {
+              "name": "Schedule_Rural_Development.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 27121,
+              "size": "26.5 KB"
+            },
+            {
+              "name": "concept_proposal.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 28169,
+              "size": "27.5 KB"
+            },
+            {
+              "name": "concept_proposal_final.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 28169,
+              "size": "27.5 KB"
+            },
+            {
+              "name": "concept_proposal_final_v2.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 35699,
+              "size": "34.9 KB"
+            },
+            {
+              "name": "concept_proposal_final_v3.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 35699,
+              "size": "34.9 KB"
+            },
+            {
+              "name": "concept_proposal_human.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 24195,
+              "size": "23.6 KB"
+            },
+            {
+              "name": "concept_proposal_human_prep.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 4542,
+              "size": "4.4 KB"
+            },
+            {
+              "name": "concept_proposal_v2_prep.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 4460,
+              "size": "4.4 KB"
+            },
+            {
+              "name": "figure_utaut.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 1184,
+              "size": "1.2 KB"
+            },
+            {
+              "name": "main.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 74163,
+              "size": "72.4 KB"
+            },
+            {
+              "name": "manager_pitch.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 2647,
+              "size": "2.6 KB"
+            },
+            {
+              "name": "manager_questions.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 3969,
+              "size": "3.9 KB"
+            },
+            {
+              "name": "notes_from_manager.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 13727,
+              "size": "13.4 KB"
+            },
+            {
+              "name": "proposal_prep_guide.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 18997,
+              "size": "18.6 KB"
+            },
+            {
+              "name": "survey_instrument.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 13416,
+              "size": "13.1 KB"
+            },
+            {
+              "name": "test_hindi.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 830,
+              "size": "830.0 B"
+            },
+            {
+              "name": "test_research.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 35934,
+              "size": "35.1 KB"
+            },
+            {
+              "name": "wellness_proposal.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 22879,
+              "size": "22.3 KB"
+            },
+            {
+              "name": "wellness_proposal_final.tex",
+              "type": "file",
+              "extension": ".tex",
+              "size_bytes": 35699,
+              "size": "34.9 KB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "scripts",
+      "type": "directory",
+      "size_bytes": 101240,
+      "size": "98.9 KB",
+      "children": [
+        {
+          "name": "add_tools_objective.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 2600,
+          "size": "2.5 KB"
+        },
+        {
+          "name": "build_architecture_map.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 9738,
+          "size": "9.5 KB"
+        },
+        {
+          "name": "clean_excel.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 1586,
+          "size": "1.5 KB"
+        },
+        {
+          "name": "convert_pdf2docx_v2.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 953,
+          "size": "953.0 B"
+        },
+        {
+          "name": "create_folium_map.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 1009,
+          "size": "1009.0 B"
+        },
+        {
+          "name": "create_form.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 7840,
+          "size": "7.7 KB"
+        },
+        {
+          "name": "create_map.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 1570,
+          "size": "1.5 KB"
+        },
+        {
+          "name": "dump_docx.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 836,
+          "size": "836.0 B"
+        },
+        {
+          "name": "export_form_to_md.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 2022,
+          "size": "2.0 KB"
+        },
+        {
+          "name": "fill_timeline.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 12646,
+          "size": "12.3 KB"
+        },
+        {
+          "name": "gen_dept_schedules.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 15890,
+          "size": "15.5 KB"
+        },
+        {
+          "name": "gen_printable_schedule.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 18479,
+          "size": "18.0 KB"
+        },
+        {
+          "name": "generate_latex_schedule.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 4383,
+          "size": "4.3 KB"
+        },
+        {
+          "name": "hi.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 20561,
+          "size": "20.1 KB"
+        },
+        {
+          "name": "upload_to_drive.py",
+          "type": "file",
+          "extension": ".py",
+          "size_bytes": 1127,
+          "size": "1.1 KB"
+        }
+      ]
+    },
+    {
+      "name": "setup_google_workspace.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 11744,
+      "size": "11.5 KB"
+    },
+    {
+      "name": "simplified_background.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 11843,
+      "size": "11.6 KB"
+    },
+    {
+      "name": "simplified_background.md",
+      "type": "file",
+      "extension": ".md",
+      "size_bytes": 2269,
+      "size": "2.2 KB"
+    },
+    {
+      "name": "skills-lock.json",
+      "type": "file",
+      "extension": ".json",
+      "size_bytes": 276,
+      "size": "276.0 B"
+    },
+    {
+      "name": "survey_instrument.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 55884,
+      "size": "54.6 KB"
+    },
+    {
+      "name": "survey_instrument.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 67435,
+      "size": "65.9 KB"
+    },
+    {
+      "name": "sync_drive.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1125,
+      "size": "1.1 KB"
+    },
+    {
+      "name": "team_overview.md",
+      "type": "file",
+      "extension": ".md",
+      "size_bytes": 1784,
+      "size": "1.7 KB"
+    },
+    {
+      "name": "team_overview.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 22861,
+      "size": "22.3 KB"
+    },
+    {
+      "name": "team_research_flow.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 604110,
+      "size": "590.0 KB"
+    },
+    {
+      "name": "temp_docx_dump.txt",
+      "type": "file",
+      "extension": ".txt",
+      "size_bytes": 20461,
+      "size": "20.0 KB"
+    },
+    {
+      "name": "temp_media_human",
+      "type": "directory",
+      "size_bytes": 147088,
+      "size": "143.6 KB",
+      "children": [
+        {
+          "name": "cover_page-1.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 72565,
+          "size": "70.9 KB"
+        },
+        {
+          "name": "expected_outputs.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 53842,
+          "size": "52.6 KB"
+        },
+        {
+          "name": "figure_utaut.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 20681,
+          "size": "20.2 KB"
+        }
+      ]
+    },
+    {
+      "name": "temp_media_v2",
+      "type": "directory",
+      "size_bytes": 200184,
+      "size": "195.5 KB",
+      "children": [
+        {
+          "name": "cover_page-1.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 72565,
+          "size": "70.9 KB"
+        },
+        {
+          "name": "expected_outputs.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 53842,
+          "size": "52.6 KB"
+        },
+        {
+          "name": "figure_utaut.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 20681,
+          "size": "20.2 KB"
+        },
+        {
+          "name": "impact_pathway.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 53096,
+          "size": "51.9 KB"
+        }
+      ]
+    },
+    {
+      "name": "template_pages",
+      "type": "directory",
+      "size_bytes": 974082,
+      "size": "951.3 KB",
+      "children": [
+        {
+          "name": "page_1.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 52370,
+          "size": "51.1 KB"
+        },
+        {
+          "name": "page_10.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 55155,
+          "size": "53.9 KB"
+        },
+        {
+          "name": "page_11.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 105575,
+          "size": "103.1 KB"
+        },
+        {
+          "name": "page_12.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 74465,
+          "size": "72.7 KB"
+        },
+        {
+          "name": "page_2.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 53579,
+          "size": "52.3 KB"
+        },
+        {
+          "name": "page_3.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 103047,
+          "size": "100.6 KB"
+        },
+        {
+          "name": "page_4.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 103198,
+          "size": "100.8 KB"
+        },
+        {
+          "name": "page_5.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 123307,
+          "size": "120.4 KB"
+        },
+        {
+          "name": "page_6.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 90379,
+          "size": "88.3 KB"
+        },
+        {
+          "name": "page_7.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 59602,
+          "size": "58.2 KB"
+        },
+        {
+          "name": "page_8.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 61595,
+          "size": "60.2 KB"
+        },
+        {
+          "name": "page_9.png",
+          "type": "file",
+          "extension": ".png",
+          "size_bytes": 91810,
+          "size": "89.7 KB"
+        }
+      ]
+    },
+    {
+      "name": "test_hindi.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 32,
+      "size": "32.0 B"
+    },
+    {
+      "name": "test_hindi.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 13100,
+      "size": "12.8 KB"
+    },
+    {
+      "name": "test_hindi.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 58590,
+      "size": "57.2 KB"
+    },
+    {
+      "name": "test_research.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 2207,
+      "size": "2.2 KB"
+    },
+    {
+      "name": "test_research.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 21564,
+      "size": "21.1 KB"
+    },
+    {
+      "name": "test_research.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 46249,
+      "size": "45.2 KB"
+    },
+    {
+      "name": "test_research.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 2284,
+      "size": "2.2 KB"
+    },
+    {
+      "name": "test_research.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 139650,
+      "size": "136.4 KB"
+    },
+    {
+      "name": "tweak_formatting.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 2367,
+      "size": "2.3 KB"
+    },
+    {
+      "name": "update_dept_questionnaire.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 19500,
+      "size": "19.0 KB"
+    },
+    {
+      "name": "update_framework_dept.py",
+      "type": "file",
+      "extension": ".py",
+      "size_bytes": 1612,
+      "size": "1.6 KB"
+    },
+    {
+      "name": "verification_checklist.png",
+      "type": "file",
+      "extension": ".png",
+      "size_bytes": 621033,
+      "size": "606.5 KB"
+    },
+    {
+      "name": "wellness_proposal.aux",
+      "type": "file",
+      "extension": ".aux",
+      "size_bytes": 3283,
+      "size": "3.2 KB"
+    },
+    {
+      "name": "wellness_proposal.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 31561,
+      "size": "30.8 KB"
+    },
+    {
+      "name": "wellness_proposal.log",
+      "type": "file",
+      "extension": ".log",
+      "size_bytes": 38712,
+      "size": "37.8 KB"
+    },
+    {
+      "name": "wellness_proposal.out",
+      "type": "file",
+      "extension": ".out",
+      "size_bytes": 4642,
+      "size": "4.5 KB"
+    },
+    {
+      "name": "wellness_proposal.pdf",
+      "type": "file",
+      "extension": ".pdf",
+      "size_bytes": 115721,
+      "size": "113.0 KB"
+    },
+    {
+      "name": "~$GGPA_Final_Proposal.docx",
+      "type": "file",
+      "extension": ".docx",
+      "size_bytes": 162,
+      "size": "162.0 B"
+    }
+  ]
+}

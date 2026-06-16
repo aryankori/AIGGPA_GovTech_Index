@@ -23,11 +23,20 @@ Research deliverables for the field study on **HR-IT Integration and Technology 
 
 ```powershell
 # Compile any document
-xelatex -interaction=nonstopmode main.tex
-xelatex -interaction=nonstopmode concept_proposal.tex
-xelatex -interaction=nonstopmode survey_instrument.tex
-xelatex -interaction=nonstopmode proposal_prep_guide.tex
+xelatex -interaction=nonstopmode schedules/tex/main.tex
+xelatex -interaction=nonstopmode schedules/tex/concept_proposal.tex
+xelatex -interaction=nonstopmode schedules/tex/survey_instrument.tex
+xelatex -interaction=nonstopmode schedules/tex/proposal_prep_guide.tex
 ```
+
+## Fieldwork Data Vault
+
+Research progress and raw datasets are organized in [`AIGGPA_Fieldwork_Vault/`](AIGGPA_Fieldwork_Vault/).
+Open the master tracker [`AIGGPA_Fieldwork_Vault/AIGGPA_Master_Tracker.xlsx`](AIGGPA_Fieldwork_Vault/AIGGPA_Master_Tracker.xlsx) to inspect survey counts andDaily Progress logs.
+
+## Meeting Shortcuts
+
+All files, charts, descriptive statistics, and briefs required for the Monday 10:00 AM CEO review meeting are organized in [`AIGGPA_Fieldwork_Review/`](AIGGPA_Fieldwork_Review/). Copies have also been placed on the Desktop for instant access during the presentation.
 
 ## Web Prototype
 

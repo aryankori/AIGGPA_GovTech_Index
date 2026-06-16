@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLens — Alt-Text & Reverse Image Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a26;
+            --bg-input: #1e1e2e;
+            --border: #2a2a3e;
+            --border-focus: #6366f1;
+            --text-primary: #e4e4ed;
+            --text-secondary: #8888a4;
+            --text-muted: #55556a;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--accent), #a855f7);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .login-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--danger);
+            transition: background 0.3s;
+        }
+
+        .status-dot.online { background: var(--success); }
+
+        .status-text { font-size: 13px; color: var(--text-secondary); }
+
+        /* --- Tabs --- */
+        .tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 24px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            padding: 4px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
+        }
+
+        .tab:hover { color: var(--text-primary); }
+
+        .tab.active {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        /* --- Panels --- */
+        .panel { display: none; }
+        .panel.active { display: block; }
+
+        /* --- Search Forms --- */
+        .search-form {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .form-row:last-child { margin-bottom: 0; }
+
+        .input-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .input-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input[type="text"], select {
+            padding: 12px 16px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus, select:focus {
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        input[type="text"]::placeholder {
+            color: var(--text-muted);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-outline {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-secondary);
+            color: var(--text-primary);
+        }
+
+        /* --- Dropzone --- */
+        .dropzone {
+            border: 2px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 48px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            background: var(--bg-input);
+        }
+
+        .dropzone:hover, .dropzone.dragover {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+        }
+
+        .dropzone-text {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .dropzone-text strong {
+            color: var(--accent-hover);
+        }
+
+        .dropzone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .dropzone-preview {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: var(--radius-sm);
+            margin: 12px auto 0;
+            display: none;
+        }
+
+        /* --- Progress --- */
+        .progress-bar {
+            display: none;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+
+        .progress-bar.active { display: block; }
+
+        .progress-log {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-family: 'Courier New', monospace;
+            max-height: 150px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .progress-spinner {
+            display: inline-block;
+            width: 14px; height: 14px;
+            border: 2px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* --- Results --- */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .results-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .results-count {
+            font-size: 13px;
+            color: var(--text-secondary);
+            background: var(--bg-secondary);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .result-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .result-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .result-card img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: var(--bg-secondary);
+        }
+
+        .result-card-body {
+            padding: 14px 16px;
+        }
+
+        .result-username {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-hover);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .result-username:hover { text-decoration: underline; }
+
+        .result-alt {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .result-alt mark {
+            background: var(--accent-glow);
+            color: var(--accent-hover);
+            padding: 1px 3px;
+            border-radius: 3px;
+        }
+
+        .result-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .badge {
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-pfp {
+            background: rgba(168, 85, 247, 0.15);
+            color: #a855f7;
+        }
+
+        .badge-post {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+        }
+
+        .badge-distance {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 64px 24px;
+            color: var(--text-muted);
+        }
+
+        .empty-state p {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 640px) {
+            .form-row { flex-direction: column; }
+            .results-grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">🔍</div>
+                <h1>InstaLens</h1>
+            </div>
+            <div class="login-status">
+                <span class="status-dot" id="statusDot"></span>
+                <span class="status-text" id="statusText">Checking session...</span>
+                <button class="btn btn-outline" id="loginBtn" onclick="triggerLogin()">Login</button>
+            </div>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('keyword')">🔤 Keyword Search</button>
+            <button class="tab" onclick="switchTab('reverse')">🖼️ Reverse Image</button>
+        </div>
+
+        <!-- Keyword Search Panel -->
+        <div class="panel active" id="panel-keyword">
+            <div class="search-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Keyword</label>
+                        <input type="text" id="keyword" placeholder='e.g. "sunset" or "2 people smiling outdoor"'>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Search within</label>
+                        <select id="keywordTarget">
+                            <option value="mutuals">My Mutuals (cached)</option>
+                            <option value="custom">Specific username</option>
+                        </select>
+                    </div>
+                    <div class="input-group" id="keywordUsernameGroup" style="display:none;">
+                        <label>Username</label>
+                        <input type="text" id="keywordUsername" placeholder="@username">
+                    </div>
+                    <div style="display:flex; align-items:flex-end; gap:8px;">
+                        <button class="btn btn-outline" onclick="triggerScrape('keyword')">Scrape First</button>
+                        <button class="btn btn-primary" onclick="doKeywordSearch()">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div id="keywordResults"></div>
+        </div>
+
+        <!-- Reverse Image Panel -->
+        <div class="panel" id="panel-reverse">
+            <div class="search-form">
+                <div class="dropzone" id="dropzone">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <p class="dropzone-text">
+                        <strong>Drop an image here</strong> or click to browse<br>
+                        <small>JPG, PNG, WEBP — max 16MB</small>
+                    </p>
+                    <img class="dropzone-preview" id="dropzonePreview">
+                </div>
+                <div class="form-row" style="margin-top:16px;">
+                    <div class="input-group">
+                        <label>Search within</label>
+                        <select id="reverseTarget">
+                            <option value="mutuals">My Mutuals (cached)</option>
+                            <option value="custom">Specific username</option>
+                        </select>
+                    </div>
+                    <div class="input-group" id="reverseUsernameGroup" style="display:none;">
+                        <label>Username</label>
+                        <input type="text" id="reverseUsername" placeholder="@username">
+                    </div>
+                    <div style="display:flex; align-items:flex-end;">
+                        <button class="btn btn-primary" onclick="doReverseSearch()">Find Matches</button>
+                    </div>
+                </div>
+            </div>
+            <div id="reverseResults"></div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-log" id="progressLog"></div>
+        </div>
+    </div>
+
+    <script>
+        // --- Tab switching ---
+        function switchTab(name) {
+            document.querySelectorAll('.tab').forEach((t, i) => {
+                t.classList.toggle('active', (name === 'keyword' ? i === 0 : i === 1));
+            });
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            document.getElementById('panel-' + name).classList.add('active');
+        }
+
+        // --- Target selector toggle ---
+        document.getElementById('keywordTarget').addEventListener('change', e => {
+            document.getElementById('keywordUsernameGroup').style.display =
+                e.target.value === 'custom' ? 'flex' : 'none';
+        });
+        document.getElementById('reverseTarget').addEventListener('change', e => {
+            document.getElementById('reverseUsernameGroup').style.display =
+                e.target.value === 'custom' ? 'flex' : 'none';
+        });
+
+        // --- Login ---
+        async function checkLoginStatus() {
+            try {
+                const r = await fetch('/api/login/status');
+                const data = await r.json();
+                const dot = document.getElementById('statusDot');
+                const txt = document.getElementById('statusText');
+                const btn = document.getElementById('loginBtn');
+                if (data.logged_in) {
+                    dot.classList.add('online');
+                    txt.textContent = 'Session active';
+                    btn.textContent = 'Logged in';
+                    btn.disabled = true;
+                } else {
+                    dot.classList.remove('online');
+                    txt.textContent = 'Not logged in';
+                    btn.textContent = 'Login';
+                    btn.disabled = false;
+                }
+            } catch { /* ignore */ }
+        }
+
+        async function triggerLogin() {
+            const btn = document.getElementById('loginBtn');
+            btn.disabled = true;
+            btn.textContent = 'Opening browser...';
+            listenProgress();
+            await fetch('/api/login', { method: 'POST' });
+            // Poll login status every 3s until logged in
+            const poll = setInterval(async () => {
+                try {
+                    const r = await fetch('/api/login/status');
+                    const data = await r.json();
+                    if (data.logged_in) {
+                        clearInterval(poll);
+                        checkLoginStatus();
+                    }
+                } catch { /* ignore */ }
+            }, 3000);
+        }
+
+        // --- Dropzone ---
+        const dropzone = document.getElementById('dropzone');
+        const fileInput = document.getElementById('imageInput');
+        const preview = document.getElementById('dropzonePreview');
+        let selectedFile = null;
+
+        dropzone.addEventListener('dragover', e => {
+            e.preventDefault();
+            dropzone.classList.add('dragover');
+        });
+        dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+        dropzone.addEventListener('drop', e => {
+            e.preventDefault();
+            dropzone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                selectedFile = e.dataTransfer.files[0];
+                showPreview(selectedFile);
+            }
+        });
+        fileInput.addEventListener('change', e => {
+            if (e.target.files.length) {
+                selectedFile = e.target.files[0];
+                showPreview(selectedFile);
+            }
+        });
+
+        function showPreview(file) {
+            const url = URL.createObjectURL(file);
+            preview.src = url;
+            preview.style.display = 'block';
+            dropzone.querySelector('.dropzone-text').innerHTML =
+                `<strong>${file.name}</strong><br><small>Click or drop to change</small>`;
+        }
+
+        // --- Progress SSE ---
+        function listenProgress() {
+            const bar = document.getElementById('progressBar');
+            const log = document.getElementById('progressLog');
+            bar.classList.add('active');
+            log.innerHTML = '<span class="progress-spinner"></span> Starting...\n';
+
+            const es = new EventSource('/api/progress');
+            es.onmessage = e => {
+                const data = JSON.parse(e.data);
+                if (data.message === '__DONE__') {
+                    log.innerHTML += '✅ Done.\n';
+                    es.close();
+                    setTimeout(() => bar.classList.remove('active'), 3000);
+                } else if (data.message === 'timeout') {
+                    log.innerHTML += '⏱ Timed out.\n';
+                    es.close();
+                } else {
+                    log.innerHTML += data.message + '\n';
+                    log.scrollTop = log.scrollHeight;
+                }
+            };
+            es.onerror = () => { es.close(); };
+        }
+
+        // --- Scrape trigger ---
+        async function triggerScrape(panel) {
+            let target;
+            if (panel === 'keyword') {
+                const sel = document.getElementById('keywordTarget').value;
+                target = sel === 'custom'
+                    ? document.getElementById('keywordUsername').value
+                    : 'mutuals';
+            } else {
+                const sel = document.getElementById('reverseTarget').value;
+                target = sel === 'custom'
+                    ? document.getElementById('reverseUsername').value
+                    : 'mutuals';
+            }
+            if (!target) return alert('Please specify a target.');
+
+            const r = await fetch('/api/scrape', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ target })
+            });
+
+            if (r.status === 401) {
+                const data = await r.json();
+                alert(data.message || 'Not logged in. Click Login first.');
+                return;
+            }
+
+            listenProgress();
+        }
+
+        // --- Keyword search ---
+        async function doKeywordSearch() {
+            const keyword = document.getElementById('keyword').value.trim();
+            if (!keyword) return;
+
+            const sel = document.getElementById('keywordTarget').value;
+            const target = sel === 'custom'
+                ? document.getElementById('keywordUsername').value.trim()
+                : 'mutuals';
+
+            const r = await fetch('/api/search', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ keyword, target })
+            });
+            const data = await r.json();
+            renderResults('keywordResults', data.results, keyword);
+        }
+
+        // --- Reverse image search ---
+        async function doReverseSearch() {
+            if (!selectedFile) return alert('Please select an image first.');
+
+            const sel = document.getElementById('reverseTarget').value;
+            const target = sel === 'custom'
+                ? document.getElementById('reverseUsername').value.trim()
+                : 'mutuals';
+
+            const fd = new FormData();
+            fd.append('image', selectedFile);
+            fd.append('target', target);
+            fd.append('threshold', '10');
+
+            const r = await fetch('/api/reverse', { method: 'POST', body: fd });
+            const data = await r.json();
+            renderResults('reverseResults', data.results, null, true);
+        }
+
+        // --- Render results ---
+        function renderResults(containerId, results, keyword = null, isReverse = false) {
+            const container = document.getElementById(containerId);
+            if (!results || results.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <p>No matches found.</p>
+                        <p>Try scraping profiles first, then search again.</p>
+                    </div>`;
+                return;
+            }
+
+            let html = `
+                <div class="results-header">
+                    <h3>Results</h3>
+                    <span class="results-count">${results.length} match${results.length !== 1 ? 'es' : ''}</span>
+                </div>
+                <div class="results-grid">`;
+
+            for (const r of results) {
+                let altDisplay = r.alt_text || '(no alt text)';
+                if (keyword) {
+                    const re = new RegExp(`(${keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                    altDisplay = altDisplay.replace(re, '<mark>$1</mark>');
+                }
+
+                const badge = r.is_profile_pic
+                    ? '<span class="badge badge-pfp">Profile Pic</span>'
+                    : '<span class="badge badge-post">Post</span>';
+
+                const distBadge = isReverse && r.hamming_distance !== undefined
+                    ? `<span class="badge badge-distance">Distance: ${r.hamming_distance}</span>`
+                    : '';
+
+                const postLink = r.post_url || `https://www.instagram.com/${r.username}/`;
+
+                html += `
+                    <div class="result-card">
+                        <img src="${r.image_url}" alt="${r.alt_text || ''}" loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="result-card-body">
+                            <a class="result-username" href="https://www.instagram.com/${r.username}/"
+                               target="_blank" rel="noopener">
+                                @${r.username}
+                            </a>
+                            <div class="result-alt">${altDisplay}</div>
+                            <div class="result-meta">
+                                <div>${badge} ${distBadge}</div>
+                                <a href="${postLink}" target="_blank" rel="noopener"
+                                   style="color:var(--accent);text-decoration:none;font-size:11px;">
+                                    View →
+                                </a>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        // --- Enter key support ---
+        document.getElementById('keyword').addEventListener('keydown', e => {
+            if (e.key === 'Enter') doKeywordSearch();
+        });
+
+        // --- Init ---
+        checkLoginStatus();
+    </script>
+</body>
+</html>

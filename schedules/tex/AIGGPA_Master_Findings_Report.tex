@@ -1,0 +1,227 @@
+\documentclass[10pt,a4paper]{article}
+
+% ── FONTS ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\setsansfont{Calibri}
+\newfontfamily{\hindifont}{Nirmala UI}[Script=Devanagari]
+\newcommand{\hindi}[1]{{\hindifont #1}}
+
+% ── LAYOUT ───────────────────────────────────────────────────
+\usepackage[top=1.5cm,bottom=1.8cm,left=2.0cm,right=2.0cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+
+\hypersetup{colorlinks=true,linkcolor=navyblue,urlcolor=accentteal,citecolor=navyblue}
+
+% ── BRAND COLORS ────────────────────────────────────────────
+\definecolor{navyblue}{HTML}{003566}
+\definecolor{gold}{HTML}{C9A84C}
+\definecolor{lightgray}{HTML}{F4F6FB}
+\definecolor{darkgray}{HTML}{4A4A4A}
+\definecolor{accentteal}{HTML}{0077B6}
+
+% ── SECTION STYLING ─────────────────────────────────────────
+\titleformat{\section}[block]
+  {\normalfont\bfseries\fontsize{12}{14}\selectfont\color{navyblue}}
+  {\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries\fontsize{10.5}{12}\selectfont\color{accentteal}}
+  {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+
+% ── HEADER / FOOTER ─────────────────────────────────────────
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\color{navyblue}\textbf{AIGGPA Bhopal} \quad\textbar\quad Master Fieldwork Research Report}
+\fancyhead[R]{\footnotesize\color{navyblue}June 2026}
+\fancyfoot[C]{\footnotesize\color{navyblue}\thepage}
+\fancyfoot[L]{\scriptsize\color{darkgray}Atal Bihari Vajpayee Institute of Good Governance and Policy Analysis}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{navyblue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrule}{\color{gold}\hrule width\headwidth height 1pt}
+
+% ── LISTS ───────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=1.5pt, topsep=2pt}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+\setstretch{1.15}
+
+\begin{center}
+  {\fontsize{16}{19}\selectfont\bfseries\color{navyblue}
+  Digital Tool Adoption and Efficiency Impacts\\[3pt]
+  {\fontsize{12}{14}\selectfont\bfseries\color{accentteal}An Evaluation of HR-IT Integration in Madhya Pradesh Government Departments}}\\[4pt]
+  {\small\color{darkgray} Aryan Kori, Summer Research Program \quad\textbar\quad AIGGPA Bhopal \quad\textbar\quad June 2026}
+\end{center}
+
+\vspace{0.1cm}
+\noindent
+\textbf{Abstract:} This paper evaluates the acceptance and workflow integration of administrative and domain-specific digital portals among public servants in Madhya Pradesh. Based on a stratified, purposive sample of $N=140$ government officials across three departments (Forest, Rural Development, and Revenue) and four cadres (Class I to IV), we find clear gradients in digital readiness, confidence, and system access. While administrative leadership (Class I/II) exhibits high digital confidence and usage, field-level operational staff (Class III/IV) face substantial technical, usability, and training constraints that impede efficient service delivery.
+
+\vspace{0.2cm}
+
+% ── EXECUTIVE SUMMARY ───────────────────────────────────────
+\begin{tcolorbox}[colback=navyblue!4,colframe=navyblue,leftrule=3.5pt,rightrule=0pt,toprule=0pt,bottomrule=0pt,arc=0pt,top=6pt,bottom=6pt,left=10pt,right=10pt]
+\fontsize{9.5}{13}\selectfont
+\noindent{\bfseries\color{navyblue}Key Research Insights}
+\begin{itemize}
+  \item \textbf{Significant Cadre Divide:} High-level officials (Class I) report high tool confidence (mean of 4.85/5.00) and receive structured training (84.6\% coverage). Support staff (Class IV) face low confidence (mean of 1.50/5.00), severe UI difficulties (mean difficulty of 4.71/5.00), and negligible training (7.1\% coverage).
+  \item \textbf{Departmental Gradients:} Forest Department leads in connectivity and perceived utility (mean PU of 3.29, internet rating of 3.49/5.00). Rural Development lags behind (mean PU of 2.67, internet rating of 2.73/5.00), constrained by block-level connectivity issues.
+  \item \textbf{High Reliability:} Survey constructs mapped to TAM/UTAUT show high reliability across the sample, with Cronbach's Alpha scores of 0.873 for Performance Expectancy (PE) and 0.896 for Effort Expectancy (EE).
+  \item \textbf{Policy Recommendations:} Focus training programs on role-specific tasks, upgrade local block internet access, and establish unified UI standards across department portals.
+\end{itemize}
+\end{tcolorbox}
+
+\section{Introduction and Theoretical Framework}
+Government departments in Madhya Pradesh have deployed multiple digital portals to manage workflows and citizen services. However, digital adoption is uneven. This study uses Venkatesh et al.'s (2003) Unified Theory of Acceptance and Use of Technology (UTAUT) and Davis's (1989) Technology Acceptance Model (TAM) to examine the factors driving or hindering tool utilization. We analyze four key constructs: Performance Expectancy (PE), Effort Expectancy (EE), Social Influence (SI), and Facilitating Conditions (FC), alongside demographics, training rates, and department-specific tool issues.
+
+\section{Research Methodology and Sample Profile}
+A mixed-methods research design was implemented, combining quantitative survey responses with qualitative field observations. Purposive sampling was used to select $N=140$ respondents from state headquarters (Bhopal) and district/block offices (Narmadapuram). The cohort includes 80 Forest officers, 40 Rural Development officials, and 20 Revenue personnel, stratified across four cadres.
+
+\renewcommand{\arraystretch}{1.1}
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Demographic and Workforce Profile of the Survey Cohort ($N=140$)}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{l X X X r}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Department}} & \textcolor{white}{\textbf{Class I}} & \textcolor{white}{\textbf{Class II}} & \textcolor{white}{\textbf{Class III}} & \textcolor{white}{\textbf{Class IV}} \\
+\midrule
+Forest ($N=80$, Head Office) & 8 (10.0\%) & 15 (18.8\%) & 30 (37.5\%) & 27 (33.8\%) \\
+Rural Development ($N=40$, District Office) & 3 (7.5\%) & 10 (25.0\%) & 17 (42.5\%) & 10 (25.0\%) \\
+Revenue ($N=20$, Mixed HO/DO) & 2 (10.0\%) & 5 (25.0\%) & 8 (40.0\%) & 5 (25.0\%) \\
+\rowcolor{lightgray}
+\textbf{Total ($N=140$)} & \textbf{13 (9.3\%)} & \textbf{30 (21.4\%)} & \textbf{55 (39.3\%)} & \textbf{42 (30.0\%)} \\
+\midrule
+\rowcolor{white}
+\textbf{Demographics} & \multicolumn{4}{l}{Age: Below 30: 12 (8.6\%) \textbullet{} 30--45: 67 (47.9\%) \textbullet{} 46--60: 61 (43.6\%)} \\
+ & \multicolumn{4}{l}{Gender: Male: 103 (73.6\%) \textbullet{} Female: 37 (26.4\%)} \\
+\rowcolor{white}
+ & \multicolumn{4}{l}{Service: 0--5 yrs: 10 (7.1\%) \textbullet{} 6--10 yrs: 31 (22.1\%) \textbullet{} 11--20 yrs: 64 (45.7\%) \textbullet{} 21+ yrs: 35 (25.0\%)} \\
+ & \multicolumn{4}{l}{Education: 12th: 40 (28.6\%) \textbullet{} Graduate: 46 (32.9\%) \textbullet{} PG: 35 (25.0\%) \textbullet{} Professional: 19 (13.6\%)} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Quantitative Analysis and Reliability Testing}
+To validate the survey instrument, Cronbach's Alpha was calculated for the primary UTAUT and training constructs. A threshold of $\alpha \ge 0.70$ was used to verify scale reliability.
+
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Construct Reliability (Cronbach's Alpha) for Master Sample ($N=140$)}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{l X c c l}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Construct}} & \textcolor{white}{\textbf{Survey Questions Included}} & \textcolor{white}{\textbf{Valid N}} & \textcolor{white}{\textbf{Alpha ($\alpha$)}} & \textcolor{white}{\textbf{Interpretation}} \\
+\midrule
+Performance Expectancy (PE) & Q11 (Faster Paper), Q12 (Quality), Q13 (Productivity), Q14 (Suited) & 140 & 0.873 & Good \\
+Effort Expectancy (EE) & Q15 (Difficulty, reversed), Q16 (Confidence), Q29 (UI Friendly) & 140 & 0.896 & Good \\
+Social Influence (SI) & Q17 (Superiors Encourage), Q18 (Colleagues Use) & 140 & 0.856 & Good \\
+Facilitating Conditions (FC) & Q22 (Internet Quality), Q24 (Helpdesk Access) & 140 & 0.581 & Questionable \\
+Organisational Support & Q52 (Ask Help), Q53 (Org Support), Q54 (Committed) & 140 & 0.793 & Acceptable \\
+Training Effectiveness & Q46 (Train Quality), Q47 (Sufficient), Q49 (For Role) & 140 & 0.787 & Acceptable \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The lower score for Facilitating Conditions ($\alpha = 0.581$) reflects a structural discrepancy: many block-level officials have access to a support helpdesk (Q24) but suffer from poor local internet connectivity (Q22), meaning hardware/network availability is decoupled from support services.
+
+\section{Digital Divide and Sentiment Gradients}
+The quantitative descriptive analysis highlights a clear digital divide between cadres. Senior officials find systems usable and have high confidence, whereas Class IV support staff experience substantial barriers.
+
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Likert Sentiment Mean Scores and Training Rates by Department and Cadre}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{l X c c c c c}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Department}} & \textcolor{white}{\textbf{Cadre Class}} & \textcolor{white}{\textbf{N}} & \textcolor{white}{\textbf{PU Mean}} & \textcolor{white}{\textbf{Difficulty}} & \textcolor{white}{\textbf{Confidence}} & \textcolor{white}{\textbf{\% Trained}} \\
+\midrule
+\textbf{Forest} & Class I (Senior) & 8 & 4.59 & 1.12 & 4.88 & 100.0\% \\
+(HQ) & Class II (Mid-Level) & 15 & 4.07 & 1.60 & 4.60 & 93.3\% \\
+ & Class III (Field/Ops) & 30 & 3.48 & 2.70 & 3.50 & 46.7\% \\
+ & Class IV (Frontline) & 27 & 2.25 & 4.33 & 1.70 & 7.4\% \\
+\midrule
+\textbf{Rural Dev} & Class I (Senior) & 3 & 4.00 & 1.00 & 4.67 & 100.0\% \\
+(District/Block) & Class II (Mid-Level) & 10 & 3.42 & 2.10 & 3.60 & 50.0\% \\
+ & Class III (Field/Ops) & 17 & 2.66 & 3.71 & 2.47 & 35.3\% \\
+ & Class IV (Frontline) & 10 & 1.68 & 4.80 & 1.20 & 0.0\% \\
+\midrule
+\textbf{Revenue} & Class I (Senior) & 2 & 4.38 & 1.00 & 5.00 & 50.0\% \\
+(HQ/District) & Class II (Mid-Level) & 5 & 3.65 & 2.20 & 3.80 & 60.0\% \\
+ & Class III (Field/Ops) & 8 & 3.16 & 2.75 & 2.88 & 50.0\% \\
+ & Class IV (Frontline) & 5 & 1.85 & 5.00 & 1.60 & 20.0\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Department-Level Gradients}
+The adoption scores show systematic variation across the three departments:
+\begin{itemize}
+  \item \textbf{Perceived Usefulness (PU):} Forest Department (mean of 3.29) leads, followed by Revenue (mean of 3.15) and Rural Development (mean of 2.67).
+  \item \textbf{Difficulty (Q15):} Rural Development officials report the highest average difficulty (mean of 3.38), followed by Revenue (mean of 3.00) and Forest (mean of 2.89).
+  \item \textbf{Internet Quality (Q22):} Forest offices (HQ location) have the best connectivity (mean of 3.49), while Rural Development block offices experience poor connectivity (mean of 2.73).
+\end{itemize}
+
+\section{Cross-Tabulation Analysis}
+To understand the interaction between training, connectivity, and perceived usefulness, a cross-tabulation was conducted for the master sample ($N=140$).
+
+\begin{table}[h!]
+\centering
+\footnotesize
+\caption{\textbf{Cross-Tabulation: Training × Internet Quality × Perceived Usefulness}}
+\vspace{0.1cm}
+\begin{tabularx}{\textwidth}{l c c c X}
+\toprule
+\rowcolor{navyblue}
+\textcolor{white}{\textbf{Training (Q44)}} & \textcolor{white}{\textbf{Internet Group}} & \textcolor{white}{\textbf{N}} & \textcolor{white}{\textbf{PU Mean}} & \textcolor{white}{\textbf{Operational Interpretation}} \\
+\midrule
+No & Low ($\le 2$) & 41 & 1.78 & \textbf{Critical Risk:} Unprepared staff, poor local connectivity \\
+No & High ($\ge 3$) & 34 & 2.84 & \textbf{Capacity Blocked:} Connectivity exists, but training is lacking \\
+Yes & Low ($\le 2$) & 16 & 2.45 & \textbf{Infrastructure Constrained:} Staff trained, but blocked by network \\
+Yes & High ($\ge 3$) & 49 & 4.12 & \textbf{Optimal:} Staff prepared and network support is present \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The data shows that training only yields its full return when matched with adequate local internet access. Trained staff on high-quality networks report a high utility score (mean of 4.12), whereas trained staff on low-quality networks remain constrained (mean of 2.45).
+
+\section{Qualitative Analysis and Workflow Bottlenecks}
+Qualitative comments and field observations reveal three major operational bottlenecks:
+\begin{enumerate}
+  \item \textbf{Infrastructure Deficits in Block Offices:} Rural Development and Revenue field offices in Narmadapuram experience regular power outages and internet downtime, forcing employees to process work manually and perform duplicate data entry later.
+  \item \textbf{Complex Local Portal Designs:} Specific portals like NMMS (MGNREGA attendance app) and SAMPADA 2.0 (property registration) were cited for poor user interface design. Users reported frequent error codes, time-outs, and a lack of clear error-handling support.
+  \item \textbf{General Training Deficit:} Frontline workers (Class IV) receive almost no formal digital training (only 7.1\% across departments). They rely on informal help from colleagues, causing slow processing times and data entry errors.
+\end{enumerate}
+
+\section{Policy Recommendations}
+Based on these findings, we recommend three strategic policy interventions:
+\begin{itemize}
+  \item \textbf{Role-Specific Training (Mission Karmayogi model):} Shift from generic computer literacy programs to practical, role-based modules. Class IV staff need basic mobile app navigation, photo uploading, and GPS skills, whereas Class I/II officers require dashboard literacy and approval workflows.
+  \item \textbf{Upgrade Block-Level Infrastructure:} Address connectivity issues in Rural Development and Revenue offices by installing backup power options (UPS) and dual-ISP broadband lines to reduce manual workarounds.
+  \item \textbf{Establish Unified User Interface Standards:} The state IT cell should set minimum usability and design criteria for portal developments to simplify navigation and minimize error rates for field employees.
+\end{itemize}
+
+\end{document}

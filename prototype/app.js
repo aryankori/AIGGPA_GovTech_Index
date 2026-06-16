@@ -5,12 +5,11 @@
 
 // ==================== CONSTANTS ====================
 const STORAGE_KEY = 'govtech_adoption_responses';
-const DEPARTMENTS = ['Revenue', 'PWD', 'Health', 'Education'];
+const DEPARTMENTS = ['Forest', 'Rural Development', 'Revenue'];
 const DEPT_COLORS = {
-    Revenue: { bg: 'rgba(27,59,111,0.7)', border: '#1B3B6F' },
-    PWD: { bg: 'rgba(255,193,7,0.7)', border: '#FFC107' },
-    Health: { bg: 'rgba(231,76,60,0.7)', border: '#E74C3C' },
-    Education: { bg: 'rgba(142,68,173,0.7)', border: '#8E44AD' }
+    Forest: { bg: 'rgba(39,174,96,0.7)', border: '#27AE60' },
+    'Rural Development': { bg: 'rgba(230,126,34,0.7)', border: '#E67E22' },
+    Revenue: { bg: 'rgba(27,59,111,0.7)', border: '#1B3B6F' }
 };
 
 const CHART_CONFIG = {
@@ -85,7 +84,7 @@ function computeTier(r) {
 // ==================== MOCK DATA ====================
 function loadMockData() {
     if (getResponses().length > 0) {
-        if (!confirm('This will add 120 demo records. Continue?')) return;
+        if (!confirm('This will add 140 demo records. Continue?')) return;
     }
 
     const firstNames = ['Rajesh', 'Priya', 'Amit', 'Sunita', 'Vikram', 'Neha', 'Deepak', 'Kavita', 'Suresh', 'Meena',
@@ -95,21 +94,17 @@ function loadMockData() {
         'Chauhan', 'Dubey', 'Pandey', 'Shukla', 'Agrawal', 'Rajput', 'Chouhan', 'Bhatia', 'Saxena', 'Dwivedi'];
 
     const profiles = {
+        Forest: {
+            dpRange: [50, 85], lfRange: [15, 45], hwRange: [60, 90], connRange: [65, 95],
+            confBias: 0.55, frusBias: 0.35, gradeWeights: { 'Group A': 0.10, 'Group B': 0.19, 'Group C': 0.38, 'Group D': 0.33 }
+        },
+        'Rural Development': {
+            dpRange: [30, 65], lfRange: [8, 30], hwRange: [45, 75], connRange: [40, 70],
+            confBias: 0.45, frusBias: 0.45, gradeWeights: { 'Group A': 0.08, 'Group B': 0.25, 'Group C': 0.42, 'Group D': 0.25 }
+        },
         Revenue: {
-            dpRange: [45, 90], lfRange: [10, 50], hwRange: [60, 95], connRange: [70, 98],
-            confBias: 0.6, frusBias: 0.3, gradeWeights: { 'Group A': 0.15, 'Group B': 0.35, 'Group C': 0.50 }
-        },
-        PWD: {
-            dpRange: [25, 70], lfRange: [5, 35], hwRange: [40, 80], connRange: [50, 85],
-            confBias: 0.4, frusBias: 0.45, gradeWeights: { 'Group A': 0.15, 'Group B': 0.30, 'Group C': 0.55 }
-        },
-        Health: {
-            dpRange: [15, 55], lfRange: [3, 25], hwRange: [25, 65], connRange: [35, 75],
-            confBias: 0.3, frusBias: 0.55, gradeWeights: { 'Group A': 0.10, 'Group B': 0.30, 'Group C': 0.60 }
-        },
-        Education: {
-            dpRange: [10, 45], lfRange: [2, 20], hwRange: [20, 55], connRange: [25, 65],
-            confBias: 0.25, frusBias: 0.6, gradeWeights: { 'Group A': 0.10, 'Group B': 0.25, 'Group C': 0.65 }
+            dpRange: [45, 90], lfRange: [12, 48], hwRange: [55, 95], connRange: [60, 90],
+            confBias: 0.60, frusBias: 0.30, gradeWeights: { 'Group A': 0.10, 'Group B': 0.25, 'Group C': 0.40, 'Group D': 0.25 }
         }
     };
 
@@ -140,16 +135,22 @@ function loadMockData() {
     }
 
     const records = [];
+    const deptCounts = {
+        Forest: 80,
+        'Rural Development': 40,
+        Revenue: 20
+    };
     for (const dept of DEPARTMENTS) {
         const p = profiles[dept];
-        for (let i = 0; i < 30; i++) {
+        const count = deptCounts[dept] || 30;
+        for (let i = 0; i < count; i++) {
             const grade = weightedPick(p.gradeWeights);
             const ageGroup = pick(ages);
 
             // Older age = lower digital penetration modifier
             let ageMod = ageGroup === '<30' ? 1.15 : ageGroup === '30-40' ? 1.0 : ageGroup === '41-50' ? 0.85 : 0.65;
             // Higher grade = higher digital penetration modifier
-            let gradeMod = grade === 'Group A' ? 1.2 : grade === 'Group B' ? 1.0 : 0.8;
+            let gradeMod = grade === 'Group A' ? 1.2 : grade === 'Group B' ? 1.0 : grade === 'Group C' ? 0.8 : 0.55;
 
             const dp = Math.min(100, Math.max(0, rand(p.dpRange[0], p.dpRange[1]) * ageMod * gradeMod));
             const lf = Math.min(100, Math.max(0, rand(p.lfRange[0], p.lfRange[1]) * ageMod * gradeMod));
@@ -571,7 +572,7 @@ function renderPerceptionsChart(data) {
 }
 
 function renderGradeAdoptionChart(data) {
-    const grades = ['Group A', 'Group B', 'Group C'];
+    const grades = ['Group A', 'Group B', 'Group C', 'Group D'];
     const avgByGrade = {};
     grades.forEach(g => {
         const gd = data.filter(r => r.grade === g);
@@ -581,12 +582,12 @@ function renderGradeAdoptionChart(data) {
     charts.gradeAdoption = new Chart(document.getElementById('chartGradeAdoption'), {
         type: 'bar',
         data: {
-            labels: ['Class I / Group A', 'Class II / Group B', 'Class III / Group C'],
+            labels: ['Class I', 'Class II', 'Class III', 'Class IV'],
             datasets: [{
                 label: 'Avg. Adoption Index',
                 data: grades.map(g => avgByGrade[g]),
-                backgroundColor: ['rgba(46,134,193,0.7)', 'rgba(193,154,62,0.7)', 'rgba(142,68,173,0.7)'],
-                borderColor: ['#2E86C1', '#C19A3E', '#8E44AD'],
+                backgroundColor: ['#2E86C1', '#C19A3E', '#8E44AD', '#E74C3C'],
+                borderColor: ['#1B3B6F', '#9A7D0A', '#6C3483', '#C0392B'],
                 borderWidth: 2,
                 borderRadius: 8,
                 barPercentage: 0.5

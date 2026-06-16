@@ -1,0 +1,1143 @@
+/* ============================================================
+   Tactile Workflows Sandbox — Stylesheet
+   Premium Glassmorphic Dark Theme with Rich Animations
+   ============================================================ */
+
+/* ---------- Layout & Sandbox Settings ---------- */
+.sandbox-body {
+    background: #0A1221;
+    color: #E8ECF1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ---------- Header ---------- */
+.sandbox-header {
+    height: 70px;
+    background: rgba(13, 24, 41, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1E3050;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+    flex-shrink: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8899AB;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #FFC107;
+}
+
+.header-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    background: linear-gradient(120deg, #E8ECF1, #FFC107);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-subtitle {
+    font-size: 0.75rem;
+    color: #5A6E82;
+    margin-top: 2px;
+}
+
+/* ---------- Toggle Tabs ---------- */
+.sandbox-tabs {
+    display: flex;
+    background: #060B14;
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid #1E3050;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #8899AB;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+    color: #E8ECF1;
+}
+
+.tab-btn.active {
+    background: #FFC107;
+    color: #0A1221;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+.cadre-tag {
+    background: rgba(255, 193, 7, 0.1);
+    color: #FFC107;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* ---------- Main Container ---------- */
+.sandbox-content {
+    flex: 1;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.sandbox-pane {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.sandbox-pane.active {
+    display: flex;
+}
+
+/* ==================== WORKFLOW SIGN & SLIDE VIEW ==================== */
+
+/* ---------- Sidebar Queue ---------- */
+.workflow-sidebar {
+    width: 300px;
+    background: #0D1829;
+    border-right: 1px solid #1E3050;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.pane-sidebar-title {
+    padding: 20px;
+    border-bottom: 1px solid #1E3050;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pane-sidebar-title h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.count-badge {
+    background: rgba(255, 193, 7, 0.15);
+    color: #FFC107;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.doc-queue {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.queue-item {
+    background: rgba(27, 59, 111, 0.25);
+    border: 1px solid #1E3050;
+    border-radius: 8px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.queue-item:hover {
+    border-color: #253D5E;
+    background: rgba(27, 59, 111, 0.35);
+}
+
+.queue-item.active {
+    background: rgba(255, 193, 7, 0.08);
+    border-color: #FFC107;
+}
+
+.queue-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: #FFC107;
+}
+
+.queue-item.signed {
+    border-color: #27AE60;
+    background: rgba(39, 174, 96, 0.05);
+    opacity: 0.75;
+}
+
+.queue-item.signed::after {
+    content: 'SIGNED';
+    position: absolute;
+    right: 8px; top: 8px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 2px 6px;
+    background: rgba(39, 174, 96, 0.15);
+    color: #52D68A;
+    border-radius: 4px;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.queue-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.queue-dept {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #8899AB;
+}
+
+.queue-time {
+    font-size: 0.65rem;
+    color: #5A6E82;
+}
+
+.queue-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #E8ECF1;
+    margin-bottom: 6px;
+}
+
+.queue-snippet {
+    font-size: 0.75rem;
+    color: #8899AB;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------- Async Queue Container ---------- */
+.async-queue-container {
+    background: #060B14;
+    border-top: 1px solid #1E3050;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.async-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.async-header h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8899AB;
+}
+
+.pulse-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+}
+
+.pulse-dot.idle { background: #5A6E82; }
+.pulse-dot.processing {
+    background: #FFC107;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.async-desc {
+    font-size: 0.65rem;
+    color: #5A6E82;
+    line-height: 1.4;
+}
+
+.async-jobs-list {
+    max-height: 140px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.empty-jobs {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.75rem;
+    color: #5A6E82;
+    border: 1px dashed #1E3050;
+    border-radius: 6px;
+}
+
+.job-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #1E3050;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+}
+
+.job-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.job-filename {
+    font-weight: 600;
+    color: #8899AB;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+}
+
+.job-status {
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+.job-status.hashing { color: #FFC107; }
+.job-status.signing { color: #5DADE2; }
+.job-status.done { color: #52D68A; }
+
+.job-progress-bar {
+    height: 4px;
+    background: #15253F;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.job-progress-fill {
+    height: 100%;
+    background: #FFC107;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.job-progress-fill.done {
+    background: #27AE60;
+}
+
+/* ---------- Main Desk Area ---------- */
+.work-desk {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #060B14;
+    overflow: hidden;
+    position: relative;
+}
+
+.active-file-banner {
+    padding: 16px 24px;
+    background: rgba(13, 24, 41, 0.4);
+    border-bottom: 1px solid #1E3050;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.department-tag {
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.department-tag.revenue { background: rgba(39,174,96,0.15); color: #52D68A; }
+.department-tag.health { background: rgba(231,76,60,0.12); color: #F1948A; }
+.department-tag.forest { background: rgba(46,134,193,0.15); color: #5DADE2; }
+.department-tag.development { background: rgba(230,126,34,0.15); color: #F5B041; }
+
+.file-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.file-actions-shortcut {
+    font-size: 0.75rem;
+    color: #5A6E82;
+}
+
+.key-badge {
+    background: #15253F;
+    border: 1px solid #253D5E;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 800;
+    color: #E8ECF1;
+    margin: 0 2px;
+}
+
+/* ---------- Interactive Doc View Stage ---------- */
+.doc-viewer-wrapper {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+/* AI Policy Audit Overlay */
+.audit-overlay {
+    width: 250px;
+    background: rgba(13, 24, 41, 0.6);
+    border-right: 1px solid #1E3050;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    backdrop-filter: blur(8px);
+}
+
+.audit-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #FFC107;
+}
+
+.audit-body {
+    font-size: 0.8rem;
+    color: #8899AB;
+    line-height: 1.5;
+}
+
+.audit-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #1E3050;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.audit-card.pass { border-color: rgba(39,174,96,0.3); background: rgba(39,174,96,0.02); }
+.audit-card.warning { border-color: rgba(230,126,34,0.3); background: rgba(230,126,34,0.02); }
+
+.audit-card-title {
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.audit-card.pass .audit-card-title { color: #52D68A; }
+.audit-card.warning .audit-card-title { color: #F5B041; }
+
+.audit-card p {
+    font-size: 0.72rem;
+    color: #8899AB;
+    line-height: 1.4;
+}
+
+/* The Paper Stage */
+.paper-stage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 28px;
+    overflow-y: auto;
+    perspective: 1000px;
+}
+
+.paper-sheet {
+    width: 100%;
+    max-width: 600px;
+    min-height: 750px;
+    background: #FAFAF7; /* Paper beige */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 48px;
+    color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-origin: center top;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s;
+}
+
+/* Paper Document Animations */
+.paper-sheet.slide-out-left {
+    transform: translateX(-100%) rotateY(-20deg) scale(0.9);
+    opacity: 0;
+}
+
+.paper-sheet.slide-in-right {
+    animation: paperSlideIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes paperSlideIn {
+    from {
+        transform: translateX(100%) rotateY(20deg) scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.paper-header-design {
+    border-bottom: 2px double #2C3E50;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.govt-emblem {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #2C3E50;
+}
+
+.file-reference {
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: #7F8C8D;
+}
+
+.paper-body-content {
+    flex: 1;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.paper-body-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.paper-body-content p {
+    margin-bottom: 14px;
+}
+
+.paper-body-content ul {
+    margin-left: 20px;
+    margin-bottom: 14px;
+}
+
+.paper-body-content li {
+    margin-bottom: 6px;
+}
+
+.paper-footer-signature {
+    margin-top: 36px;
+    border-top: 1px dashed #BDC3C7;
+    padding-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signature-line-group {
+    width: 220px;
+    text-align: center;
+}
+
+.sig-placeholder {
+    height: 70px;
+    border: 1px dashed #BDC3C7;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.01);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #95A5A6;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+/* Cryptographic Seal Stamp Design */
+.cryptographic-seal-stamp {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 10;
+}
+
+.cryptographic-seal-stamp.active {
+    transform: translate(-50%, -50%) scale(1) rotate(-8deg);
+}
+
+.sig-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #34495E;
+}
+
+/* ---------- Interaction Board ---------- */
+.interaction-board {
+    height: 160px;
+    background: #0D1829;
+    border-top: 1px solid #1E3050;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.btn-desk {
+    height: 110px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+    transition: all 0.25s ease;
+}
+
+.btn-skip {
+    width: 100px;
+    background: rgba(231, 76, 60, 0.08);
+    border: 1px solid rgba(231, 76, 60, 0.25);
+    color: #E74C3C;
+}
+
+.btn-skip:hover {
+    background: rgba(231, 76, 60, 0.15);
+    border-color: #E74C3C;
+    transform: translateY(-2px);
+}
+
+.btn-skip svg {
+    transition: transform 0.3s;
+}
+
+.btn-skip:hover svg {
+    transform: rotate(90deg);
+}
+
+.btn-skip span {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Touch Signature Pad */
+.touch-pad-container {
+    flex: 1;
+    height: 110px;
+    background: #060B14;
+    border: 1px solid #1E3050;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.touch-pad-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #8899AB;
+    padding: 6px 12px;
+    border-bottom: 1px solid #1E3050;
+    background: rgba(13, 24, 41, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pad-status-icon {
+    width: 6px; height: 6px;
+    background: #FFC107;
+    border-radius: 50%;
+}
+
+.signature-canvas-container {
+    flex: 1;
+    position: relative;
+    cursor: crosshair;
+}
+
+.signature-canvas-container canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.canvas-instructions {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    color: #5A6E82;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.canvas-instructions.hidden {
+    opacity: 0;
+}
+
+.clear-sig-btn {
+    position: absolute;
+    right: 8px; bottom: 8px;
+    background: #15253F;
+    border: 1px solid #253D5E;
+    color: #8899AB;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.clear-sig-btn:hover {
+    color: #E8ECF1;
+    border-color: #FFC107;
+}
+
+/* Biometric Sensor button */
+.btn-sign {
+    width: 160px;
+    background: linear-gradient(135deg, #FFC107, #FFD54F);
+    color: #0A1221;
+    padding: 12px;
+}
+
+.btn-sign:hover {
+    box-shadow: 0 4px 20px rgba(193, 154, 62, 0.4);
+    transform: translateY(-2px);
+}
+
+.fingerprint-sensor {
+    width: 44px; height: 44px;
+    background: rgba(10, 18, 33, 0.1);
+    border: 2px solid rgba(10, 18, 33, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.btn-sign:hover .fingerprint-sensor {
+    background: #0A1221;
+    color: #FFC107;
+    border-color: #FFC107;
+}
+
+.fp-svg {
+    width: 24px; height: 24px;
+}
+
+.sensor-light {
+    position: absolute;
+    bottom: -2px; right: -2px;
+    width: 8px; height: 8px;
+    background: #27AE60;
+    border-radius: 50%;
+    border: 1px solid #FFC107;
+}
+
+.btn-sign-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-sign-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.btn-sign-sub {
+    font-size: 0.65rem;
+    font-weight: 600;
+    opacity: 0.75;
+}
+
+/* ==================== SPATIAL ALTMAN WORKBENCH ==================== */
+
+/* ---------- Spiral notebook binder ---------- */
+.notebook-binder {
+    width: 340px;
+    background: #0D1829;
+    border-right: 1px solid #1E3050;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 14px; /* Space for spiral bounds */
+    flex-shrink: 0;
+}
+
+/* Cool Spiral binding hardware visual */
+.spiral-bound-effect {
+    position: absolute;
+    left: 2px; top: 0; bottom: 0;
+    width: 10px;
+    background-image: radial-gradient(circle, #7F8C8D 3px, transparent 4px);
+    background-size: 10px 24px;
+    background-repeat: repeat-y;
+}
+
+.notebook-binder::after {
+    content: '';
+    position: absolute;
+    left: 6px; top: 0; bottom: 0;
+    width: 2px;
+    background: #BDC3C7;
+    box-shadow: 1px 0 3px rgba(0,0,0,0.5);
+}
+
+.binder-header {
+    padding: 20px 20px 20px 10px;
+    border-bottom: 1px solid #1E3050;
+}
+
+.binder-header h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #FFC107;
+}
+
+.binder-desc {
+    font-size: 0.75rem;
+    color: #8899AB;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+.spiral-pages-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 16px 16px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.spiral-page-item {
+    background: #FAFAF7;
+    border-radius: 4px;
+    padding: 16px;
+    color: #2C3E50;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: grab;
+}
+
+.spiral-page-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.torn-edge-indicator {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background-image: linear-gradient(135deg, transparent 4px, #FAFAF7 4px),
+                      linear-gradient(225deg, transparent 4px, #FAFAF7 4px);
+    background-size: 5px 8px;
+    background-repeat: repeat-y;
+    transform: translateX(-3px);
+}
+
+.note-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.note-tag.red { background: rgba(231,76,60,0.15); color: #E74C3C; }
+.note-tag.blue { background: rgba(46,134,193,0.15); color: #2E86C1; }
+.note-tag.gold { background: rgba(243,156,18,0.15); color: #D35400; }
+.note-tag.green { background: rgba(39,174,96,0.15); color: #27AE60; }
+
+.note-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.note-snippet {
+    font-size: 0.72rem;
+    color: #555;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.tear-btn {
+    margin-top: 10px;
+    width: 100%;
+    background: #0A1221;
+    color: #E8ECF1;
+    border: 1px solid #1E3050;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tear-btn:hover {
+    background: #FFC107;
+    color: #0A1221;
+    border-color: #FFC107;
+}
+
+/* ---------- Infinite Workbench ---------- */
+.spatial-workbench {
+    flex: 1;
+    background-color: #060B14;
+    background-image: 
+        linear-gradient(rgba(30, 48, 80, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 48, 80, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.workbench-instructions {
+    position: absolute;
+    top: 16px; left: 16px; right: 16px;
+    padding: 12px 18px;
+    background: rgba(13, 24, 41, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid #1E3050;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: #8899AB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.canvas-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-ctrl {
+    background: #15253F;
+    border: 1px solid #253D5E;
+    color: #E8ECF1;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-ctrl:hover {
+    border-color: #FFC107;
+    color: #FFC107;
+}
+
+.canvas-viewport {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Draggable notes on desk */
+.draggable-note-sheet {
+    position: absolute;
+    width: 200px;
+    min-height: 250px;
+    background: #FAFAF7;
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    padding: 16px;
+    color: #2C3E50;
+    cursor: move;
+    transform-origin: center center;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    user-select: none;
+    z-index: 5;
+}
+
+.draggable-note-sheet:active {
+    cursor: grabbing;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    transform: scale(1.02);
+    z-index: 50; /* Bring to front while dragging */
+}
+
+/* Drag Handles & Headers */
+.note-sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #BDC3C7;
+}
+
+.close-note-btn {
+    background: transparent;
+    border: none;
+    color: #95A5A6;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 2px;
+}
+
+.close-note-btn:hover {
+    color: #E74C3C;
+}
+
+.note-sheet-body {
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.note-sheet-body p {
+    margin-bottom: 8px;
+}
+
+/* Crumple Discard Animation */
+.draggable-note-sheet.crumple-discard {
+    animation: crumpleDiscard 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+    pointer-events: none;
+}
+
+@keyframes crumpleDiscard {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+        border-radius: 4px;
+    }
+    40% {
+        transform: scale(0.6) rotate(15deg);
+        filter: blur(1px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) rotate(90deg);
+        filter: blur(4px);
+        opacity: 0;
+    }
+}
+
+/* Zoomed Note Sheet Overlay */
+.draggable-note-sheet.zoomed {
+    transform: scale(1.6) !important;
+    z-index: 100 !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* ---------- Global Toast Alerts ---------- */
+.info-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: rgba(13, 24, 41, 0.9);
+    border: 1px solid #FFC107;
+    color: #E8ECF1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.35s ease;
+    z-index: 500;
+}
+
+.info-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

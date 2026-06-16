@@ -29,3 +29,20 @@ Thumbs.db
 
 # Windows
 desktop.ini
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Agent and IDE files
+.agents/
+.gemini/
+
+# Temporary and duplicate presentation folders
+temp_codex/
+Review_Presentation_Desk/
+temp_media_human/
+temp_media_v2/
+charts_preview/
+preview_pages/
+template_pages/

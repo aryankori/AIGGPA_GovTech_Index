@@ -60,6 +60,7 @@ See `prototype/` folder in root for all web app files. Kept outside archive for 
 | `data_pipeline_flowchart.html` | Data pipeline flow diagram |
 | `editorial_infographic.html` | Infographic for presentations |
 | `gender_parity_index.html` | Gender parity analysis in IT adoption |
+| `forest_dashboard.html` | Interactive Forest Department Survey Dashboard |
 | `maturity_ladder.html` | Technology maturity ladder visual |
 | `policy_ledger_matrix.html` | Policy impact matrix |
 | `research_timeline.html` | Research project timeline |

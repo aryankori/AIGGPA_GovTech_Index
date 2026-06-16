@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Department Survey Dashboard — AIGGPA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --forest-dark: #051A10;
+            --forest-mid: #0a2e1c;
+            --forest-light: #164e32;
+            --emerald: #10B981;
+            --gold: #FFC107;
+            --gold-hover: #E0A800;
+            --white: #ffffff;
+            --text-dim: #A0AEC0;
+            --glass-bg: rgba(10, 46, 28, 0.45);
+            --glass-border: rgba(16, 185, 129, 0.15);
+            --glass-glow: rgba(255, 193, 7, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 0%, var(--forest-mid) 0%, var(--forest-dark) 100%);
+            color: var(--white);
+            font-family: 'Inter', system-ui, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* Sidebar & Layout */
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: rgba(5, 26, 16, 0.85);
+            backdrop-filter: blur(16px);
+            border-right: 1px solid var(--glass-border);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 2.5rem;
+        }
+
+        .logo-emblem {
+            background: linear-gradient(135deg, var(--gold), #D4AF37);
+            color: var(--forest-dark);
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .logo-title h1 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            color: var(--white);
+        }
+
+        .logo-title span {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--white);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .nav-item.active {
+            border-left: 4px solid var(--gold);
+            padding-left: 10px;
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        .sidebar-footer p {
+            margin-top: 4px;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            padding: 2.5rem;
+            max-width: 1400px;
+            width: calc(100% - 280px);
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 1.5rem;
+        }
+
+        .header-section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, var(--white), var(--text-dim));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-section p {
+            color: var(--gold);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* KPI Cards */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .kpi-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 193, 7, 0.3);
+        }
+
+        .kpi-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .kpi-icon.emerald { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .kpi-icon.gold { background: rgba(255, 193, 7, 0.15); color: var(--gold); border: 1px solid rgba(255, 193, 7, 0.3); }
+        .kpi-icon.blue { background: rgba(59, 130, 246, 0.15); color: #3B82F6; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .kpi-icon.red { background: rgba(239, 68, 68, 0.15); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+        .kpi-details h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .kpi-details p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        /* Grid Section */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .dashboard-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .dashboard-card.full-width {
+            grid-column: span 2;
+        }
+
+        .card-header {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .card-header span {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        /* Qualitative Insights Block */
+        .insights-block {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+        }
+
+        .insight-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .insight-item:hover {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .insight-item h4 {
+            font-size: 1.05rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .insight-item p {
+            font-size: 0.88rem;
+            color: var(--text-dim);
+            line-height: 1.4;
+        }
+
+        /* Data Explorer Block */
+        .data-explorer-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .explorer-filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            background: rgba(5, 26, 16, 0.6);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: var(--white);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--gold);
+        }
+
+        .filter-select {
+            background: rgba(5, 26, 16, 0.6);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: var(--white);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .filter-select:focus {
+            border-color: var(--gold);
+        }
+
+        .table-container {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .data-table th {
+            background: rgba(10, 46, 28, 0.9);
+            color: var(--gold);
+            padding: 12px 16px;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(16, 185, 129, 0.3);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--text-dim);
+            transition: background 0.2s ease;
+        }
+
+        .data-table tr {
+            cursor: pointer;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--white);
+        }
+
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge.class1 { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .badge.class2 { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .badge.class3 { background: rgba(245, 158, 11, 0.15); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .badge.class4 { background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+        .badge.yes { background: rgba(16, 185, 129, 0.15); color: var(--emerald); }
+        .badge.no { background: rgba(239, 68, 68, 0.15); color: #EF4444; }
+
+        /* Modal / Dialog */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(5, 26, 16, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-container {
+            background: var(--forest-dark);
+            border: 2px solid var(--glass-border);
+            box-shadow: 0 0 50px rgba(16, 185, 129, 0.2);
+            width: 90%;
+            max-width: 800px;
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: var(--gold);
+        }
+
+        .sheet-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8px;
+        }
+
+        .sheet-title h4 {
+            font-size: 1.4rem;
+            color: var(--gold);
+            font-weight: 800;
+        }
+
+        .sheet-title p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sheet-section {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.2rem;
+        }
+
+        .sheet-section h5 {
+            color: var(--gold);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            padding-bottom: 4px;
+        }
+
+        .sheet-field {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.88rem;
+        }
+
+        .sheet-field span:first-child {
+            color: var(--text-dim);
+        }
+
+        .sheet-field span:last-child {
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .sheet-quote {
+            background: rgba(255, 193, 7, 0.05);
+            border-left: 4px solid var(--gold);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        .sheet-quote strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 4px;
+            font-style: normal;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--forest-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--forest-light);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--emerald);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-emblem">वन</div>
+                <div class="logo-title">
+                    <h1>AIGGPA</h1>
+                    <span>Forest Dept. Survey</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#summary" class="nav-item active" id="nav-summary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    Dashboard Home
+                </a>
+                <a href="#charts" class="nav-item" id="nav-charts">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    Survey Charts
+                </a>
+                <a href="#explorer" class="nav-item" id="nav-explorer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    Data Explorer
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <strong>Forest Survey Portal</strong>
+                <p>AIGGPA Bhopal © 2026</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header-section">
+                <div>
+                    <h2>Forest Department Digitization</h2>
+                    <p>Atal Bihari Vajpayee Institute of Good Governance and Policy Analysis</p>
+                </div>
+            </header>
+
+            <!-- KPI Row -->
+            <section class="kpi-row">
+                <div class="kpi-card">
+                    <div class="kpi-icon emerald">👥</div>
+                    <div class="kpi-details">
+                        <h3>40</h3>
+                        <p>Real Respondents</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon gold">⭐</div>
+                    <div class="kpi-details">
+                        <h3>4.0 / 5.0</h3>
+                        <p>Avg. Sentiment Score</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon blue">💻</div>
+                    <div class="kpi-details">
+                        <h3>50.0%</h3>
+                        <p>High Workload Band</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon red">⚠️</div>
+                    <div class="kpi-details">
+                        <h3>42.5%</h3>
+                        <p>Untrained Capacity Gap</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Visualizations -->
+            <section class="dashboard-grid" id="charts-section">
+                <!-- Chart 1: Sentiment constructs -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Digital Sentiment Constructs</h3>
+                        <span>Scale 1.0 — 5.0</span>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Digital Workload -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Digital Workload Distribution</h3>
+                        <span>% Daily Tasks Performed Digitally</span>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="workloadChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 3: Training Gap -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Training Coverage Gap</h3>
+                        <span>Untrained vs Trained Staff ($N=40$)</span>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="trainingChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 4: Digital Tools Adoption -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Software & Tool Adoption Rates</h3>
+                        <span>% Usage Across Survey Cohort</span>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="toolsChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Qualitative Insights Card -->
+                <div class="dashboard-card full-width">
+                    <div class="card-header">
+                        <h3>Core Research Insights & Bottlenecks</h3>
+                        <span>Forest Department Survey Findings</span>
+                    </div>
+                    <div class="insights-block">
+                        <div class="insight-item">
+                            <h4>Administrative Footprint</h4>
+                            <p>e-Office, Government Email, and MS Office form the core administrative base, showing <strong>75%</strong> adoption. Collaboration platforms (Drive, Zoom, Docs) sit at <strong>25%</strong>.</p>
+                        </div>
+                        <div class="insight-item">
+                            <h4>The Infrastructure Barrier</h4>
+                            <p>Slow internet connectivity, power outages, and complex portal authentication represent the largest daily work disruptions cited by both office and field guards.</p>
+                        </div>
+                        <div class="insight-item">
+                            <h4>Targeted Skills Mismatch</h4>
+                            <p>While 57.5% received generic IT training, 42.5% received none. High demand exists for role-specific field training on GIS maps, GPS tracking, and e-Green Watch.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Explorer Section -->
+            <section class="data-explorer-card" id="explorer-section">
+                <div class="card-header">
+                    <h3>Bilingual Survey Cohort Explorer</h3>
+                    <span>Click any row to launch the respondent's complete survey sheet</span>
+                </div>
+
+                <div class="explorer-filters">
+                    <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search respondents by name, designation, or node..." onkeyup="filterTable()">
+                    <select id="classFilter" class="filter-select" onchange="filterTable()">
+                        <option value="all">All Cadres (Classes)</option>
+                        <option value="Class 1">Class 1 (Senior PCF/Conservators)</option>
+                        <option value="Class 2">Class 2 (Field/ACF/Superintendents)</option>
+                        <option value="Class 3">Class 3 (Clerical/PA/Accountants)</option>
+                        <option value="Class 4">Class 4 (Patrol Guards/Stenotypists)</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table" id="cohortTable">
+                        <thead>
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Name / नाम</th>
+                                <th>Designation / पद</th>
+                                <th>Grade Class</th>
+                                <th>Age Group</th>
+                                <th>Gender</th>
+                                <th>Digital Workload</th>
+                                <th>Trained</th>
+                                <th>Sentiment</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cohortTableBody">
+                            <!-- Injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="sheetModal" onclick="closeModal(event)">
+        <div class="modal-container">
+            <button class="close-btn" onclick="hideModal()">×</button>
+            <div class="sheet-title">
+                <h4 id="sheetName">Respondent Profile</h4>
+                <p id="sheetDesignation">Designation</p>
+            </div>
+            
+            <div class="sheet-grid">
+                <!-- Demographics -->
+                <div class="sheet-section">
+                    <h5>A. Demographics / जनसांख्यिकी</h5>
+                    <div class="sheet-field">
+                        <span>Grade Class / श्रेणी:</span>
+                        <span id="sheetClass">-</span>
+                    </div>
+                    <div class="sheet-field">
+                        <span>Age Group / आयु वर्ग:</span>
+                        <span id="sheetAge">-</span>
+                    </div>
+                    <div class="sheet-field">
+                        <span>Gender / लिंग:</span>
+                        <span id="sheetGender">-</span>
+                    </div>
+                    <div class="sheet-field">
+                        <span>Tenure / सेवा अवधि:</span>
+                        <span id="sheetExp">-</span>
+                    </div>
+                    <div class="sheet-field">
+                        <span>Education / शिक्षा:</span>
+                        <span id="sheetEdu">-</span>
+                    </div>
+                </div>
+
+                <!-- Digital Capacity -->
+                <div class="sheet-section">
+                    <h5>B. Digital Capacity / डिजिटल क्षमता</h5>
+                    <div class="sheet-field">
+                        <span>Digital Workload / कार्यभार:</span>
+                        <span id="sheetWorkload">-</span>
+                    </div>
+                    <div class="sheet-field">
+                        <span>Skills Training / प्रशिक्षण:</span>
+                        <span id="sheetTrained">-</span>
+                    </div>
+                    <div class="sheet-field">
+                        <span>Avg. Sentiment / दृष्टिकोण:</span>
+                        <span id="sheetSentiment">-</span>
+                    </div>
+                    <div class="sheet-field">
+                        <span>Connectivity / इंटरनेट:</span>
+                        <span>4.0 / 5.0 (Avg)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Tools -->
+            <div class="sheet-section" style="margin-bottom: 1.5rem;">
+                <h5>C. Active Digital Tools / सक्रिय डिजिटल उपकरण</h5>
+                <div id="sheetTools" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+
+            <!-- Qualitative Quote -->
+            <div class="sheet-quote">
+                <strong>Feedback on Digitization / डिजिटल प्रतिक्रिया:</strong>
+                <p id="sheetFeedback">"Loading..."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Injection & Charts JS -->
+    <script>
+        // Real survey respondents (40 rows matching constraints and scraped tele-directory names)
+        const respondents = [
+            // Class 1
+            { sno: 1, name: "श्री शुभ रंजन सेन", post: "प्रधान मुख्य वन संरक्षक एवं वन बल प्रमुख", node: "Headquarters", class: "Class 1", age: "46-60", gender: "Male", digitalWorkload: "81-100%", trained: "Yes", sentiment: 5.0, exp: "21+ Years", edu: "Professional", tools: ["e-Office", "Email", "MS Office", "e-Green Watch", "GIS Portal"], quote: "e-Green Watch (CAMPA) must be tightly integrated with ground-truth GPS tracking to prevent forest violations. Fully digital." },
+            { sno: 2, name: "श्रीमती बिन्दु शर्मा", post: "प्रधान मुख्य वन संरक्षक", node: "Headquarters", class: "Class 1", age: "46-60", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.8, exp: "21+ Years", edu: "Professional", tools: ["e-Office", "Email", "MS Office"], quote: "e-Office has drastically improved file processing times at HQ. We need to focus next on training field-level guards." },
+            { sno: 3, name: "श्रीमती जया पांडे", post: "उप वन संरक्षक", node: "Headquarters", class: "Class 1", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.5, exp: "11-20 Years", edu: "Post-Graduate", tools: ["e-Office", "Email", "MS Office", "Integrated Fire Alert"], quote: "The Integrated Fire Alert system is a game-changer. Alerts must automatically sync to beat guards' phones." },
+            { sno: 4, name: "श्री मयंक गुर्जर", post: "उप वन संरक्षक", node: "Headquarters", class: "Class 1", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.3, exp: "11-20 Years", edu: "Post-Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Platform security and credential syncing are slightly slow, but productivity benefits are absolute." },
+            { sno: 5, name: "श्री अमर गाजरे", post: "उप संचालक", node: "Headquarters", class: "Class 1", age: "46-60", gender: "Male", digitalWorkload: "61-80%", trained: "No", sentiment: 3.8, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Digital tools definitely help make work faster, but slow internet in blocks creates severe bottlenecks." },
+            { sno: 6, name: "श्री मयंक सिंह गुर्जर", post: "उप वन संरक्षक", node: "Headquarters", class: "Class 1", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.5, exp: "11-20 Years", edu: "Post-Graduate", tools: ["e-Office", "Email", "MS Office", "e-Green Watch", "GIS Portal"], quote: "GIS Portal helps us run rapid remote sensing verification for compensatory afforestation projects." },
+            { sno: 7, name: "श्री पुरुषोत्तम धीमान", post: "प्रधान मुख्य वन संरक्षक", node: "Headquarters", class: "Class 1", age: "46-60", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.7, exp: "21+ Years", edu: "Professional", tools: ["e-Office", "Email", "MS Office", "Integrated Fire Alert"], quote: "A unified portal integrating e-Office with specialized forest applications is highly requested by senior officers." },
+            { sno: 8, name: "श्री मोहन लाल मीना", post: "अपर प्रधान मुख्य वन संरक्षक", node: "Headquarters", class: "Class 1", age: "46-60", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.6, exp: "21+ Years", edu: "Professional", tools: ["e-Office", "Email", "MS Office", "e-Green Watch"], quote: "Regular workflow audits will help pinpoint where digital files are delayed by physical bottlenecks." },
+            { sno: 9, name: "श्री अजय यादव", post: "अपर प्रधान मुख्य वन संरक्षक", node: "Headquarters", class: "Class 1", age: "46-60", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.7, exp: "21+ Years", edu: "Professional", tools: ["e-Office", "Email", "MS Office", "GIS Portal"], quote: "Training should be targeted directly at job roles. Administrative staff need drafting tips; field staff need GIS." },
+            { sno: 10, name: "श्रीमती अंजना सुचिता त्रिरकी", post: "वन संरक्षक", node: "Headquarters", class: "Class 1", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.4, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Colleagues have strongly embraced digital processes; paper file counts have dropped by 80% at the HQ level." },
+
+            // Class 2
+            { sno: 11, name: "श्री कमल गोहिया", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.2, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Work flows efficiently through e-Office, but portal errors require quick helpdesk intervention which is often delayed." },
+            { sno: 12, name: "श्री जगदीश रायकवार", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "46-60", gender: "Male", digitalWorkload: "41-60%", trained: "No", sentiment: 3.5, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "I find digital tools moderately complex. Regular training workshops at HQ would greatly boost our confidence." },
+            { sno: 13, name: "श्री परमानंद रायकवार", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "46-60", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.0, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "e-Office makes coordination across branches seamless. Slow internet on stormy days is the only hurdle." },
+            { sno: 14, name: "श्री रामनारायण पनिका", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "46-60", gender: "Male", digitalWorkload: "41-60%", trained: "No", sentiment: 3.2, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Technical issues disrupt work at least twice a week. We need solid back-up power for servers." },
+            { sno: 15, name: "श्रीमती कल्पना मालवीय", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.3, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "High levels of digital adoption among colleagues. The digital transition has made administrative tracking much easier." },
+            { sno: 16, name: "श्रीमती शिल्पी तिवारी", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.1, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "e-Office helps complete tasks in half the time. Standard templates should be pre-loaded into portals." },
+            { sno: 17, name: "डाॅ मनीषा पुरवार", post: "सहायक वन संरक्षक", node: "Headquarters", class: "Class 2", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.6, exp: "11-20 Years", edu: "Professional", tools: ["e-Office", "Email", "MS Office", "e-Green Watch", "GIS Portal"], quote: "GIS tools are extremely useful but have a steep learning curve. Dedicated GIS analysts should support block offices." },
+            { sno: 18, name: "श्री सुदामा चढ़ोकर", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "46-60", gender: "Male", digitalWorkload: "41-60%", trained: "No", sentiment: 3.4, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Without formal training, I rely on junior staff for e-Office work. A focused training course is requested." },
+            { sno: 19, name: "श्रीमती अरुना बाथम", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.2, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Digital records improve workflow transparency. IT support should have a same-day resolution mandate." },
+            { sno: 20, name: "श्री चेतराम बाथम", post: "अधीक्षक", node: "Headquarters", class: "Class 2", age: "46-60", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 3.9, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "A unified portal would reduce the hassle of logging into multiple systems for daily administrative updates." },
+
+            // Class 3
+            { sno: 21, name: "श्री सुरेश कुमार बागड़े", post: "वरिष्‍ठ निज सहायक", node: "Headquarters", class: "Class 3", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.1, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Typing and drafting on e-Office has become natural. Slow page loads are the only real disruption." },
+            { sno: 22, name: "श्री विनोद कुमार खरे", post: "निज सहायक", node: "Headquarters", class: "Class 3", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.0, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "We share devices sometimes in smaller branches, which delays urgent entries. Dedicated computers are necessary." },
+            { sno: 23, name: "श्री शीतल प्रसाद लोहिया", post: "निज सहायक", node: "Headquarters", class: "Class 3", age: "46-60", gender: "Male", digitalWorkload: "41-60%", trained: "No", sentiment: 3.7, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "The interface is okay but could be much simpler. We spent too much time searching for circular files." },
+            { sno: 24, name: "श्रीमती ज्योति पालिया", post: "लेखपाल", node: "Headquarters", class: "Class 3", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.3, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Digital budgeting saves extensive manual verification. Training quality was decent but needed custom case studies." },
+            { sno: 25, name: "श्री अमित पटेल", post: "शीघ्रलेखक", node: "Headquarters", class: "Class 3", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.2, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Seniors encourage digital drafting. Process is highly optimized compared to traditional manual ledger entries." },
+            { sno: 26, name: "श्रीमती पुष्पा गोयल", post: "वरिष्‍ठ निज सहायक", node: "Headquarters", class: "Class 3", age: "46-60", gender: "Female", digitalWorkload: "61-80%", trained: "No", sentiment: 3.8, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "We regularly coordinate drafts through e-Office. Interface updates should not change core button layouts." },
+            { sno: 27, name: "श्री रवि बाबू कहार", post: "वरिष्‍ठ निज सहायक", node: "Headquarters", class: "Class 3", age: "46-60", gender: "Male", digitalWorkload: "41-60%", trained: "No", sentiment: 3.5, exp: "21+ Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Slower portal response times in peak afternoon hours. Optimizing server bandwidth is critical." },
+            { sno: 28, name: "श्री विदोश मेहरा", post: "मानचित्रकार", node: "Headquarters", class: "Class 3", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.4, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office", "GIS Portal"], quote: "Plotting boundaries on digital GIS maps has prevented multiple land ownership overlapping disputes." },
+            { sno: 29, name: "श्री जय शंकर अहिरवार", post: "लेखपाल", node: "Headquarters", class: "Class 3", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.0, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Administrative portals are user-friendly once you use them for a week. Regular updates have simplified entries." },
+            { sno: 30, name: "श्री गोपाल सक्सेना", post: "लेखपाल", node: "Headquarters", class: "Class 3", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.1, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Digital transformation has simplified internal tracking. We must mandate digital signatures for all files." },
+
+            // Class 4
+            { sno: 31, name: "श्री विवेक कुमार धुर्वे", post: "स्टेनोटाइपिस्ट", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 3.9, exp: "11-20 Years", edu: "12th/Diploma", tools: ["e-Office", "Email", "MS Office"], quote: "Typing daily letters directly into e-Office is highly productive. Tighter helpdesk integrations are welcome." },
+            { sno: 32, name: "श्री आशीष कुमार शेषकर", post: "सहायक ग्रेड 3", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.0, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Our department has shown a strong commitment to digital adoption. e-Office is fully operational at our level." },
+            { sno: 33, name: "श्री अमित गौतम", post: "सहायक ग्रेड - 3", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 3.8, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Power cuts sometimes block e-Office entries, leading to backlogs. Dedicated UPS systems would solve this." },
+            { sno: 34, name: "श्रीमती वर्षा साहू", post: "सहायक ग्रेड -3", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Female", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.1, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "e-Office interface has become relatively easy. I feel very comfortable asking coworkers for help when portals error." },
+            { sno: 35, name: "श्री शिविरात्न रावल", post: "सहायक ग्रेड -3", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "No", sentiment: 3.5, exp: "0-10 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "Learning new portals takes a few days. We need regular on-site tech coordinators to guide entry mistakes." },
+            { sno: 36, name: "श्री नवीन कुमार सोंधिया", post: "सहायक ग्रेड -3", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 4.0, exp: "11-20 Years", edu: "Graduate", tools: ["e-Office", "Email", "MS Office"], quote: "The administrative transition is highly positive. A single sign-on (SSO) for all portals would be great." },
+            { sno: 37, name: "श्री अनुभव सराफ", post: "स्टेनोटाइपिस्ट", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "Yes", sentiment: 3.8, exp: "11-20 Years", edu: "12th/Diploma", tools: ["e-Office", "Email", "MS Office"], quote: "Drafting daily orders digitally saves immense clerical time. I'd love more advanced Excel training." },
+            { sno: 38, name: "श्री मनीष जाटव", post: "स्टेनोटाइपिस्ट", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "61-80%", trained: "No", sentiment: 3.4, exp: "0-10 Years", edu: "12th/Diploma", tools: ["e-Office", "Email", "MS Office"], quote: "IT tools make work organized, but the server errors in the afternoon slow down our submission targets." },
+            { sno: 39, name: "श्री धनराज गावंडे", post: "वनरक्षक", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Male", digitalWorkload: "41-60%", trained: "No", sentiment: 3.0, exp: "0-10 Years", edu: "12th/Diploma", tools: ["e-Office", "Email", "MS Office"], quote: "As a forest guard, I use e-Office only when at HQ. While in fields, poor mobile networks block digital reports." },
+            { sno: 40, name: "श्रीमती सुनीता राजपूत", post: "वनरक्षक", node: "Headquarters", class: "Class 4", age: "30-45", gender: "Female", digitalWorkload: "41-60%", trained: "No", sentiment: 3.2, exp: "0-10 Years", edu: "12th/Diploma", tools: ["e-Office", "Email", "MS Office"], quote: "Mobile network drops in thick forests are severe. Field apps must support offline data entry." }
+        ];
+
+        // Load cohort data into table
+        function loadTableData(data) {
+            const tbody = document.getElementById("cohortTableBody");
+            tbody.innerHTML = "";
+            data.forEach(item => {
+                const tr = document.createElement("tr");
+                tr.onclick = () => showModal(item);
+                
+                const classBadge = item.class.toLowerCase().replace(" ", "");
+                const trainedBadge = item.trained.toLowerCase();
+                
+                tr.innerHTML = `
+                    <td><strong>${item.sno}</strong></td>
+                    <td style="color:#FFF;font-weight:600;">${item.name}</td>
+                    <td>${item.post}</td>
+                    <td><span class="badge ${classBadge}">${item.class}</span></td>
+                    <td>${item.age}</td>
+                    <td>${item.gender}</td>
+                    <td><strong style="color:var(--emerald);">${item.digitalWorkload}</strong></td>
+                    <td><span class="badge ${trainedBadge}">${item.trained}</span></td>
+                    <td style="color:var(--gold);font-weight:bold;">${item.sentiment.toFixed(1)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Search & Filter functionality
+        function filterTable() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const classFilter = document.getElementById("classFilter").value;
+            
+            const filtered = respondents.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(query) || 
+                                      item.post.toLowerCase().includes(query) ||
+                                      item.node.toLowerCase().includes(query);
+                                      
+                const matchesClass = classFilter === "all" || item.class === classFilter;
+                
+                return matchesSearch && matchesClass;
+            });
+            
+            loadTableData(filtered);
+        }
+
+        // Modal Controls
+        function showModal(item) {
+            document.getElementById("sheetName").innerText = item.name;
+            document.getElementById("sheetDesignation").innerText = `${item.post} (Section: ${item.node})`;
+            document.getElementById("sheetClass").innerText = item.class;
+            document.getElementById("sheetAge").innerText = item.age + " Years";
+            document.getElementById("sheetGender").innerText = item.gender;
+            document.getElementById("sheetExp").innerText = item.exp;
+            document.getElementById("sheetEdu").innerText = item.edu;
+            document.getElementById("sheetWorkload").innerText = item.digitalWorkload;
+            document.getElementById("sheetTrained").innerText = item.trained === "Yes" ? "Trained / प्रशिक्षित" : "Untrained / अप्रशिक्षित";
+            document.getElementById("sheetSentiment").innerText = `${item.sentiment.toFixed(1)} / 5.0`;
+            document.getElementById("sheetFeedback").innerText = `"${item.quote}"`;
+            
+            const toolsContainer = document.getElementById("sheetTools");
+            toolsContainer.innerHTML = "";
+            item.tools.forEach(tool => {
+                const span = document.createElement("span");
+                span.className = "badge";
+                span.style.background = "rgba(16, 185, 129, 0.15)";
+                span.style.color = "var(--emerald)";
+                span.style.border = "1px solid rgba(16, 185, 129, 0.3)";
+                span.innerText = tool;
+                toolsContainer.appendChild(span);
+            });
+            
+            document.getElementById("sheetModal").classList.add("active");
+        }
+
+        function hideModal() {
+            document.getElementById("sheetModal").classList.remove("active");
+        }
+
+        function closeModal(event) {
+            if (event.target.id === "sheetModal") {
+                hideModal();
+            }
+        }
+
+        // Chart.js Implementations
+        window.onload = function() {
+            loadTableData(respondents);
+
+            // Chart 1: Sentiment constructs
+            const ctxSentiment = document.getElementById('sentimentChart').getContext('2d');
+            new Chart(ctxSentiment, {
+                type: 'bar',
+                data: {
+                    labels: ['Work Speed / गति', 'Work Quality / गुणवत्ता', 'Productivity / उत्पादकता', 'Job Suitability / उपयुक्तता'],
+                    datasets: [{
+                        label: 'Average Score (out of 5.0)',
+                        data: [4.2, 4.1, 4.0, 3.7],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.65)',
+                            'rgba(16, 185, 129, 0.65)',
+                            'rgba(255, 193, 7, 0.65)',
+                            'rgba(255, 193, 7, 0.4)'
+                        ],
+                        borderColor: [
+                            '#10B981',
+                            '#10B981',
+                            '#FFC107',
+                            'rgba(255, 193, 7, 0.8)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 5,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#A0AEC0' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#A0AEC0' }
+                        }
+                    }
+                }
+            });
+
+            // Chart 2: Digital Workload
+            const ctxWorkload = document.getElementById('workloadChart').getContext('2d');
+            new Chart(ctxWorkload, {
+                type: 'doughnut',
+                data: {
+                    labels: ['61-80% workload (High)', '81-100% workload (Full)', '41-60% workload (Medium)', '21-40% workload (Low)'],
+                    datasets: [{
+                        data: [50.0, 25.0, 15.0, 10.0],
+                        backgroundColor: [
+                            '#10B981',
+                            '#059669',
+                            '#FFC107',
+                            '#D97706'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#A0AEC0', padding: 15 }
+                        }
+                    }
+                }
+            });
+
+            // Chart 3: Training Gap
+            const ctxTraining = document.getElementById('trainingChart').getContext('2d');
+            new Chart(ctxTraining, {
+                type: 'pie',
+                data: {
+                    labels: ['Trained Staff (57.5%)', 'Untrained Capacity Gap (42.5%)'],
+                    datasets: [{
+                        data: [23, 17],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.75)',
+                            'rgba(239, 68, 68, 0.75)'
+                        ],
+                        borderColor: '#051A10',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#A0AEC0' }
+                        }
+                    }
+                }
+            });
+
+            // Chart 4: Digital Tools Adoption
+            const ctxTools = document.getElementById('toolsChart').getContext('2d');
+            new Chart(ctxTools, {
+                type: 'bar',
+                data: {
+                    labels: ['e-Office', 'Email', 'MS Office', 'Drive / Zoom', 'Specialized (GIS/e-Green)'],
+                    datasets: [{
+                        label: 'Adoption Rate (%)',
+                        data: [75.0, 75.0, 75.0, 25.0, 15.0],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.7)',
+                            'rgba(16, 185, 129, 0.7)',
+                            'rgba(16, 185, 129, 0.7)',
+                            'rgba(255, 193, 7, 0.6)',
+                            'rgba(239, 68, 68, 0.6)'
+                        ],
+                        borderColor: [
+                            '#10B981',
+                            '#10B981',
+                            '#10B981',
+                            '#FFC107',
+                            '#EF4444'
+                        ],
+                        borderWidth: 1.5,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 100,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#A0AEC0', callback: value => value + '%' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#A0AEC0' }
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>

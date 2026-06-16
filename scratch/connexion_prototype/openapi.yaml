@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Connexion Prototype API
+  version: 1.0.0
+  description: A basic API built with Connexion to demonstrate spec-first routing and validation.
+
+paths:
+  /hello:
+    get:
+      summary: Return a greeting message
+      operationId: api.hello_world
+      parameters:
+        - name: name
+          in: query
+          required: false
+          schema:
+            type: string
+            default: World
+      responses:
+        '200':
+          description: A greeting object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /add:
+    get:
+      summary: Sum two integers (demonstrates parameter validation)
+      operationId: api.add_numbers
+      parameters:
+        - name: a
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: b
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The sum of the numbers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: integer
