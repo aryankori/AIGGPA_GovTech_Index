@@ -130,6 +130,7 @@ markdown_content += f"""
 *   **Secondary Synthesis:**
     *   Technical logs on the [RCMS Portal](http://rcms.mp.gov.in) point to frequent timeout errors during peak hours (11:00 AM to 3:00 PM), when revenue courts upload order sheets.
     *   The [MP Bhulekh](https://mpbhulekh.gov.in) land records portal requires multiple authentications for land mutation, which increases transaction times for Patwaris in District Offices.
+    *   **State-Level Usability Comparison:** While MP Bhulekh remains an informational repository, Telangana's transition from the highly integrated but complex Dharani portal (33 modules) to the simplified, decentralized Bhu Bharati system (6 modules) shows that reducing module complexity and restoring local Tahsildar authority reduces backlogs.
     *   To resolve transaction failures, the state has established dedicated helpline and email support (help.rcms@gmail.com), though response latency remains a major administrative bottleneck.
 
 ### Rural Development Department (N=40)
@@ -152,14 +153,15 @@ markdown_content += f"""
 ### Health Department (Secondary-Only Policy Benchmark)
 *   **Secondary Synthesis:**
     *   The digital ecosystem in health is led by **ANMOL MP** (ANM Online), which digitizes maternal and child health tracking.
-    *   Secondary research from the [National e-Governance Division](https://negd.gov.in) shows that Auxiliary Nurse Midwives (ANMs) face a dual-documentation burden. They must log data in physical registers during village visits, then re-enter the same records on tablets, leading to high administrative fatigue.
+    *   **Frontline Troubleshooting Friction:** Auxiliary Nurse Midwives (ANMs) face chronic synchronization errors, internet connectivity failure messages, and "Data Not Found" errors on tablets. Technical issues like "Village Not Mapped" require administrative backend changes by Block Officers, leaving field staff stranded without local troubleshooting options (official support contact: anmol.feedbackmp@gmail.com).
+    *   Secondary research from the [National e-Governance Division](https://negd.gov.in) shows that ANMs face a dual-documentation burden. They must log data in physical registers during village visits, then re-enter the same records on tablets, leading to high administrative fatigue.
     *   Vaccine distribution is managed via the **eVIN** (Electronic Vaccine Intelligence Network) cold chain system. While eVIN has improved vaccine availability, sub-health centers in remote tribal blocks struggle with power outages and data-sync delays.
 
 ---
 
 ## 5. Capacity Building & Training Deficits
 *   **Centralized Training Infrastructure:** Although regional training centers exist across district headquarters under the state's **e-Daksha** program, remote field staff (Class III/IV) report low training frequency.
-*   **Curriculum Alignment:** e-Daksha programs primarily cover general digital competency and emerging technologies (AR-VR, Cyber Security). Frontline administrative workers, however, require practical training on specific daily applications, such as e-Office workflows and local portal entry systems.
+*   **Curriculum Alignment & Best Practices:** e-Daksha programs primarily focus on emerging technologies (AR-VR, Cyber Security). According to public sector training studies by [Infosys Public Services](https://infosyspublicservices.com), the most effective frameworks rely on a **blended learning architecture** (combining instructor-led feedback with self-paced eLearning) and **microlearning** (5-10 minute video snippets and quick-reference guides) rather than generic computer literacy courses.
 *   **Recommendations for Policy Action:**
     1.  *Decentralize training delivery:* Launch mobile IT training vans that visit block and tehsil offices, minimizing travel barriers for frontline staff.
     2.  *Reduce duplicate workflows:* Issue formal circulars to eliminate physical register backups once a digital portal is confirmed active.
