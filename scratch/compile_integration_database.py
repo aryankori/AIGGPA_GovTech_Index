@@ -58,6 +58,7 @@ rel_master = load_reliability(os.path.join(QUANT_DIR, "master_reliability.xlsx")
 rel_forest = load_reliability(os.path.join(QUANT_DIR, "forest_reliability.xlsx"))
 rel_rd = load_reliability(os.path.join(QUANT_DIR, "rd_reliability.xlsx"))
 rel_rev = load_reliability(os.path.join(QUANT_DIR, "revenue_reliability.xlsx"))
+rel_health = load_reliability(os.path.join(QUANT_DIR, "health_reliability.xlsx"))
 
 # Extract Cadre Divide
 cadre_master = load_cadre_divide(os.path.join(QUANT_DIR, "master_crosstabs.xlsx"))
@@ -69,12 +70,13 @@ means_master = load_descriptive_means(os.path.join(QUANT_DIR, "master_descriptiv
 means_forest = load_descriptive_means(os.path.join(QUANT_DIR, "forest_descriptives.xlsx"), general_vars + ["Q73_AIAlert", "Q74_GISDifficulty"])
 means_rd = load_descriptive_means(os.path.join(QUANT_DIR, "rd_descriptives.xlsx"), general_vars + ["Q66_MultiPortal", "Q67_BlockInternet", "Q68_NMMS"])
 means_rev = load_descriptive_means(os.path.join(QUANT_DIR, "revenue_descriptives.xlsx"), general_vars + ["Q59_Bhulekh", "Q60_RCMS", "Q62_CitizensExpect", "Q64_Sampada"])
+means_health = load_descriptive_means(os.path.join(QUANT_DIR, "health_descriptives.xlsx"), general_vars + ["Q78_ANMOL_ABHA", "Q79_IHIP_workload"])
 
 print("[+] Successfully extracted all quantitative metrics from Excel files.")
 
 markdown_content = f"""# Primary-Secondary E-Governance Integration Database
 
-This database compiles primary survey findings (N=140) across three government departments in Madhya Pradesh (MP) - Forest (N=80), Rural Development (N=40), and Revenue (N=20) - and integrates them with secondary research findings covering e-governance infrastructure, capacity building, and department-specific platforms.
+This database compiles primary survey findings (N=154) across four government departments in Madhya Pradesh (MP) - Forest (N=80), Rural Development (N=40), Revenue (N=27), and Health (N=7) - and integrates them with secondary research findings covering e-governance infrastructure, capacity building, and department-specific platforms.
 
 ---
 
@@ -82,7 +84,7 @@ This database compiles primary survey findings (N=140) across three government d
 
 The following matrix compares primary survey findings against verified secondary data sources, providing a cross-methodology view of digital adoption hurdles:
 
-| Analytical Dimension | Survey Variable / Metric (N=140) | Secondary Source / Context | Integrated Policy Implication |
+| Analytical Dimension | Survey Variable / Metric (N=154) | Secondary Source / Context | Integrated Policy Implication |
 | :--- | :--- | :--- | :--- |
 | **Connectivity & Network** | Internet Quality Mean: **{means_master.get('Q22_Internet', 'N/A')}** / 5.0 (Reliability Alpha: **{rel_master.get('Facilitating Conditions (FC)', 'N/A')}**) | [Testbook Policy Report](https://testbook.com) highlights severe rural infrastructure gaps, forcing citizens to rely on private kiosk networks. | Rural block offices face a double burden: poor local connectivity combined with strict digital entry mandates. |
 | **Capacity Building** | Training Quality Mean: **{means_master.get('Q46_TrainQuality', 'N/A')}** / 5.0 (Effectiveness Alpha: **{rel_master.get('Training Effectiveness', 'N/A')}**) | [NeGD e-Daksha Directory](https://negd.gov.in) confirms IT training centers are centralized at district headquarters. | Access disparities exist; frontline staff in remote areas cannot easily travel to district centers for hands-on training. |
@@ -94,14 +96,14 @@ The following matrix compares primary survey findings against verified secondary
 
 Reliability testing establishes the internal consistency of the TAM and UTAUT constructs measured in the survey. Scores above 0.70 are considered acceptable:
 
-| Construct | Master (N=140) | Forest (N=80) | Rural Development (N=40) | Revenue (N=20) |
-| :--- | :---: | :---: | :---: | :---: |
-| **Performance Expectancy (PE)** | **{rel_master.get('Performance Expectancy (PE)', 'N/A')}** | **{rel_forest.get('Performance Expectancy (PE)', 'N/A')}** | **{rel_rd.get('Performance Expectancy (PE)', 'N/A')}** | **{rel_rev.get('Performance Expectancy (PE)', 'N/A')}** |
-| **Effort Expectancy (EE)** | **{rel_master.get('Effort Expectancy (EE)', 'N/A')}** | **{rel_forest.get('Effort Expectancy (EE)', 'N/A')}** | **{rel_rd.get('Effort Expectancy (EE)', 'N/A')}** | **{rel_rev.get('Effort Expectancy (EE)', 'N/A')}** |
-| **Social Influence (SI)** | **{rel_master.get('Social Influence (SI)', 'N/A')}** | **{rel_forest.get('Social Influence (SI)', 'N/A')}** | **{rel_rd.get('Social Influence (SI)', 'N/A')}** | **{rel_rev.get('Social Influence (SI)', 'N/A')}** |
-| **Facilitating Conditions (FC)** | **{rel_master.get('Facilitating Conditions (FC)', 'N/A')}** | **{rel_forest.get('Facilitating Conditions (FC)', 'N/A')}** | **{rel_rd.get('Facilitating Conditions (FC)', 'N/A')}** | **{rel_rev.get('Facilitating Conditions (FC)', 'N/A')}** |
-| **Organisational Support** | **{rel_master.get('Organisational Support', 'N/A')}** | **{rel_forest.get('Organisational Support', 'N/A')}** | **{rel_rd.get('Organisational Support', 'N/A')}** | **{rel_rev.get('Organisational Support', 'N/A')}** |
-| **Training Effectiveness** | **{rel_master.get('Training Effectiveness', 'N/A')}** | **{rel_forest.get('Training Effectiveness', 'N/A')}** | **{rel_rd.get('Training Effectiveness', 'N/A')}** | **{rel_rev.get('Training Effectiveness', 'N/A')}** |
+| Construct | Master (N=154) | Forest (N=80) | Rural Development (N=40) | Revenue (N=27) | Health (N=7) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Performance Expectancy (PE)** | **{rel_master.get('Performance Expectancy (PE)', 'N/A')}** | **{rel_forest.get('Performance Expectancy (PE)', 'N/A')}** | **{rel_rd.get('Performance Expectancy (PE)', 'N/A')}** | **{rel_rev.get('Performance Expectancy (PE)', 'N/A')}** | **{rel_health.get('Performance Expectancy (PE)', 'N/A')}** |
+| **Effort Expectancy (EE)** | **{rel_master.get('Effort Expectancy (EE)', 'N/A')}** | **{rel_forest.get('Effort Expectancy (EE)', 'N/A')}** | **{rel_rd.get('Effort Expectancy (EE)', 'N/A')}** | **{rel_rev.get('Effort Expectancy (EE)', 'N/A')}** | **{rel_health.get('Effort Expectancy (EE)', 'N/A')}** |
+| **Social Influence (SI)** | **{rel_master.get('Social Influence (SI)', 'N/A')}** | **{rel_forest.get('Social Influence (SI)', 'N/A')}** | **{rel_rd.get('Social Influence (SI)', 'N/A')}** | **{rel_rev.get('Social Influence (SI)', 'N/A')}** | **{rel_health.get('Social Influence (SI)', 'N/A')}** |
+| **Facilitating Conditions (FC)** | **{rel_master.get('Facilitating Conditions (FC)', 'N/A')}** | **{rel_forest.get('Facilitating Conditions (FC)', 'N/A')}** | **{rel_rd.get('Facilitating Conditions (FC)', 'N/A')}** | **{rel_rev.get('Facilitating Conditions (FC)', 'N/A')}** | **{rel_health.get('Facilitating Conditions (FC)', 'N/A')}** |
+| **Organisational Support** | **{rel_master.get('Organisational Support', 'N/A')}** | **{rel_forest.get('Organisational Support', 'N/A')}** | **{rel_rd.get('Organisational Support', 'N/A')}** | **{rel_rev.get('Organisational Support', 'N/A')}** | **{rel_health.get('Organisational Support', 'N/A')}** |
+| **Training Effectiveness** | **{rel_master.get('Training Effectiveness', 'N/A')}** | **{rel_forest.get('Training Effectiveness', 'N/A')}** | **{rel_rd.get('Training Effectiveness', 'N/A')}** | **{rel_rev.get('Training Effectiveness', 'N/A')}** | **{rel_health.get('Training Effectiveness', 'N/A')}** |
 
 ---
 
@@ -121,7 +123,7 @@ markdown_content += f"""
 
 ## 4. Departmental Portals & Secondary Synthesis
 
-### Revenue Department (N=20)
+### Revenue Department (N=27)
 *   **Primary Findings:**
     *   MP Bhulekh/WebGIS Usability Mean: **{means_rev.get('Q59_Bhulekh', 'N/A')}** / 5.0
     *   RCMS Usability Mean: **{means_rev.get('Q60_RCMS', 'N/A')}** / 5.0
@@ -150,7 +152,11 @@ markdown_content += f"""
     *   Under the State Spatial Data Infrastructure (SSDI) managed by [MAP_IT](https://www.mapit.gov.in), GIS data layers are mapped for forest boundary verification. While Class I/II officers use these layers for planning, Class III/IV staff (e.g. Forest Guards) report high difficulty operating hand-held GPS units in dense canopy environments where satellite signals are weak.
     *   AI-based forest alert systems send notifications regarding fire spots and illegal logging, but field staff lack mobile data connectivity to respond to these alerts in real time.
 
-### Health Department (Secondary-Only Policy Benchmark)
+### Health Department (N=7 Primary Cohort)
+*   **Primary Findings:**
+    *   ANMOL/ABHA Usability Mean: **{means_health.get('Q78_ANMOL_ABHA', 'N/A')}** / 5.0
+    *   IHIP Workload Integration Mean: **{means_health.get('Q79_IHIP_workload', 'N/A')}** / 5.0
+    *   **Class IV Underemployment & Digital Divide:** Frontline support staff show a stark educational and digital divide. Elderly Class IV workers (with 12th-grade education or below) experience severe difficulty with ANMOL and smartphone-based tools (scoring usability at 1.0/5.0), remaining entirely dependent on traditional paper registers. In contrast, younger Class IV workers (some holding postgraduate degrees like MA Psychology and M.Sc. Computer Science) report high digital proficiency, utilizing personal devices, designing spreadsheets, and implementing AI-driven workflows to complete administrative reporting.
 *   **Secondary Synthesis:**
     *   The digital ecosystem in health is led by **ANMOL MP** (ANM Online), which digitizes maternal and child health tracking.
     *   **Frontline Troubleshooting Friction:** Auxiliary Nurse Midwives (ANMs) face chronic synchronization errors, internet connectivity failure messages, and "Data Not Found" errors on tablets. Technical issues like "Village Not Mapped" require administrative backend changes by Block Officers, leaving field staff stranded without local troubleshooting options (official support contact: anmol.feedbackmp@gmail.com).

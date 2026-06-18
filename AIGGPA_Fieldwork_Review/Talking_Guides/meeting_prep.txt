@@ -12,20 +12,22 @@
 |---|---|---|---|---|---|
 | **Forest** | **80** | 0 | **80** | 80 | **100%** |
 | **Rural Development** | 0 | **40** | **40** | 40 | **100%** |
-| **Revenue** | **10** | **10** | **20** | 20 | **100%** |
-| **TOTAL** | **90** | **50** | **140** | **140** | **100%** |
+| **Revenue** | **10** | **17** | **27** | 27 | **100%** |
+| **Health** | 0 | **7** | **7** | 7 | **100%** |
+| **TOTAL** | **90** | **64** | **154** | **154** | **100%** |
 
 ### How to Present This (Frame It Right)
 
 **Say THIS:**
-> "I have successfully completed data collection and analysis for our target cohort of N=140 respondents across three primary departments: Forest, Rural Development, and Revenue. Every response has been digitized, coded, and analyzed through our automated Python quantitative pipeline, yielding a clean dataset and validated reliability metrics."
+> "I have successfully completed data collection and analysis for our target cohort of N=154 respondents across four primary departments: Forest, Rural Development, Revenue, and Health. Every response has been digitized, coded, and analyzed through our automated Python quantitative pipeline, yielding a clean dataset and validated reliability metrics."
 
 ### Key Talking Points
 
 1. **"Forest is 100% complete"** — 80 respondents (Class I: 8, Class II: 15, Class III: 30, Class IV: 27). Fully analyzed.
 2. **"Rural Development is 100% complete"** — 40 respondents (Class I: 3, Class II: 10, Class III: 17, Class IV: 10) representing district and block execution levels.
-3. **"Revenue is 100% complete"** — 20 respondents (Class I: 2, Class II: 5, Class III: 8, Class IV: 5) split equally between Vallabh Bhavan HQ (10) and Narmadapuram DO (10).
-4. **"Analytical Pipeline is fully automated"** — Cronbach's Alpha reliability, descriptive statistics, frequencies, and cross-tabulations are completely compiled for all departments.
+3. **"Revenue is 100% complete"** — 27 respondents (Class I: 2, Class II: 5, Class III: 15, Class IV: 5) representing headquarters and district levels.
+4. **"Health has N=7 primary respondents"** — 7 Class IV support staff respondents at the district level.
+5. **"Analytical Pipeline is fully automated"** — Cronbach's Alpha reliability, descriptive statistics, frequencies, and cross-tabulations are completely compiled for all departments.
 
 ---
 

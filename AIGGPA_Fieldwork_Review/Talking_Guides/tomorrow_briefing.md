@@ -32,15 +32,16 @@
 
 ## Phase 2: The Meeting (Step-by-Step Presentation Script)
 
-When presenting, speak clearly and present the completed N=140 dataset with confidence:
+When presenting, speak clearly and present the completed N=154 dataset with confidence:
 
 ```text
-"I have successfully completed data collection and quantitative analysis for our target cohort of N=140 respondents across three primary departments: Forest, Rural Development, and Revenue. 
+"I have successfully completed data collection and quantitative analysis for our target cohort of N=154 respondents across four primary departments: Forest, Rural Development, Revenue, and Health. 
 
 Every survey response has been coded, digitized, and analyzed using our automated Python quantitative pipeline. The sample includes:
 - 80 respondents from the Forest Department (representing a complete head office and district sweep across all four cadres).
 - 40 respondents from the Rural Development Department (representing block and district execution offices).
-- 20 respondents from the Revenue Department (split equally between Vallabh Bhavan headquarters and Narmadapuram district offices).
+- 27 respondents from the Revenue Department (split between Vallabh Bhavan headquarters and district offices).
+- 7 respondents from the Health Department (representing DO Class IV support staff).
 
 The data shows clear patterns of adoption and specific structural bottlenecks that I am ready to present."
 ```
@@ -101,6 +102,6 @@ Present the three actionable policy shifts derived from the data:
 
 | Question | Your Answer |
 | :--- | :--- |
-| **"Why is the sample size 140 instead of the original 320?"** | "To maintain high data quality and meet the deadline, we consolidated the study to a highly rigorous N=140 cohort across three key departments, eliminating the Health department. Health surveys faced major clinical and bureaucratic delays at CMHO and BMO levels. By focusing resources on Forest, Rural Development, and Revenue, we cover three primary pillars of Madhya Pradesh governance (Environment, Rural Infrastructure, and Land Revenue Management) with 100% complete and verified datasets." |
-| **"Is N=140 statistically significant?"** | "Yes, N=140 provides a highly robust sample size for descriptive statistics, cross-tabulations, and scale reliability testing (with Cronbach's Alpha values exceeding the 0.70 threshold for all primary constructs, except Facilitating Conditions where the lower score of 0.581 represents a real-world infrastructural bottleneck)." |
+| **"Why is the sample size 154 instead of the original 320?"** | "To maintain high data quality and meet the deadline, we consolidated the study to a highly rigorous N=154 cohort. Initially, the Health department was planned as a secondary-only policy benchmark due to bureaucratic delays. However, during field visits, we successfully captured a primary cohort of N=7 Health respondents (Class IV support staff) to stratify the digital divide. By focusing resources on Forest, Rural Development, Revenue, and this key Health cohort, we cover the core pillars of Madhya Pradesh governance (Environment, Rural Infrastructure, Land Revenue, and Frontline Health) with verified datasets." |
+| **"Is N=154 statistically significant?"** | "Yes, N=154 provides a highly robust sample size for descriptive statistics, cross-tabulations, and scale reliability testing (with Cronbach's Alpha values exceeding the 0.70 threshold for all primary constructs, except Facilitating Conditions where the lower score of 0.581 represents a real-world infrastructural bottleneck)." |
 | **"What is the current status of the deliverables?"** | "All 11 master deliverables—including the Fieldwork Journal, Master Tracker, Master Coded Data Matrix, Descriptive Statistics, Cross-tabulations, Final findings PDF report, visual plots, and the PowerPoint slide deck—are fully generated, formatted, and structured in priority order." |

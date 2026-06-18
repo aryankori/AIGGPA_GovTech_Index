@@ -1,6 +1,6 @@
 # Primary-Secondary E-Governance Integration Database
 
-This database compiles primary survey findings (N=140) across three government departments in Madhya Pradesh (MP) - Forest (N=80), Rural Development (N=40), and Revenue (N=20) - and integrates them with secondary research findings covering e-governance infrastructure, capacity building, and department-specific platforms.
+This database compiles primary survey findings (N=154) across four government departments in Madhya Pradesh (MP) - Forest (N=80), Rural Development (N=40), Revenue (N=27), and Health (N=7) - and integrates them with secondary research findings covering e-governance infrastructure, capacity building, and department-specific platforms.
 
 ---
 
@@ -8,11 +8,11 @@ This database compiles primary survey findings (N=140) across three government d
 
 The following matrix compares primary survey findings against verified secondary data sources, providing a cross-methodology view of digital adoption hurdles:
 
-| Analytical Dimension | Survey Variable / Metric (N=140) | Secondary Source / Context | Integrated Policy Implication |
+| Analytical Dimension | Survey Variable / Metric (N=154) | Secondary Source / Context | Integrated Policy Implication |
 | :--- | :--- | :--- | :--- |
-| **Connectivity & Network** | Internet Quality Mean: **3.21** / 5.0 (Reliability Alpha: **0.581**) | [Testbook Policy Report](https://testbook.com) highlights severe rural infrastructure gaps, forcing citizens to rely on private kiosk networks. | Rural block offices face a double burden: poor local connectivity combined with strict digital entry mandates. |
-| **Capacity Building** | Training Quality Mean: **1.96** / 5.0 (Effectiveness Alpha: **0.787**) | [NeGD e-Daksha Directory](https://negd.gov.in) confirms IT training centers are centralized at district headquarters. | Access disparities exist; frontline staff in remote areas cannot easily travel to district centers for hands-on training. |
-| **System Usability** | UI Friendliness Mean: **2.64** / 5.0 (Effort Expectancy Alpha: **0.896**) | [RCMS Support Logs](http://rcms.mp.gov.in) list frequent query timeout errors and portal downtime issues. | Frontline workers face a dual-documentation burden, maintaining physical registers to protect against system crashes. |
+| **Connectivity & Network** | Internet Quality Mean: **3.12** / 5.0 (Reliability Alpha: **0.531**) | [Testbook Policy Report](https://testbook.com) highlights severe rural infrastructure gaps, forcing citizens to rely on private kiosk networks. | Rural block offices face a double burden: poor local connectivity combined with strict digital entry mandates. |
+| **Capacity Building** | Training Quality Mean: **2** / 5.0 (Effectiveness Alpha: **0.791**) | [NeGD e-Daksha Directory](https://negd.gov.in) confirms IT training centers are centralized at district headquarters. | Access disparities exist; frontline staff in remote areas cannot easily travel to district centers for hands-on training. |
+| **System Usability** | UI Friendliness Mean: **2.61** / 5.0 (Effort Expectancy Alpha: **0.904**) | [RCMS Support Logs](http://rcms.mp.gov.in) list frequent query timeout errors and portal downtime issues. | Frontline workers face a dual-documentation burden, maintaining physical registers to protect against system crashes. |
 
 ---
 
@@ -20,14 +20,14 @@ The following matrix compares primary survey findings against verified secondary
 
 Reliability testing establishes the internal consistency of the TAM and UTAUT constructs measured in the survey. Scores above 0.70 are considered acceptable:
 
-| Construct | Master (N=140) | Forest (N=80) | Rural Development (N=40) | Revenue (N=20) |
-| :--- | :---: | :---: | :---: | :---: |
-| **Performance Expectancy (PE)** | **0.873** | **0.862** | **0.856** | **0.867** |
-| **Effort Expectancy (EE)** | **0.896** | **0.904** | **0.849** | **0.902** |
-| **Social Influence (SI)** | **0.856** | **0.857** | **0.882** | **0.752** |
-| **Facilitating Conditions (FC)** | **0.581** | **0.571** | **0.621** | **0.403** |
-| **Organisational Support** | **0.793** | **0.787** | **0.789** | **0.826** |
-| **Training Effectiveness** | **0.787** | **0.791** | **0.8** | **0.651** |
+| Construct | Master (N=154) | Forest (N=80) | Rural Development (N=40) | Revenue (N=27) | Health (N=7) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Performance Expectancy (PE)** | **0.891** | **0.862** | **0.856** | **0.878** | **0.993** |
+| **Effort Expectancy (EE)** | **0.904** | **0.904** | **0.849** | **0.899** | **0.989** |
+| **Social Influence (SI)** | **0.859** | **0.857** | **0.882** | **0.776** | **0.857** |
+| **Facilitating Conditions (FC)** | **0.531** | **0.571** | **0.621** | **0.087** | **0.542** |
+| **Organisational Support** | **0.805** | **0.787** | **0.789** | **0.874** | **0.96** |
+| **Training Effectiveness** | **0.791** | **0.791** | **0.8** | **0.65** | **N/A** |
 
 ---
 
@@ -46,12 +46,12 @@ Survey metrics show a distinct gap between high-level management (Class I & II) 
 
 ## 4. Departmental Portals & Secondary Synthesis
 
-### Revenue Department (N=20)
+### Revenue Department (N=27)
 *   **Primary Findings:**
-    *   MP Bhulekh/WebGIS Usability Mean: **2.8** / 5.0
-    *   RCMS Usability Mean: **2.7** / 5.0
-    *   SAMPADA 2.0 Usability Mean: **2.45** / 5.0
-    *   Citizens Expect Digital Updates Mean: **3.25** / 5.0
+    *   MP Bhulekh/WebGIS Usability Mean: **2.96** / 5.0
+    *   RCMS Usability Mean: **2.81** / 5.0
+    *   SAMPADA 2.0 Usability Mean: **2.63** / 5.0
+    *   Citizens Expect Digital Updates Mean: **3.3** / 5.0
 *   **Secondary Synthesis:**
     *   Technical logs on the [RCMS Portal](http://rcms.mp.gov.in) point to frequent timeout errors during peak hours (11:00 AM to 3:00 PM), when revenue courts upload order sheets.
     *   The [MP Bhulekh](https://mpbhulekh.gov.in) land records portal requires multiple authentications for land mutation, which increases transaction times for Patwaris in District Offices.
@@ -75,7 +75,11 @@ Survey metrics show a distinct gap between high-level management (Class I & II) 
     *   Under the State Spatial Data Infrastructure (SSDI) managed by [MAP_IT](https://www.mapit.gov.in), GIS data layers are mapped for forest boundary verification. While Class I/II officers use these layers for planning, Class III/IV staff (e.g. Forest Guards) report high difficulty operating hand-held GPS units in dense canopy environments where satellite signals are weak.
     *   AI-based forest alert systems send notifications regarding fire spots and illegal logging, but field staff lack mobile data connectivity to respond to these alerts in real time.
 
-### Health Department (Secondary-Only Policy Benchmark)
+### Health Department (N=7 Primary Cohort)
+*   **Primary Findings:**
+    *   ANMOL/ABHA Usability Mean: **2** / 5.0
+    *   IHIP Workload Integration Mean: **2** / 5.0
+    *   **Class IV Underemployment & Digital Divide:** Frontline support staff show a stark educational and digital divide. Elderly Class IV workers (with 12th-grade education or below) experience severe difficulty with ANMOL and smartphone-based tools (scoring usability at 1.0/5.0), remaining entirely dependent on traditional paper registers. In contrast, younger Class IV workers (some holding postgraduate degrees like MA Psychology and M.Sc. Computer Science) report high digital proficiency, utilizing personal devices, designing spreadsheets, and implementing AI-driven workflows to complete administrative reporting.
 *   **Secondary Synthesis:**
     *   The digital ecosystem in health is led by **ANMOL MP** (ANM Online), which digitizes maternal and child health tracking.
     *   **Frontline Troubleshooting Friction:** Auxiliary Nurse Midwives (ANMs) face chronic synchronization errors, internet connectivity failure messages, and "Data Not Found" errors on tablets. Technical issues like "Village Not Mapped" require administrative backend changes by Block Officers, leaving field staff stranded without local troubleshooting options (official support contact: anmol.feedbackmp@gmail.com).
